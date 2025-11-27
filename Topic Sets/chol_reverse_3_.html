@@ -1,0 +1,1484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.accessiblecaption
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.aftercaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.batch
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7px;
+}
+.beforecaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.body
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodydate
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  width: 100%;
+}
+.bycontentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.byline
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.bylinecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.caption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.cell
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.container
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.contentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contentprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contents
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.contentsdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.contenttitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.continued
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  width: 100%;
+}
+.data
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasis
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataemphasisfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataempty
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datafixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datastrong
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.datastrongfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.date
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.document
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.extendedpage
+{
+  background-color: #FFFFFF;
+  border: 1pt solid #000000;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+.fatalbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.folderaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.frame
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.graph
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.header
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.headersandfooters
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.index
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.indextitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.linecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.note
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notebanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.output
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.pageno
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+.pages
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.pagesdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.pagesitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.pagesproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagesprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagestitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.paragraph
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.parskip
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.prepage
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitlefixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooter
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooteremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooteremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooterempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowfooterstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheader
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderemphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderemphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowheaderstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemfooter
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemtitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systitleandfootercontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.table
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+  border: 0;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+  border: 0;
+}
+.titleandnotecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.titlesandfooters
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.usertext
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warnbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Cholesterol reverse transport (cholesterol ester (CE) + HDL)</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Liver to Tissues (cholesterol deposition (Anti-Atherogenic))</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Cholesterol reverse transport data set 3</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="1" cellpadding="7" rules="none" frame="box" summary="Procedure Print: Data Set REF2.CHOL_REVERSE_SORTED_3">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="l header" scope="col">Strengths</th>
+<th class="l header" scope="col">Weaknesses</th>
+<th class="l header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">However, the interrelation between HDL lipidome, proteome and particle functionality is a missing part of the puzzle, which remains as yet unsolved.  XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="l data">A strength of the current study is that it included a large number of participants with a varied age range and with a follow-up period of 7.3 years. Furthermore, in sensitivity analysis applying the proportion of HDL subspecies, the inverse association of H4P and the positive association of H2P with incident T2D remained, significant, in fully adjusted analyses. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">A limitation of our study is that the majority of the participants were of White ethnic background, limiting extrapolation of our findings to other ethnicities. In this regard, it may be of importance that the inverse association of HDL-C and HDL-P with cardiovascular disease is absent in Black people (67). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">However, paraoxonase-1 activity did not predict T2D development, making the role of this antioxidative enzyme in T2D development uncertain (61). XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="l data">The major strengths of this study are the large number of individuals with T2D from 5 independent cohorts as well as adjustment for an extensive set of relevant clinical covariates and multiple testing, which diminished the risk of false-positive results. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, the use of the NMR platform provided standardized measures of metabolites, allowing exploration of measures beyond routinely measured biomarkers. This method was faster, cheaper, and thereby more accessible than the more extensive MS-based metabolomics methods and could potentially be easier to adapt to a clinical setting, although it did not provide as in-depth a characterization as, for example, MS. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The use of medications agents may affect the metabolome substantially. In a recently published paper, also from the Biobanking and Biomolecular Resources Research Infrastructure consortium, significant associations between cardiometabolic agents and several of the measured metabolites were demonstrated (44). In the present study, results were adjusted for several medications commonly used in diabetes. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">We further recognize some limitations of the study. Metabolites were measured at one timepoint and therefore did not provide information regarding within-subject variation 
+in metabolite levels. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In some of the original studies, information regarding albuminuria measurements and history of micro- or macroalbuminuria was very limited. Further, we were limited by a low number of cases in the CODAM study, no diabetes duration in the RS study, and only having follow-up measurements from 2 cohorts. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Information regarding diet, which may affect the measured metabolites, was not available in all cohorts and not uniformly captured. Therefore, we could not  control for diet in this study. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Information regarding other renal markers, such as vitamin D, parathyroid hormone, and calcium, was also not available. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Since the samples originate from different studies, the storage time before metabolite measurements differed. Although all samples were stored at −80°C as recommended (45), we did find consistent results across studies, regardless of the year of sampling. This finding was also demonstrated by low heterogeneity between studies, suggesting no such influence. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Further longitudinal studies are needed to clarify whether alterations in metabolite levels precede or are consequences of renal impairment and whether a biomarker panel of both amino acid and lipid measures could potentially lead to improved prediction in the development of DKD. XXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">One necessary future development is post-selection inference (31, 32) in the high-dimensional multivariable MR framework. MR-BMA does not provide unbiased causal effect estimates. Re-fitting an unbiased multivariable MR model after risk factor selection would ignore the uncertainty of the selection and consequently not provide valid inferences. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="l data">Our study has several strengths. To our knowledge, it is the largest to investigate the metabolic signature of atherosclerosis using both standard 1D and CPMG 1H NMR spectra with information on small molecules and lipoprotein subclasses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We replicated our findings in external independent populations and we used two phenotypes of atherosclerosis (CAC and IMT) to further increase the generalizability and robustness of our findings. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We characterized the underlying biological pathways associated with the metabolites of interest, highlighting extensive inter-connected disturbances of metabolism. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">One limitation of our study is the cross-sectional nature of associations of metabolites with sub-clinical atherosclerosis; however, we also examined our results in relation to prospective data using incident CVD events. Nonetheless, as with any observational study, causality cannot be inferred and further experimental and functional work is needed to further elucidate the metabolic pathways involved in atherosclerotic disease. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We studied metabolites present in blood which may not accurately reflect metabolic processes in atherosclerotic plaques and arterial tissue, although there is strong evidence to suggest that at least some blood biomarkers (e.g. cholesterol) are relevant to atherosclerosis and blood is a readily accessible tissue for identification of prognostic or diagnostic markers. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, since we used a untargeted metabolic profiling approach, some of the discovered metabolic features could not be annotated (as expected); however, most of the unannotated signatures correspond to broad signals most likely from protein residues which cannot be further annotated by NMR. At the same time, this untargeted (‘agnostic’) approach allows for the discovery of metabolites that are not part of targeted panels. Our analysis was limited to NMR and mass spectrometry data may offer additional insights not apparent based on NMR data alone. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Genetic approaches as well as mechanistic studies are now needed to further validate our results and to follow-up the possible entry points for investigation of novel targets or preventive strategies for atherosclerotic disease. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="l data">The main strengths of our study include the case-cohort design nested within the PREDIMED trial, which enables the extension of the identified lipid patterns to all PREDIMED participants. Additionally, the analyses considering the complete lipidome allowed us to observe the effect of each lipid metabolite and each lipid group in the context of co-existing and interacting with the other plasma lipids. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">We acknowledge that despite our extensive adjustments, residual confounding cannot be ruled out. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, our results may not be generalizable to other populations because all study participants lived in a Mediterranean country and were at high cardiovascular risk. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additionally, many of the participants who developed diabetes during the trial were people at high risk at baseline. At baseline, case subjects with T2D presented high mean levels of fasting glucose (117 +/- 18 mg/dL), which could be because many had prediabetes at baseline. Thus, the baseline lipid biomarkers could reflect an established prediabetic profile rather than a non-diabetic risk profile. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this context, a recent study reported that plasma lipid profiles were similar in subjects with both prediabetes and diabetes (6), which indicates that our identified lipid patterns may be discriminating progressors versus non-progressors rather than healthy subjects versus subjects with T2D. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="l data">Our findings are slightly different from those of previous metabolomics studies, which were not able to show that metabolites materially improved type 2 diabetes risk prediction over other clinical risk factors [11, 15, 16] XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">We acknowledge that the results of our population-based analysis should be interpreted with caution since several limitations such as unmeasured factors (e.g. changes in lifestyle factors, medications or insulin secretion and resistance over time) might have influenced our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The lack of independent validation is due to the lack of availability of comparable cohorts of normoglycaemic individuals who developed type 2 diabetes for whom the necessary data were available. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Five TAGs were prioritised by our methodological approach but we did not find significant enrichment of pathways associated with these species. This might be because the software we used for pathway enrichment analysis may provide poor reporting for lipid classes and pathways or because only five TAGs in a particular metabolic pathway are likely to be less than expected by chance for enrichment. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Last, we recognise that participants in this study were all of European descent. Further work is needed to determine whether our findings can be replicated in an independent cohort of the same ethnicity and to extend the study to other racial/ethnic groups. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="l data">More than being simple markers, which vary depending on physiological or pathological processes, recent observations suggest a functional role of circulating miRNAs. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">However, the observations from the currently available studies are difficult to compare because of the heterogeneity of the technical methods used and the small and heterogeneous cohorts investigated. As the impact of these shortcomings is not precisely evaluated and not considered in most studies, a top priority is to establish a consensus to standardise the methodology used and to improve reproducibility. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">A considerable amount of research efforts need to be invested to determine whether circulating miRNAs profiles are of use in routine hospital practice, but given the potential advantages, the challenge is undoubtedly worth it. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Although our study has several strengths, we also acknowledge some limitations. First, based on our previous studies, we had expected greater IR (Si) and hyperinsulinemia in African Americans with modestly severe obesity and prediabetes than their white American counterparts, but this was not the case. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, our observation suggests a possible ethnic and racial threshold effect of obesity (BMI) on glucose homeostasis, insulin sensitivity, and lipid and lipoprotein metabolism, as well as cardiometabolic parameters. This hypothesis deserves further elucidation. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, the study was cross-sectional, and hence cause-effect relations among the degree of obesity and cardiometabolic parameters could not be ascertained. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fourth, the respective putative mechanisms of the paradoxical relationships of IR versus TGs and HDL-C and HDL-C/TG ratio in obese African Americans could not be ascertained in our study. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fifth, we did not measure the visceral abdominal adiposity that is well established as an important determinant of IR in white Americans, but not in African Americans and other black populations (32–34). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sixth, there was a sex imbalance with more females than males (8–10:1) in both white Americans and African Americans. However, excluding males from
+our analyses did not change the mean values of the anthropometric and metabolic parameters or the relationships of BMI and the Si and cardiometabolic parameters in both ethnic groups. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the genetic markers for the paradoxical relations of IR and CVD risks in African Americans are not known. Thus, an understanding of the genomic and/or proteomic basis of IR and glucose homeostasis, lipid and lipoprotein synthesis, and catabolism in modestly severely obese African Americans is warranted. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">The mechanism of the putative greater Sg and GEZI values, however, remains to be elucidated in obese and nonobese African Americans with and without prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The reasons for the IR and lipid / lipoprotein paradox in blacks are unknown. In this regard, ethnic and genetic interactions have been implicated in hepatic lipid and lipoprotein synthesis and clearance as possible mechanisms for the paradoxical differences in lipids / lipoproteins in obese and non-obese African Americans and blacks residing in diverse populations (23). XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We suggest that longitudinal studies of underlying putative mechanisms and molecular targets for glucose homeostasis, lipid/lipoprotein metabolism, and HDL functionality in a large sample of obese African Americans and white Americans are warranted.</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Although we believe that the highly significant findings (P=0.001) are robust, given the number of hypotheses tested and our use of stepwise methods, replication in other data sets is warranted. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The present study provides supportive data that might explain this finding; whether these demonstrated pro-atherogenic lipoprotein abnormalities in prediabetic individuals are related to increased insulin resistance or rather impairment in insulin secretion is the topic of further ongoing analyses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

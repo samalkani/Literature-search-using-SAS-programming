@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Biomarkers data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.BIOMARKERS_SORTED_2">
+<caption aria-label="Data Set REF.BIOMARKERS_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">Metabolomic Markers of Kidney Function Decline in Patients With Diabetes: Evidence From the Chronic Renal Insufficiency Cohort (CRIC) Study</td>
+<td class="data">Our study extended earlier work by evaluating associations between thirteen (previously identified (14)) urine metabolites and future kidney disease. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Multivariate analysis identified several metabolites associated with eGFR decline, after adjusting for clinical variables. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Survival analysis provided further validation of these models for a clinically important outcome, time-to-incident KFRT. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cross-validated accuracy of models were comparable, suggesting that clinical variables alone can achieve high model discrimination. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nevertheless, inclusion of selected metabolites improved overall fit of the models, as evidenced by likelihood ratio and F statistics, indicating that these markers improved prognostication and might provide potentially relevant biological information over and above clinical variables. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Two of the selected metabolites, citric acid and aconitic acid, are part of the TCA pathway. Reduction of these two metabolites in the twenty-four hour urine may reflect a reduction of TCA cycle activity due to reduced mitochondrial function or content (14,27). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additional studies to evaluate genes involved in citrate production and conversion to aconitate will shed light on our current findings. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The other two metabolite features are annotated as (i) 3-hydroxyisobutyrate (3-HIBA) or 2-hydroxybutyrate and (ii) 3-methylcrotonylglycine or tiglylglycine. In a previous study with a small sample-size (14), 3-HIBA was reduced in patients with established DKD, whereas in the present study, higher 3-HIBA was associated with progressive DKD and time-to-incident KFRT. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 3-HIBA is a catabolic intermediate of branched chain amino acid (BCAA) valine and previous studies have shown that it drives vascular fatty acid transport and uptake into cardiac endothelial cells (28,29). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Furthermore, in endothelial cells 3-HIBA levels increase in response to pathways induced by the transcriptional coactivator PGC1a, and thus 3-HIBA may be a biomarker for PGC1a activity (28). Elevated plasma levels of BCAA30 and 3-HIBA29 have been shown to be associated with obesity and incident type 2 diabetes in humans (29) and rodents (31). XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 3-HIBA has also been associated with excess angiogenesis which could be a contributing factor to progressive DKD. Notably, 3-HIBA is indistinguishable from 2-hydroxybutyrate in our assay, and the latter, a hydroxy acid involved in propanoate metabolism, has a well-known positive association with insulin resistance and ketoacidosis (32–34). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the two metabolite features annotated as 3-methyl-crotonylglycine or tiglylglycine are metabolites of BCAA degradation and were reduced in our prior study in established DKD (14). Elevation of these metabolites indicates that shunting of BCAA catabolism is a risk factor for kidney disease 
+progression. Detailed pathway information on these selected metabolites has been previously published by our group (see the second and third figures in Sharma et al (14)). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Our study addresses several gaps in current DKD research. While a few prospective studies (7,12,13,35,36) have evaluated urine or plasma metabolites for future kidney disease, small sample-sizes have hampered the ability to validate results. Furthermore, statistical methods for building cross-validated multivariate models of multiple urine metabolites to classify and predict DKD, have not been fully exploited (37,38). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our CRIC sample of diabetic patients is one of the largest in the US, with comprehensive data on clinical factors, metabolite profiles, and extended follow-up with multiple longitudinal assessments of kidney function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We implemented rigorous statistical methods to select metabolites for eGFR decline, and these selected features were then tested for associations with incident KFRT. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, models were not trained on the incident KFRT outcome, so that overfitting is less likely for this outcome, and thus our hazard ratio estimates should be unbiased. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We used likelihood ratio tests, the most powerful statistical approach for evaluating the prognostic value of metabolite features when added to a model with clinical variables alone. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also calculated a cross-validated C-statistic, a popular measure of model discrimination; use of cross-validation reduces overfit and provides a more accurate assessment of how well the model will perform on independent test samples. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; While our study demonstrated that the clinical-variables only model had competitively good discrimination compared to other metabolite models, we identified several metabolites that offer biological insights in DKD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We identified key pathways including TCA cycle features and amino acid metabolism, further implicating mitochondrial function as a key parameter to monitor chronic organ dysfunction, as well as features linked with angiogenesis and/or insulin resistance and ketoacidosis. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX If replicated in other cohorts, these metabolites and related pathways could inform therapeutic targets for DKD, and improve clinical management of DKD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">Plasma fatty acids and the risk of vascular disease and mortality outcomes in individuals with type 2 diabetes: results from the ADVANCE study</td>
+<td class="data">This biomarker study showed inverse associations of baseline plasma n-3 fatty acids and DHA with the risk of macrovascular events and for n-3 fatty acids with the risk of death among individuals with type 2 diabetes. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These inverse associations appeared approximately linear, and among the macrovascular events, n-3 fatty acids and DHA demonstrated stronger associations with cardiovascular death and non-fatal stroke. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, no significant associations were observed for the predominant fatty acids such as n-6 fatty acids, LA, MUFA and SFA with the risk of macrovascular events and death, after adjustment for multiple traditional risk factors. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The prospective associations of circulating n-3 fatty acids and DHA with the risk of CVD are consistent with the prior studies. According to previous pooled analyses, DHA in whole plasma was associated with a lower risk of fatal and non-fatal CHD (RR [95% CI]: 0.78 [0.69, 0.90] and 0.91 [0.84, 0.98], respectively) in people without a history of CVD [9]. In addition, another study reported that plasma n-3 fatty acids were associated with a lower risk of non-fatal myocardial infarction [21]. Similar inverse associations with CHD and stroke were observed in other studies which measured n-3 fatty acids in plasma phospholipid [10, 22–24], whole blood [25] and serum [26], among people without prior CVD. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These studies did not assess the C statistic and NRI; however, the present study did not detect significant improvement in predicting macrovascular events by adding n-3 fatty acids or DHA into the model including traditional cardiovascular risk factors. This indicates that the predictive power of plasma n-3 fatty acids and DHA may be limited in the presence of a complement of traditional cardiovascular risk factors. On the other hand, cardiovascular benefits of high-dose supplementation with n-3 fatty acids were recently observed in REDUCE-IT, where there were potentially greater benefits of n-3 fatty acid supplementation in those with lower plasma levels of n-3 fatty acids. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to generally consistent results from observational studies of circulating n-3 fatty acids and DHA, the effects of n-3 fatty acid supplementation on cardiovascular outcomes in RCTs have been mixed [4, 6, 27–30]. The recent study, A Study of Cardiovascular Events in Diabetes (ASCEND) trial, of 15,480 individuals with diabetes free of prior CVD, which tested n-3 fatty acid supplementation (1 g/day) for 7.4 years, did not lower the risk of composite major vascular outcomes, while only vascular deaths were less frequent in the supplementation group than in the placebo group (RR 0.82 [95% CI 0.68, 0.98]) [31]. On the other hand, the recent AHA science advisory has suggested that the use of n-3 fatty acid supplementation was probably justified in individuals at high cardiovascular risk [8, 28]. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In REDUCE-IT, which used high-dose (4 g/day) n-3 fatty acid supplementation in 8179 individuals with established CVD or with diabetes and other risk factors, the risk of composite cardiovascular outcomes was substantially reduced (HR 0.75 [95% CI 0.68, 0.83]) [7]. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, some secondary analyses from large trials have reported the benefit of n-3 fatty acid supplementation on CVD in diabetic populations with hypercholesterolaemia [32], chronic heart failure [33] and history of myocardial infarction [34]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further investigation of the benefits of n-3 fatty acid supplementation will, therefore, be required among people with type 2 diabetes and high CVD risks. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several mechanisms may explain the favourable associations between n-3 fatty acids and the risk of CVD. Previous clinical trials looking at intermediate cardiovascular outcomes among people with diabetes have reported that n-3 fatty acid supplementation could lower triacylglycerol concentrations [35, 36], improve arterial blood flow and attenuate inflammatory signals [37, 38]. These effects were supported by clinical trials in the general population and in experimental studies [39–41]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The present study observed the inverse associations between baseline plasma n-6 fatty acids and LA with the risk of death, but these associations attenuated after adjustment for multiple risk factors. Similar findings have been reported between serum LA and mortality in a cohort of older adults (≥65 years of age) [42]. We did not, however, detect significant associations between n-6 fatty acids and LA with the risk of macrovascular events. These results were consistent with those of previous observational studies [23, 24, 43] and directionally concordant with the recent pooled analyses of 30 cohort studies which reported that higher circulating and tissue levels of LA were associated with a lower risk of major cardiovascular events (HR 0.93 [95% CI 0.88, 0.99]) [44]. In addition, our study did not detect significant associations with the risk of CVD for circulating MUFA and SFA, which is consistent with previous studies [24, 43, 45], while some studies have reported that MUFA in blood were associated with a higher risk of CVD [46]. There were no significant associations between any fatty acids and the risk of microvascular events. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A further analysis specifically for renal outcome also demonstrated no significant associations. Although limited studies have assessed the association between circulating fatty acids and renal outcomes, in an Italian cohort of 931 adults, plasma n-3 fatty acids were inversely associated with the risk of developing renal insufficiency (creatinine clearance rate &lt;60 ml/min) [47]. However, in a cohort of 2792 individuals, levels of n-3 and n-6 fatty acids and SFA in plasma phospholipid were not associated with kidney function [48]. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CONCLUSIONS =&gt; In conclusion, we report distinct associations of different plasma fatty acids with the risk of major clinical outcomes in individuals with type 2 diabetes. In particular, plasma n-3 fatty acids were associated with a lower risk of macrovascular disease and death, and DHA was associated with a lower risk of macrovascular disease. These results support the cardioprotective effects of n-3 fatty acids and DHA and further merit testing the role of high-dose n-3 fatty acid supplementation in individuals with type 2 diabetes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">Lysine pathway metabolites and the risk of type 2 diabetes and cardiovascular disease in the PREDIMED study: results from two case-cohort studies</td>
+<td class="data">In the frame of the PREDIMED trial we found that XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) baseline lysine and especially 2-AAA circulating levels were associated with future risk of T2D but not with CVD risk; XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) a baseline diabetic status appeared to modify the association between baseline lysine levels and subsequent CVD risk so that only subjects who were diabetic at baseline exhibited an association between higher lysine levels and increased risk of future CVD; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (3) 1-year changes in lysine, 2-AAA and pipecolic acid were not associated with subsequent CVD or T2D risk; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (4) the MedDiet did not show any significant effect on 1-year changes neither in 2-AAA nor in lysine; XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (5) the MedDiet supplemented with nuts or with EVOO may be reducing CVD or T2D risk through the regulation of different biological mechanisms than those related to lysine degradation. However, MedDiet may be modifying the risk conferred by high levels of metabolites included in the lysine degradation pathway. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A previous work published by Wang et al. [5], found in two independent cohorts—Framingham Heart Study (FHS)-Offspring Cohort and Malmö Diet and Cancer Study (MDC)-Cardiovascular Cohort-that high 2-AAA predicted the risk of developing T2D in normoglycemic individuals.  XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results confirmed this association among subjects at high cardiovascular risk showing that the higher the baseline levels of 2-AAA, the higher the subsequent T2D risk in this Mediterranean population. This is an important replication and update of the results considering that all PREDIMED participants randomly selected for the T2D case-cohort were at high risk of developing CVD and had baseline glucose levels that can be considered as a proxy of a pre-diabetic status. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that it seems possible to predict the risk of developing diabetes conferred by 2-AAA even at a pre-diabetic stage. We found similar results for the association of lysine with T2D but this association was not as robust as that for 2-AAA. A recent small cross sectional study reported that 2-AAA was also associated with obesity and metabolic syndrome in addition to T2D [3]. Consistent with our results, they also reported that lysine presented similar but weaker associations with these metabolic conditions. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A mechanism potentially explaining these associations may be that 2-AAA is elevated in response to high glucose levels, leading to increased insulin secretion and promoting mechanisms involved in maintaining glucose homeostasis in early stages of insulin resistance [5]. In the case of lysine, it may be elevated at an early stage of this pathophysiological process to provide the 2-AAA substrate for a likely compensatory mechanism [3]. In concordance with these explanations, lysine was also found to be a predictor of insulin resistance and gestational diabetes during pregnancy in a previous study [18]. Moreover, both 2-AAA and pipecolic have been found to be elevated in diabetic corneas suggesting that this pathway may be also related to diabetes induced diseases [6]. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, we observed no association between baseline lysine, 2-AAA or pipecolic acid levels and subsequent incidence of CVD in non-diabetic subjects. However, the association of lysine with CVD was present in subjects with an initial diabetic status. Therefore, it is likely that this association may only be apparent among subjects with pre-existent T2D. In this context, diabetic status may behave as an effect modifier of the association between lysine and CVD. The p value for the interaction test was statistically significant, supporting this interpretation. This finding represents a novelty and deserves future replication in further independent cohorts. It can be speculated that this effect modification by pre-existent diabetes may suggest that lysine can be implicated in the development of complications associated with T2D, because high levels of lysine may represent a biomarker of a poorer control of glycemic levels in T2D. This interpretation should be taken with caution and further confirmation is needed. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition to the 2-AAA pathway of lysine degradation, L-homoarginine may be also synthesized from lysine catabolism and, this alternative pathway, involving arginine and nitric oxide synthesis [19, 20], may be related to CVD and T2D, as we have previously reported [21, 22]. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regarding the effect of the dietary intervention, we observed no effect of MedDiet on lysine, 2-AAA or pipecolic acid 1-year changes. Additionally, we did not find any significant multiplicative interaction between the MedDiet intervention and 1 year changes in lysine, 2-AAA or pipecolic acid. However, we found that Med-Diet may be modifying the effects of baseline lysine on CVD risk as we found a significant interaction between lysine and the intervention. In the same direction, results on 2-AAA and pipecolic acid pointed at the same effect of MedDiet + EVOO (non significant interaction). These results may be suggesting that although there is no  direct effect of diet on the levels of the metabolites, it is possible that MedDiet may be modifying the effects of metabolites on CVD or T2D risk by affecting other mechanisms that may involve different metabolic pathways, inflammation or oxidation.   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, our results provide an interesting independent replication of the association of 2-AAA with future risk of T2D, a similar association for lysine and pipecolic acid and a suggestion of a diabetes-dependent association of lysine with subsequent CVD risk. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">MetaboAnalyst 4.0: towards more transparent and integrative metabolomics analysis</td>
+<td class="data">Perhaps the most visible change to MetaboAnalyst is its newly designed web interface, which allows new features to be more easily ‘plugged in’. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It also gives more space to permit interactive exploration of large networks as well as to display R command history during data analysis. We believe the latter feature, in combination with the release of the MetaboAnalystR package, will greatly improve reproducibility and transparency during metabolomics data analysis. Many advanced MetaboAnalyst users have felt constrained by the analysis boundaries defined by its web interface, and have asked for a more flexible workflow design and batch processing capabilities. The MetaboAnalystR package addresses these limitations. Users can now create a workflow (R command history) through the web interface, customize the workflow by changing the order of the commands or their parameters, and finally execute the workflow in batch mode using the R package. For those researchers who are already familiar with R programming, it is also possible to directly modify the underlying R code to suit their needs. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another major focus of this MetaboAnalyst’s update is the addition of new modules to support further data integration (biomarker meta-analysis and multiomics analysis), as well as functional analysis for high resolution untargeted MS data. These additions were made in response to frequent user requests and growing trends seen in metabolomic data analysis practices. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, to ensure that the biological interpretation of metabolomic data remains as current and insightful as possible, all of Metabo-Analyst’s underlying knowledgebases have been updated. These updates will allow metabolomics researchers to move beyond simply re-iterating common textbook interpretations of metabolism, and give them much more useful insights into complex and relevant biological processes that are ultimately driven by metabolites. Overall, we believe these updates will allow MetaboAnalyst to remain at the cutting edge of computational metabolomics and systems biology, and that it will continue to enable new discoveries and greater insights for a growing number of metabolomics researchers. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">Metabolomics and Isotope Tracing</td>
+<td class="data">An important direction in metabolomics is standardization of analytical procedures (Salek et al., 2015). This addresses several needs. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, while the individual steps of analysis are not especially complicated, building an effective integrative workflow remains tricky. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, standardization of chromatography is needed to enable effective sharing across laboratories of peak identities. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Well-vetted libraries of exact mass and retention time should eventually enable automated quantitation of known metabolites. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Standardized procedures should also include posting of annotated data tables, including measured masses, retention times, and individual sample peak intensities, to public repositories. With continuous improvements in instrumentation, standardization of protocols, and automation of data analysis and sharing, metabolomics is poised to be increasingly broadly available and useful to biologists over the coming decade. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX STRENGTHS =&gt; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX WEAKNESSES =&gt; XXXXXXXXXXXXXXXXXXXXXXXXXXXXX FUTURE RESEARCH =&gt; What are the frontiers? One immediate need is better understanding the scope of metabolites. There is a vast gulf between the ~ 200 water-soluble metabolites that many labs now routinely measure, and the ~ 10,000 peaks that are found in a typical LC-MS run. Most of this difference is the result of individual metabolites producing many different ions, due to adduct formation and in-source fragmentation (Mahieu and Patti, 2017). After accounting for these phenomena, however, there may still be more unknown than identified metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A longer term goal is to capture the spatial organization of metabolism. Genetically-encoded fluorescent metabolite reporters provide an unmatched combination of spatial and temporal 
+resolution and are amenable to live imaging. Effective ones are available, however, for only a few metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A promising alternative is imaging mass spectrometry (BodzonKulakowska and Suder, 2016). Since there is no chromatographic step to separate isomers and in-source degradation products, a key challenge in imaging mass spectrometry is ensuring accurate peak identification. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Current methods have a spatial resolution of about 20 µm, which is sufficient to assess metabolite levels in different tissue and tumor regions, but not across subcellular organelles. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To determine organellar metabolite levels, an auspicious approach is rapid organelle purification, which is facilitated by genetically encoding an affinity tag on the organelle of interest (Chen et al., 2016). Metabolomics can then be performed as for any other sample. Users need to be mindful of the potential for metabolite alterations, either due to continued enzymatic activity or metabolite leakage during the purification process. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Imaging mass spectrometry and organelle purification will both be most valuable in combination with isotope tracing. A key opportunity is to use multiple tracers and measurement methods to reveal metabolic activity across tissues, cell types, and intracellular organelles. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A major challenge will be making sense of the data. Graphical representation of labeling patterns and intuitive data interpretation is likely to continue to be important, but, as complexity increases, mathematical modeling may become more central to driving biological discovery. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This Primer explicitly does not discuss large-scale quantitative flux analysis, because it currently relies on modeling that is beyond the capacity of most labs. Development of software that makes quantitative flux analysis broadly accessible is an important goal.  For such efforts to maximize their impact, they must ultimately allow flux determination in multi-compartment systems, including organs connected via the circulation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For such efforts to maximize their impact, they must ultimately allow flux determination in multi-compartment systems, including organs connected via the circulation. Combined progress in experimental and computational methods hold the potential to produce a picture of metabolism in action, in space and time. The resulting knowledge should inform many of society’s greatest challenges, from green technology to cancer therapy. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Identification of Neuroendocrine Stress Response-Related Circulating MicroRNAs as Biomarkers for Type 2 Diabetes Mellitus and Insulin Resistance</td>
+<td class="data">This study identified the association between plasma expression
+of neuroendocrine stress response-related miRNAs and T2DM as well as IR in an occupational cohort. Based on the differential miRNA expression profile and bioinformatic analysis, six stress-related miRNAs (let-7b, let-7i, miR-142, miR-144, miR-155, and miR-29a) associated with T2DM were selected for qRT-PCR validation. We found that the average expression levels of let-7b, miR-142, miR-144, and miR-29a were significantly different between T2DM patients and healthy controls. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The increased expression of let-7b, miR-144, and miR-29a and decreased expression of miR-142 were significant-independent predictors of T2DM, IFG, and even IR. At the same time, ROC analysis showed that a three-miRNA panel, including let-7b, miR-142, and miR-144 had a high accuracy for diagnosing T2DM. A number of miRNAs have been shown to be important signatures or therapeutic targets in patients with T2DM in circulation and specific tissues (25, 26). miR-184 was reported as a highly regulated miRNA impacting the growth and function of the β-cell. By targets Argonaute2, miR-184 plays adaptive role of the miRNA pathway based on metabolic state (27). Stress-induced overexpression of miR-708 suppressed β-cell proliferation and induced β-cell apoptosis, which provide a novel mechanism of glucose regulation of β-cell function and growth (28). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Comparing to tissue biomarkers, circulating miRNAs are preferred due to easier sampling and testing. Circulating miR-192 and miR-193b were even found significantly increased in the prediabetic state (29). Some other miRNAs have also been identified as biomarkers for diabetic complications, such as plasma miR-152 and diabetic nephropathy, and miR-93 and diabetic retinopathy (30, 31). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, circulating miRNAs may help to predict the development and progression of T2DM. Increasing evidence indicates that psychosocial factors facilitate the development and progression of central obesity and T2DM, possibly as the results of increasing insulin resistance (32). In our previous study, the Copenhagen Psychosocial Questionnaire was used to assess job-related psychosocial stress. We found that after adjustment for the influence of cortisol, HOMA-IR was also significantly associated with scales of “demands at work” and “insecurity at work” (6). Psychosocial factors interact with biological mechanisms at several levels in the organisms include neuroendocrine, metabolic, and molecular responses. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Stress hormones influence glucose metabolism by stimulating gluconeogenesis and impairing glucose uptake in peripheral tissues like fat and muscle (8, 33). Activation of stress hormones secretion is mediated by neuronal signals. Repeated stress activates hypothalamic paraventricular nucleus to synthesize CRH, the major regulator of stress responses. Anterior pituitary responds to CRH to produce adrenocorticotropic hormone (ACTH), which is released into the circulation and promotes synthesis and release of glucocorticoids (cortisol in humans) at the level of the adrenal gland (34). The HPA axis controlling cortisol secretion and the SNS both originate in the hypothalamus and they are interlinked, and hyperactivity in one of them can activate the other (35). XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study showed that plasma levels of E, NE, cortisol, and CRH significantly higher in T2DM group than those in control group (P &lt; 0.05). Cortisol and CRH also showed significantly higher levels in the IFG group when compared with controls (P &lt; 0.05). These results provide evidence for the association between chronic stress and T2DM based on an occupational population study. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Elevated activities in both HPA axis and SNS, which were triggered by psychosocial factors have also been reported in individuals with the metabolic syndrome (36). Increased plasma IL-6 levels in T2DM patients and correlation of IL-6 with cortisol in this study maybe another evidence in the pathway between chronic stress and T2DM, since various psychological stressors alone can induce proinflammatory (36, 37). Cellular responsiveness to stress hormone depends on the amount of corresponding receptor protein. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Significant upregulated expression of let-7b and miR-144 in T2DM patients in our study may indicate downregulated expression of their target gene, including ADBR2/ADBR3 (β-adrenoreceptors) and NR3C1 (GR), respectively. Sheng, et al. verified that the protein expression of ADRB3 was regulated by direct binding of let-7b at 3′-UTR (22). In addition, they found that let-7b was negatively correlated with ADRB3 protein level and had a decreased expression in perivascular adipose tissue of hypertensive mice. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cortisol treatment reduced NR3C1 mRNA levels and increased miR-144 expression in hippocampus and sperm of mice (24). The evidence of NR3C1 as the target of miR-144 can also be obtained from next-generation sequencing (miRTarBase). Positive correlation between let-7b and E/NE, miR-144 and cortisol in the study subjects indicated decreased stress hormone receptor expression, which reflects the negative feedback mechanisms for controlling the magnitude of responses to stress (34). Our previous population-based study showed that chronic stress increase plasma cortisol, which subsequently decrease mRNA expression of GRα and increase of GRβ / GRα mRNA ratio in lymphocyte (14). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX miR-142, which mediated the expression of CRH, showed lower levels in either T2DM or IFG individuals compared with controls. miR-142 also participates in the inflammatory response by regulating the production of IL-6 (23). Both plasma CRH and IL-6 were negatively associated with miR-142 expression in total subjects, which may be explained by the inhibitory effect of miRNA on target genes. Microarray analysis revealed the downregulation miR-142 in the peripheral blood of mice associated with pronounced enhanced oxidative stress (22). XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX miR-29a was reported to be involved in the glucocorticoids signaling pathway (24) and chronic academic stress excessive glucocorticoids reduce the expression of miR-29a (13). The association may partially be explained by receptor gene NR3C1 and CRHR1. Although miR-29a expression significantly associated with T2DM and HOMA-IR, relatively weak correlations exist only between miR-29a and cortisol (r = 0.183) in the total subjects. It is possible that miR-29a regulates glucose metabolism though other pathway. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; It is the first time that we systematically investigated the relationship between plasma expression of neuroendocrine stress response-related miRNAs and T2DM at population level. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The reasonable diagnostic accuracy of miRNA panel (let-7b, miR-142, and miR-144) indicates their clinical value in diagnosing T2DM. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is worth noting that significantly altered expression of let-7b, miR-142, miR-144, and miR-29a was found even at the stage of pre-diabetes in this study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These miRNAs were also identified as significant-independent predictors of insulin resistance which is an important component of the pathophysiological processes that underlies the development of T2DM. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The findings of this study support the hypothesis that neuroendocrine stress response-related miRNAs may play a role in the pathogenesis of T2DM and insulin resistance by regulating those target genes which involve neuroendocrine pathways of stress responses, which unveils new targets for the prevention, prediction, and more personalized treatment of neuroendocrine stress-related disorders, including T2DM.  XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">Evaluation of Two-Diabetes Related microRNAs Suitability as Earlier Blood Biomarkers for Detecting Prediabetes and type 2 Diabetes Mellitus</td>
+<td class="data">The increase in the incidence of prediabetes in parallel with the rapid increase of T2D prevalence worldwide [1,2] raises an urgent need to develop effective biomarkers for disease detection at an early stage to facilitate future preventive interventions and improve patient’s care [15,16]. microRNAs (miRNAs), a group of small non-coding RNA molecules, have been reported to regulate important cellular processes and are also implicated in many pathological conditions [19]. Being released by cells into the circulation and stalely detected in blood [24], miRNAs have shown promise as prognostic, diagnostic and predictive biomarkers [25–27]. Studies from our group and others have also demonstrated the stability and utility of peripheral blood miRNAs as biomarkers for prediabetes, T2D and other diseases [28,29]. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies have demonstrated that aberrant expression of numerous miRNAs including miR-375 and miR-9 influence insulin signaling pathway, insulin resistance and play a major role in T2D [20]. Both miR-375 and miR-9 were previously reported as important regulators of insulin secretion and glucose homeostasis [22,23]. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, in this study we examined the expression of the diabetes-related miR-375 and miR-9 by TaqMan-based RT-qPCR in peripheral blood of prediabetes patients, T2D patients and non-diabetic healthy individuals and evaluated their suitability as earlier blood biomarkers for detecting prediabetes and T2D. We found that both miR-375 and miR-9 were expressed at higher levels in prediabetes patients and progressively more enriched in T2D patients as compared controls. We also observed that miR-375 expression was significantly higher in T2D patients than in prediabetes patients. On the other hand, although miR-9 expression was observed to be higher in T2D patients than prediabetes patents, it was not however significant. Increased the expression of miR-375 and miR-9 in prediabetes and T2D patients are in agreement with a previous report by Kong et al. [32] showing increased miR-375 and miR-9 in sera from patients with prediabetes and T2D. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In our study, multivariate logistic regression analysis using crude an adjusted models revealed a direct association between miR-375 and miR-9 with the presence of prediabetes and T2D and this association remained significant following adjustment for age, sex, BMI, mean blood pressure, triglyceride, total cholesterol and LDL. These results may suggest an involvement of these two of miR-375 and miR-9 in the pathogenicity of T2D. Additionally, multivariate logistic regression analysis confirmed a significant association of miR-375 but not miR-9, with the development of T2D independently of age, sex, BMI, mean blood pressure, HbA1c, total cholesterol, triglyceride and LDL. These results indicate a possible link between miR-375 and the progression from prediabetes to T2D. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Both miR-375 and 9 are islet-specific microRNAs which expressed at high levels during human pancreatic islet development [21]. Poy et al. [22,33] have demonstrated that miR-375 is abundantly expressed in the pancreatic B–cells and essential for maintaining normal pancreatic cell mass. It functions as a negative regulate of glucose-stimulated insulin secretion through controlling the expression of myotrophin (Mtpn) and phosphoinositide-dependent protein kinase-1 (Pdk1) genes [22,34]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Overexpression of miR-375 suppresses insulin secretion, whereas its downregulation enhances insulin release [22]. Therefore, miR-375 is a key player in regulation of insulin release and glucose homeostasis [22]. miR-9 also participates in regulation of insulin secretion through the effect on insulin exocytosis from the pancreas [23]. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Overexpression of miR-9 inversely correlates with glucose stimulated insulin release by directly targeting Onecut2 (OC2), the latter inhibits the expression of Granuphilin / Slp4. While, overexpression of OC2 suppresses Granuphilin transcription [35]. Impaired insulin secretion and action occur both in prediabetes and T2D patients [8,9]. These metabolic abnormalities may precede T2D for years [9,10] and a high percentage of prediabetes patients will progress to clinical T2D [9,10]. Based on the important regulatory roles of miR-375 and miR-9 in insulin secretion, upregulations of miR-375 and miR-9 in blood of prediabetes and T2D patients observed in the current study further support our earlier suggestion that these two miRNAs participation in the pathogenicity of T2D and miR-375 is associated with the T2D progression. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several epidemiological studies have shown that factor like age, obesity, dyslipidemia, uncontrolled hyperglycemia, hypertension and family history contribute to increased risk of progression to T2D [36,37]. In our study, miR-375 and miR-9, which were significantly elevated in prediabetes and T2D patients, displayed positive correlations with FG and HbA1c both in the two groups of patients. Moreover, miR-375 and miR-9 were positively correlated with mean blood pressure and total cholesterol both in prediabetes and T2D patients and miR-9 was also positively correlated with age and BMI. These results may imply a link between the two miRNAs and the susceptibility to developing T2D. Studies using animal models of diabetes have shown that increased circulating levels of miR-375 serve as useful predictor of diabetes and  B–cell death [38,39]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the present study, the ROC curve analysis revealed that miR-375 discriminated both prediabetes and T2D patients from healthy subjects and also differentiated between prediabetes patients from T2D patients with significant diagnostic ability. Similar to our results, a previous study by Higuchi et al. [40], found a significant increase in the expression of miR-375 in T2D patients and suggested a possible use of this miRNA as a biomarker for T2D. Notably, our results extended these finding and showed that elevated miR-375 expression could be a useful biomarker not only for T2D but also to identify prediabetes patients who are at risk of developing T2D. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Contrary to miR-375, the ROC curve analysis in our study showed lower diagnostic value and borderline significance for miR-9 in discriminating between the three subject groups, suggesting that miR-9 is not a potentially good biomarker for prediabetes and T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, the combination of miR-375 with miR-9 enhanced the predictability to discriminate prediabetes patients from healthy subjects as well as T2D patients from healthy subjects. However, the combined miR-375 with miR-9 did not significantly enhance the predictability to discriminate prediabetes patients from T2D patients. Despite these results, increased miR-9 expression in prediabetes and T2D patients and its correlation with T2D risk factors suggests an association with the susceptibility to T2D. XXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; Our study demonstrated that blood miR-375 and miR-9 were expressed at higher levels in prediabetes and T2D patients compared with non-diabetic healthy subjects and progressively more enriched in T2D patients. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Both miRNAs were directly associated with the presence of prediabetes and T2D independently of known risk factors to T2D and miR-375 was independently associated with the development of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX miR-375 and miR-9 were positively correlated with the glycemic status and other T2D risk factors, implying a link between the two miRNAs and the susceptibility to developing T2D. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study also showed a high diagnostic ability for miR-375 but not miR-9, to distinguish overall patients from control and prediabetes from T2D patients, whereas, the combination of miR-375 with miR-9 -375 showed a good diagnostic ability to discriminate overall patients from controls, indicating that miR-375 alone or in combination with miR-9 could serve as biomarkers for early detection of prediabetes and T2D. XXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">Early metabolic markers identify potential targets for the prevention of type 2 diabetes</td>
+<td class="data">Using comprehensive metabolomics profiling, we have identified
+a novel multivariate panel of metabolic markers consisting of glucose, mannose, α-HB, α-tocopherol, [Hyp3]-BK, X-12063 and X-13435, whose concentrations in fasting serum samples predicted future progression to type 2 diabetes in an otherwise healthy, normoglycaemic population, years before the onset of type 2 diabetes (Fig. 3, Table 3). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These metabolic markers significantly improved the prediction of progression towards type 2 diabetes, showing the added value of screening metabolites along with clinical risk factors. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Statistical association testing and machine learning-based predictive modelling identified metabolic changes that preceded type 2 diabetes. Statistical tests identified 34 significant metabolites, yet multivariate predictive models required only five metabolites for the optimal prediction of progression to type 2 diabetes. While the metabolite features identified using both approaches are well supported in type 2 diabetes literature, our novel contribution was in systematically assessing the predictive performance of the biomarker panel in type 2 diabetes risk prediction. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXSTATISTICAL ASSOCIATIONS =&gt; Histidine, glutamine and the (E,E)-isomer of bilirubin were negatively associated with type 2 diabetes risk independent of clinical risk factors (ESM Fig. 2b). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Histidine-mediated suppression of hepatic glucose production has previously been suggested as a potential target for the treatment of type 2 diabetes [25]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a double-blind placebo-controlled trial in participants with type 2 diabetes, glutamine supplementation yielded positive results [26]. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Bilirubin has previously been reported to be negatively correlated with progression to diabetic
+nephropathy in individuals with type 2 diabetes [27, 28]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Glutamate and trehalose were positively associated with type 2 diabetes risk independent of clinical risk factors (Table 2, Fig. 1, ESM Fig. 2a). Plasma glutamate levels are known to be elevated in several diseases characterised by chronic oxidative stress and inflammation. Furthermore, chronically high extracellular glutamate levels may directly or indirectly contribute to the progressive loss of beta cells in both type 1 and type 2 diabetes [29]. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although trehalose is widely regarded as a safe food ingredient even for individuals with diabetes, trehalose was associated with increased type 2 diabetes risk in this study. Similar results have been previously reported in an African-American population [30]. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX PREDICTIVE MODELLING =&gt; The machine learning model based on the entire metabolome accurately predicted the future incidence of type 2 diabetes. To derive a more interpretable model, we performed feature selection and identified the most predictive metabolic markers (Fig. 3, Table 3). Combining clinical variables with the selected markers significantly improved the predictive performance over the reference model with clinical variables alone, and led to the model with the highest predictive performance. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Even after excluding glucose, the combined predictive model outperformed the clinical reference model that contained fasting glucose (p = 0.0066, ESM Fig. 6), showing that the predictive performance of the marker panel was not solely due to glucose.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Excluding glucose as well as mannose from the marker panel resulted in a reasonable combined predictive model (AUC = 0.75) that outperformed the reference model (p = 0.04), further supporting the value of our novel markers. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Among the biomarkers identified using feature selection (Fig. 3, Table 3), three showed negative associations and four showed positive associations with type 2 diabetes risk. The negatively associated markers were [Hyp3]-BK, α-tocopherol and X-13435 and, to the best of our knowledge, this is the first metabolomics study revealing the value of these markers in predicting type 2 diabetes risk. The positively associated markers were glucose, mannose, α-HB and X-12063. Mechanisms by which mannose is associated with an increased risk of type 2 diabetes independently of glucose have previously been suggested [31]. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Identifying the unknown markers X-13435 and X-12063, although non-trivial, may reveal potentially novel pathways associated with progression to type 2 diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BK is a peptide that causes vasodilation associated with BP lowering and protection from CVD [32]. [Hyp3]-BK is a BK analogue in which the third amino acid, proline, is hydroxylated. In this study, [Hyp3]-BK was negatively associated with type 2 diabetes risk independent of CVD risk (p = 2.2 × 10−6). However, as BK was elevated in progressors, showing an opposite trend (data not shown), we additionally tested the association of the total amount of BK and [Hyp3]-BK with progression. The total BK level was also negatively associated with progression to type 2 diabetes (p = 0.004). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Diabetes decreases the activity of the kallikrein–kinin system by reducing the synthesis of plasma prekallikrein and hence BK, resulting in endothelial dysfunction [33, 34]. The current study revealed reduced levels of total BK far before the onset of type 2 diabetes, indicating a potential early role for the kallikrein–kinin system or oxidative stress and DNA damage associated with reduced BK in progression to type 2 diabetes. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Interestingly, physical exercise improves glucose uptake by skeletal muscle resulting in improved insulin sensitivity, an effect that is partially mediated by an increased BK concentration, suggesting a mechanism by which physical exercise would contribute to the prediction of type 2 diabetes [33, 35–37]. [Hyp3]-BK was associated with type 2 diabetes risk independently of physical activity, antihypertensive medication and CVD (ESM Fig. 2c).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A-TOCOPHEROL =&gt; A reduction in α-tocopherol, the most biologically active form of vitamin E in humans, was seen in progressors, and it was selected in the biomarker panel. Although observational studies have previously indicated a protective effect of vitamin E supplementation on glycaemic control in type 2 diabetes, randomised controlled trials have not confirmed the effect [38–40]. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX THE UNKNOWNS (X-13435 AND X-12063) =&gt; The unknown metabolite X-12063 showed a strong association with progression towards type 2 diabetes, and was selected in the biomarker panel (Fig. 3). Although its identity is currently unknown,
+this metabolite has previously been noted to be significantly associated with insulin resistance and glucose intolerance [14]. X-13435, which was not identified in earlier metabolomics studies, did not show univariate statistical association, but predicted type 2 diabetes risk jointly with the other markers. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX All of the metabolic markers were associated with progression to type 2 diabetes independently of fasting glucose (ESM Fig. 2c). Except for X-13435, they were all associated with progression to type 2 diabetes independently of CVD, physical activity and use of hypertension medication. While mannose was highly correlated with fasting glucose, [Hyp3]-BK and X-12063 showed statistically significant yet low correlations. Similarly, α-HB showed a relatively low correlation, although statistically significant, with fasting glucose (ESM Table 2). Taken together, the statistical analysis and predictive modelling identified a variety of known metabolic changes associated with progression to type 2 diabetes (ESM Fig. 2). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In agreement with a recent meta-analysis [9], our study identified changes in BCAAs (valine and isoleucine), amino acids (histidine, glutamine and glycine), sugars (glucose and mannose) and other metabolites (glutamate, α-HB and L-GPC). XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BENCHMARKING OF THE PREDICTIVE MARKERS =&gt; According to our benchmarking results, our new biomarker panel performed better than previously published metabolic markers, namely α-HB and L-GPC [14, 15] and amino acids [13]. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX α-HB was associated with increased insulin resistance and glucose intolerance, whereas L-GPC was protective [14, 15]. Predictive modelling with α-HB and L-GPC revealed a high predictive performance (AUC = 0.72; ESMFig. 7), when combined with clinical covariates. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BCAAs are associated with insulin resistance, and the combination of isoleucine and the amino acids tyrosine and phenylalanine has been reported to predict the risk of type 2 diabetes 12 years before disease onset [13]. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consistent with previous studies, joint modelling of isoleucine, tyrosine, phenylalanine and clinical covariates showed high predictive performance (AUC = 0.71; ESM Fig. 7). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; Progressors and non-progressors have different metabolic profiles years before they develop overt type 2 diabetes. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this study, a combination of known markers such as glucose, mannose and α-HB, and novel markers such as α-tocopherol, [Hyp3]-BK, X-12063 and X-13435, was found to accurately predict progression to type 2 diabetes. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Interestingly, the negative association of [Hyp3]-BK with progression to type 2 diabetes highlights a possible mechanism by which interventions such as exercise could contribute to the prevention of type 2 diabetes. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">Can NMR solve some significant challenges in metabolomics?</td>
+<td class="data">10. BIOMARKER DISCOVERY AND TRANSLATION =&gt; In response to the growing need for improved diagnostic tests and new therapies, many biomarker discovery efforts are being made for translational applications focused on early disease detection, therapy prediction and prognosis, treatment monitoring and recurrence detection, as well as the important area of therapeutic target discovery. Numerous human diseases including inborn errors of metabolism, diabetes, cardiovascular disease, neurological diseases and cancer have been the targets of biomarker discovery efforts [4,108–111]. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our own work in biomarker discovery has mostly focused on identifying potential metabolite biomarkers for various types of cancers. For example, we have used NMR-based metabolite profiling to identify promising serum metabolite biomarkers of hepatocellular carcinoma [112], and pancreatic cancer [113]. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Using a combination of NMR and MS analysis, a panel of serum biomarkers consisting of amino and organic acids was identified for the early detection of breast cancer recurrence [114]. Separately, a combination of NMR and MS detected biomarker candidates were identified that can predict response to neoadjuvant chemotherapy for breast cancer [115]. Similarly, biomarkers for esophageal cancer have been identified using NMR or in combination with MS [116,117]. See Fig. 20 for examples of these studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In order to translate the discovered biomarkers to clinical use, a number of validation steps are needed [4,118]. A first step typically involves pre-validation of the putative biomarkers to reduce the number of false positive biomarker candidates, and to assess the overall accuracy of initial multivariate models. Multivariate models are typically cross-validated either by splitting the data into a training and testing set, or by using a leave-n-out procedure, with typically 1% &lt; n &lt; 30% for n samples. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The models are then evaluated by determining the diagnostic sensitivity and specificity, or more generally using a receiver operative characteristic (ROC) curve (Fig. 20c) to describe overall performance. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The robustness of models can be tested using Monte Carlo Cross Validation (MCCV) [119], in which the whole dataset is randomly divided into training and testing sets to assess not only the predictive model&apos;s average performance, but also its range (Fig. 20d) [115]. This process is then iterated hundreds of times to evaluate the average accuracy of the model. Validation studies for translational applications should be properly designed and ideally take into account biological or technical variations. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 11. CONCLUDING REMARKS =&gt; In summary, NMR spectroscopy continues to play a key role in the metabolomics field. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">Peripheral blood microRNA-15a is a potential biomarker for type 2 diabetes mellitus and pre-diabetes</td>
+<td class="data">Previous studies have reported that serum and plasma miRNAs may serve as novel biomarkers for various diseases, including T2D (14,17‑21). Furthermore, miRNAs in peripheral whole blood have also shown promise as a novel class of biomarkers for the detection of several types of cancer, such as brain (22) and breast (23) cancer, as well as acute myocardial infarction (24), and other human diseases (25). A study by Karolina et al (30) reported an miRNA marker in the peripheral whole blood of patients with T2D patients and IFG. Their study demonstrated that these blood miRNAs (miR‑144, miR‑146a, miR‑150, miR‑182, miR‑192, miR‑29a, miR‑30d and miR‑320a) may serve as unique biomarkers that are reflective and predictive of T2D (30). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The present study examined the expression levels of T2D‑associated miR‑15a (21) in the peripheral whole blood of patients with T2D, pre‑diabetes individuals (IFG/IGT), and healthy control subjects, and investigated the potential use of blood miR‑15a as a biomarker for predicting T2D and pre‑diabetes. The results demonstrated that blood miR‑15a expression levels were significantly lower in patients with T2D and IFG/IGT individuals, compared with healthy controls. Furthermore, a strong association was observed between lower miR‑15a expression levels and T2D, as well as pre‑diabetes. Notably, this association was not altered following adjustment for known risk factors and certain other biochemical indicators. In a previous population‑based cohort study, Zampetaki et al (21) demonstrated a similar pattern of expression, with circulating plasma miR‑15a expression levels being lower in patients with T2D. The results from the present study extended the association of lower miR‑15a expression levels to pre‑diabetes individuals. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A previous study demonstrated that miR‑15a is implicated in controlling cell cycle and apoptosis in cancer cells (31). The expression levels of miR-15a were shown to inversely correlate with the expression levels of cyclin D1, and negatively regulate those of B‑cell lymphoma 2, a key anti-apoptotic protein (32). XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recently, miR‑15a has been demonstrated to positively regulate and promote insulin biosynthesis by targeting and inhibiting endogenous uncoupling protein‑2 gene expression (33). The overexpression of miR-15a in transfected MIN6 (mouse insulinoma) cells increases insulin secretion, and its suppression decreases insulin levels (33). Therefore, miR‑15a was suggested as an important mediator of β cell function and insulin synthesis, and a possible therapeutic agent for diabetes (33). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The progression from pre‑diabetes (IFG and/or IGT) to early T2D is marked by a decrease in β cell function, and thus a decline in insulin secretion, followed by a failure of β cells to compensate for insulin resistance with hyperinsulinemia that marks the beginning of T2D (3,4). Individuals with IFG have a 20‑30% chance of developing T2D over the following 5‑10 years, and the risk is even higher if individuals with combined IFG and IGT (34,35). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The observation of the present study that blood miR‑15a expression levels were decreased in patients with T2D and IFG/IGT individuals may suggest that miR‑15a expression correlates with disease development. In the present study, the ROC curves revealed that blood miR‑15a levels have a promising ability to distinguish patients with T2D and IFG/IGT individuals from healthy controls, which suggested a potential use of peripheral blood miR‑15 as a biomarker for T2D and pre‑diabetes.  Given that lifestyle interventions may be highly effective in delaying the onset and progression of T2D (7), the evaluation of peripheral blood biomarkers that are capable of distinguishing between patients with T2D and healthy individuals may lead to a novel preliminary screening method to prevent T2D, through the early identification of individuals who are at a higher risk of developing the disease, particularly those individuals with pre‑diabetes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt;  In conclusion, the results of the present study demonstrated that the expression levels of miR‑15a were significantly lower in the peripheral whole blood of patients with T2D and pre‑diabetes individuals, compared with healthy controls, and that miR-15a in peripheral whole blood may serve as a potential biomarker for the prediction of T2D and pre‑diabetes. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">Biomarkers of rapid chronic kidney disease progression in type 2 diabetes</td>
+<td class="data">In this study of individuals with type 2 diabetes and CKD3 we found that within a large set of candidate and global discovery biomarkers, at least 62 showed some evidence for association with subsequent rapid renal function decline. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Many of these biomarkers showed high correlations with each other and with clinical covariates so that a much sparser set of 14 biomarkers contained most of the predictive information beyond clinical covariates. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found that the increment in prediction with these biomarkers was of sufficient magnitude that it would be useful for risk stratification into clinical trials. Some of the biomarkers identified in the most predictive panels are already known to be associated with eGFR (that is, β2-microglobulin and cystatin-C), whereas others have little or no prior data (for example, SDMA/ADMA ratio, FGF-21, and uracil). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The best biomarker panel for prediction consisted of the restricted clinical covariates along with 35 biomarkers; however, this was only modestly better than the best sparsemodel that only required measurement of 14 biomarkers. The expense and logistics associated with validation and subsequent utilization of any new panel means that the 14 biomarker panel represents a more pragmatic approach. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This panel of biomarkers now warrants further evaluation in other cohorts. We used clinical creatinine measurements to calculate eGFR in this study, and as there is considerable variability in this measure, it is unsurprising that the in-sample measure of creatinine was also selected in our biomarker panels. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Space does not permit a detailed discussion of each of the 14 biomarkers selected and some of the associations have been described elsewhere. (5,6) Here we focus on some of the more novel associations. One of the strongest predictive biomarkers in our study released during proteolytic breakdown of nuclear proteins and both have been studied as biomarkers for cardiovascular disease (CVD) (7–9). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SDMA is primarily excreted via the kidney and is strongly associated with renal function, (7) but there is also some evidence that the protein methyl-transferase PRMT5 that synthesizes SDMA regulates interleukin-2-gene expression, (10) suggesting that higher levels of SDMA might also reflect inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We did not find any association of SDMA with inflammatory biomarkers such as C-reactive protein, but there was a positive correlation (rho = 0.39) with interleukin-2 receptor α levels. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, rather than a bioactive effect of SDMA itself, the observed prediction in our study may simply indicate that SDMA accumulates when filtration falls and thus it is predictive because it is a good biomarker of filtration. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to SDMA we found that ADMA was only weakly inversely correlated with eGFR but more strongly correlated with arginine. The ratio may be a biomarker of these complex interactions and we note that was the ratio of SDMA/ADMA. SDMA and ADMA are models including the ratio yielded higher AUROCs than models including ADMA and SDMA separately. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX KIM-1 is a protein expressed on the apical membrane of proximal tubule cells. Its ectodomain is shed into the lumen and serves as a urinary biomarker of kidney injury, although there have been mixed results for it as a prognostic biomarker in diabetic kidney disease, (11,12). Studies have shown that KIM-1 expression is increased in the glomerulus in diabetic animal models (13) and is elevated in their plasma (14). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recently, it was reported that shed KIM-1 also serves as a blood biomarker of kidney injury in humans, as plasma KIM-1 levels were higher in patients with acute kidney injury than in healthy controls or postcardiac surgery patients without acute kidney injury (2). In that study serum KIM-1 level at baseline in type 1 diabetes patients strongly predicted rate of eGFR loss and risk of ESRD during 5–15 years of follow-up. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We identified associations with rapid progression of two fibroblast growth factor members FGF-21 and FGF-23. FGF-21 is a 181 amino acid polypeptide secreted predominantly by the liver and adipose tissue and has been shown to play an important role in lipid and energy metabolism (15,16). Previous studies have reported cross-sectional associations with eGFR (17). Median serum FGF-21 levels were  &gt; 7–15-fold higher in dialysis patients than controls (18,19) but fell after short-term angiotensin blockade (19). In cross-sectional studies FGF-21 levels were also elevated with albuminuria even when eGFR was  &gt; 60 ml/min (20). FGF-21 was independently associated with urinary albumin in type 2 diabetes (20). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The kidney has relatively low levels of FGF-21, (21) and FGF-21 activity depends on the tissue-specific expression of its cofactor Klotho β that is predominantly in the liver and adipose tissue rather than the kidney. Thus, association between FGF-21 and renal disease progression may reflect simple accumulation in renal disease. However, it might also reflect an antifibrotic response; it was shown that FGF-21 prevented the expression of profibrotic cytokines, including transforming growth factor-β1 in the kidney (22). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FGF-23 is a 32-kD bone-derived hormone with several known endocrine functions in the kidney, including the promotion of urinary phosphate excretion and the inhibition of the hydroxylation of 25-hydroxyvitamin D (23). Elevated FGF-23 was an independent risk factor for ESRD in patients with relatively preserved kidney function and for mortality across the spectrum of CKD (24). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recently, it was shown in 13,448 subjects of the Atherosclerosis Risk in Communities study (ARIC) that higher serum level of FGF-23 were associated with increased risk of incident ESRD, independent of the baseline level of kidney function and a number of other risk factors (25). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX C16-acylcarnitine was one of the strongest predictors of rapid progression in our study. Previously in the KORA cohort, acylcarnitines and especially the ratio of serine to glutarylcarnitine were associated with eGFR, (26) and in FinnDiane study urinary acylcarnitines were associated with</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data">Alternative biomarkers for assessing glycemic control in diabetes: fructosamine, glycated albumin, and 1,5-anhydroglucitol</td>
+<td class="data">The growing attention to non-traditional glycemic biomarkers is attributable to the limitations of the HbA1c assay (47-49). It is important to recognize the conditions in which HbA1c levels may be difficult to interpret. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Use of these alternative markers can be more helpful in the management of diabetes as complement standard measures. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data">Circulating microRNAs and diabetes: potential applications in medical practice</td>
+<td class="data">While the field is still in its infancy, circulating miRNAs appear to offer various potential applications in medical practice as biomarkers of diabetes and associated complications. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Different applications can be envisioned, such as prediction of the disease, detection and monitoring of its complications, evaluation of treatment efficacy and the characterisation of pathogenic traits such as insulin resistance for type 2 diabetes and the autoimmune process for type 1 diabetes.  While improvements in the standardisation of pre-analytical and analytical methods are needed and additional studies on larger cohorts are required before circulating miRNAs can be introduced into medical practice, miRNAs appear to be bona fide biomarkers for diabetes in the future. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Even if the measurement of circulating miRNAs currently has limitations, miRNAs are likely to become useful in the near future. Indeed, one can anticipate that they will complement existing biomarkers, especially in the context of the early identification of individuals at high risk to develop diabetes, and in the detection and the follow-up of diabetic complications. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Indeed, circulating miRNAs contained in vesicles or associated with HDL can be transferred into recipient cells and thus could be involved in cell-to-cell communication [12, 14]. To date, a series of studies has investigated the role of circulating miRNAs as intercellular mediators in diabetic conditions, pointing to possible new mechanisms in diabetes pathogenesis [99–101]. It is clear that the precise potential of circulating miRNAs in complex and multifactorial diseases such as diabetes requires further confirmation both in terms of a biomarker and its involvement in disease mechanisms.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data">Advantages and pitfalls of fructosamine and glycated albumin in the diagnosis and treatment of diabetes</td>
+<td class="data">An early diagnosis of diabetes and a strict glucose control are crucial for preventing or delaying the onset of serious, even life-threatening complications. Although HbA1c remains the standard for diagnosing diabetes and glycemic monitoring, (2) emerging evidence attests that additional biomarkers such as fructosamine and GA are becoming HbA1c surrogates, especially
+in select patients, in whom the measurement of HbA1c may be biased or even unreliable.  XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data">Circulating miR-192 and miR-193b are markers of prediabetes and are modulated by an exercise intervention</td>
+<td class="data">The discovery of relatively abundant levels of miRNAs in serum / plasma has opened the door to their exploitation as biomarkers for numerous diseases, including cancer or autoimmune diseases (9). To date, there is a scant number  of published reports profiling c-miRNAs in type 2 diabetes (18–20), as well as type 1 or gestational diabetes (21, 22). There are also a number of studies focusing on a single miRNA or a limited number of them (23–25). However, a high-throughput analysis designed to identify a c-miRNA signature in prediabetic patients was still lacking. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX From our data, it is noteworthy that we observed changes in a small percentage of the miRNAs studied in both T2D and prediabetic subjects, suggesting that the alterations of the c-miRNA profile associated with metabolic diseases may not be as evident as those associated with tumors (26). XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another remarkable fact is that we observed only subtle differences in the profile of c-miRNAs between IFG and IGT individuals, although their etiology is different. IFG-type prediabetes, characterized by increased levels of fasting glucose, is thought to be related to defects in the hepato-renal actions of insulin, whereas IGT patients display marked defects in insulin secretion (5). However, both conditions are characterized by insulin secretion defects (the early phase in IFG, and the early and late phases in IGT) and insulin resistance (in the liver in IFG, predominantly in the muscle in IGT) (27). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On top of that, ethnic differences exist; hence, prediabetic Asian individuals with both IFG and IGT are more prone to defects in insulin secretion (28), whereas Pima Indians with IFG have a more severe defect in early insulin secretion than those with IGT (29). The Insulin Resistance Atherosclerosis Study, including Hispanic and non-Hispanic whites and African American subjects, showed that those with IGT were more insulin resistant than those with IFG (30). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The existence of common pathological mechanisms, although involving different tissues, may explain the moderate differences that we observed in the c-miRNA profile between IFG and IGT subjects. Thus, the validity of our selected miRNAs as biomarkers for prediabetes should be tested before they are applied to other ethnic groups.  XXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We identified two c-miRNAs, miR-192 and miR-193b, which may act as biomarkers for prediabetes. Our results were reproduced in a second cohort of prediabetic subjects and, strikingly, a mouse model of glucose intolerance. Surprisingly, circulating levels of these miRNAs were not altered in T2D patients. The transient nature of the increase of miR-192 and miR-193b during evolution of the disease may reflect the existence of a dynamic state of adaptation of the organism to the new metabolic conditions in the prediabetic state, which might be lost or modified once diabetes is established. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Development of diabetes from a prediabetic status is indeed associated with the acquisition of a novel set of metabolic coordinates, different from the control but also the prediabetic states. The response of the peripheral tissues and the pancreatic islets may thus differ in prediabetes and overt diabetes, hence affecting their combined pattern of miRNA secretion. In this regard, changes in tissue miRNA expression correlating with adaptation processes have been described, such as the increase and posterior decrease of miR-132 in pancreatic islets associated with their pregnancy-driven expansion (31). miR-150 is highly expressed in lymphocytes, where it has a role in regulating differentiation and activation (32). miR-192, on the other hand, is one of the most abundant miRNAs in pancreatic B-cells and liver (33). Changes in circulating miR-192 may act as a biomarker for liver dysfunction under several circumstances, including hepatic steatosis in humans (34). In our samples, miR-192 showed a good correlation with serum TAG and the FLI, a clinical index of steatosis (14), as well as hepatic TAG content in HFD mice. These data could support a role for liver dysfunction in the development of prediabetes in our population, as has been previously shown for others (17). Alternatively, the increase of serum miR-192 in prediabetic  subjects and its posterior return to baseline in overt diabetes might reflect the initial compensation and ulterior failure of the pancreatic B-cells, since it is a B-cell enriched miRNA (33). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, miR-193b is detected at low levels in plasma or serum and has not been associated with any disease. Interestingly, miR-193b is highly expressed in fat, where it contributes to the differentiation of brown adipocytes as well as decreasing inflammation by targeting chemokine (C-C motif) ligand 2 (35, 36). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Remarkably, these three miRNAs could then convey information regarding the immune system (miR-150), liver and pancreas (miR-192), and fat (miR-193b), which are some of the main tissues involved in the early pathogeny of diabetes. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Exercise has been shown to prevent or delay development of diabetes in at-risk subjects (37), and accordingly, the prediabetic patients included in our study displayed blood glucose levels in the control range after the intervention. It is remarkable that this was accompanied by a partial normalization of miR-192 and miR-193b. Both acute and chronic exercise modify the profile of c-miRNAs in healthy subjects (38). However, circulating miR-192 and miR-193b have not been shown to be regulated by exercise (38). Thus, the decrease that we observed may be related to the partial reversion of the prediabetic phenotype rather than exercise per se. Accordingly, we do not observe a regulation of miR-192 and miR-193b in control subjects after exercise. The profile of c-miRNAs is thus dynamic and correlates with the metabolic phenotype, signaling the presence of disease as well as response to treatment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In summary, we provide evidence for the existence of a c-miRNA signature for prediabetes, which could be used as a new diagnostic tool, as well as to monitor response to treatment.</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data">The role of circulating microRNA-126 (miR-126): a novel biomarker for screening prediabetes and newly diagnosed type 2 diabetes mellitus</td>
+<td class="data">Previous studies have indicated an association between miR-126 and T2DM [23]. The results from the current study extended the association to pre-diabetes (e.g., IFG/IGT subjects). miR-126 is highly enriched in endothelial cells, and plays a pivotal role in maintaining endothelial homeostasis and vascular integrity [25]. It represses two negative regulators of the vascular endothelial growth factor (VEGF) pathway (Sprouty-related protein (SPRED1) and phosphoinositol-3 kinase regulatory subunit 2 (PIK3R2/p85-β)), with an end result of enhanced VEGF signaling [24]. A previous study revealed that shedding miR-126 from endothelial cells could regulate VEGF responsiveness and confer vascular protection in a paracrine manner [26,27]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this study, a RT-qPCR direct serum assay (RT-qPCR-DS) was used to examine serum miR-126. This assay eliminates the RNA extraction step, and therefore, could avoid miRNA loss, minimize human and mechanical errors, and reduce the time and overall cost [28]. Analysis of miR-126 transcripts obtained from the serum of T2DM patients revealed a correlation between T2DM and miR-126 expression. The current study indicated that serum miR-126 could be used to discriminate pre-diabetes from healthy individuals. Also, low miR-126 expression was significantly associated with poor treatment response. ROC analysis showed reasonable sensitivity and specificity of serum miR-126 in distinguishing IFG/IGT and T2DM patients from healthy individuals. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the current study, we also noticed an association of decreased serum miR-126 with high blood glucose; accordingly, the miR-126 content in plasma was reduced in a glucose-dependent fashion. This association suggests that elevated plasma glucose might result in the reduced delivery of miR-126 to monocytes, which in turn contributes to VEGF resistance and endothelial dysfunction. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Serum miR-126 has been linked with numerous diseases, including cancer. However, serum miR-126 has been reported to be both increased and decreased, depending on the type of cancer. miR-126 regulates the expression of several proteins with prominent roles in multiple diseases, including the anti-inflammatory TOM1 (target of Myb1), the growth factor VEGF-A, and the cell cycle regulatory and signaling protein IRS-1 (insulin receptor substrate 1). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt;  In conclusion, our results suggested that circulating miR-126 could be used to distinguish T2DM patients, as well as pre-diabetic subjects from healthy subjects.  XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data">Fructosamine and glycated albumin for risk stratification and prediction of incident diabetes and microvascular complications: a prospective cohort analysis of the Atherosclerosis Risk in Communities (ARIC) study</td>
+<td class="data">Our study demonstrated that fructosamine and glycated albumin were independently associated with prevalent retinopathy and the risk of incident chronic kidney disease and diabetes. These associations persisted after adjustment for traditional risk factors and added information after further adjustment for HbA1c or fasting glucose. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that fructosamine and glycated albumin have prognostic utility for the prediction of diabetes, chronic kidney disease, and retinopathy in the community. In general, the associations of glycated albumin and fructosamine with retinopathy and chronic kidney disease were similar to those observed for HbA1c in this study population. These results suggest that these non-traditional markers of hyperglycemia might be useful in clinical practice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The limitations of HbA1c are widely acknowledged (28) and include its cost, assay interferences such as hemoglobin variants (29), other conditions that affect the validity of test results (e.g. hemolytic anemia, recent transfusion, pregnancy, or blood loss), and that it does not change rapidly in response to changes in treatment (2–3 month measure of glycemic control). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The acceptance of new measures of hyperglycemia is dependent on establishing their association with clinical events and prognostic value (30), especially relative to standard biomarkers used to identify persons at risk for diabetes and its complications. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results suggest that fructosamine and/or glycated albumin testing may add complementary information to HbA1c and may be particularly useful in settings where HbA1c testing is problematic or in research settings where whole blood samples are not available. Fructosamine and glycated albumin may also be useful as adjuncts to standard measures and in situations where short-term (2–4 week) glycemic control is specifically of interest. For example, short-term measures may be important in evaluating the effects of diabetes treatment or changes to a treatment regime shortly after implementation or in resource-intensive trials (such as feeding studies) that are only able to follow participants for a few weeks. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Because HbA1c has been shown to underestimate glycemic control in dialysis patients, fructosamine and glycated albumin have been of particular interest and have been shown to be associated with mortality and other important outcomes in this patient population (31, 32). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Fructosamine is formed by the covalent attachment of glucose to serum proteins, primarily albumin. In the present study, we also specifically assayed glycated albumin using a novel enzymatic method (33). Both assays are rapid and not technically challenging. Nonetheless, despite its availability from most major clinical laboratories, fructosamine testing is not widely used in research or clinical practice. The limited adoption of fructosamine may reflect the lack of evidence regarding its associations with long-term outcomes and perhaps, also, that earlier generations of fructosamine assays demonstrated poor laboratory performance (34). The glycated albumin and fructosamine assays examined here demonstrated excellent laboratory performance with method CVs of 3% or less, similar to or lower than many other commonly used clinical tests (35).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, these results suggest the complementary nature of fructosamine and glycated albumin to HbA1c for risk stratification for diabetes and its microvascular complications in a community-based population. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="data">Plasma miR-126 is a potential biomarker for early prediction of type 2 diabetes mellitus in susceptible individuals</td>
+<td class="data">DM affects more than 350 million people worldwide in 2011 [1]. The prevalence of DM in Asia has increased significantly in recent years with a disproportionate burden in young and middle-aged population [19]. The situation is considered especially urgent in China because it is becoming a major public health problem. Despite the widely publicized report of 9.7% prevalence for diabetes and 15.5% for prediabetes in the 2007 survey [2], the latest epidemiologic study suggests
+that the estimated prevalence has increased to 11.6% for diabetes and 50.1% for prediabetes [3]. Unfortunately, the epidemic of diabetes and prediabetes in China has shown no sign of abating [3]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Due to complex etiology which involves genetics, diet, life style, and environmental factors, DM is posing diagnostic and therapeutic challenges. The existing traditional biochemical markers for DM including levels of glucose, triacylglycerol, cholesterol, lipoproteins, and HbA1c may predict the development of DM a few years prior to disease manifestation. However, these biomarkers are not specific for DM and cannot be used to assess disease susceptibility in the general population. Hence, the discovery of new biomarkers that could be used to identify individuals at risk and thereby provide early intervention to delay the development and progression of DM is urgently needed. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX miRNAs belong to a class of small noncoding RNAs that function as translational repressors by partially pairing to the 3&apos; untranslated region of target mRNAs. The idea of using circulating miRNAs as biomarkers is fairly new and was first proposed for detecting various types of cancer [20]. Circulating miRNAs are very stable and resistant to ribonucleases, freezing/thawing cycles, and other drastic experimental conditions [21]. Consequently, serum or plasma samples can be stored at −20C or −80C for several months without notable degradation of miRNAs, which supports the utility of miRNAs as ideal candidate biomarkers [22]. The miRNA expression profiles in serum samples of prediabetic Han Chinese individuals or T2DM patients have recently been analyzed [23]. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results showed increased expression of 7 diabetes-related miRNAs (miR9, miR29a, miR30d, miR34a, miR124a, miR146a, and miR375) in T2DM patients compared with pre-diabetic or T2DM susceptible individuals [23]. However, no difference in miRNA expression was observed between individuals with normal glucose tolerance and pre-diabetic individuals, indicating that these serum miRNAs cannot be used for the prediction of susceptibility to T2DM. Zampetaki and colleagues systematically examined the plasma miRNA expression profiles in patients with T2DM by microarray screening and revealed a unique plasma miRNA signature for DM [17]. This pioneer study demonstrates the potential of plasma miRNAs as diagnostic and prognostic biomarkers for T2DM. In this study, we focused on the expression patterns of 5 diabetes-related signature miRNAs identified by Zampetaki’s group and investigated the potential of using plasma miRNAs as a non-invasive tool for blood based prediction of highly susceptible individuals to develop T2DM. We present novel findings that plasma miR-126 level is significantly lower in susceptible individuals and established T2DM patients in comparison to normal individuals, and the decreased miR-126 level is inversely associated with the development of DM. Interestingly, miR-126 expression is not associated with the sex and age of patients. Together, our results support miR-126 as a potential independent risk factor and diagnostic biomarker of susceptible individuals to developing T2DM. Compared to the existing traditional biochemical markers, our proposed miR-126 is more specific to DM and may be able to facilitate early identification of DM risk since its expression level is significantly lower even in the DM susceptible individuals. miRNAs are also more stable and less likely to be affected by diet and physical activities before the blood sample collection. Even though DM is affected by multiple complex factors, such as genetics, environment, diet, and life style, undoubtedly, genetic factor contributes the most to its occurrence. Hence, the identification of genetic markers, such as miRNAs, will yield new and reliable approaches to prevent DM through early identification of individuals at risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt;  In conclusion, we have shown that miR-126 is significantly reduced in plasma samples of T2DM susceptible individuals and T2DM patients. These findings suggest that detection of circulating miR-126 can be developed into a non-invasive and rapid diagnostic tool for the prediction of susceptible individuals to developing T2DM.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">19</td>
+<td class="data">MetaboNetworks, an interactive Matlab-based toolbox for creating, customizing and exploring sub-networks from KEGG</td>
+<td class="data">MetaboNetworks can be used to investigate and modify complex  metabolic reaction networks. It improves the visual interpretation of metabonomic experiments with coverage across disparate metabolic pathways. The network should ideally be viewed as a connected network of probabilistic events (reactions) (Wilson and Nicholson, 2003) that lie on the shortest path between two metabolites. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The database can be tailored to the study by including specific organisms, as we have done for the hydrazine toxicity network by including all bacteroidetes and firmicutes species, as it has been shown that germ-free rats react differently to hydrazine (Swann et al., 2009). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MetaboNetworks can possibly also be used for identifying unknown metabolites by generating a network of metabolites correlated to the unknown metabolite. The unknown can be part of the shortest path between the known metabolites as the correlation can be due to a similarity in structure. Note that use of the KEGG-API is free for academic use; however, non-academic users should ask for permission (see http://www.pathway.jp/) X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">20</td>
+<td class="data">Identification of serum metabolites associated with risk of type 2 diabetes using a targeted metabolomic approach</td>
+<td class="data">In this prospective investigation using a targeted metabolomic approach at population level, we found increased concentrations of hexose; phenylalanine; and diacyl-phosphatidyl-cholines C32:1, C36:1, C38:3, and C40:5 and reduced concentrations of glycine; sphingomyelin C16:1; acyl-alkylphosphatidylcholines C34:3, C40:6, C42:5, C44:4, and C44:5; and lysophosphatidylcholine C18:2 to be independently predictive of T2D in EPIC-Potsdam. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results agree with data from cross-sectional studies showing that patients with T2D had increased concentrations of sugar metabolites (13), acylcarnitines (14), and BCAA (13) and reduced concentrations of glycine (12). We were able to further replicate the results of Wang et al. (35), who recently reported that BCAA and aromatic amino acids predicted T2D in the prospective Framingham Offspring cohort and the Malmö Diet and Cancer study. In agreement with Wang et al. (35), we found higher concentrations of phenylalanine, isoleucine, tyrosine, and valine to be associated with increased risk of T2D and glycine to be associated with reduced risk of T2D. However, in the present study, BCAA and aromatic amino acids were linked to each other, and only phenylalanine was independently associated with T2D risk when accounting for the other metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BCAAs may serve as substrates for the glucose-alanine cycle in skeletal muscle. Through alanine aminotransferase–catalyzed transamination reactions, this may result in increased substrate availability for hepatic gluconeogenesis, thereby increasing hepatic glucose production (39). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Conversely, glycine is a gluconeogenic amino acid; therefore, reduced serum glycine may also reflect increased gluconeogenesis. Alternative theories suggest that glycine depletion may reflect glutathione consumption driven by oxidative stress (40) or abundance of incompletely oxidized fuels that are excreted as urinary acylglycine conjugates (41–43). The frequently observed increase of BCAA in subjects with insulin resistance is also believed to be the result of reduced activities of key BCAA catabolic enzymes in liver and adipose tissue (44). Furthermore, amino acids may directly cause muscular insulin resistance by disrupting insulin signaling (45). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The positive association between hexose and T2D risk remained significant after adjustment for glucose. This observation could be an artifact from the different methods used to measure hexose and glucose. However, it has to be noted that hexose represented not only glucose but also the sum of all six-carbon monosaccharides. Previous studies have shown that in addition to glucose, fructose levels were elevated in individuals with T2D (12) and that intake of fructose was positively associated with risk of insulin resistance and T2D (46). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In insulin-resistant conditions, the body aims to compensate for decreased glucose uptake of peripheral tissues through increased pancreatic insulin secretion (1). However, at the stage of overt insulin resistance, this system will eventually be exhausted, as caused by b-cell dysfunction and, subsequently, insulin secretion decreases (1). Phenylalanine, which was positively correlated to insulin secretion in the present study, may be involved in pathways to compensate early stages of insulin resistance through stimulation of insulin secretion. In contrast, increased hexose concentrations may indicate manifest insulin resistance and defect of b-cells.  XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is noteworthy that we observed significant associations between choline-containing phospholipids (i.e., diacyl-, acyl-alkyl-, and lysophosphatidylcholines and sphingomyelins) and T2D risk. Diacyl-phosphatidylcholines consist of glycerol linked to phosphocholine and two fatty acid residues, and removal of one fatty acid produces lysophosphatidylcholines. The corresponding acyl-alkyl-phosphatidylcholines comprise an ether linkage to one alkyl chain and one polyunsaturated fatty acid (47). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sphingomyelins are built of a ceramide core linked to one fatty acid and a phosphocholine or phosphoethanolamine (Fig. 3). Together, these phospholipids make up the main constituent of cellular membranes and may be involved in cellular signal transduction (48). In addition, they represent a major fraction of the human plasma lipidome because they are most abundant in all lipoproteins (49). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Diacyl-phosphatidylcholines are particularly essential for hepatic secretion of triglyceride-rich VLDL particles and HDL (48), whereas acyl-alkyl-phosphatidylcholines may act as serum antioxidants to prevent lipoprotein oxidation (50). Their hepatic synthesis requires dietary choline (48). It was previously shown that choline-deficient mice on a high-fat diet showed reduced phosphatidylcholine biosynthesis and accumulated hepatic fat, but at the same time, they had reduced fasting insulin and improved glucose tolerance (51). In addition, impaired hepatic phosphatidylcholine biosynthesis led to reduced levels of plasma triglycerides and HDL cholesterol in vivo (52). Accordingly, phosphatidyl-cholines and sphingomyelins were positively related to plasma HDL cholesterol in the present study. Furthermore, acyl-alkyl-phosphatidylcholines were inversely correlated to plasma triglycerides, opposite to diacyl-phosphatidylcholines, and higher levels of acyl-alkyl-phosphatidylcholines but not diacylphosphatidylcholines were linked to improved insulin sensitivity and reduced insulin secretion. Previous studies reported that acyl-alkyl-phosphatidylcholine levels were lower in obese subjects and subjects with insulin resistance (50,53). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These mechanisms may contribute to the antithetical association between two phosphatidylcholine subclasses and T2D risk found in the present study and may indicate a key role of the type of linkage between phospholipid core and fatty acid residue. Furthermore, those phosphatidylcholines containing fatty acids with a lower number of carbons and double bonds were positively associated with T2D risk, contrary to those with a higher number of carbons and double bonds. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Similar observations have recently been reported for fatty acid compositions of erythrocyte membrane phospholipids (54) and triglycerides (55), suggesting that lipids with a shorter chain length and saturated fatty acid residues may trigger development of T2D, whereas those containing longer
+chains and unsaturated fatty acids may offer protection. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SUMMARY =&gt; In summary, the present data suggest that the identified metabolites could be part of different pathways involved in the early genesis of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, these novel candidates could be useful in clinical practice to identify high-risk individuals earlier in order to delay or prevent disease onset. Furthermore, serum metabolites in this study predicted risk of T2D in a similar manner to a combination of classic risk factors; thus, their measurement may be a useful approach to predict T2D risk for individuals in the future. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, this prospective investigation using metabolomics data of independent study populations identified sugar metabolites, amino acids, and choline-containing phospholipids to be independently associated with risk of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">21</td>
+<td class="data">alpha-hydroxybutyrate is an early biomarker of insulin resistance and glucose intolerance in a nondiabetic population</td>
+<td class="data">Using a non-targeted biochemical screening approach in a large and well characterized cohort of non-diabetic subjects representing a wide spectrum of insulin sensitivity, we identified a–hydroxybutyrate (a–HB) as a biomarker segregating with clamp-derived IR in subjects with normal glucose tolerance. Furthermore, a–HB segregated with dysglycemia (IFG+IGT) independently of, and in
+addition to, IR. Importantly, these associations were independent of sex, age, and BMI. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, together with other biomarkers, a–HB may provide a diagnostic tool to identify IR and/or IGT earlier than currently used clinical tests. a–HB is an organic acid derived from a-ketobutyrate (a–KB) (Figure 7). a–KB is produced by amino acid catabolism (threonine and methionine) and glutathione anabolism (cysteine formation pathway) and is metabolized to propionyl-CoA and carbon dioxide [25]. a–HB is formed as a by-product during the formation of a–KB via a reaction catalyzed by lactate dehydrogenase (LDH) or a–hydroxybutyrate dehydrogenase (a–HBDH) (Figure 7), an LDH isoform present in the heart [26]. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Accumulation of a–HB is postulated to occur in vivo when either XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (a) the formation of a–KB exceeds the rate of its catabolism, which leads to substrate accumulation, or XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (b) there is product inhibition of the dehydrogenase that catalyzes the conversion of a–KB to propionyl-CoA [25,27]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX a–KB is also produced as a result of the conversion of cystathionine to cysteine. Under conditions of increased oxidative stress, a higher flux of cysteine into production of glutathione, the primary antioxidant in cells, occurs from a shift in homocysteine production from transmethylation of methionine to transsulfuration of homocysteine to produce cystathionine [28] (Figure 7). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In one report, a–HB was associated with excess glutathione demand and disrupted mitochondrial energy metabolism and shown to derive from hepatic glutathione stress [28], supporting the idea that elevated a–HB may be associated with increased oxidative stress in the IR state. a–HB may become elevated by at least two mechanisms:  XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) elevation of hepatic glutathione stress resulting in an increased demand for glutathione production, and XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) elevation of the NADH / NAD + ratio due to increased lipid oxidation. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The first mechanism likely contributes to increased a–HB formation by supplying more a–KB substrate from increased cysteine anabolism (Figure 5). Consistent with this interpretation, we observe statistically significant elevation of both a-KB and cysteine with increasing insulin resistance from the global screening data (Figures 2 &amp; 5, Table 2), similar to the trend observed with a-HB. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In support of the second proposed mechanism, increased lipid oxidation is a metabolic feature of IR, and is indexed by the insulin-inhibited FFA concentration [7,14]. Our finding of a positive association between steady state FFA and plasma a–HB concentrations in the whole cohort supports the possibility that an increased NADH/NAD + ratio favors reduction of a–KB to a–HB (Figure 7). XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Changes in other important IR-associated metabolites within metabolic pathways leading to the formation of a-KB and a-HB are highlighted in Figure 7. For example, reduced levels of glycine (Figure 6E) and serine upstream of a-KB formation may be consistent with increased gluconeogenesis which is observed with IR in db- / db- mice [29]. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our interpretation that a redox imbalance may contribute to elevated a-HB in the context of IR is consistent with our finding that branched-chain alpha-keto acids, such as 3-methyl-2-oxobutyrate, are elevated with IR (Table 3). These increases may be due to the effect of the redox imbalance on the directionality of the dehydrogenases that reduce / oxidize these keto acids (Figure 7). In addition, a-HB has also been observed to be elevated in T2D subjects and animal models of T2D, as well as in severe lactic acidosis and ketoacidosis [25, 27, 30, 31, 32, 33, 34]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Interestingly, in normal subjects and T2D patients, it has been shown that restoration of the NADH / NAD + redox balance by glutathione infusion therapy resulted in improvement of insulin sensitivity and b-cell function in normal subjects and in T2D patients [35]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a recent study comparing the urinary profiles of 98 intermediary metabolites measured by targeted MS in 74 obese and 67 lean individuals, Newgard et al. identified a metabolic signature for the accumulation of branched-chain amino acids, the glutamine / glutamate couple, several acylcarnitines, and some aromatic amino acids (phenylalanine and tyrosine) using principal component analysis [36]. These metabolites were also related to insulin resistance (as determined by the HOMA index) and interpreted as marking the metabolic consequences of excessive fat and protein intake, with impairment of insulin signaling and mitochondrial overload. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is noteworthy that in the non-targeted metabolomics approach of the present study, lipid molecules, branched-chain amino acids, and acylcarnitines were also featured among the top 30 metabolites that RF analysis associated with the M value (Figure 2). The current data narrow down the complex interactions of amino acid and lipid metabolism [37] to highlight the importance of a single marker, a–HB, which may reflect oxidative burden in the context of IR. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With an unmet need for a practical clinical test that accurately measures IR in individuals, identification of a–HB as a significant biomarker for separating IR from IS subjects using a fasting plasma sample could lead to development of such a diagnostic test. a–HB in combination with other biochemical and clinical parameters may also prove to be useful as a clinical indicator of subclinical abnormalities of glucose metabolism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">22</td>
+<td class="data">Elevated serum ferritin levels predict new-onset type 2 diabetes: results from the EPIC-Norfolk prospective study</td>
+<td class="data">In this prospective study we found a strong association between clinically raised ferritin, below the range indicative of clinical haemochromatosis, and development of incident diabetes. The risk was elevated seven-fold in the clinically raised ferritin group compared with the lowest ferritin category. This striking association is of potential importance in understanding the aetiology of type 2 diabetes. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study adds new information concerning the association of serum ferritin and incident type 2 diabetes. Unlike previous studies [1, 2] we were able to study the association in both men and women in the same prospective study. There were strong associations of clinically raised ferritin with diabetes, when compared with the whole group of those with normal ferritin, and also when compared with those in the lowest quartile of the ferritin distribution. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our sensitivity analysis showed that this was the case regardless of the cut-point of the upper limit of ferritin in women, in whom there is debate about whether the threshold should be 150 [3], 200 [20, 21] or the same as in men at 300 ng/ml. We found that elevated ferritin was predictive of diabetes independently of a comprehensive range of risk factors and confounders, where previously only a limited number of confounders were accounted for. Specifically, we found that elevated ferritin was associated with diabetes independently of known risk factors for diabetes (age, BMI, sex, family
+history, physical inactivity and smoking), as well as dietary factors and alcohol intake measured by food diary. We were able to account for the potential confounding effect of three markers of inflammation (IL-6 and fibrinogen in addition to CRP, which was measured in previous studies). In addition, we also accounted for the potential confounding effect of hepatic enzymes and adiponectin, both of which are now known to be associated with incident diabetes, but their association with ferritin is unclear. Data on fasting glucose are not available in the EPIC-Norfolk study, but we suggest that as non-diabetic hyperglycaemia is likely to be on the causal pathway, it is not likely to be a confounder of the ferritin–diabetes association. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The mechanism for the association between ferritin and type 2 diabetes is not established, but iron deposition in the liver may cause insulin resistance by interfering with the ability of insulin to suppress hepatic glucose production [5]. Iron is auto-oxidised to form highly reactive, lipid-soluble iron–oxygen complexes. These free radicals are powerful pro-oxidants, which can change membrane properties and result in tissue damage [22, 23]. Oxidative stress can also lead to hyperglycaemia through disturbed glucose metabolism [24]. In addition, iron accumulation in hepatocytes may interfere with the insulin-extracting capacity of the liver [25], and affect insulin synthesis and secretion in the pancreas [26]. Iron excess probably contributes initially to insulin resistance and subsequently to decreased insulin secretion [26]. The independent association of hepatic enzymes and incident diabetes has now been well described [10–13]. We found a strong positive correlation between ferritin and the hepatic enzymes, ALT and GGT (r ranging between 0.29 and 0.37, p&lt;0.0001). This is consistent with the recently reported correlation of 0.37 (p&lt;0.001) between ALT and serum ferritin among 959 women in a cross-sectional Korean study [27]. It is plausible that iron overload in the liver damages hepatocytes, which in turn would result in elevated transaminases and GGT. Although we did not have access to liver ultrasound or biopsy in our study, a correlation between ferritin level and non-alcoholic fatty liver disease or non-alcoholic steatohepatitis, which is associated with elevated ALT, has been described by others in both obese [28] and mainly non-obese [29] individuals. An association between raised hepatic iron concentration and severity of fibrosis in non-alcoholic steatohepatitis has also been reported [30]. Further, Iwasaki et al. also recently described an association between hepatic fat content as measured by computed tomography and ferritin concentration among diabetic individuals [31]. Although it is well described that hypo-adiponectinaemia is predictive of future diabetes [8, 9], there are no previous published reports of an association between serum ferritin and adiponectin levels.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CONCLUSIONS =&gt;  In conclusion, we have shown prospectively that even modestly elevated ferritin, below levels diagnostic of haemochromatosis or other iron-storage disorders, predicts incident diabetes independently of known risk factors and confounders. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

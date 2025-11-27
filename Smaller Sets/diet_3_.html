@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Diet data set 3</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.DIET_SORTED_3">
+<caption aria-label="Data Set REF.DIET_SORTED_3"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Strengths</th>
+<th class="header" scope="col">Weaknesses</th>
+<th class="header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">However, our study presents important strengths: we used the case‐cohort design, which retains randomization, to both evaluate associations of 2-AAA and lysine with incident T2D and CVD. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our analyses were adjusted for multiple confounders within a well-characterized trial and, as an important novelty, we used repeated measurements of these metabolites, that allowed us to assess 2-AAA and lysine changes due to the dietary intervention. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Our study presents some limitations. First, we do not have available data on glycated hemoglobin (HbA1c), which was previously reported to be a biomarker of diabetes and CVD damage, independently of fasting glucose [23]. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, we did not find an effect of MedDiet on 1 year-changes in none of the studied metabolites. It may be possible that 1 year is not enough time to observe sound changes in metabolites, and as a consequence we did neither observe an association between 1-year changes of metabolites and the subsequent risk of T2D or CVD. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another limitation is that our results may be not generalizable because we used a Mediterranean population at high CVD risk. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, we cannot exclude the possibility of residual confounding regarding the observational associations between metabolites and cardiometabolic outcomes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further studies are needed to clarify the effect of diet on lysine, 2-AAA and pipecolic acid levels and the potential effect modification by dietary interventions on the CVD/T2D risk associated with these metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, new studies are needed to evaluate if lysine pathway metabolites may add value to the prediction of risk provided by HbA1c. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consequently, these results, especially those suggesting a potential interaction between the nutritional intervention and these 2 metabolites deserve further confirmation in independent prospective cohort studies and trials [24].</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Thus, whether certain dietary factors interact with the potential BCAA-biosynthetic component of the gut microbiome pattern, thereby affecting BCAA levels, deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Despite the accumulating evidence that BCAAs are related to T2D pathogenesis, whether increased BCAA levels are a cause or consequence of T2D has not been elucidated. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX LysoPC is a signaling molecule involved in atherogenic and inflammatory processes (49), of which the major function needs to be clearly elucidated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Given that food intake and relevant nutrients possibly interact with the environment and the gut microbiome, and that these interactions would be reflected in the blood metabolites, the links among dietary intake, gut microbiota and metabolic biomarkers and their associations with T2D must be further investigated. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Because the response to the specific stimulus (e.g. chemicals, nutrients, etc.) can be distinct depending on gender and ethnic group (62), separate analysis in a certain population is required to apply the identified metabolites for planning the preventive strategy as well as for pharmacological targeting to treat T2D.</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">Our analysis and prior studies derived a similar combination of fatty acids [12-15], but no previous studies to our knowledge evaluated T2D incidence as an outcome. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Strengths of this work include the standardised assay of fatty acid profiles in an EPIC-Inter-Act population with geographic diversity; the large study size (to our knowledge by far the largest among studies of fatty acid biomarkers), allowing various sensitivity analyses; and the generalisability of our findings, strengthened by our findings across 8 European countries and the US NHANES. By focussing on a single combination of fatty acids, we were able to report details of its association with incident T2D and metabolic, genetic, and dietary factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, this also limited our investigation of other fatty acid patterns, in particular in relation to omega-3 fatty acids. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Other limitations include possible residual confounding by factors unmeasured or measured imprecisely, although we adjusted for many covariates including major risk factors for T2D. Whether or not the combination of fatty acids itself caused the T2D onset remains unestablished. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Possible exposure misclassification due to single fatty acid measurements and possible outcome misclassification were limitations, but likely to be independent of T2D case status and fatty acid profiles, respectively. We found no strong reason to think that these limitations would alter the overall conclusions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Lastly, the generalisability of our findings might be limited to high-income Western populations, and fatty acid patterns in other populations with diverse genetic backgrounds and dietary patterns are of future interest. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Associations of gene variants with fatty acids and with incident T2D cannot be confounded by long-term lifestyle characteristics. Therefore, the specific gene variants, the identified combination of fatty acids, and the risk of T2D are likely to be on the same causal pathway, warranting future research to elucidate how insulin resistance specifically alters fatty acid profiles or vice versa. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, an association with ischaemic heart disease or stroke was not significant [15]. The inconsistency depending on outcome is predictable as DNL could promote insulin resistance, but suppress atherosclerosis [36]. Statins and other lipid-lowering drugs also alter fatty acid profiles [10] and have divergent effects on heart disease and T2D [40]. Thus, a fatty acid pattern can be a future focus of investigations of cardiometabolic diseases and related interventions. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The association of the FA-pattern score with incident T2D was not fully explained by any single fatty acid, but was partly attenuated by adjustment for odd-chain SFAs and VLSFAs. These SFAs are associated with lower risk of cardiometabolic diseases [16,41,42], while their biological roles remains understudied. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX High phospholipid VLSFAs may reflect high activity of PPARα, which leads to VLSFA synthesis and less insulin resistance, apoptotic cell death, and
+pancreatic dysfunction [41,43]. Blood odd-chain SFAs may partly reflect dairy consumption [3,44], gut microbiota [45], or endogenous synthesis through α-oxidation [46], and thus any correlates to those factors could explain our findings. Evidence for these mechanisms and relationships with other fatty acids remains scarce and deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The combination of fatty acids warrants further investigation of its determinants and potential application as a marker of metabolic characteristics.</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data"> &#160;</td>
+<td class="data">As described throughout this review, the estimated CVD burden of many risk factors is affected by the fact that limited data are available regarding population exposure and by likely or potential biases in the magnitudes of their effects. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To overcome the limitations of data on population exposure, researchers have used sophisticated statistical methods for pooling worldwide population-based surveys, (174) or proxy measures of risk factors exposure, eg, lung cancer death rates as a measure of cumulative life-long smoking and satellite-based measurement as a proxy for ambient PM pollution. (6, 175) XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nonetheless, the estimated exposures have moderate-to-large uncertainties, even for a risk factor such as diabetes mellitus that is commonly used in clinical settings. (79, 81) Furthermore, small effect sizes and publication and reporting bias can undermine the presumed causal associations; even when causality is accepted, these limitations lead to bias in the magnitudes of associations. (104) XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The estimated CVD burden of risk factors is relatively robust to these issues for those risks with high prevalence and large causal effects (Figure 8), a situation that for CVD risks may be limited to high blood pressure, high cholesterol (for effects on IHD), smoking (among men), and possibly harmful alcohol use (among eastern European men). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX If causal effects are large, but risk factor exposure is low, for example, in the case of smoking in Asian and African women, the estimated health burden is most sensitive to the quality of, and error in, exposure data. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The most common situation for CVD risks, however, is one of small effect sizes and high exposure levels, which applies to most dietary and environmental risks, physical inactivity, and high BMI and glucose. The estimated CVD burden of such high-exposure–and–low-effect-size risks is highly sensitive to bias and residual confounding in their effect sizes. At the extreme, the real estimated CVD burden of such risks can be zero if the causal association is spurious. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX More likely, the CVD burden may be overestimated by several-fold because inadequate adjustment and publication bias often lead to inflated effect sizes. (104) The proportional over-estimation of the CVD burden in the presence of bias and confounding is more severe in the case of small effect estimates. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For illustration, if one-half of the excess relative risk is attributable to residual confounding, and if the observed relative risk is 1.02, the CVD burden would be overestimated by 98% (1/1.02) for those risks with universal exposure. The overestimation would be 67% (1/1.5) if the observed relative risk is 1.50 and 50% (1/2)  if it is 2.0. Furthermore, the CVD burden of risk factors is estimated by comparing their actual levels in worldwide populations with some counterfactual optimal level. (9) XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Putting aside risks such as smoking, dietary trans fats, and binge drinking for which the optimal level in a population is unequivocally zero, the exposures used as counterfactual optimal levels in global
+analyses – eg, a systolic blood pressure of 110 to 115 mmHg, BMI of 21 to 23 kg/m2, vigorous levels of physical activity for the whole population, and a daily fruit intake of 300 g –(13) tend to be at the extreme levels in most epidemiological studies and
+hence are uncertain. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the effect sizes for the associations between risk factors and CVDs tend to attenuate with age, with relative risks approaching 1.0 in older ages. (40) Because most epidemiological studies do not enroll a sufficiently large number of older individuals to robustly estimate small effects at these ages, relative risks in ages &gt;75 years either are not estimated or have large uncertainty. This gap in data has required extrapolating effect sizes to older ages for population-based analyses. (13, 40) With CVD events and especially deaths increasingly shifting to older ages, this extrapolation increases the uncertainty of estimated CVD burden of risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Clinical behavior change efforts, health system changes, novel technologies, and robust policy strategies must complement and facilitate these individual food choices, which together will reduce cardiometabolic disease and economic burdens across the population.</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">LMICs are among the most active countries in the world in attempting to address these problems with large-scale regulatory efforts. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Nevertheless, to date these efforts are concentrated in only a few countries and, other than the effort in Mexico, are yet to be rigorously evaluated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">LMICs in general face serious challenges with little likelihood of prevention. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">However, the beneficial effects of metformin on prevention of type 2 diabetes still await confirmation from undergoing clinical trials specifically designed to answer this important question. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXThe role of TZDs in prevention of type 2 diabetes still awaits evaluation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

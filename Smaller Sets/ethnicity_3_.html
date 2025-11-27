@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Ethnicity data set 3</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.ETHNICITY_SORTED_3">
+<caption aria-label="Data Set REF.ETHNICITY_SORTED_3"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Strengths</th>
+<th class="header" scope="col">Weaknesses</th>
+<th class="header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">This study has several strengths. First, to our knowledge, this is one of the first studies that used large-scale linked administrative data to illustrate the characteristics of people who developed diabetes following a positive HCV diagnosis. The large sample size and sufficient follow-up time in the BC-HTC allowed us to estimate the effect of HCV infection on incident diabetes at a population level. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, as the BC-HTC is a longitudinal cohort data, (26) it was possible to establish the temporality in the association between HCV infection and type 2 diabetes. Even though this is an observational study, analyses using PS allowed for a less biased assessment of the impact of HCV infection on incident diabetes by balancing the baseline characteristics between individuals living with and without HCV infection. (34) Moreover, the robustness of our findings is supported by the consistent results from the PS-matched dataset and the overall weighted dataset. In addition, studies assessing the impact of HCV infection on diabetes across different ethnic groups are scarce.  XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this analysis, we were able to identify South and East Asian people in the study cohort with high specificity. In an internal validation study, Nam Pechan had high sensitivity (91.2%) and specificity (95.9%) for identifying South Asians, and Onomap identified East Asians with high sensitivity (99.5%) but lower sensitivity (66.7%). Although there may still be some misclassification of South and East Asians in the ‘Other’ group, this would have biased the estimates toward the null. By analyzing data from the ethnically diverse population of BC, we were able to examine and compare the impact of HCV infection on diabetes in East and South Asian people compared with Others. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, as the BC-HTC is linked with various administrative data, we have accounted for several important confounders as well as the competing risk of mortality to estimate a more accurate measure of association between HCV and diabetes. The BC-HTC is a comprehensive population-based cohort representative of the BC population, (26) which improves the generalizability of our results. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">This study also has several limitations and the findings should be interpreted with caution. As the BC-HTC is based on linked health administrative data, study variables were assessed from administrative information. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Diabetes and obesity are particularly challenging to identify from these types of data as many cases, such as pre-diabetes, may not be formally diagnosed and may lead to some misclassification. However, this misclassification is likely to be non-differential between individuals with or without HCV infection and the bias would be toward the null. There remains some unmeasured confounding, (50) such as individuals’ education level, smoking history, BMI, diet and lifestyle factors, and serum levels of lipids. For instance, it has been suggested previously that whether or not an association is found between HCV infection and diabetes is influenced by the inclusion of indicators such as bilirubin, lipid and albumin serum levels which demonstrate liver and kidney functions, information that is not available in this analysis. (51) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To mitigate the residual confounding, we adopted a double-robust approach after matching based on PS, by adjusting for covariates again in the Fine-Gray subdistribution proportional hazards models. (38) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">A major strength of our study is the large sample size drawn from English primary care electronic health records, with linkage to secondary care records. This large sample size enabled us to reliably estimate BMI cutoffs for overweight and obesity for the four main minority ethnic populations currently living in England. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The inclusion of the Arab population and the sufficiently granular categorisation of Black and south Asian individuals into ethnic subgroups is instructive, permitting clinicians to manage health-care needs related to these ethnic groups at much lower BMI values. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Ascertainment of type 2 diabetes diagnoses from electronic health records was by a validated algorithm designed to minimise miscoding and misclassification of diabetes type, thereby reducing the likelihood that individuals with type 1 diabetes or other forms of diabetes were included in our study population. (17) Restriction of the study sample to individuals with at least 12 months of continuous registration before their initial diagnosis of type 2 diabetes ensured that diagnoses were truly incident. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX By restricting our analyses to individuals of White, Black, south Asian, Chinese, and Arab populations, we were able to make clinically relevant comparisons between well defined populations with distinct biological, sociocultural, and demographic characteristics. This approach facilitated the meaningful characterisation of ethnicity. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Linkage to area-level deprivation data additionally enabled us to separate the influences of ethnicity and socioeconomic deprivation, factors that frequently conflate.  XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX By adjusting for the clustering of individuals within general practices with robust SEs, we attempted to account for the influence of practice-level factors on BMI cutoffs. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To optimise the coverage of ethnicity, we used an ontological approach to incorporate codes referring to country of origin and language spoken, in addition to codes for ethnic group, all of which convey some information about ethnicity. (29) XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">A limitation of our study is that, even though individuals registered in the CPRD are representative of the general adult population in the UK, (14) individuals with a recorded BMI measurement might not necessarily be representative of the general UK population. BMI data, if not recorded as part of registration with a general practitioner, tends to be recorded opportunistically (ie, when the patient is using health-care services for other reasons or when a BMI measurement is of direct clinical importance). X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We reduced this possibility by only using the first BMI value recorded from the registration date (these values would have probably been recorded for administrative and not health reasons).  XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our ﬁndings of lower BMI cutoffs for obesity in minority ethnic populations compared with White populations living in England apply only to the risk of developing type 2 diabetes, and might not apply to other endpoints, such as cardiovascular disease or all-cause mortality. Type 2 diabetes was chosen as the outcome of interest because it is the most specific obesity-related complication and a chronic, progressive disease with considerable health and socioeconomic costs. (21) XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BMI is a simple, inexpensive surrogate measure of body fat used in primary and secondary care, and is the subject of national and international guidelines on assessing adiposity. (3, 4, 28) Unlike BMI, body composition measures (eg, waist to hip ratio and total body fat) are not routinely measured in primary or secondary care, but might help to explain differences in the risk of type 2 diabetes between populations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In primary care, height and weight measurements are recorded as part of routine care by trained staff using medical grade anthropometric equipment. However, we were unable to verify whether all the individuals were measured in a similar and uniform manner across the practices over the 28 years between 1990 and 2018. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The generational status of minority ethnic populations in electronic health records in primary and secondary care is not recorded. Therefore, we cannot be certain of the extent to which our findings are applicable to future generations or to minority ethnic populations living in other countries or their country of origin. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Whether lower BMI cutoffs in non-White populations are due to differences in body composition, biochemical characteristics, lifestyle factors (eg, physical activity or diet), the genetic architecture of type 2 diabetes, or lifestyle–gene interactions remains unclear. (25–27) Future studies that examine the relative contributions of these mechanisms to the development of type 2 diabetes might help to explain our study findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further research is required to examine whether the same ethnicity-specific BMI cutoffs for overweight and obesity can be applied to trigger action to prevent type 2 diabetes in other countries.</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">Our study has several strengths. To our knowledge, it is the largest to investigate the metabolic signature of atherosclerosis using both standard 1D and CPMG 1H NMR spectra with information on small molecules and lipoprotein subclasses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We replicated our findings in external independent populations and we used two phenotypes of atherosclerosis (CAC and IMT) to further increase the generalizability and robustness of our findings. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We characterized the underlying biological pathways associated with the metabolites of interest, highlighting extensive inter-connected disturbances of metabolism. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">One limitation of our study is the cross-sectional nature of associations of metabolites with sub-clinical atherosclerosis; however, we also examined our results in relation to prospective data using incident CVD events. Nonetheless, as with any observational study, causality cannot be inferred and further experimental and functional work is needed to further elucidate the metabolic pathways involved in atherosclerotic disease. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We studied metabolites present in blood which may not accurately reflect metabolic processes in atherosclerotic plaques and arterial tissue, although there is strong evidence to suggest that at least some blood biomarkers (e.g. cholesterol) are relevant to atherosclerosis and blood is a readily accessible tissue for identification of prognostic or diagnostic markers. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, since we used a untargeted metabolic profiling approach, some of the discovered metabolic features could not be annotated (as expected); however, most of the unannotated signatures correspond to broad signals most likely from protein residues which cannot be further annotated by NMR. At the same time, this untargeted (‘agnostic’) approach allows for the discovery of metabolites that are not part of targeted panels. Our analysis was limited to NMR and mass spectrometry data may offer additional insights not apparent based on NMR data alone. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Genetic approaches as well as mechanistic studies are now needed to further validate our results and to follow-up the possible entry points for investigation of novel targets or preventive strategies for atherosclerotic disease. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data"> &#160;</td>
+<td class="data">First and foremost, the cross sectional design of our study poses a major limitation. The proposed implications should be read with caution, as causal inferences cannot be made. For example, previous work shows that diabetes
+might also cause impaired host defenses and thus predispose to infections [41, 42]. Although the analysis that excluded self-reported cases, presumably those with a longer diabetes duration and potentially lower host defense, showed comparable results (Appendix 2) to the analysis in the full population, we cannot draw firm conclusions with regards to the time-sequences of cause and effect. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There are some further limitations that merit discussion. First, the overall response rate was relatively low (44%). However, we find it unlikely that selective response would change the interpretation of our findings as there were no significant differences between the respondents and the non-respondents in a previous analysis [43]. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, we did not distinguish between past and chronic infection, and the estimated IB may have been flawed by the definition of our measures. As indicated previously, IB was based on seropositivity to antibodies (mostly IgG). Several potentially relevant chronic infections were not measured. Additionally, IgG antibodies only indicate prior infection (or vaccination), and not current infection, chronicity or duration of infection [24]. Additionally, we did not measure mode of transmission. Nevertheless, prior studies have also based their IB definitions on IgG antibodies, and there is no conclusive evidence that consideration of other markers of infection (e.g. endovascular or circulation DNA, antigens of pathogens) give more reliable results [42]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, as in many epidemiological studies, we partly defined our outcomes based on self-reported diagnoses, in line with previous analyses within the study population [3–5]. This could be problematic if differences in reporting occur. However, our restricted analyses (Appendix 2) suggest that this did not affect our results. In addition, our definition was based on a single measurement of e.g. fasting glucose and blood pressure. Although this applies similarly to all subgroups, more elaborate measurements, e.g. an oral glucose tolerance test for the identification of diabetes [44], and confirmation of diagnosis by a repeated measurement [45, 46], may have given more precise estimates of the prevalence across groups. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the results may have been affected by residual confounding. We were unable to adjust for potentially important factors, such as dietary intake, hygiene and (early life) living conditions in our analyses. In addition, numbers were too small to distinguish between generations. Moreover, we were not able to investigate whether treatment for infections (e.g. HCV [47]), the body’s immune response or the presence of the germ contributed to the associations found, which may have caused us to wrongly ascribe the results to the effects of the infections.</td>
+<td class="data">Nevertheless, the findings ask for further research into the nature of association of IB with metabolic risk factors in a longitudinal setting, including investigations of dose-response relationships and an investigation of possible underlying mechanisms leading to the incidence of metabolic risk factors for CVD. If the association and time-sequence are confirmed, a reduction in IB or treatment directed at effects of IB may possibly be investigated as a target for reducing ethnic disparities in metabolic risk factors.</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">The current results emphasize that progressively larger sample sizes, coupled with higher density sequence-based imputation (13), will continue to represent a powerful strategy for genetic discovery in T2D and in complex diseases and traits more generally. At known T2D-associated loci, identification of the most plausible T2D causal variants will likely require large-scale multiethnic analyses, where more diverse haplotypes, reflecting different patterns of LD, in combination with functional (31,50,51) data allow refinement of association signals to smaller numbers of variants (2) XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">The present report has several strengths, by extending the previous observations in important directions. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, we demonstrate in a prospective study that the previously reported association of lower adiponectin levels with increased risk of T2DM manifests at a more proximal stage, and is evident during transition from normoglycemia to prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, our findings suggest that the putative mechanisms whereby adiponectinemia interacts with glucose homeostasis to confer protection against dysglycemia are operative even in persons who are among the highest risk groups for diabetes, namely, offspring of parents with T2DM. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, our findings were obtained from a biracial cohort and were consistent in men and women, indicating that the known gender and ethnic differences in adiponectin expression do not abrogate the interaction between adiponectinemia and glucose homeostasis. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we have used rigorous methods (including hyperinsulinemic euglycemic clamp and FSIVGTT) to acquire novel biracial data on the associations between adiponectinemia and insulin action, insulin secretion and dyslipidemia in otherwise healthy African-Americans and European Americans. Our data indicate that the association of adiponectin with insulin sensitivity is particularly robust among African-Americans (table 2), which suggests that interventions that increase adiponectin secretion may have enhanced insulin-sensitizing potency in African-Americans. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The present report has some limitations related to the population studied: our findings were obtained from offspring of parents with T2DM. As these participants represent a selected group at high risk for diabetes, the strong association between baseline adiponectin levels and incident prediabetes may not be exactly applicable to individuals without a family history of diabetes, or the general population. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, our analyses focused on baseline adiponectin levels; thus, our assessment did not include the potential effects of changes in adiponectin secretion that may have occurred during the course of the POP-ABC study. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The mechanisms whereby adiponectin exerts its favorable cardiometabolic effects are not fully understood, but could involve improvement in insulin action, decreased inflammatory tone, interaction with fibroblast growth factor (FGF)-21 and amelioration of lipotoxicity, among others. (34–39) XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">This is the first population-based study on AA profiles with a large number of South Asian migrants and native Europeans conducted in the same setting and with a lengthy follow-up. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, loss to follow-up did not differ by ethnicity, and it is unlikely that the strengths of the associations within ethnic groups would differ in those lost to follow-up. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, the study was conducted only in middle-aged men and the findings may not apply to women or other age groups. Loss to follow-up occurred in approximately one-third of the participants, and while the baseline characteristics of the whole study group and those with follow-up data only were almost identical, it is likely that those lost to follow-up would be more at risk of developing diabetes and have more adverse outcomes, leading to a possible underestimation of the associations between AAs and incident diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We did not have baseline measures of hepatic function; hence we could not explore hepatic effects on AA levels and associations. In addition, many associations have been compared within and between ethnic groups, and although the trends are consistent with previously published results in European populations, caution is needed in interpreting multiple comparisons. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, comparisons of AA associations with incident diabetes within and between South Asian subgroups are based on small numbers and should be interpreted with caution. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Abdominal adipose tissue in South Asian individuals contains larger and more dysfunctional adipocytes [37]. It has also been suggested that increased AA levels may result from increased protein turnover in association with increased central obesity and reduced lean body mass [7]; this is a plausible, but untested, explanation for the increased levels of isoleucine, tyrosine, alanine and glutamine seen in our more centrally obese South Asian men. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further research is needed to understand the role of diet in the relationship between serum AA levels and risk of diabetes XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">The strengths of our study include a large overall sample size, long follow-up, use of repeated and validated dietary questionnaires, updated computation of dietary diabetes risk reduction score, and high specificity of self-reported cases of type 2 diabetes as confirmed by a supplementary questionnaire. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">A limitation of our study is the modest sample size of Asian, Hispanic, and black women, which resulted in wide CIs. Furthermore, though we controlled for confounding by known risk factors of type 2 diabetes, we cannot completely exclude the possibility of residual confounding owing to the observational nature of the study. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Generalizability of our findings may be limited because all the women in our study were health care professionals, and therefore they could be more health conscious than the general U.S. population. However, this would reduce the likelihood of confounding by socioeconomic variables that are hard to measure. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Lastly, the FFQ designed for a population that consists mainly of NHWs may not fully capture ethnic foods and in turn may misclassify individuals with unusual or culture-specific diets. However, our FFQ has worked similarly in African American and European American groups (39), and the population of nurses in our cohorts may have been assimilated into U.S. culture by virtue of their education and employment. Moreover, misclassification of diet resulting from ethnic specific dietary patterns would have intended to underestimate associations in minority groups</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">A strength of this study was the use of gold standard methods such as the euglycemic clamp with tracer dilution, coupled with indirect calorimetry. This enabled us to measure both fasting endogenous glucose production and insulin sensitivity, as well as carbohydrate and fat metabolism, both in the basal and hyperinsulinemic state. To our knowledge, this has not been reported in SA subjects with T2D previously. The patients were included by a large variety of approaches, with wide inclusion criteria, the main restriction being the 25-hydroxyvitamin D levels =&lt;50 nM, with the aim of securing broad representativeness. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The following limitations must be noted: The data presented here are cross-sectional. No efforts towards matching of the two ethnic
+groups at baseline were made. The inclusion of SA patients in the study proved challenging, hence the SA group was limited in size, increasing the risk of Type II statistical errors. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Type II error means failing to conclude there was an effect when there actually was. In reality, your study may not have had enough statistical power to detect an effect of a certain size. (FALSE NEGATIVE)) XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further studies in a larger group of patients, will therefore be necessary to confirm some of the findings that are still uncertain in our study. We selected only subjects with low levels of vitamin D, and our results therefore cannot be generalized to the whole population of subjects with T2D, although low vitamin D levels are common in T2D. Nevertheless, we did not find any correlation between 25-hydroxyvitamin D levels and insulin sensitivity or insulin secretion. This is an exploratory study, and we have judged it appropriate not to show p-values corrected for multiple testing. Bonferroni-Holm corrections were performed, showing that p-values &lt;0.01 remained significant. However, due to the high risk of missing a genuine difference that is clinically significant, we still focus on the non-corrected tests [40]. Hence, there is also a risk of reporting p values &lt;0.05 by chance. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The inclusion of SA patients in the study proved challenging, hence the SA group was limited in size, increasing the risk of Type II statistical errors.  Further studies in a larger group of patients, will therefore be necessary to confirm some of the findings that are still uncertain in our study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Findings of near significant correlations between REE, EE clamp and EGP in the SA group only, might indicate increased post-absorptive glucose metabolism in the SA group, at the expense of lipid metabolism, but these results have to be confirmed in larger studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">The dataset used in this study has several strengths. It contained information for 198,622 people with type 2 diabetes, with validation of the diagnosis by using criteria to exclude people with late-onset type 1 diabetes. Even after excluding missing data, the study population included data for 56,000 people. Further, our data was nationally representative, making use of electronic data from over 99% of primary care practices in Scotland, with previous ethnicity-based studies being regional [8], or from smaller geographical locations [7,9,10]. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX While many other studies have analysed cross-sectional data, the advantage with this dataset was the availability of multiple HbA1c and BMI values for each patient, thus providing the opportunity to summarize the overall mean measures of glycaemic control and BMI for the available data (although ethnic differences were similar when the most
+recent values were used in a sensitivity analysis). XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This dataset also gave the opportunity to compare the main South-Asian ethnic groups individually, rather than collectively against the White Scottish group. Classification of ethnicity into collective groups, namely South Asians and Europeans, has been reported as a weakness by underestimating or overlooking the degree of difference between South Asian sub- groups [23]. Heterogeneity within South Asians has been reported for several other
+cardiovascular risk factors, including blood pressure and smoking [23–25] as well as for CVD risk, which seem highest in Pakistanis [16]. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">This study is not without its limitations. Some of the statistically significant differences reported in tables 1 and 2 may have occurred by chance as a consequence of multiple testing. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Ethnicity was poorly recorded, leading to a large proportion of missing data and it is possible that the sub-group whose characteristics we have described is not representative of the whole population of people with diabetes. Information about country of birth, time since migration or general practice was not available to us. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is not clear to what extent higher HbA1c in Pakistanis and Indians reflects higher HbA1c at diagnosis of diabetes, a faster rise in HbA1c following diagnosis, under-treatment or poorer compliance or response to lifestyle interventions or pharmacological treatments, ethnic differences in prevalence of anaemia and haemoglobinopathy and all of these factors may be relevant. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study did not address differences in treatment between ethnic groups, as data were only available on recording of prescribed treatment at the time of data extraction in 2008, with no data available on drug dosage or treatment duration or validation of these data in this analysis. Differences in drug treatment may partly explain the disparities in glycaemic control. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another limitation of this analysis is that data on ethnicity was only recorded for 38% of the patients with type 2 DM, although the study population appeared to be representative of the whole cohort, as described earlier. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Unfortunately we did not have the opportunity to use name recognition software to attempt to assign ethnicity before the pseudonymised research extract was performed and the approvals we have for use of the data prevent use of the identifiable data - more recently there has been an improvement in recording ethnicity data [4], with 78% of patients having their ethnicity recorded in 2011 [26]. It was not possible to validate the recording of ethnicity or other variables in the dataset. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The absence of a single, uniform standard for collecting and reporting diabetes-related information and testing HbA1c is likely to have resulted in differences in the quality of the data as also the number and the frequency of HbA1c tests conducted. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As we used mean values to summarise glycaemic control and other risk factors, we were unable to investigate whether ethnicity is associated with variability of HbA1c and other factors which has been found to be associated with mortality in elderly people with diabetes [27]. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the small numbers of Bangladeshis in this dataset limited our ability to investigate glycaemic control in this population. XXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The role of other factors such as treatment-specific responses, physician to patient communication as way to improve glycaemic control in South Asians and the association between glycaemic control and complications of diabetes including hospital admissions are clearly relevant areas for future research. XXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data">A strength of our study was that desaturase activities were calculated on the basis of fatty acid compositions in four different lipid pools. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It was, therefore, possible to evaluate consistencies between pools in the calculated desaturase activities and we were able to demonstrate complete consistency for elevated SCD-16 activity in white Europeans compared with African Caribbeans or Asian Indians. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These differences have not been investigated previously, but their strength and consistency in our analysis justifies further, dedicated confirmatory studies. By contrast, reduced D6D activity in Asian Indians and elevated D5D activity in African Caribbeans was restricted to activities calculated from the CE and PL pools. This suggests ethnic variation in desaturase activities in specific tissues, most likely the liver, and justifies further investigations of ethnic variation in tissue-specific desaturase activities. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Our study has limitations in that it was restricted to a subgroup of a larger cohort [27] and both the African Caribbean and Asian Indian women were slightly but significantly younger than the Europeans. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies [1,28-30], including the full cohort study from which the present analysis was drawn [27], report that, compared to European women, African Caribbean women have higher BMI, higher or similar systolic and diastolic BP, similar HDL cholesterol, lower triglycerides and decreased insulin sensitivity, whereas Asian Indian women have higher or similar BMI, similar blood pressure, lower or similar HDL cholesterol, higher or similar triglycerides and lower or similar insulin sensitivity. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Ethnic differences in these measures in the present study were, therefore, broadly similar to previous findings, although in our smaller subgroup we found no significant difference in triglyceride levels between European and African Caribbean women. The systematic multivariable analysis we adopted was designed to minimize any effects of these differences in risk factors on relationships between desaturase activities and ethnicity. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A further potential limitation was that the study from which the present analysis derives did not include recording of dietary information. There is undoubtedly considerable ethnic variation in dietary habits, but it is important to note that our analysis concerned measures derived from precursor-to-product ratios, which should be relatively uninfluenced by variation in absolute levels of either precursors or products. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Genetic variation might underlie the lower D6D activity in Asian Indians but definitive studies of ethnic variation in the Fads2 gene that codes for D6D have yet to be carried out. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX D5D is coded by the Fads1 gene and it has been suggested that the higher arachidonic acid levels in African Caribbeans could reflect ethnic differences in Fads1 genotype [19,20]. However, as with the Fads2 gene, ethnic variation in Fads1 genotype has yet to be explored in depth. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found no evidence for an association between SCD activity and insulin sensitivity but previous studies have reported positive [13] or negative [15] associations between SCD activity and insulin sensitivity so this issue remains unresolved. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">We need future studies to define ethnic-specific cut-points for central obesity. Although we did not address obesity as a stand-alone disorder in this statement, there is growing understanding of the neuroendocrine regulation of appetite and energy expenditure that contribute to obesity (435); however, basic science and translational studies are needed to determine whether these mechanisms differ by race / ethnicity.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXSex disparities exist in certain endocrine disorders, with autoimmune thyroid disease and cardiovascular complications of diabetes being more common in women than men. The etiology of these sex differences remains unclear and warrants further basic and clinical research. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Data on the prevalence and incidence of osteoporotic fractures in minority men are lacking, suggesting a need for further investigation given the aging of our population. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A major gap in our current understanding of race / ethnic disparities in endocrine disorders is a failure of most studies to specify Hispanic-American and Asian-American subgroups. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this statement, we have attempted to specify ethnic subgroups where they were identified in certain studies; however, the majority of studies did not clearly define subgroups. Where these data are available, there are clear ethnic-specific differences within Hispanic and Asian subgroups, particularly related to diabetes and obesity risk. Thus, it is imperative that future studies accurately identify ethnic subgroups. In general, except for diabetes, there are few data on endocrine disorders in Native Americans and Alaska Natives, an important population for future research as well. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For the endocrine disorders discussed in this statement, there is little evidence that genetic differences are a significant contributor to race / ethnic disparities; however, there is likely significant heterogeneity and admixture among populations, which may mask genetic differences in GWAS studies. As recently reviewed, however, there are emerging techniques to overcome these challenges in performing GWAS studies in minority populations (436). Future genetic studies should incorporate ancestral markers to account for admixture and more specifically address the contribution of race / ethnicity to disease risk and disparities. There is a paucity of data on race / ethnic differences in responses to various treatments for endocrine disorders, and determining whether these differences exist will allow us to implement more patient-specific treatment regimens. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our improved awareness and knowledge of interventions regarding disparities in diabetes needs to be expanded to other endocrine disorders for which race / ethnic disparities exist. Specifically, it is important to study whether social determinants of disease presented in our health disparities framework, specifically the physical and community context, are important contributors to disparities in vitamin D deficiency and poor outcomes after thyroid cancer diagnosis and osteoporotic fractures in minority populations. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the field of diabetes, multilevel interventions targeting the patient, provider, health care organization, community and health care system, and policy have reduced disparities in diabetes care and improved quality of care. These successes can be used as a roadmap for designing similar interventions to improve quality of care for endocrine disorders where there is currently a gap—specifically reducing mortality and improving outcomes after thyroid cancer treatment and osteoporotic fractures. Understanding the biological, clinical, and non-clinical contributors to disparities in endocrine disorders will allow the design of effective interventions to reduce these disparities and improve public health. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, according to a 2010 American Association of Medical Colleges survey, just under 27% of our current endocrine workforce is represented by minority physicians—16.9% Asian, 5.7% Hispanic, 3.6% NHB, and 0.3% Native American or Alaska Native—despite several endocrine disorders having a higher burden in these populations (438). Increasing the representation of ethnic minorities in both the clinical and research sectors of endocrinology and diabetes will help to raise awareness and prioritize research funding and policy development to reduce endocrine disparities.</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data"> &#160;</td>
+<td class="data">There are several limitations to consider when interpreting the results of this study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Firstly, the minimal difference detected between DPoRT and the full ethnicity algorithm may not be found in other populations with different ethnic compositions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Secondly, using self-report survey measures is a limitation which could affect predictive risk accuracy since these measures may be more subject to reporting error and bias than clinical measures. For self-reported height and weight, in general there is a high agreement; however, validation studies show that weight tends to be slightly underestimated and that height may be slightly overestimated and as a result reported BMI is generally lower than measured BMI (Nawaz et al. 2001, Rowland 2007, Shields et al. 2008), which would result in a slight underestimation of predicted risk. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The possibility of misclassification is also possible with the use of self-reported ethnicity, even though it is the most common measure of acquiring ethnic information in epidemiological studies (Comstock et al. 2004). Interestingly self report ethnicity is generally preferred by epidemiologists and federal agencies, such as the US and Canadian Census and the National Center for Health Statistics (Gomez et al. 2005). This is due to the fact the self-identification with ethnicity is most important for studying influences of lifestyle on disease risk. Misclassification due to self-reported ethnicity may be more problematic when examining the genetic associations with disease (Burchard et al. 2003). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Physician diagnosed diabetes, as detected by claims data will not capture all diabetes cases and misclassification is possible i based on the 86% specificity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another important limitation is the exclusion of an important subpopulation which compromises the generalizability of this research to all ethnicities in Canada. The cohorts covered in the surveys used in this study exclude those living on Aboriginal reserves. Therefore, estimates for First Nations people apply only to those living off-reserve and are not intended to represent First Nations on-reserve. Previous studies show that First Nations are at greater risk for diabetes than other members of the Canadian population including off-reserve First Nations counterparts (Harris et al. 1997, Young et al. 2000, Green et al. 2003, Horn et al. 2007, Kaler et al. 2006). This is an important component of the population to consider for diabetes prevention and a population risk algorithm developed specifically for on-reserve populations would be beneficial to estimating overall diabetes burden in Canada. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Though overall model performance was good, analysis by ethnicity shows that further research is required to improve model fit in south Asian males. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data"> &#160;</td>
+<td class="data">The major limitation of this study is the number of subjects investigated. The number was limited by the complexities of the metabolic and imaging studies. For this reason, addition studies are needed to confirm our conclusions. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One other limitation of the study is that South Asians had higher percentage of subjects with family history of diabetes which could be a confounding factor. However, the ethnic differences in insulin resistance also translate in to higher prevalence of type 2 diabetes in South Asians and random selection of healthy young volunteers is bound to result in this difference in family history of diabetes between Caucasians and South Asians. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One other limitation of this study is lack of dietary information in the two groups. However, reported frequency of exercise was similar in both the groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although we have shown that abnormalities in adipose tissue amounts, distribution, and function can account for a significant portion of the predisposition of South Asians to insulin resistance, we cannot rule out the possibility that genetic factors of a more generalized nature also contribute to insulin resistance. For example we have shown that South Asians have a relative increase in a polymorphism of ENPP1/PC-1 that has been reported to be associated with increased insulin resistance and predisposition to type 2 diabetes [5,6]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The major limitation of this study is the number of subjects investigated. The number was limited by the complexities of the metabolic and imaging studies. For this reason, addition studies are needed to confirm our conclusions. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Whether this increase in plasma IL-6 concentration is playing a causative role for the increased prevalence of insulin resistance in the Asian-Indian men or is secondary to the hepatic steatosis and insulin resistance remains to be determined. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">However, the beneficial effects of metformin on prevention of type 2 diabetes still await confirmation from undergoing clinical trials specifically designed to answer this important question. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXThe role of TZDs in prevention of type 2 diabetes still awaits evaluation.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

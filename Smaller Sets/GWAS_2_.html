@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">GWAS - (genome wide association studies) data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.GWAS_SORTED_2">
+<caption aria-label="Data Set REF.GWAS_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">HDL and type 2 diabetes: the chicken or the egg?</td>
+<td class="data">Based on the current literature, a bidirectional correlation between HDL dysfunction and type 2 diabetes exists, leading to a perpetual self-feeding cycle (Fig. 1). It is increasingly evident that not all HDL disturbances are causatively associated with the development and progression of type 2 diabetes. Most recent clinical and epidemiological data indicate that an optimal range of plasma HDL-C concentrations exists in humans. Even though very high HDL-C levels appear to correlate with dysfunctional HDL, this does not necessarily preclude a substantial benefit when raising ones HDL-C from very low levels to levels within the optimal range. The notion that HDL proteome dictates its lipidome and subsequently HDL particle functionality [11] suggests that alterations in the HDL metabolic pathway have substantial influence on its properties and functions. However, the interrelation between HDL lipidome, proteome and particle functionality is a missing part of the puzzle, which remains as yet unsolved. HDL, the sleeping beauty of lipoproteins, is waiting for its prince to awake her therapeutic potential. Understanding HDL functionality and the factors affecting it in diabetic individuals remains a crucial step towards better glucose homeostasis. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The significance of HDL-C optimal ranges
+1. A bidirectional correlation between HDL dysfunction and type 2 diabetes exists.
+2. An optimal range of plasma HDL-C concentration exists in humans.
+3. Raising one’s HDL-C levels from very low to levels within the optimal range may translate to benefit.
+4. HDL proteome dictates its lipidome and HDL particle functionality.
+5. Understanding HDL functionality in diabetic individuals remains a crucial step towards better glucose homeostasis. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">Selecting likely causal risk factors from high-throughput experiments using multivariable Mendelian randomization</td>
+<td class="data">We here introduce MR-BMA, an approach for multivariable MR which allows for the analysis of high-throughput experiments. This model averaging procedure prioritises and selects causal risk factors in a Bayesian framework from a high-dimensional set of related candidate risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As is common for statistical techniques for variable selection, MR-BMA does not provide unbiased estimates. However, as shown in the simulation study, causal estimates from MR-BMA have reduced variance and thus MR-BMA improves over unbiased approaches, like the IVW method, in terms of mean squared error and detection of true risk factors.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The primary aim of this work is to detect causal risk factors rather than to unbiasedly estimate the magnitude of their causal effects. MR-BMA is a multivariable MR approach that can analyse a high-dimensional set of risk factors. XXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When analysing many risk factors jointly one important implicit assumption of MR-BMA is sparsity, i.e., the proportion of true causal risk factors compared with all risk factors considered is small. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Since MR-BMA evaluates all possible combinations of risk factors exhaustively or all relevant combinations of risk factors in a shotgun stochastic search there is an upper bound for the maximum model size in order to keep the computation tractable. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sparsity is a common assumption for high-throughput data and we have seen in the applied example that the best models only contained one to three metabolites as risk factors despite allowing for a model size of up to twelve risk factors. Yet this is an important aspect of the algorithm and the maximum model size should be adjusted if models including many risk factors are expected or evidenced in the data. We demonstrated the approach with application to a dataset of NMR metabolites, which included predominantly lipid measurements, using variants associated with lipids as instrumental variables. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous MR analysis (23, 24) including three lipid measurements from the Global Lipids Genetics Consortium (19) have identified HDL cholesterol as potential risk factor for (age related macular degeneration) AMD. Our approach to multivariable MR refined this analysis and confirmed HDL cholesterol as a potential causal risk factor for AMD, further pinpointing that large or extra-large HDL particles are likely to be driving disease risk. Other areas of application where this method could be used include imaging measurements of the heart and coronary artery disease, body composition measures and type 2 diabetes, or blood cell traits and atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As multivariable MR accounts for measured pleiotropy, this approach facilitates the selection of suitable genetic variants for causal analyses. In each case, it is likely that genetic predictors of the set of risk factors can be found, even though finding specific predictors of, for example, particular heart measurements from cardiac imaging, may be difficult given widespread pleiotropy (25). XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MR-BMA allows a more agnostic and hypothesis-free approach to causal inference, allowing the data to identify the causal risk factors. Multivariable MR estimates the direct effect of a risk factor on the outcome and not the total effect as estimated in standard univariable MR. This is in analogy with multivariable regression where the regression coefficients represent the association of each variable with the outcome when all others are held constant. Having said this, the main goal of our approach is risk factor selection, and not the precise estimation of causal effects, since the variable selection procedure shrinks estimates towards the null. This results in causal effect estimates being biased towards the Null when there is a causal effect and unbiased estimates when there is no causal effect. If there are mediating effects between the risk factors, then this approach will identify the risk factor most proximal to and has the most direct effect on an outcome. For example, if the risk factors included would form a signalling cascade (Supplementary Fig. 1b) then our approach would identify the downstream risk factor in the cascade with the direct effect on the outcome and not the upstream risk factors in the beginning of the cascade. Hence, a risk factor may be a cause of the outcome, but if its causal effect is mediated via another risk factor included in the analysis, then it will not be selected in the multivariable MR approach. Our approach is formulated in a Bayesian framework. Particular care needs to be taken when choosing the hyper-parameter for the prior probability which relates to the a priori expected number of causal risk factors. In the applied example the results were robust to a wide range of prior specifications for the parameter as seen in Supplementary Table 10. In addition, the prior variance of the causal parameters needs to be specified and tested for robustness as we show in the Supplementary Table 11. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When genetic variants are weak predictors for the risk factors, this can introduce weak instrument bias. In univariable two sample MR, any bias due to weak instruments is towards the null and does not lead to inflated type 1 error rates (26). However, in multivariable MR, weak instrument bias can be in any direction (see Methods), although bias will tend to zero as the sample size increases and consequently the instrument strength increases. Selection of risk factors is only possible if there are genetic variants that are predictors of these risk factors. One of the biggest challenges of multivariable MR is the design of a meaningful study, in particular the choice of both, the genetic variants and the risk factors. The design of the study is important for the interpretation of the risk factors prioritised: The ranking of risk factors is conditional on the genetic variants used. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For instance, in our applied example we find evidence for extra-large and large HDL cholesterol concentration given that we used lipid-related genetic variants as instrumental variables. We recommend to include only risk factors which have at least one, and ideally multiple genetic variants that act as strong instruments. Caution is needed for the interpretation of null findings, particularly in our example for non-lipid risk factors, as these might be deprioritised in terms of statistical power by our choice of genetic variants. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The instrument selection and general study design are essential for the MR-BMA approach and we strongly recommend the user to be critical in the choice of genetic variants and risk factors. Moreover, similar to standard MR we urge to perform model checks and be transparent in the presentation of the removal of outlier / influential genetic variants. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A further requirement for multivariable MR is that the genetic variants can distinguish between risk factors (12). We recommend to check the correlation structure between genetic associations for the selected genetic variants and to include no pair of risk factors which is extremely strongly correlated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the applied example, we included only risk factors with an absolute correlation &lt;0.99. As we were not able to include more than three measurements for each lipoprotein category (cholesterol content, triglyceride content, diameter), care should be taken not to overinterpret findings in terms of the specific measurements included in the analysis rather than those correlated measures that were excluded from the analysis (such as phospholipid and cholesterol ester content). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another assumption of multivariable MR is that there is no unmeasured horizontal pleiotropy. This means that the variants do not influence the outcome except via the measured risk factors. The assumption of no horizontal pleiotropy is a common and untestable assumption in MR. It is an active area of research to robustify MR against violations of this assumption. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Some of these robust methods for MR make a specific assumption about the behaviour of pleiotropic variants, such as MR-Egger (27), which assumes pleiotropic effects are uncorrelated from the genetic associations with the risk factor—the InSIDE assumption. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Other methods exclude outlying variants as they are potentially pleiotropic such as MR-PRESSO (28). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In multivariable MR, pleiotropic variants can be detected as outliers to the model fit. Here we quantify outliers using the q-statistic. Outlier detection in standard univariable MR can be performed by model averaging where different subsets of instruments are considered (29, 30), assuming that a majority of instruments is valid, but without prior knowledge which are the valid instruments. In multivariable MR, ideally one would like to perform model selection and outlier detection simultaneously. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, we search for genetic variants that are influential points. While these may not necessary be pleiotropic, we suggest removing such variants as a sensitivity analysis to judge whether the overall findings from the approach are dominated by a single variant. Findings are likely to be more reliable when they are evidenced by multiple genetic variants.  XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+CONCLUSION =&gt; In conclusion, we introduce here MR-BMA, the first approach to perform risk factor selection in multivariable MR, which can identify causal risk factors from a high-throughput experiment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MR-BMA can be used to determine which out of a set of related risk factors with common genetic predictors are the causal drivers of disease risk. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">Assessing the causal association of glycine with risk of cardio-metabolic diseases</td>
+<td class="data">Based on a genetic discovery in up to 80,003 participants from five studies, we identify 22 loci not previously reported for glycine. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Two novel loci (PSPH and PHGDH) are located in genes encoding enzymes catalysing the de novo biosynthesis of serine—a pathway which has not previously been genetically associated with glycine, despite the close metabolic link between glycine and
+serine. We also identified two rare variants (in FGG and near KIF5B) not previously reported for metabolic traits, which corroborates previous evidence that rare genetic variation plays a role in amino acid levels (13). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Based on four genetic scores with different degrees of specificity to the glycine pathway, we demonstrate that low levels of glycine are genetically associated with higher risk of CHD, which supports a potential protective role of glycine against CHD. The effect size differs depending on the genetic score, with estimated effects of glycine on CHD increasing with the degree of specificity of the genetic score to glycine, which strengthens the evidence that the observed genetic associations are driven by glycine. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We furthermore found that glycine has similarly protective effects in men and in women, which contradicts findings by Hartiala et al., (7) who suggested that the sex-specific association of CPS1 with CHD may reflect a causal role for glycine on CHD in women only. We however show that, after taking into account the sex-specific effect sizes on glycine, the genetic association of glycine with CHD, based on CPS1 only and the four genetic scores for glycine, is similar in magnitude in both sexes. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that the inverse genetic association of glycine with blood pressure may at least partly explain the genetic glycine-CHD association. High blood pressure is a major risk factor for cardiovascular diseases (29) and glycine supplementation has been shown to lower blood pressure in rodents (30–32) and in one small intervention study on human participants (33). Our findings corroborate a potential blood pressure-lowering effect of glycine for the first time in a large-scale epidemiological setting. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A proposed mechanism through which glycine may lower blood pressure is by the glycine-gated chloride channels expressed on the endothelial surface, which upon binding of glycine induce membrane hyperpolarisation and thus the production of nitric
+oxide—a well-known vasodilator (34). Despite the strong genetic association of glycine with blood pressure, we cannot conclude that the genetic effect of glycine on CHD risk is entirely mediated through blood pressure, due to the limited power of the multivariable MR analyses. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, the absence of associations between glycine and stroke, for which hypertension is also a major risk factor (29), suggests that there also may be other physiological pathways through which glycine influences cardiovascular disease risk. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We however find no evidence for a role of glycine in lipid metabolism or blood cell traits, despite previous studies suggesting that glycine may regulate lipid metabolism (2) and platelet (35) and immune cell activation (36). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There may be other mechanisms underlying the genetic glycine-CHD association which we could not investigate here. For example, glycine may protect against oxidative stress, as it is a substrate for the biosynthesis of glutathione—a major antioxidant in human cells (37, 38). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX While multiple observational epidemiological studies have linked high glycine levels to lower incidence of T2D (3, 4, 39), the genetic evidence for causality is weaker. MR analyses based on the larger but less specific genetic scores indicate no causal effect of glycine on risk of T2D, while variants in genes related to glycine catabolism drive associations of the 5 and 2 SNP scores with lower T2D risk. These findings suggest that overall levels of glycine may not be causal for T2D but that low glycine levels due to changes in the catalytic efficiency of the glycine cleavage system—the protein complex that catalyses the major catabolic pathway of glycine (40)—may cause higher risk of T2D. Coding mutations in genes of the glycine cleavage system have been identified as one of the causes of severe hyperglycinemia (41), a life-threatening inborn error of metabolism, and have been linked to higher risk of neural tube defects (42). To the best of our knowledge, this enzyme complex has not previously been linked to common cardio-metabolic diseases. An alternative interpretation of our findings is that overall glycine levels are causally associated with T2D risk, but that this association is masked by pleiotropic effects of CPS1. As CPS1 had a 10-fold stronger effect on glycine than most other glycine-associated variants, the genetic scores which included CPS1 in fact mostly represented CPS1. The CPS1 locus has widespread effects across the metabolome, which are not restricted to the glycine pathway, and has also been associated with other traits, of which some, including glycine, may protect against T2D while others could increase T2D risk. Therefore, the null-association based on the genetic scores including CPS1 may have been driven by glycine-independent pathways and may thus mask a true genetic association of glycine with T2D. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings do not entirely replicate the recently reported protective effect of glycine on T2D based on an MR analysis using five loci for glycine (3). The significant inverse genetic association of glycine with T2D risk reported by Merino et al. was largely driven by CPS1, of which the glycine-raising allele was nominally associated with lower T2D risk in the 11,600 T2D cases and 33,000 controls. Our analyses based on 74,124 T2D cases and 824,006 controls did not replicate the nominal association with T2D for CPS1, nor for the genetic scores that included CPS1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We find strong genetic evidence that low glycine levels are a consequence of IR, which suggests that the inverse association of glycine levels with incidence of T2D is at least partly driven by IR. Observational epidemiological research has previously described that measures of IR are inversely associated with glycine (43, 44) and rodent experiments suggest that increased oxidative stress caused by IR leads to a higher rate of glutathione synthesis, which may lead to glycine depletion (45). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another proposed mechanism that could link IR to lower levels of glycine is the increased demand for glycine to safely excrete fatty acyl-CoA esters which accumulate as a consequence of incomplete suppression of lipolysis and resulting high circulating levels of fatty acids in the insulin resistant state (46). Free fatty acids can lead to a build-up of beta oxidation intermediates, i.e., fatty acyl-CoA esters, which can upon trans-conjugation with glycine be safely excreted as fatty acyl-glycine (46, 47). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings raise the question whether glycine supplementation merits evaluation as a strategy to prevent cardio-metabolic disease. A variety of glycine supplements are available for purchase “over the counter” and are used without clinical follow-up for a wide range of indications. To consider the preventive value, the potential benefits and harms should be assessed. Effect sizes for CHD varied depending on the “specificity” of the genetic score and, in addition, CI across these estimates varied, ranging from 0.69 to 0.98 per SD higher glycine levels. However, the increase in the effect estimate of glycine with increasing specificity of the genetic score suggests that the benefit may be considerable. This, together with the feasibility of achieving the required glycine concentration in blood given its short half-life (48), and any potential harms arising, require piloting under controlled conditions. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In terms of safety, in vitro and animal-based evidence has suggested that glycine and serine may promote oncogenesis by fuelling one-carbon and folate metabolism (49). This is indirectly supported by a suggestive association between folic acid supplementation and cancer incidence (50). Furthermore, it was recently shown that a serine and glycine-depleted diet improves treatment response and survival in murine models of colorectal cancer and lymphoma (51). Our genetic analyses of three site-specific cancers where GWAS summary statistics were available to provide maximum power and specificity did not provide evidence that glycine levels increase the risk of breast, ovarian or prostate cancer. However, consortia data for other cancer sites and types are required to provide genetic evidence against an increased risk for site-specific cancers other than breast, ovarian and prostate, and a thorough assessment of the potential carcinogenicity of glycine is required before glycine supplementation can be considered even in an evaluative setting in human participants. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our investigation into the aetiological role of glycine metabolism in cardio-metabolic diseases has several strengths. The variance in glycine levels explained by the genetic score comprising 24 loci was more than 15%, which enabled us to conduct well powered MR experiments. The high proportion of explained variance can be attributed to the biological specificity of the exposure. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Secondly, we conducted a thorough assessment of pleiotropic effects of the genetic scores for glycine and generated a series of subsets of the full genetic score with increasing specificity to glycine metabolism, in order to reduce the likelihood of contributions of glycine-unrelated metabolic pathways to the causal effect estimate. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We adopted multiple MR approaches, including robust methods which are less sensitive to bias due to pleiotropic effects by a subset of genetic variants within the score (52–54), which further decreases the chance that the genetically determined effect estimate was driven by glycine-independent pathways.  XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, we show that low glycine is associated with higher incidence of CHD and that genetic scores for glycine are compatible with this relationship being causal. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We furthermore show that a glycine-lowering effect of IR may drive the consistently reported association between higher glycine and lower incidence of T2D, while the evidence for a causal relationship between glycine and T2D risk is weaker. XXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Fine-mapping of an expanded set of type 2 diabetes loci to single-variant resolution using high-density imputation and islet-specific epigenome maps</td>
+<td class="data">Combined GWAS (In genomics, a genome-wide association study (GWA study, or GWAS), is an observational study of a genome-wide set of genetic variants in different individuals to see if any variant is associated with a trait. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GWA studies typically focus on associations between single-nucleotide polymorphisms (SNPs) and traits like major human diseases, but can equally be applied to any other genetic variants and any other organisms) data from 32  studies =&gt; including 74,124 T2D cases + 824,006 controls of European ancestry (effective sample size 321,436). This represents a 3.2-fold increase in effective sample size from the previous largest genome-wide study of T2D risk in Europeans (1). With this sample size, assuming accurate imputation (imputation quality score &gt;0.8), we had &gt; 80% power to detect T2D association (at a=5 x 10-8) with variants of minor allele frequency (MAF) &gt;= 5% and odds ratio (OR) &gt;=1.10, or MAF&gt;=0.1% and OR &gt;= 1.60 XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MAF definition =&gt; (Minor allele frequency (MAF) is the frequency at which the second most common allele occurs in a given population. They play a surprising role in heritability since MAF variants which occur only once, known as &quot;singletons&quot;, drive an enormous amount of selection) XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX After stringent harmonised quality control =&gt; 31 of the 32 GWAS were imputed using the 64,976 whole-genome sequenced haplotypes. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A haplotype =&gt; (haploid genotype) is a group of alleles in an organism that are inherited together from a single parent. Many organisms contain genetic material (DNA) which is inherited from two parents. Normally these organisms have their DNA organized in two sets of pairwise similar chromosomes. The offspring gets one chromosome in each pair from each parent. A set of pairs of chromosomes is called diploid and a set of only one half of each pair is called haploid. The haploid genotype (haplotype) is a genotype that considers the singular chromosomes rather than the pairs of chromosomes. It can be all the chromosomes from one of the parents or a minor part of a chromosome, for example a sequence of 9000 base pairs) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX of the Haplotype Reference Consortium (HRC) (4): the exception was the deCODE GWAS, which was imputed using a population-specific reference panel based on 30,440 Icelandic whole-genome sequenced haplotypes (5). We condicted T2D association analyses with + without adjustment for body-mass index (BMI). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX DISCOVERY OF NOVEL LOCI FOR T2D SUSCEPTIBILITY =&gt; We tested for T2D association with 27 million genotyped or imputed variants passing quality control filters =&gt; 21 million with MAF &lt; 5%. Our GWAS meta-analysis identified =&gt; variants at 231 loci at genome-wide significance (p&lt;5 x 10-8) in the BMI-unadjusted analysis and 152 in the smaller (effective sample size 157,401) BMI-adjusted analysis. The BMI adjusted signals included 140 overlapping with the BMI-unadjusted analysis and 12 that were genome-wide significant only after adjustment. Of these 243 loci, (231 +12), 172 were significant at the more stringent threshold of p&lt;5 x 10-9 recently advocated for whole genome sequence data (6) (and therefore likely overly conservative for the GWAS setting). Of the 243 significant loci, 135 mapped outside regions previously-implicated in T2D-risk, defined as &gt; 500kb from reported lead variants. The MAF of lead variants at the 135 novel loci ranged from 0.02% to 49.7%, including 9 low-frequency (0.5% =&lt;MAF&lt;5%) and rare (MAF&lt;0.5%) variant signals. Amongst the samples not included in previous discovery efforts (42,734 cases and 497,261 controls) =&gt; we replicated associations (directionally consistent at p&lt;0.05) at 126 of 141 previously reported T2D loci, including all 105 regions first discovered in European-only or trans-ethnic efforts (3, 7-9). We detected significant European signals (p&lt;0.05) for 20 other loci initially reported in studies focused on non-European subjects (10, 11). The 15 signals that did not replicate were all first identified in non-European ancestry samples: at six of these, the reported lead variant had MAF&lt;1% in Europeans. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MULTIPLE ASSOCIATION SIGNALS AT T2D SUSCEPTIBILITY LOCI =&gt; We used approximate conditional analysis with GCTA12 to delineate distinct association signals arising from multiple causal variants in the same locus. Across the 243 associated loci =&gt; we identified 160 additional signals at &quot;locus-wide&quot; significance (which, as in previous T2D analyses, we define using a locus-specfic threshold of p&lt;10-5), 110 within previously-reported T2D loci. Of these 160 signals, 92 met a more conservative association threshold of p&lt;10-6. Overall, we observed one signal at 151 loci =&gt; and two to ten signals at the remaining 92, for a total of 403 significant T2D-association signals. These analyses revealed marked complexity at some of the associated loci. For the first time, we observed evidence of multiple association signals at the TCF7L2 locus =&gt; the largest-effect common variant signal for T2D in Europeans. We detected seven additional distinct signals =&gt; (0.5%&lt;MAF&lt;47.6%, 1.05&lt;OR&lt;1.36), represented by index variants that are , at most, in weak LD (r2&lt;0.06) with previously-reported lead GWAS SNP, rs7903146 (OR 1.37, MAF 29.3%). Most spectacularly =&gt; in the 1Mb region that encompasses the (previously-annotated) INS-IGF2 and KCNQ1 loci =&gt; we found compelling evidence, on conditional analyses =&gt; for 5 and 10 independent (r2&lt;0.25) non-coding index variants, respectively (0.15%&lt;MAF&lt;42.8%, 1.03&lt;OR&lt;1.68). The adjacency of these two loci, in a region notable for multiple imprinting effects that include many strong biological candidates (including INS, IGF2, KCNQ1, and CDKN1C), =&gt; speaks to a previously-unheralded degree of complexity in this T2D-associated telomeric region of chromosome 11. (A telomere (/ˈtɛləmɪər, ˈtiːlə-/; from Ancient Greek τέλος (télos) &apos;end&apos;, and μέρος (méros) &apos;part&apos;) is a region of repetitive nucleotide sequences associated with specialized proteins at the ends of linear chromosomes. Telomeres are a widespread genetic feature most commonly found in eukaryotes. In most, if not all species possessing them, they protect the terminal regions of chromosomal DNA from progressive degradation and ensure the integrity of linear chromosomes by preventing DNA repair systems from mistaking the very ends of the DNA strand for a double-strand break.) XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX EFFECTS OF BMI AND SEX =&gt; At most known and novel T2D-loci =&gt; there were only minimal differences in statistical significance and estimated T2D effect size between BMI-adjusted and unadjusted models. However =&gt; at the index SNPs for 41 distinct signals (mapping to 21 known and 16 novel loci), we observed significant heterogeneity in effect sizes between BMI adjusted and unadjusted analyses (Phet &lt; 0.05/403 = 0.00012 adjusting for 403 variants tested; Methods). The heterogeneity in effect sizes =&gt; followed two distinct patterns. At 26 signals =&gt; including variants at the FTO, MC4R, TMEM18, SEC16B, and GNPDA2 loci =&gt; BMI-adjustment led to marked attentuation of signals detected in BMI-unadjusted analyses. These signals display strong positive correlation between BMI and T2D effect sizes =&gt; represent T2D-risk effects primarily diven by adiposity. The other 15 were more strongly associated the BMI-adjusted analysis (including two of the 12 signals genome-wide significant in BMI-adjusted analyses alone). These reflect a mixture of signals =&gt; including some with a particularly marked effect on insulin secretion (e.g. TCF7L2, ARAP1, JAZF1), and others that likely influence T2D risk through reduced capacity for fat storage in peripheral adipose tissue (13) (e.g. GRB14, PPARG, HMGA1, ZNF664). We used increased sample size =&gt; to examine heterogeneity in allelic effects between males (41,846 T2D cases; 383,767 controls) and females (30,053 T2D cases; 434,336 controls). In sex-differentiated meta-analysis (14) =&gt; we detected nominal evidence of heterogeneity (p&lt;0.05) at 31 of 403 T2D susceptibility signals (7.7%, Pbinomial = 0.013). Variants at 19 signals displayed larger effects in females with the most differentiated signals at CMIP (rs2925979, female OR = 1.09, male OR = 1.03, Phet = 8.3 x 10-6), KLF14 (rs1562396, female OR = 1.09, male OR = 1.04, Phet = 0.00048), and MAP3K11 (rs1783541, female OR = 1.10, male OR = 1.04, Phet = 0.00058). The female-specific effects on T2D risk at KLF14 (15) are consistent with those previously-reported for lipids (16) and, given evidence that the risk variant acts as a regulator of KLF14 expression in adipose tissue =&gt; indicate sexually-dimorphic effects on fat deposition. At the other 12 signals, larger effects were seen in males =&gt; with the differentiation most marked at ANK1 (rs4736819, female OR = 1.03, male OR = 1.09, Phet = 0.00021). Amongst sex-differentiated signals, only that at CMIP survived Bonferroni correction for comparison across 403 T2D loci. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FINE-MAPPING VARIANTS DRIVING T2D ASSOCIATION SIGNALS =&gt; Previous efforts at fine-mapping causal variants within T2D loci have been hampered by factors that are both biological (extensive LD) and technical (diverse geneotyping scaffolds, relatively small reference panels for imputation).  We sought to establish the extent to which the combination of =&gt; increased sample size, enlarged reference panel, and harmonised variant quality control =&gt; would enhance fine mapping resolution. Comprehensive fine-mapping for 380 of the 403 independent T2D association signals =&gt; following conditional decomposition of loci with multiple signals. We excluded 23 signals not amenable to fine mapping: (i) 19 where the index variant had MAF &lt; 0.25%; (ii) three where the index variant was rare and analysed in &lt; 50% of the effective sample size; and (iii) the one mapping to the major histocompatibility complex because of the extended and complex structure of LD across the region, which complicates fine-mapping. For each of the remaining 380 signals =&gt; we constructed credible sets that collectively account for &gt;= 99% of the posterior probability of driving the association (PPA), based on the conditional meta-analyses summary statistics (17). As expected =&gt; fine-mapping resolution varied markedly across the 380 signals. Credible sets included a median of 42 variants (range 1-3,997) distributed across the entire allelefrequency spectrum , and spanned a median of 116kb (kilobases) (range 1bp-995kb). At 18 signals, the credible set included a single variant; by definition, this variant had PPA&gt;99%. For 51 signals, at 44 loci, including 18 novel loci, the most strongly associated variant accounted for &gt;80% PPA. We explored fine-mapping resolution at the 83 distinct signals =&gt; where detection in both studies allowed us to compare 99% credible sets from the current HRC-based analysis with those constructed using the recent meta-analysis of a subset of these T2D GWAS data imputed using the 1000G multi-ethnic reference panel (1) (26,676 T2D cases; 132,532 controls of European ancestry, effective sample size 72,143). Genome-wide, the HRC-based metaanalysis includes 2.3-fold more variants than the 1000G study. Despite this, the HRCimputed analysis resulted in far smaller credible sets: the median number of variants at these 83 signals decreased from 59 to 10 and the median length of intervals from 60.3kb to 19.2kb. Overall =&gt; at 79 of the 83 signals, HRC-based credible sets were either smaller (72 signals) than those generated from 1000G or unchanged. This improved resolution likely reflects the combination of: (i) increased effective sample size; (ii) improved imputation quality, especially for lower-frequency variants (4); and (iii) more effective quality control measures harmonised across all contributing studies. To estimate the contribution to fine-mapping resolution attributable to the increase in effective sample size (the other two factors are more difficult to tease apart) =&gt; we constructed 99% credible sets based on downscaling the HRC-imputation to a subset of 19 studies (31,387 cases; 326,742 controls, effective sample size 92,960) that contributed to both the 1000G and HRC-based analyses. Amongst 41 single signal loci with p&lt;1x10-5 in this downscaled meta-analysis, estimates of credible set size (median 66) and interval (median 196kb) indicate that most of the benefits in causal variant resolution achieved in the current study derive from increased sample size. The HRC panel (Haplotype Reference Consortium (HRC) released a large imputation panel that allows more accurate imputation of genetic variants) provides excellent coverage of all but very rare single nucleotide variants (SNVs). However =&gt; one HRC limitation is the absence of indels: these make up 4% of total variants in the phase 3 1000G reference panel (18). To explore the potential impact on our findings =&gt; we considered the 245,207 indels from the European subset of the 1000G panel that map within 500kb of index variants at the 380 fine-mapped signals: these account for 2.8% of variants across the 380Mb of sequence. Only 1% of these are in even moderate LD (r2&gt;0.5) with the index variants for each distinct signal: this suggests that indel omission is unlikely to have impacted our estimates of credible set size. (Indel =&gt; is a molecular biology term for an insertion or deletion of bases in the genome of an organism. It is classified among small genetic variations, measuring from 1 to 10 000 base pairs in length, including insertion and deletion events that may be separated by many years, and may not be related to each other in any way. A microindel is defined as an indel that results in a net change of 1 to 50 nucleotides). XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  THE CONTRIBUTION OF LOWER-FREQUENCY VARIANTS =&gt; The limited yield of low-frequency and rare variant signals for T2D in previous GWAS has placed an upper bound on their individual and collective contribution to disease risk (19). The present analysis =&gt; with larger sample size and improved imputation =&gt; provided far greater power in this regard, identifying 56 low-frequency and 24 rare T2D-associated variants across 60 loci. At 21 loci, these alleles (15 low frequency, 6 rare) represented =&gt; the strongest regional associations and the remaining 59 were index variants for secondary signals. Six of these 80 signals mapped within known T2D loci =&gt; five reconfirming earlier observations. At the sixth (TMEM18) =&gt; fine-mapping highlighted the lead regional SNP as rs62107261 (MAF=4.6%) rather than the previously-reported common lead variant rs2867125 (MAF=17%) (2); at this locus =&gt; the common and low-frequency variants constitute distinct signals, with the former relegated to secondary status in this analysis following emergence of the stronger association at rs62107261. Odds ratios for low-frequency and rare variants ranged from 1.08 to 8.05 (including 14 with estimated allelic OR&gt;2), compared to 1.03 to 1.37 for common variants (Figure 5). The 80 low-frequency and rare risk-variants cumulatively explain only 1.13% of phenotypic variance in T2D as compared to the 16.3% attributable to common variant signals. Extrapolation beyond these discovered signals to estimate the full contribution of lowerfrequency variants to T2D risk is intrinsically difficult given the combination of effect size overestimation in the current study (winner’s curse) and limited power to capture additional low-frequency and rare variants of lesser effect. Nonetheless, these data are consistent with recently-proposed models for the genetic architecture of T2D derived from modelling findings from GWAS and sequencing data (19). Put succinctly, although the present study leverages increased sample size and improved imputation to expand the number of lowfrequency and rare variants reaching genome-wide (or for secondary signals, locus-wide) significance, the effect sizes of the associated low-frequency and rare variants are mostly modest, and this limits their collective contribution to heritability. Notwithstanding, the identification of low-frequency and rare variants of modest to large effect can provide valuable biological inference; here we briefly describe a subset of these signals. We observed a mix of common and low-frequency variant signals =&gt; around the NEUROG3 gene, including T2D risk attributable to the minor alleles at rs41277236 (p.Gly167Arg, MAF=4.3%, OR=1.09, p=1.5x10-6) and rs549498088 (non-coding, MAF=0.60%, OR=1.56, p=4.7x10-7). NEUROG3 =&gt; encodes the neurogenin-3 transcription factor known to play a central role in the development of pancreatic islets and enteroendocrine cells (20). In humans, rare homozygous, hypomorphic missense mutations in NEUROG3 (non-overlapping with those we detected) =&gt; are a cause of childhood-onset diabetes associated with severe congenital malabsorptive diarrhea (21). Age of T2D diagnosis amongst heterozygous and homozygous carriers of the low-frequency NEUROG3 T2D-risk alleles we identified was =&gt; in UK Biobank, similar to that in non-carriers (52.3 vs 52.7 years; p=0.21 for rs41277236; 51.1 vs 52.7 years; p=0.49 for rs549498088), consistent with a spectrum of functional impact that associates these variants with risk of typical T2D. To explore the phenotypic correlates of these variants =&gt; particularly with respect to the syndromic consequences of severe NEUROG3 mutations, we conducted “PheWAS” analyses in UK Biobank. T2D-risk alleles at NEUROG3 =&gt; were associated with hyperlipidaemia (OR=1.07; p=0.0014) and multiple phenotypes recapitulating the gastrointestinal component of the neonatal syndrome (including “obstruction of bile duct” [OR=1.29; p=0.023], “gastrointestinal complications” [OR=1.79; p=0.024], and “functional digestive disorders” [OR=1.06; p=0.027]).  We identified a rare missense (A genetic alteration in which a single base pair substitution alters the genetic code in a way that produces an amino acid that is different from the usual amino acid at that position. Some missense variants (or mutations) will alter the function of the protein. Also called missense variant ) coding variant =&gt; p.Cys418Arg in ABCC8 (rs67254669, MAF=0.11%, OR=1.89, p=1.1x10-8) =&gt; which is independent of the existing GWAS lead variant in the adjacent KCNJ11 gene (rs5213, MAF=36.2%, OR=1.07, p=3.5x10-27). KNCJ11 and ABCC8 encode the two components of the beta-cell KATP channel; =&gt; loss and gain-of-function mutations in both genes have been reported as causal for congenital hyperinsulinemia and monogenic diabetes, respectively (22–25). The p.Cys418Arg ABCC8 missense variant has been previously-identified in an individual with recessively-inherited congenital hyperinsulinism (26). However =&gt; the relationship between hyper- and hypo-secretion of insulin associated with variation in this locus is dynamic and complex (27): some dominant ABCC8 mutations have been implicated in the combination of neonatal hyperinsulinism and later-onset diabetes. We detected two previously-unreported rare alleles with large ORs. The first was intronic to DENND2C (rs184660829, MAF=0.020%, OR=8.05, p=2.5x10-8). In PheWAS in the UK Biobank, the T2D-risk allele was also associated with “lower gastrointestinal congenital anomalies” (OR=17.31 p=0.00047), and “disorders of bilirubin excretion” (OR=10.13; p=0.022). The second mapped near KIF2B (rs569511541, MAF=0.020%, OR=7.63, p=1.5x10-8) and was also associated with “congenital anomalies of endocrine gland” (OR=30.75; p=0.00015), “disease of pancreas” (OR=5.93; p=0.0017), and “hypokalemia” (OR=6.92; p=0.0046). Both sites are present in the Genome Aggregation Database (28) and met quality control criteria in our data (average imputation quality &gt;0.7; association signal visible in multiple contributing studies), but their precise contribution to T2D-risk requires further in vitro and in vivo validation. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CAUSAL CODING VARIANTS =&gt; We next focused attention on the 51 (of 380) signals where our fine-mapping strongly implicated (PPA&gt;80%) a single causal variant. Eight of these 51 variants were missense coding variants (Supplementary Table 7). Six of the eight fell into established T2Dassociated regions; with the exception of p.Cys130Arg at APOE (MAF=15.4%), all have been previously implicated as causal variants for T2D: p.Ser539Trp in PAM (MAF=0.83%); p.Thr139Ile in HNF4A (MAF=3.5%); p.Asp1171Asn in RREB1 (MAF=11.3%); p.Ala146Val in HNF1A (MAF=2.9%); and p.Pro446Leu in GCKR (MAF=39.3%) (3). Coding variant associations at PATJ (p.Gly157Val; 9.5% MAF) and CDKN1B (p.Val109Gly; 23.5% MAF) are novel and highlight these genes as playing direct roles in T2D-risk. PATJ is highly expressed in brain (29) and codes for Pals1-Associated Tight Junction component, a protein with multiple PDZ domains that mediate protein-protein interactions. In PheWAS =&gt; associations for this variant indicate a central mechanism of action on T2D: the T2D-risk allele is associated with obesity (OR=1.11; p=3.8x10-5; with attenuation of T2D association signal in BMI-adjusted analyses, phet=9.3x10-10), hyperlipidemia (OR=1.05; p=0.00048), and chronotype (p=7.7x10-12). CDKN1B, encodes a cyclin dependent kinase inhibitor; and in mouse, deletion of this gene ameliorates hyperglycemia by increasing islet mass and maintaining compensatory hyperinsulinemia (30). At a further four signals =&gt;  a single missense variant accounted for the majority (&gt;50%) of the PPA. These included two variants previously-reported as causal (3): ANKH (p.Arg187Gln, MAF=0.6%), and POC5 (p.His36Arg, MAF=39.5%) (3). The other two signals were driven by low-frequency variants: p.Gly167Arg at NEUROG3 (described above), and p.Glu4Gln at ZNF771 (MAF=0.6%). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">Genome-Wide Association Studies of Metabolite Concentrations (mGWAS): Relevance for Nephrology</td>
+<td class="data">Future efforts in the mGWAS area should aim to improve comparability across studies through standardization of analytic approaches. In the absence of a unified technology that allows for a comprehensive and standardized quantification of all metabolites in a sample, imputation of missing metabolites may be a fruitful area of future research. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additional areas that would benefit from further automatization and research include computational approaches to assign identity to unknown molecules, and to identify the most likely causal gene in a genomic interval identified through mGWAS. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Besides translating unknown but quantifiable molecules to known ones, the study of additional human biofluids and from cell- and animal-based experimental systems also will deliver additional novel molecules that are not even quantified to date. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Improvements in the connection of metabolites into networks and in the modeling of higher-dimensional relationships among metabolites and between metabolites, proteins, transcripts, and so forth should provide additional insights into metabolic pathways when associated with genetic information. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our understanding of the influence of disease states and environmental influences, that is, the dynamic aspect of the metabolome, also should be a major focus of future studies. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the central question of cause versus consequence for observed metabolite-disease associations can be addressed experimentally or through large-scale Mendelian randomization experiments.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">An Expanded Genome-Wide Association Study of Type 2 Diabetes in Europeans</td>
+<td class="data">In this large-scale study of T2D genetics, in which individual variants were assayed in up to 238,209 subjects, we identified 13 novel T2D-associated loci at genome-wide significance and refined causal variant location for the 13 novel and 69 established T2D loci. We also found evidence for enrichment in regulatory elements at associated loci in tissues relevant for T2D and demonstrated tissue-specific enrichment in regulatory annotations when T2D loci were stratified according to inferred physiological mechanism. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We calculate that the present analysis, together with loci reported in other recent publications (9), brings the total number of independent T2D associations to 128 distinct signals at 113 loci (Supplementary Table 3). Lead SNVs at all 13 novel loci were common (MAF &gt; 15%) and of comparable effect size (1.07 =&lt; OR =&lt; 1.10) to previously identified common variant associations (2,4). Associations at the novel loci showed homogeneous effects across diverse ethnicities, supporting the evidence for coincident common risk alleles across ancestry groups (2). Moreover, we conclude that misclassification of diabetes subtype is not a major concern for these analyses and that the HLA-DQA1 signal represents genuine association with T2D, independent of nearby signals that influence T1D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We observed a general increase in the size of credible sets with 1000G imputation compared with HapMap imputation. This is likely due to improved enumeration of potential causal common variants on known risk haplotypes rather than resolution toward low-frequency variants of larger effect driving common variant associations. These findings are consistent with the inference (arising also from the other analyses reported here) that the T2D risk signals identified by GWAS are overwhelmingly driven by common causal variants. In such a setting, imputation with denser reference panels, at least in ethnically restricted samples, provides more complete elaboration of the allelic content of common risk haplotypes. Finer resolution of those haplotypes that would provide greater confidence in the location of causal variants will likely require further expansion of trans-ethnic fine-mapping efforts (2). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The distinct signals at the established CCND2 and TP53INP1 loci point to contributions of low-frequency variant associations of modest effect but indicate that even larger samples will be required to robustly detect association signals at low frequency. Such new large data sets might be used to expand the follow-up of suggestive signals from our analysis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The discovery of novel genome-wide significant association signals in the current analysis is attributable primarily to increased sample size rather than improved genomic coverage. Although we queried a large proportion of the low-frequency variants present in the 1000G European reference haplotypes and had &gt;80% power to detect genome-wide significant associations with OR &gt; 1.8 for the tested low-frequency risk variants, we found no such low frequency variant associations in either established or novel loci. While low-frequency variant coverage in the current study was not complete, this observation adds to the growing evidence (2,4,9,46) that few low-frequency T2D risk variants with moderate to strong effect sizes exist in European ancestry samples and is consistent with a primary role for common variants of modest effect in T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The current study reinforces the conclusions from a recent study that imputed from whole-genome sequencing data—from 2,657 European T2D case and control subjects rather than 1000G—into a set of GWAS studies partially overlapping with the present meta-analysis. We demonstrated that the failure to detect low-frequency associations in that study is not overcome by a substantial increase in sample size (9). It is worth emphasizing that we did not, in this study, have sufficient imputation quality to test for T2D associations with rare variants and we cannot evaluate the collective contribution of variants with MAF  &lt; 0.5% to T2D risk. The development of T2D involves dysfunction of multiple mechanisms across several distinct tissues (9,29,31,47,48). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When coupled with functional data, we saw larger effect estimates for enrichment of coding variants than observed with HapMap SNVs alone, consistent with more complete recovery of the causal variants through imputation using a denser reference panel. The functional annotation analyses also demonstrated that the stratification of T2D risk loci according to primary physiological mechanism resulted in evidence for consistent and appropriate tissue-specific effects on transcriptional regulation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These analyses exemplify the use of a combination of human physiology and genomic annotation to position T2D GWAS loci with respect to the cardinal mechanistic components of T2D development. Extension of this approach is likely to provide a valuable in silico strategy to aid prioritization of tissues for mechanistic characterization of genetic associations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Using the hypothesis-free pathway analysis of T2D associations with DEPICT (32), we highlighted a causal role of mTOR signaling pathway in the etiology of T2D not observed from individual loci associations. The mTOR pathway has previously been implicated in the link between obesity, insulin resistance, and T2D from cell and animal models (44,49). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

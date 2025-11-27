@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Energy metabolism data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.ENERGY_METABOLISM_SORTED_2">
+<caption aria-label="Data Set REF.ENERGY_METABOLISM_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">Ceramides in Adipose Tissue</td>
+<td class="data">The data described in this review and others in this series, identify ceramides as critical lipid metabolite that modulate adipose tissue function, homeostasis, and contribute to metabolic
+disease. Moreover, interventions that reduce ceramide synthesis in adipose tissue, delay, or prevent various comorbidities of obesity, such as insulin resistance and liver steatosis. These discoveries, while exciting, raise several essential questions to be answered to validate ceramide as a potential therapeutic target. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, can additional mechanisms be identified to explain ceramide action? Although initial studies identified a couple of key mechanisms (i.e., regulation of Akt) for ceramide actions, the numerous effects (e.g., regulation of thermogenic program, mitochondrial function) elicited by ceramide seems unlikely to be fully explained solely by PP2A-Akt axis or PKCz-Akt axis. Therefore, identifying additional molecular mechanisms will be crucial for understanding the roles of ceramides such that the therapeutic strategy could be developed accordingly. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, what is the role of immune-cell ceramide content in maintaining adipose tissue homeostasis? How do ceramides regulate these cell populations and how do they interact with adipocytes to gauge nutrient content? XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, how do b-adrenergic’s inhibit ceramide synthesis in adipose tissue? Delineation of the molecular targets downstream of the b-adrenergic receptor may offer additional interventional strategies to target ceramide synthesis. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fourth, are there additional regulators (nutrients / enzymes) that modulate intracellular ceramide content? The recent development of the ceramide flux assays coupled with secondary biochemical assays might favor the identification of more regulators and lead to additional strategies to safely target ceramide synthesis for its therapeutic use. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fifth, how various enzymes in sphingolipids synthesis and degradation pathways coordinate to maintain lipid homeostasis, particularly in response to various local and systemic stimuli. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">A metabolomics-based molecular pathway analysis of how the sodium-glucose co-transporter-2 inhibitor dapagliflozin may slow kidney function decline in patients with diabetes</td>
+<td class="data">In this study, we investigated the effect of 12 weeks of treatment of dapagliflozin, an SGLT2i, on plasma levels of more than 800 identified metabolites.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In general, our results show that treatment of dapagliflozin in the fasting situation is associated with increased amino acid metabolites and reduced levels of lipid species from several subclasses. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We used a bioinformatic approach to delineate molecular pathways that may contribute to the renal protective effects of the SGLT2i dapagliflozin. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Overlap at the gene expression level between metabolites targeted by dapagliflozin and intra-renal transcripts associated with DKD pointed to upregulation of the metabolites belonged to the sub-pathway of BCAA, while the corresponding BCAAs were not changed (9). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, urea and urea cycle metabolites, including N2, N5 diacetyl-ornithine, N-delta-acetylornithine and argininate, were similarly increased in the two studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to the findings of Kappel et al, (9) we observed decreased levels of TCA metabolites. The reason for the different response is unclear but may be attributable to many factors such as different populations or treatment durations. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Whereas Kappel et al found increased levels of acetyl-, propionyl- and β-hydroxybutyrylcarnitine, we have observed increased levels of butyrylcarnitine (10) and, in this study, reduced plasma levels of myristoylcarnitine. When fatty acid oxidation is incomplete, surplus acyl-groups are exported from mitochondria as acylcarnitines (16).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Reduced levels of acylcarnitines could therefore reflect a larger degree of complete fatty acid oxidation. In contrast to the long-chain acylcarnitines, fasting increases the release of short-chain carnitines, including acetylcarnitine and propionylcarnitine from the hepatosplanchnic bed (17). Several 3-hydroxy fatty acids decreased by dapagliflozin and high levels of these fatty acids are markers of fatty acid oxidation disorders (18). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Together, these results could indicate improved fatty acid oxidation and an enhanced fasting response with a surplus of 2- and 4-chain carbons. Plasma metabolomics have also been investigated in animal models treated with SGLT2is. Treatment of obese non-diabetic mice with canagliflozin showed activation of catabolic pathways including fatty acid oxidation and signs of inhibition of mTOR, while there was activation of AMPK (19). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In another study, the effects of ipragliflozin on metabolites were investigated in a model of diabetic nephropathy on Black and Tan BRachyury (BTBR) ob/ob mice (20). In line with our results, they observed that SGLT2is reduced the high levels of TCA cycle intermediates in the kidney of BTBR ob/ob mice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Collectively, findings from these cross-species studies underscore the metabolic effects of SGLT2is, which may potentially contribute to long-term clinical benefits. SGLT2i treatment increases haemoglobin and haematocrit. To what extent this is secondary to plasma contraction or increased red cell mass is unknown (21). Heme, an intermediate in haemoglobin metabolism, is one of the metabolites significantly increased after dapagliflozin treatment. Increased heme levels could reflect an increased heme synthesis, but also reduced degradation of heme by heme oxygenase. Reduced plasma levels of bilirubin could indicate reduced heme degradation because carbon oxide and biliverdin, which is further reduced to bilirubin, are the end-products of heme oxygenase activity (22). Regardless of the exact underlying mechanism, the increase in heme supports a potential effect of SGLT2is on haematopoiesis (23). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The molecular pathways selected through our bioinformatic approach have been associated with progressive renal function loss in patients with type 2 diabetes (24-26). The bioinformatics analysis showed that dapagliflozin treatment increased the TCA cycle activity. Expression of several TCA cycle enzymes was associated with increased eGFR, indicating a positive effect on renal mitochondrial function. Increased levels of metabolites and intermediates of the TCA cycle have been associated with DKD and endoplasmatic reticulum stress (24,27). The cause of the reduced levels of TCA-cycle intermediates is not clear, but may be explained by improved mitochondrial efficacy, as reflected by indications of a larger degree of complete fatty acid oxidation as well as increased gluconeogenesis, which may take place both in the liver and the kidney to compensate for urinary glucose loss. Additional support of the salutary effects on mitochondrial function is our finding that kynurenine was reduced while picolinic acid, a product of kynurenine metabolism, increased. This finding may indicate increased activity of the kynurenine pathway and increased production of quinolinic acid and NAD+ that may further support improved mitochondrial function after dapagliflozin treatment. Also, the increased plasma levels of NAA indicate improved mitochondrial function, specifically in the brain (15). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In line with these observations, a recent study showed that a metabolite panel previously associated with reduced mitochondrial function improved after dapagliflozin in patients with type 2 diabetes and chronic kidney disease (28). Moreover, studies in experimental animals have shown improved mitochondrial function both in the heart and renal tubules following treatment with SGLT2is (29,30). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These data together support the notion that long-term renal protective effects of SGLT2is may be mediated through amelioration of mitochondrial function. We also found the superpathway of citrulline metabolism to be associated with DKD progression and targeted/increased by dapagliflozin, as evidenced by the increase in urea and reduction in glutamine. The citrulline pathway involves nitric oxide synthase as one of the key enzymes which generates citrulline from arginine in a single reaction step. Nitric oxide synthase-derived nitric oxide exerts a wide array of effects and acts in the blood vessels as a potent vasodilator, exerting anti-thrombotic effects, and also has anti-inflammatory effects (31). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several studies have shown that SGLT2 inhibition in patients with type 2 diabetes improves endothelial function as measured by reactive hyperemia peripheral arterial tonometry and flow-mediated dilation and endothelial dysfunction has been associated with accelerated renal function decline (32-34). The exact mechanism of how SGLT2 inhibition improves endothelial function is not fully understood but may involve improved glycaemic and metabolic control, osmotic diuresis, and changes in sodium homeostasis as a result of increased natriuresis. The current study supports a potential role for improvements in endothelial function, through the citrulline pathway, as one of the potential mediators of the protective effects of
+SGLT2 inhibition on kidney function. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results of the bioinformatics approach indicated a change in the glycine degradation pathway after dapagliflozin treatment. Denovo creatine synthesis starts by the conversion of glycine and arginine to ornithine and guanidinoacetate by glycine amidinotransferase (GATM), and guanidinoacetate is then converted to creatine by guanidinoacetate N-methyl-transferase (GAMT), a reaction which is dependent on S-adenosylmethionine as methyl donor (35). In this study, plasma creatine levels increased, while the creatine precursor, guanidinoacetate, was reduced, indicating increased GAMT activity. Alternatively, reduced GATM activity explains reduced levels of guanidinoacetate and therefore increased creatine levels must be explained by causes other than changed synthesis, such as increased dietary intake of creatine. Overall, the bioinformatics analysis suggested reduced activity of the pathway, although we cannot rule out the possibility that increased creatine levels are the result of increased GAMT activity. Therefore, the suggestion of reduced glycine degradation should be carefully interpreted. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to previous studies, this study combined metabolomics and transcriptomics to identify metabolites and pathways associated with dapagliflozin response. This approach is potentially applicable in other chronic disease settings and can be used to identify novel biomarkers for disease progression and drug efficacy and safety monitoring.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, the molecular pathways targeted by dapagliflozin and associated with DKD suggest that molecular processes related to energy metabolism, mitochondrial function and endothelial function may be involved in the renal protective effects of dapagliflozin. These data confirm existing and offer novel hypotheses about the molecular effects of dapagliflozin in slowing the progression of DKD. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">Glutamine blockade induces divergent metabolic programs to overcome tumor immune evasion</td>
+<td class="data">From the time of the pioneering work of Otto Warburg, the study of immune cell metabolism has been linked to our understanding of cancer cell metabolism as a paradigm for the behavior of highly proliferative cells (5, 50–54). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although both activated T cells and cancer cells use Warburg physiology and glutamine metabolism to fuel notably high proliferative rates (2, 54, 55), the precise role of Warburg physiology, an inherently less efficient mode of ATP generation than oxidative respiration, has not been established. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recent theories have suggested that highly proliferative cells engage Warburg physiology to maintain the activity of critical pathways such as the PPP that emanate from the glycolytic pathway (56). We show here that, although increased glucose uptake may fuel increased PPP activity (as observed in DON-treated T cells), the function of this pathway does not require that glucose is metabolized to lactic acid, that is, Warburg physiology. In other words, the PPP (pentose phosphate pathway) runs in parallel with glycolysis but is not necessarily dependent on it. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Could Ceramides Become the New Cholesterol?</td>
+<td class="data">While it is premature to equate the nascent studies relating ceramides to diabetes and heart disease with the exhaustive body of literature surrounding cholesterol, a foundation for such a comparison is beginning to emerge. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One wonders whether ceramides are currently in the same position that cholesterol was in the 1980s. Will serum ceramides show the same prognostic utility as LDL cholesterol in large epidemiological studies? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Will mutations in genes encoding ceramide modifying enzymes prove relevant to diabetes and heart disease?  XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Will ceramide synthesis inhibitors prove to be as efficacious in humans as they are in rodents? XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regardless of what one thinks of this comparison or the likely answers to these questions, human beings are starting to monitor ceramide levels and are seeking answers about the ramifications of an altered ceramide profile.  XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">Profiling of Plasma Metabolites Suggests Altered Mitochondrial Fuel Usage and Remodeling of Sphingolipid Metabolism in Individuals With Type 2 Diabetes and Kidney Disease</td>
+<td class="data">There are several novel findings in this targeted plasma metabolomics study. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, profiling of plasma acyl-carnitines revealed evidence for incomplete FAO and intriguingly, accelerated catabolism of amino acids in individuals with T2DM and kidney disease. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, a reduction in plasma phosphatidylcholine levels and elevation of long-chain sphingomyelin and ceramide levels suggested remodeling of sphingolipids in T2DM with DKD. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we found that impaired renal filtration function and albuminuria levels were associated with different metabolite signatures. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Targeted metabolomics provides an excellent survey of energy-yield pathways and fuel substrate selection (5). In addition to incomplete FAO as indicated by an elevation in b-oxidation-derived even-number acyl-carnitines (Table 5 and Figure 1), our data point to an accelerated catabolism of amino acids, especially aromatic amino acids, in patients with DKD (23, 25). XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This is suggested by elevated levels of amino acid-derived acylcarnitines (C3, C5, C3-DC, C4-DC, C5-DC, and C6-DC) and lower plasma levels of tyrosine and tryptophan in participants with DKD (P = 0.002 and P = 0.014 in an unadjusted model, borderline significance after adjustment for age, sex, and ethnicity) (Table S1). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The depletion of aromatic amino acids has been reported by other studies in both diabetic and non-diabetic populations with chronic kidney diseases (6,11,29). It is worth noting that the flux of amino acids and its oxidation in mitochondria occur only under special circumstances such as aerobic physical exercise (30,31). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, the accelerated amino acid catabolism in DKD is intriguing, and the sensory signals that trigger amino acid flux and oxidation in these patients remain largely unknown. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, a large body of evidence has shown that excess intracellular and circulating acylcarnitines may exacerbate metabolic disturbance and lead to cytotoxicity (24,32,33). Hence, it is conceivable that accumulation of FAO and amino acid-derived metabolic intermediates in plasma may play a role in the progression of DKD (Figure 1). Another metabolic feature of DKD observed in the current study is the elevation of a cluster of dicarboxyl and hydroxyl acylcarnitines in plasma (Table 5 and Figure 1). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Increased formation of dicarboxyl and hydroxyl dicarboxylic acids via u- FAO and u-1 FAO and their conversion to the corresponding acylcarnitines may be attributed to acyl-CoA accumulation in DKD (34) u-Oxidation is a rescue pathway when mitochondrial fatty acid oxidation is impaired (27,34). A recent study by Kraus et al. indicated that endoplasmic reticulum stress might elevate short-chain diacid levels (22). Thus, accumulation of short- and long-chain dicarboxylacylcarnitines may indicate mitochondrial stress and /or endoplasmic reticulum stress that may lead to activation of alternative FAO pathways in DKD. Accumulation of acetyl-CoA-derived C2 (acetylcarnitine), as observed in our study, points to a mismatch between energy substrate flux and its utilization in DKD. However, due to the observational nature of our study, we are unable to elucidate whether the imbalance is due to accelerated flux or a reduced downstream utilization, or both. A strong body of evidence supports that mitochondrial function is markedly impaired in patients with DKD. A decrease in electronic transport chain activities accompanied by an overall reduction in mitochondrial content and PGC-1a expression has been found in diabetic kidney (9,35). Similar defects have been observed in diabetic islet, heart, and skeletal muscle (36). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, impaired mitochondrial function may at least partially explain the substrate flux/oxidation imbalance in DKD. On the other hand, insulin resistance and other related metabolic disturbance in DKD may impair mitochondria and restrict its ability to select glucose as preferred substrate for oxidation (metabolic inflexibility) (35,37). Therefore, the increased flux of fatty acids and amino acids into mitochondria may be a compensation for impaired glucose utilization (38).  XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, fuel supply and oxidation may not necessarily be reduced in the presence of mitochondrial dysfunction. For instance, frank mitochondrial dysfunction in humans (e.g., myopathies with impaired electron transport chain activity) is accompanied by increased fuel flux and oxidation to compensate for the impaired ATP synthesis (39). Taken together, we postulate that both impaired mitochondria function and energy substrate oversupply in individuals with T2DM may be involved in intramitochondrial metabolic intermediates accumulation and their extracellular overflow to circulation. A future in vivo tracing study by isotope-labeled substrates may provide insights into substrate flux, selection, and oxidization in DKD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found that long-chain sphingomyelin and ceramides are elevated in participants with DKD, suggesting that the sphingomyelin-ceramide pathway may play a part in renal complications. The underlying pathological mechanisms may involve impairment of mitochondria function, enhanced generation of reactive oxygen species, activation of apoptotic pathway, elevation of inflammation tone, and endoplasmic reticulum stress (40). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The latter may contribute to the aforementioned overproduction of short-chain diacids and long-chain dicarboxylacylcarnitines in DKD (22). XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The observed pattern of reduction in phosphatidyl-choline and increment in sphingomyelin levels may suggest sphingolipid remodeling in DKD, as sphingomyelin can be synthesized from phosphatidylcholine by choline-phosphotransferase action (41). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another novel finding in our current study is the association of renal filtration function and albuminuria levels with distinct metabolite signatures. Early studies have found that both eGFR and ACR are independent predictors of CKD progression (42). In addition, genetic studies have found little overlap between loci of eGFR and ACR (43). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Association of sphingomyelin with albuminuria has been reported in diabetic patients, and inhibiting conversion of sphingomyelin to ceramide might protect kidney function and reduce albumin excretion in animal models (14,44,45). Interestingly, we found that metabolite signature for sphingomyelin-ceramide metabolism was independently associated only with albuminuria but not with renal filtration function in T2DM. These data echo findings from an early study showing that polymorphism of ceramide synthase 2 (CerS2) was associated only with changes in albuminuria but not eGFR in patients with diabetes (46). Our data reinforce the notion that albuminuria and decline of filtration function may represent complementary, if overlapping, manifestations of kidney damage (47). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX An inverse association of acylcarnitine levels with eGFR has been reported in non-diabetic populations (13). Our current study extended the early findings by showing that among many acylcarnitine sub-species that differed significantly between DKD versus non-DKD controls, only short-chain diacids and amino acid-derived acylcarnitines were strongly and independently associated with eGFR (Tables 2 and 3). This finding is principally agreeable with findings from an early, small study that reported that amino acid-derived acylcarnitines predicted progression to ESRD in T2DM (11).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXCONCLUSIONS =&gt; In conclusion, our targeted plasma metabolomics study implicates altered energy substrate selection, imbalance of substrate flux and utilization, as well as remodeling of sphingolipids in T2DM with DKD. The association of distinct plasma metabolite signatures with eGFR and albuminuria suggest different pathophysiological processes underlying these 2 related manifestations of DKD in individuals with T2DM. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Environment Impacts the Metabolic Dependencies of Ras-Driven Non-Small Cell Lung Cancer</td>
+<td class="data">These findings suggest increased glucose uptake in Kras-driven NSCLC is used to support both increased lactate production and increased TCA cycle metabolism, challenging the notion that tumors switch from oxidative glucose metabolism to aerobic glycolysis (Vander Heiden et al., 2009). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The exclusive metabolism of glucose to lactate by tumors has also been questioned by analysis of glucose fate in glioblastoma, lung cancers and liver cancers (Maher et al., 2012; Marin-Valencia et al., 2012; Yuneva et al., 2012). The finding that oxidative metabolism of glucose is increased in vivo raises the possibility that the use of glucose to support the TCA cycle is important to support cell proliferation under the conditions present in tissues.  It has been hypothesized that high flux through glycolysis benefits tumors by allowing ATP production in the absence of oxygen and by promoting anabolic metabolism (Gatenby and Gillies, 2004; Vander Heiden et al., 2009). Increased lactate production supports NAD+ regeneration in the absence of oxygen consumption and may provide other benefits to tumor cells related to altered pH or supplying lactate to other tumor cells (Sonveaux et al., 2008). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Near quantitative conversion of glucose to lactate is a phenotype observed in proliferating cells in culture, raising the possibility that a similar phenotype is present in proliferating cells of lung tumors. Because a substantial fraction of the tumor is not actively proliferating, the increase in oxidative glucose metabolism might reflect the metabolic phenotype of non proliferating cells. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In mouse breast cancer, proliferating and non-proliferating cells regulate glucose metabolism differently such that the non-proliferating cells select for increased pyruvate kinase activity, a regulatory state associated with increased oxidative glucose metabolism (Israelsen et al., 2013). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Differences in lactate production are present across the NSCLC models considered for this study. Whereas the KP, KPS, and xenograft models form tumors with a higher proliferative index, the LA2 model forms lower grade tumors. Consistent with a model where increased lactate production tracks with increased proliferation, lactate levels are increased in KP, KPS, and xenograft tumors relative to normal tissue but not in LA2 tumors. However, KPS tumors proliferate faster than KP tumor, and if anything lactate levels are lower in the KPS tumors arguing that lactate levels do not always scale with proliferation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX While all of the tumor models examined contain a high proportion of cancer cells relative to other cell types, differences in glucose metabolism are observed in different regions of human cancers (Hensley et al., in press). Thus, unknown factors driving tumor heterogeneity might also contribute to the metabolic phenotype differences observed in tumor tissue. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Decreased PDH flux has been described as a property of tumors, with PDH reactivation proposed as a cancer therapy (Michelakis et al., 2008). Surprisingly, glucose metabolism through PDH is increased in tumors relative to normal lung tissues and the cancer cells are dependent on this enzyme for tumor formation. Increased inhibitory phosphorylation of PDHE1α was also not observed in these tumors. One possibility is the lack of increased PDHE1α phosphorylation reflects increased oxygenation. Indeed, the lung is a relatively  well-perfused organ providing access to circulating nutrients and oxygen, although as lung cancers grow vascularization can become limiting and even large human lung tumors have elevated PDH flux (Hensley et al. in press). This suggests that oxidative glucose metabolism may provide benefits to tumor cells such as the production of aspartate (Sullivan et al., 2015) regardless of tumor size.  Despite exposure to among the highest oxygen tensions in the body, normal lung uses 30 - 50% of consumed glucose to make lactate and 20% to make CO2 while contributing relatively minor amounts to protein and lipid biosynthesis (Fisher, 1984). Outside of cytosolic ATP production and NAD+ regeneration, the benefit for normal lung physiology of relatively high flux to lactate remains unclear. Although the flux from glucose to lactate in the lung is high relative to other tissues, glucose also supports production of TCA cycle intermediates in the lung. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, glucose fuels glutamate and glutamine production in lung tissue in rats and humans, and lung tissue is among the highest producers of glutamine (Hensley et al., 2013). Glutamine is the most abundant amino acid in tissue culture media and in the blood, yet in contrast to observations in cell culture, blood glutamine contributes minimally to both normal lung and lung tumor metabolism. Labeled glutamine was abundant in both tissues suggesting ineffective glutamine delivery cannot explain why this amino acid is not used as a fuel. Instead, both normal lung and lung tumors synthesize α-ketoglutarate, glutamate and glutamine from glucose-derived carbon. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This is consistent with findings in MYC-driven lung tumors and glioblastoma (Maher et al., 2012; Marin-Valencia et al., 2012; Yuneva et al., 2012) and may reflect the glutamine use to excrete excess nitrogen from amino acid catabolism (Stumvoll et al., 1999). Urea production for nitrogen excretion is restricted primarily to the liver and kidney in mammals, and glutamine carries excess nitrogen from peripheral tissues to these organs. Because the use of glutamine as a carbon source produces ammonia, glutaminase activity may be better tolerated in tissue culture where large media volumes prevent ammonia accumulation to toxic levels. However, because of an increased need for glutathione (Sellers et al., 2015), nucleotides, and amino acids; tumor nitrogen requirement is higher than that of normal tissues (Mayers and Vander Heiden, 2015). Nevertheless, the net production of glutamine by lung tumors despite the availability of this amino acid from the circulation suggests alternative sources of nitrogen are used, possibly reflecting the propensity of RAS-cancers to catabolize extracellular protein (Commisso et al., 2013; Kamphorst et al., 2015). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The use of pyruvate carboxylase appears to be an important for anaplerosis in tumors in vivo (Fan et al., 2009; Sellers et al., 2015). Consistent with these findings, genetic deletion of Pcx prevents tumor growth while genetic deletion or inhibition of glutaminase has no observable effect. The fact that opposite dependencies were suggested by cell culture experiments highlights the importance of selecting targets for cancer therapy based on nutrient use in a relevant tissue context. The possibility that tissue context is an important determinant of how tumors utilize nutrients might also explain why chemotherapies targeting nucleotide metabolism show efficacy based on cancer tissue of origin. More directly, it suggests that targeting PDH or PCX might inhibit lung tumor growth. In fact, lipoate derivatives act in part through PDH activity suppression and can be potent anticancer drugs in vivo (Zachar et al., 2011).  XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study highlights the importance of model selection to identify metabolic cancer targets. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cell culture conditions are non-physiological with respect to nutrients, oxygen, and tolerance for excretion of toxic metabolites such as ammonia. Cell culture also selects for the most rapidly proliferating cells, and many tumor cells cannot be cultured in vitro. The fact that transplanted tumors exhibit a phenotype more similar to tumors arising in the lung that are never exposed to cell culture suggests that environment has a greater impact on how nutrients are utilized than genetic or epigenetic selection associated with cell line formation. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The similarities between Kras-driven NSCLC, an EGFR-driven lung tumor, and published studies of genetically distinct tumors further argues that tissue environment can dictate metabolic phenotypes across tumor types. This highlights the importance of considering environmental context in addition to genetics in metabolism studies, particularly in considering how best to target cancer metabolism. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">Characteristics of glucose metabolism in Nordic and South Asian subjects with type 2 diabetes</td>
+<td class="data">In this study we examined ethnic differences in glucose and fat metabolism and energy expenditure in basal and clamp hyper-insulinemic conditions in subjects with T2D, of SA or NOR ethnicity, living in Oslo, Norway. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found evidence of ethnic differences in fasting endogenous glucose production, and indications of possible differences in the choice of substrates for energy expenditure both in basal and clamp conditions. The concept of ethnicity and ethnic groups is complex, consisting of both socio-cultural and biological components that are not clearly defined [12]. The term South Asian ethnicity is often used, although the South Asian region is diverse, with several countries (Pakistan, India, Bangladesh and Sri Lanka), and differences in culture, religion and diet. In diabetes research, using the term South Asian can nonetheless be justified, in view of the fact that the high prevalence of diabetes and increased insulin resistance is present in the whole region [13], particularly in urban areas, and also after migration to Western countries [1]. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+This study shows a significantly higher fasting (endogenous glucose production) EGP in SA compared to NOR patients, which was not explained by any of the examined possible confounding factors. During clamp hyperinsulinemia the EGP was lowered, and the ethnic difference was
+attenuated. Even so, EGP clamp was still not negligible, and constituted almost 40% of TGD in SA and 25% in NOR patients.  XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Hyperinsulinemia during clamp is often said to suppress EGP almost entirely [14,15], and euglycemic clamp studies are still frequently performed without the measurement of endogenous glucose production [16,17]. However, several authors have demonstrated that EGP clamp persists [18–20]. We here present further evidence that EGP clamp can be substantial in type 2 diabetic patients, even with serum insulin concentrations during clamp as high as 1000–1500 pM. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This finding underscores the importance of controlling for hepatic glucose production during clamp studies. Measuring EGP via the isotope tracer dilution method is both time consuming and costly. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In an attempt to find predictors for the estimation of EGP clamp from variables that are easier to measure, we looked at a group of variables which correlated with EGP clamp. Only FPG remained significantly related to EGP clamp in regression analyses, and it explained only 15% of EGP clamp variation in the whole patient group. When looking at the correlations in the separate ethnic subgroups, most variables only correlated significantly in the NOR group. The exogenous glucose infusion rate did not correlate to EGP clamp at all. In the SA group, the only significant correlation was between EGP clamp and TGD, merely reflecting the high percentage of EGPclamp in TGD in this group. We therefore suggest that measuring EGP clamp, in addition to the exogenous glucose infusion rate, is essential for correct estimation of total glucose disposal rate. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Some ethnic groups residing in tropical climates, including SA, have previously been shown to have lower (resting energy expenditure) REE than Westerners [21], however, several authors have advocated the need for adjusting REE for fat free mass (FFM) and fat mass (FM), as well as age and sex [4,22]. The lower REE in SA is in this way shown to be due to differences in body composition and not due to ethnicity per se. We find it to be the case also in our study. Our two ethnic groups display clear differences in body composition, and adjusting for these differences, mainly FFM, attenuates the ethnic difference seen in REE. This, however brings us back to the complex concept and definition of ethnicity, whence it can also be argued that lower FFM is an ethnic characteristic of South Asians. This has been described in other studies [23,24]. In basal, resting conditions, energy production is for the most part derived from lipids, and less from carbohydrates [25]. This is also reflected in our study, by the highly significant correlation between REE and fat oxidation in both ethnicities. In the SA subgroup, however, there is also a near-significant correlation between REE and EGP-basal. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This could signify increased use of carbohydrates as energy substrate in the fasting state in SA, to such an extent that it becomes important for the total REE. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, we did not find any ethnic differences in basal (respiratory quotient) RQ or in (change in respiratory quotient) DRQ from fasting to clamp hyperinsulinemic conditions, that would have clearly indicated an ethnic difference in metabolic flexibility. The values of basal RQ and DRQ in our subjects were comparable to the group with diabetes in the recently published study by van de Weijer [26]. In that study, they also demonstrated that insulin stimulated RQ is mainly dependent on glucose disposal rates, which in our study are similar in the two groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our NOR participants are significantly more obese than the SA, which could in part explain why there is no obvious ethnic difference in (total glucose disposal) TGD. After adjustment for difference in waist circumference, as well as the endogenous glucose production, the ethnic difference in TGD came closer to significance. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In our study we found a non-significant trend towards higher both oxidative and non-oxidative glucose metabolism in SA compared to NOR subjects in the basal, post-absorptive state. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The total EGP basal was significantly higher. This points towards a higher degree of hepatic insulin resistance in SA. One could speculate that a possible higher basal oxidative glucose metabolism in muscle, triggered by increased substrate availability
+from fasting hyperglycemia, leads to less use of lipids as energy substrate, again leading to lipid accumulation and further aggravation of the hepatic insulin resistance, as described in the metabolic inflexibility hypothesis [3]. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In postabsorptive conditions skeletal muscle contribution to total metabolism is modest [3]. A possible ethnic difference in muscle metabolism could thus have been masked. The hepatic insulin resistance could also initially have been caused by increased lipid storage in the liver due to adipose tissue overflow [2]. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Percentage truncal fat was similar in our two ethnic groups, although the NOR group was significantly more obese. In a previous study we found that even though a group of Pakistani and Norwegian subjects with T2D had similar abdominal adipose tissue distribution, the visceral adipose tissue was more metabolically active in the Pakistani subjects (Wium C, Eggesbo HB, Ueland T et al, 2013, unpublished data). An increased supply of NEFA from visceral adipose tissue to the liver would, in addition
+to the effect of increasing the insulin resistance, constitute a source of substrate for gluco-neogenesis. Gluconeogenesis is known to be increased in subjects with T2D, being in large part responsible for the increased post-absorptive EGP. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When using [6,6-2H2] glucose as tracer, Cori cycling is included in the estimation of the total glucose disposal, and has been shown to be increased 25% in T2D in general [27]. It is possible that the increase in non-oxidative glucose metabolism in SA in large part corresponds to increased Cori cycling, due to substrate availability through hyperglycemia in tissues, with lactic acid production in muscle or other tissues by anaerobic glycolysis, then transport back to the liver and re-use as substrate in gluconeogenesis, creating a vicious circle. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The data in this study are baseline results from a vitamin D intervention trial. It was therefore of interest to look for associations between baseline 25-hydroxyvitamin D levels and measures of insulin sensitivity and insulin secretion. We found significantly lower median 25-hydroxyvitamin D levels in the SA group. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Could differences in vitamin D status explain some of the ethnic differences in glucose metabolism? Several epidemiological studies have in recent years shown a relationship between vitamin D and diabetes [28,29], the metabolic syndrome [28], insulin resistance [30,31], and some studies also with insulin secretion [32]. However, in most of the published studies that report significant associations, or an effect of vitamin D intervention, the primary end points have been surrogate markers based on fasting blood values, like the HOMA indices [28, 33, 34]. The few studies using more sophisticated methods, like OGTT, IVGTT or clamps have usually not been able to show similar significant relationships [35–39]. We did not find any association between levels of 25-hydroxyvitamin D and TGD or AIRg. The question therefore still remains whether there is a genuine and causal relationship between vitamin D and diabetes, and we have to await results from randomised, controlled trials.  XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; We have demonstrated higher basal EGP in SA patients with established T2D. Clamp EGP can be substantial in patients with established T2D, and cannot be estimated from the surrogate markers measured. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found no ethnic difference in insulin sensitivity or in first phase insulin secretion. Findings of near
+significant correlations between REE, EE clamp and EGP in the SA group only, might indicate increased post-absorptive glucose metabolism in the SA group, at the expense of lipid metabolism, but these results have to be confirmed in larger studies. Finally, we found no indication of any relation between vitamin D and insulin sensitivity and secretion. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">Glutamine and cancer: cell biology, physiology, and clinical opportunities</td>
+<td class="data">Recent advances in glutamine-based imaging, coupled with the successful application of glutamine metabolic inhibitors in mouse models of cancer, make it possible to conceive of treatment plans that feature consideration of tumor glutamine utilization. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A key challenge will be predicting which tumors are most likely to respond to inhibitors of glutamine metabolism. Neuroblastoma is used here as an example of a tumor in which evidence supports the utility of strategies that would involve both glutamine-based imaging and therapy (Figure 3). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Neuroblastoma is the second most common extracranial solid malignancy of childhood. High risk neuroblastoma is defined by age, stage, and biological features of the tumor, including MYCN amplification, which occurs in some 20%–25% of cases (31). Because MYCN-amplified tumor cells require glutamine catabolism for survival and growth (15), glutamine-based PET at the time of standard diagnostic imaging could help predict which tumors would be likely to respond to inhibitors of glutamine metabolism. Infusion of 13C-glutamine coordinated with the diagnostic biopsy could then enable inspection of 13C enrichment in glutamine-derived metabolites from the tumor, confirming the activity of glutamine catabolic pathways. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Following on evidence from mouse models of neuroblastoma, treatment could then include agents directed against glutamine catabolism (15). Of note, some tumors were sensitive to the ATF4 agonist fenretinide (FRT), alone or in combination with EGCG. Importantly, FRT has already been the focus of a Phase I clinical trial in children with solid tumors, including neuroblastoma, and was fairly well tolerated (81). XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">Effect of uridine on energy metabolism, LPO, and antioxidant system in the myocardium under conditions of acute coronary insufficiency</td>
+<td class="data">Occlusion of LCA for 60 min reduced ATP content in the rat heart by 35% in comparison with that in intact animals (Table 1). XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The content of another macroergic compound (Phosphagens, also known as macroergic compounds, are high energy storage compounds, also known as high-energy phosphate compounds, chiefly found in muscular tissue in animals. The actual biomolecule used as a phosphagen is dependent on the organism. The majority of animals use arginine as phosphagen; however, the phylum Chordata (i.e., animals with spinal cords) use creatine. Creatine phosphate (CP), or phosphocreatine (PCr), is made from ATP by the enzyme creatine kinase in a reversible reaction: Creatine + ATP creatine phosphate + ADP + H+ (this reaction is Mg2+-dependent) ) creatine phosphate also considerably decreased by 59%. The deficiency of macroergic compounds in the ischemic myocardium was accompanied by pronounced accumulation of lipid peroxides (by 97%) and suppression of SOD activity (by 28%) and glutathione system, which resulted in a decreased content of reduced glutathione (by 30%). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Serum paraoxonase activity increased by 93%. This HDL-associated enzyme exhibits anti-atherogenic and anti-oxidant properties and prevents lipid oxidation in HDL [12]. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The administration of uridine 5 min prior to LCA occlusion limits changes of energy metabolism in ischemic myocardium and preserved high content of ATP and creatine phosphate. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, uridine prevented overproduction of lipid hydroperoxides and inhibition of (anti-oxidant system) AOS enzymes in animals of this group. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These findings attest to preserved balance between LPO processes and AOS activity that is essential for intracellular homeostasis. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (5-hydroxydecanoate) 5-HD administered 5 min before uridine injection and subsequent LCA occlusion abolished the protective effect of this preparation. In animals of this group, the content of ATP and creatine phosphate remained at the control level. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Prevention of lipid hydroperoxide overproduction and AOS activation by uridine were also abolished after blockade of mitoKATP-channels. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These findings suggest that the energy-stabilizing effect of uridine and its capacity to prevent LPO intensification and AOS inhibition are related to activation of mitoKATP-channels. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  In 5 min after administration of the nucleoside to intact rats, its blood content increased by 11 times in comparison with the baseline value (65.3±3.6 vs. 5.9±0.3 μmol/liter; Fig. 1). XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Similar increase was observed in animals receiving uridine injection before LCA occlusion. The sharp increase in uridine concentration was followed by its elimination. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The rate of uridine elimination from the blood was similar in animals with and without LCA occlusion and therefore its concentration did not differ in these groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, uridine content in rats with AMI on minute 15 after its intravenous injection sharply decreased to 10.3±0.9 μmol/liter and even dropped below the baseline level by the 30th minute (4.9±0.5 μmol/liter). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  In 15 min after uridine injection, the blood uridine content in intact rats was 18.5±1.7 μmol/liter, i.e. 2-fold lower than in rats with AMI (p&lt;0.05); by the 30th minute this parameter decreased only to 12.4±0.8 μmol/liter. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Excessive concentrations of uridine in these animals (8.0±0.6 μmol/liter) persisted over 60 min. We have previously reported that considerable disturbances of energy metabolism in ischemic myocardium developed as soon as 15 min after LCA ligation and peaked after 30 min [2]. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX According to our findings, this coincided with accelerated elimination of uridine from the circulation. This is probably related to increased myocardial demands for uridine under hypoxic conditions for activation of intracellular defense and adaptation mechanisms, especially during periods of more pronounced energy metabolism disturbances. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, our experiments have shown that uridine can increase myocardial resistance to oxygen deficiency under conditions of AMI. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In animals with myocardial ischemia, this nucleoside rapidly disappears from the circulation and apparently promotes activation of anti-ischemic cardiomyocyte defense mechanisms, which leads to stabilization of energy metabolism and maintenance of the balance between LPO and AOS. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results of the experiments with selective mitoKATP channel blocker 5-HD suggest that realization of the protective effect of uridine is related to activity of these channels. The results of this and previous studies drove us to a conclusion that uridine can be used as promising cardioprotective preparation for prevention and therapy of AMI.</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">Increased levels of plasma acylcarnitines in obesity and type 2 diabetes and identification of a marker of glucolipotoxicity</td>
+<td class="data">There is growing evidence that subtle aberrations in lipid metabolism occur in obesity and T2DM. As advanced MS/MS technology for detection of altered AcylCN levels enables the detection of mild defects in FAO, we hypothesized that it would also detect FAO defects in obese participants with or without T2DM. Although our primary focus has been on skeletal muscle FAO, plasma AcylCN could also be derived from other tissues, such as liver and cardiac muscle.  XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, in a study in which elevated AcylCNs were observed in serum and skeletal muscle from insulin-resistant rats, there was no increase observed in liver, suggesting that the serum AcylCN originated mainly from the skeletal muscle (9). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results show that both obese and T2DM subjects with similarly increased NEFAs and similar BMIs equally accumulated AcylCNs of both full-length fatty acids and of the first intermediates of β-oxidation. The T2DM subjects also accumulated a wide variety of later β-oxidation intermediates. When NEFA release was inhibited by short-term insulin clamp, plasma AcylCN values were reduced, with a significantly blunted response in the T2DM subjects, as would be expected if they are “metabolically inflexible” (4). Interpretations were based on AcylCN profiles of patients with known genetic disorders of mitochondrial FAO (8). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The AcylCN profile includes substrates of both fatty acid and amino acid β-oxidation. Even-chain AcylCNs containing up Integrative Physiology to 20 carbons accumulate in response to incomplete fatty acid β-oxidation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, amino acid catabolism produces odd-chain- length species such as C3–CN and C5–CN, although C4–CN can be derived from either amino acid or fatty acid metabolism. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Acetyl (C2)–CNs derive from carbohydrate catabolism and from the ultimate product of β-oxidation, acetyl- CoA. After an overnight fast, FAO is stimulated, increasing saturated AcylCN levels while branched-chain amino acid (BCAA) metabolism is spared, reducing C5 entry from leucine and isoleucine, resulting in reduced C5–CN levels.  XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As both obese and T2DM subjects had similarly elevated NEFAs during fasting, the next question is whether they efficiently process this flood of fatty acids. One locus of regulation is the limitation of entry into β-oxidation by CPT1, which trans-esterifies the activated longchain acyl-CoA to its AcylCN before entry into mitochondria. This regulation limits C16–, C18–, and C18:1–CN levels, resulting in increased free-CN:C16–CN. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, both obese and T2DM groups had similarly elevated C16–, C18–, and C18:1–CN and free-CN, with the free-CN:C16–CN ratio decreased in obese participants (P &lt; 0.05) with a similar trend in T2DM participants (P &lt; 0.07) (Table 3). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This finding is inconsistent with CPT1-based limitation of β-oxidation flux. Thus, in both obesity and T2DM, similar quantities of NEFAs are readily activated into AcylCN that can either pass into the mitochondria via carnitine AcylCN translocase or can exit the cell for other disposal. Inside, the AcylCN is deesterified back to acyl-CoA and enters the β-oxidation spiral. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also observed increased levels of C14:1–CN and C16–OH–CN, species that arise from activity in the initial rounds of β-oxidation involving very-long-chain acyl-CoA dehydrogenase and longchain 3-hydroxyacyl-CoA dehydrogenase, respectively, yielding unaltered C14:1–CN:C16–CN and the C16–OH–CN:C16–CN ratios. This overall pattern is consistent with obese and T2DM subjects having similarly increased initial fluxes through β-oxidation in response to elevated NEFAs rather than having a CPT1 generated block, as had been suggested previously (5). With AcylCNs of ≤10 carbons, the pattern of AcylCN accumulation by groups diverged. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Most straight-chain- and hydroxy-AcylCN products from these later steps of β-oxidation (medium- and short-chain processing) accumulated in a stepwise pattern from non-significant elevations in the obese subjects to significant elevations in the T2DM subjects (Figures 2 and 3), with several species significantly increased in T2DM relative to both the obese and lean subjects. In addition, the C8–CN:C16–CN ratio was significantly increased in the T2DM relative to the obese subjects, supporting this trend toward a more severe defect in the T2DM participants. The trends are consistent with a study of rat diabetic myocardium, which found that overall AcylCN levels increased with an accumulation of 3-OH–AcylCNs (14). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, T2DM subjects display a second more global defect in their mitochondrial function that is characterized by an enhanced accumulation of intermediates such as the chain shortened straight-chain products of FAO (C4– to C14–CN) characteristic of a more generalized dysfunction in either FAO or at the interface of FAO and the ETC (15). In addition, they accumulate intermediates from substrates that would be expected to decrease in quantity rather than accumulating during fasting, such as the products of BCAA oxidation (C5–, C5–OH–, and C3–CN). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As the BMI, waist circumference, and basal free fatty acid levels of the T2DM subjects were nearly identical to levels in the obese subjects, the more “abnormal” AcylCN patterns are not due to increased body fat or basal NEFA levels but most likely result from IR. The insulin infusion studies further support the hypothesis that the T2DM participants differ in their FAO regulation. Overall, in response to insulin infusion, all AcylCN species decreased significantly. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This finding verifies that plasma AcylCN species are responsive to short-term alterations in NEFA levels. However, the T2DM subjects had a blunted decrease in the levels of many AcylCNs, leading to an AcylCN pattern that did not normalize to the extent observed in the obese group. The higher NEFA levels and lower RQ seen in the T2DM participants during insulin infusion, suggest that the insulin clamp did not block release of free fatty acids or flux into β-oxidation to the degree found in either lean or obese participants. This finding is consistent with the hypothesis that T2DM participants exhibit metabolic inflexibility (4). Only one other group has reported decreased plasma AcylCNs (C10–, C12–, and C14:1–CN) with elevated insulin and that was in response to an oral glucose tolerance test (16). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One marker of abnormal FAO was specifically associated with T2DM. C4DC–CN levels in
+T2DM were nearly double than those observed in obese or lean participants. Furthermore, C4DC–CN correlated highly with fasting plasma glucose (r = 0.72) and with HbA1c (r = 0.74). Consequently, this AcylCN species may be a biomarker at the intersection of combined gluco and lipotoxicity (17,18). It should be noted that C4DC–CN as identified using this methodology represents the sum of both methyl-malonyl-carnitine and succinyl-carnitine, which have the same molecular mass. Therefore, additional analyses will be required to specifically identify the affected species. However, whether the elevation is due to methyl-malonyl-carnitine and / or succinyl-carnitine, this finding is consistent with our observation of increased C3–CN and suggests a potential defect in the utilization of succinyl-CoA in the tricarboxylic acid cycle in T2DM. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings are consistent with recent reports in rodents and in cell culture showing that insulin-resistant skeletal muscle displays increased incomplete β-oxidation, resulting in increased AcylCN intermediates in serum and muscle (9,19,20). When rats were fed a high fat diet, obesity and IR were induced and many of the same AcylCN species we observed in humans were increased in serum and skeletal muscle (9). Muscle AcylCNs were even more elevated in Zucker diabetic fatty rats, a model of severe IR where incomplete FAO has been experimentally confirmed (10). These rodent data indicate that IR in skeletal muscle is associated with excessive (at least in the fed state) yet incomplete β-oxidation (fed and fasted state) and impaired switching to carbohydrate substrate during the fasted-to-fed transition. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Two recent human studies comparing AcylCN patterns in lean and obese (21) or obese individuals with or without T2DM (22) observed some of the same patterns we observed in this study. The first study reported no increase in C2–CN and similar elevations of four of the AcylCN that we observed in obese participants (21). Higher C3– and C5–CNs and BCAAs were observed in obese individuals, and these metabolites correlated with degree of IR (21). In addition, they observed elevations of C6– and C8:1–CN. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXIn contrast, another recent study found that women with T2DM had decreased C3–CN with increased C2–CN levels compared to obese women (22). However, consistent with our findings, they also observed that T2DM subjects accumulated medium-chain intermediates. Although we cannot explain these discrepant findings, the lean participants in the first study appeared to have impaired fasting glucose (100.5 mg/dl) and a higher percentage of males (70 vs. 57%, P = 0.09440) and the second study was limited to African-American women, who have been shown to have a lower FAO compared to the matched white women (23). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nonetheless, there is general agreement for the association of T2DM with accumulation of medium-chain fatty acid intermediates and for IR to be associated with excessive BCAA metabolism. However, these contradictory studies along with our finding that when results were examined by sex, nearly all of the increases in BCAA-derived CN metabolites (C3–CN and C5–CN) in T2DM relative to obese subjects occurred in male subjects suggest that BCAA metabolism may be regulated differently by race and sex or even by some other unexpected variable such as BCAA composition of the diet (21). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In summary, the circulating AcylCNs in obese and T2DM participants fall into two distinct patterns. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, the T2DM and obese participants have a similar accumulation of long-chain AcylCNs and AcylCN species that arise from activity in the initial rounds of β-oxidation, consistent with increased flux at entry into mitochondrial β-oxidation. Diabetic participants also displayed a secondary accumulation of many shorter chain AcylCNs that are suggestive of inefficient complete FAO or interactions between β-oxidation and ETC. They also showed an inability to efficiently switch from fat metabolism during the insulin clamp, as
+reflected in their inability to lower their AcylCNs as effectively as either the lean or obese  subjects. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the elevation in C4DC–CN in the T2DM participants is intriguing; its robust correlation with two indexes of glycemic control supports its association with elevated blood glucose. As such, it is possible that C4DC–CN may be a useful biomarker of gluco-and lipotoxicity in T2DM.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">Nutrient control of glucose homeostasis through a complex of PGC-1a and SIRT1</td>
+<td class="data">The fact that Sir2 controls lifespan in S. cerevisiae and C. elegans in response to caloric restriction (1,2) prompted us first to investigate whether SIRT1 could also be regulated by nutritional status in mice. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SIRT1 expression in liver was not regulated at the messenger RNA level in fasted mice. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SIRT1 protein levels were induced after fasting and returned to nearly control levels upon refeeding XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Expression of PGC-1a was upregulated at the level of mRNA and protein by fasting (Fig. 1a, b). PGC-1a and SIRT1 increased in correlation with induction of the gluconeogenic gene PEPCK (phosphoenolpyruvate kinase) (Fig. 1a) XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We next investigated whether lactate and pyruvate—which can change the ratio of NAD+/NADH and regulate SIRT1 activity—were fluctuating in the liver. As shown in Fig. 1c, pyruvate levels were increased 1.7-fold in the liver of fasted mice and conversely lactate levels were decreased two-fold. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also measured NAD+, a potent activator and substrate of SIRT1. As shown in Fig. 1d, liver NAD+ levels were increased by 33% by fasting and returned to control levels after refeeding. Interestingly, we could not detect significant changes of NADH levels (data not shown).XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These data suggest that increases of SIRT1 protein levels and NAD+ concentration might contribute to the SIRT1 deacetylase activity in the fasted state. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To investigate further the regulation of SIRT1, we examined the effects of cyclic AMP or insulin, key signals of the fasted response in mammals. These two pathways did not affect SIRT1 protein levels in cultured hepatocytes (Supplementary Fig. S1). In contrast, glucose and pyruvate, known to fluctuate in fasting (16), regulated SIRT1 protein levels. As shown in Fig. 1e, increasing concentrations of glucose decreased the amount of SIRT1, whereas increasing concentrations of pyruvate markedly increased it. These changes in SIRT1 protein levels are regulated at the post-transcriptional level as SIRT1 mRNA remained constant (Fig. 1e) XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We performed pulse-chase experiments (In biochemistry and molecular biology, a pulse-chase analysis is a method for examining a cellular process occurring over time by successively exposing the cells to a labeled compound (pulse) and then to the same compound in an unlabeled form (chase)) to analyse further whether these changes were at the level of protein synthesis or degradation. As shown in Supplementary Fig. S2, pulsed radiolabelled SIRT1 protein levels did not change after chase for 6 and 12 h under pyruvate treatment. However, an increase in SIRT1 protein synthesis was notably elevated by pyruvate. These results suggest that the increase of SIRT1 protein observed in the liver of fasted mice could be mediated by changes in glucose and/or pyruvate. The fact that the induction pattern of SIRT1 protein correlated with expression of PGC-1a in fasting (Fig. 1a, b) suggests that these two proteins could interact. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To study this, we performed immunoprecipitation of endogenous SIRT1 protein from liver extracts and precipitated PGC-1a (Fig. 2a). Moreover, an interaction between both endogenous and/or overexpressed proteins was also observed in cultured hepatocytes (Supplementary Fig. S5b) and 293 cells (Supplementary Fig. S3a). To confirm that this reflected a direct physical interaction, we used an in vitro interaction assay with recombinant glutathione S-transferase (GST)–PGC-1a (Supplementary Fig. S3b). The fact that PGC-1a and SIRT1 directly interacted suggests that PGC-1a might be a substrate for SIRT1 deacetylation. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As shown in Fig. 2b, nicotinamide (SIRT1 inhibitor) treatment strongly induced PGC-1a lysine acetylation. Importantly, expression of SIRT1 could overcome nicotinamide-induced PGC-1a acetylation, but a SIRT1 mutant (SIRT1H355A) that lacks enzymatic activity had no effect (Fig. 2b). PGC-1a acetylation decreased in the fasted liver, suggesting that SIRT1 activity is increased in this situation (Fig. 2c). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    To demonstrate that SIRT1 deacetylated PGC-1a directly, we used an in vitro deacetylase assay. As shown in Fig. 2d, PGC-1a acetylation is decreased (60%) only upon addition of both SIRT1 and NAD+. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  To map the PGC-1a lysine-acetylation sites induced by nicotinamide =&gt; tandem mass spectrometry analysis was performed. We found that PGC-1a was acetylated at 13 lysine sites (Fig. 2e and Supplementary Fig. S4). Mutation of these 13 lysines to arginine abolished the acetylation of PGC-1a (Fig. 2e). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To test the effect of PGC-1a acetylation on its transcriptional activity =&gt; luciferase reporter assays using the transcription factor HNF4a were performed. As shown in Fig. 2f, nicotinamide treatment decreased the transcriptional activity of wild-type PGC-1a/HNF4a by 24-fold. We tested several combinations of PGC-1a mutants and found that a mutant of PGC-1a (R5), in which five lysines were substituted to arginine, decreased the fold repression by nicotinamide to tenfold. In addition, two different mutants R10 and R13, containing the R5 mutations, largely decreased this repression to almost control levels (Fig. 2f). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These results suggest that acetylation of PGC-1a decreases its ability to efficiently coactivate HNF4a. The molecular mechanisms underlying this transcriptional repression by acetylation are under current investigation. Previous studies have focused on the hormonal regulation of PGC-1a expression (11–13) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, the above data prompted us to investigate whether the gluconeogenic function of PGC-1a might also be controlled through a nutrient-sensing pathway via pyruvate and SIRT1. As shown in Fig. 3a, the gluconeogenic genes PEPCK and G6Pase (glucose-6-phosphatase) were induced by pyruvate treatment. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The effect of pyruvate on the induction of G6Pase and PEPCK was decreased by a specific short interfering RNA for PGC-1a (G6Pase decreased by 30% and PEPCK by 70%; Fig. 3a) but not by a scrambled siRNA (control); this indicates that the pyruvate regulation of these genes required PGC-1a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We next used siRNA for SIRT1 (Supplementary Fig. S6) to determine whether the effect of pyruvate on PGC-1a was dependent on SIRT1. Indeed, this knockdown of SIRT1 protein largely blocked the pyruvate-induced PGC-1a increase on PEPCK and G6Pase (Fig. 3b). The pyruvate and SIRT1 effects were specific to gluconeogenic genes because PGC-1a-targeted mitochondrial genes (cytochrome-c and b-ATP synthase) were not significantly changed. These data indicate a requirement of SIRT1 in the regulation of gluconeogenic gene expression by PGC-1a. Consistent with these effects, endogenous SIRT1 and PGC-1a were recruited to chromatin promoter fragments of the PGC-1a targets PEPCK and G6Pase. Notably, the recruitment of both proteins was increased by pyruvate treatment (Supplementary Fig. S7). PGC-1a requires interaction with HNF4a to induce gluconeogenic gene expression (14). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We therefore examined whether SIRT1 was in a complex with HNF4a and PGC-1a. As shown in Fig. 2a and Supplementary Fig. S5, endogenous or overexpressed HNF4a co-precipitated with SIRT1 and PGC-1a. Taken together, these results might suggest that PGC-1a and SIRT1 are in a protein complex that includes HNF4a. The metabolic flux of glucose in hepatocytes is also affected by the rate of glycolysis, a pathway that is decreased during fasting. To test whether PGC-1a and SIRT1 might also control glycolysis, we analysed the expression of glucokinase and liver pyruvate kinase (LPK). As shown in Fig. 3a, b, PGC-1a and pyruvate decreased the levels of mRNAs for glucokinase and LPK. SIRT1 siRNA increased the expression of these genes under pyruvate treatment. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These results suggest that PGC-1a and SIRT1 co-regulate, in opposite directions, the patterns of gluconeogenic and glycolytic gene expression in response to pyruvate.  XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We next investigated whether this induction of gluconeogenic and glycolytic genes by SIRT1 and PGC-1a was reflected in glucose production per se. As shown in Fig. 4a, PGC-1a increased glucose production threefold compared with control cells. SIRT1 siRNA repressed the glucose production
+induced by PGC-1a to control levels. This indicates that SIRT1 is required for PGC-1a induction of glucose production. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The data we present here show for the first time that PGC-1a and SIRT1, which have been studied in very different contexts, can function together to promote adaptation to nutrient deprivation by regulating the genetic programmes of gluconeogenesis and glycolysis. This provides one of the most striking examples of a biological programme regulated through transcriptional coactivation (Fig. 4b). SIRT1 is in a protein complex with PGC-1a and HNF4a, an essential transcription factor in PGC-1a’s gluconeogenic function (14). In this protein complex SIRT1 is likely to be the sensor for nutrient fluctuations via NAD+ and regulates PGC-1a-dependent gene expression. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SIRT1 has mainly been linked to negative regulation of gene expression through protein deacetylation (5–7). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Interestingly, it has recently been reported that SIRT1 interacts with the transcriptional corepressor NCoR, negatively regulating PPARg (This gene encodes a member of the peroxisome proliferator-activated receptor (PPAR) subfamily of nuclear receptors. PPARs form heterodimers with retinoid X receptors (RXRs) and these heterodimers regulate transcription of various genes. Three subtypes of PPARs are known: PPAR-alpha, PPAR-delta, and PPAR-gamma. The protein encoded by this gene is PPAR-gamma and is a regulator of adipocyte differentiation. Additionally, PPAR-gamma has been implicated in the pathology of numerous diseases including obesity, diabetes, atherosclerosis and cancer. Alternatively spliced transcript variants that encode different isoforms have been described) in white fat where PGC-1a is very low (17). XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SIRT1 has been implicated in other specific biological responses, such as the reaction to oxidative stress through deacetylation of p53 and FOXO1 transcription factors (5–8). It is therefore possible that multiple effects of SIRT1 in energy metabolism or even lifespan might occur by means of docking on this coactivator. Ultimately, a better understanding of these nutritional signalling systems may lead to new therapeutic approaches to defects in glucose metabolism in diabetes and ageing  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

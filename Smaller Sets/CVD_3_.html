@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">CVD data set 3</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.CVD_SORTED_3">
+<caption aria-label="Data Set REF.CVD_SORTED_3"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Strengths</th>
+<th class="header" scope="col">Weaknesses</th>
+<th class="header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">However, the interrelation between HDL lipidome, proteome and particle functionality is a missing part of the puzzle, which remains as yet unsolved.  XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">One key strength of the study is that the genetic associations were derived on mainly fasting samples, which facilitates the interpretation of the results. Fasting measurements represent hepatic-derived lipid traits whereas non-fasting samples also partly reflect gut-derived contributions from chylomicron particles and their remnants. This means that our analysis is well placed to answer causal questions about endogenous lipid pathways, but is less able to answer questions about lipoproteins from dietary sources. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Previous studies have suggested that the ApoB / ApoA1 ratio may be a relevant risk factor for CAD. (26) However, working on summary-level data we were not able to investigate any other relevant risk factors than those provided by the original data, such as the ratio ApoB / ApoA1 or the ratio of LDL / HDL particles. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A further limitation is that there is overlap between individuals in the outcome datasets for the main and sensitivity analyses. For this reason, we refer to them as sensitivity analyses rather than replication analyses, as they assess the robustness of the variable selection algorithm to variations in the outcome dataset, rather than providing an independent replication of the findings. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">The future research elucidating these important queries holds great promise in not only understanding how ceramides modulate nutrient sensing that underlies metabolic disease processes but also potentially identifying new therapeutic targets to combat metabolic diseases epidemic.</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">The strengths of the current study include the use of an efficiently designed case-cohort study from a wellcharacterised clinical trial to yield a powerful study for a range of outcomes, which were independently adjudicated according to pre-specified criteria. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study included multiple plasma fatty acids and the ability to adjust for multiple covariates including lipids and lipid-lowering drugs, such as statins. We also considered the percentage that individual fatty acids contributed to total fatty acids, as well as the absolute levels of fatty acid, and both measures are important for interpreting fatty acid values since an increased intake of a specific fatty acid could alter the relative percentage of other fatty acids while their absolute levels are unlikely to be altered. XXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The present study, however, has several limitations. First, as the study cohort was derived from a randomised trial of individuals with type 2 diabetes, our results may have limited generalisability to broader populations. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, as fatty acids were measured in pragmatically collected plasma samples in a randomised trial, we cannot rule out the potential for differential pre-analytical sample handling or sample degradation during storage, which may have biased our results [49]. Further, as plasma samples were collected from non-fasted participants, the levels of fatty acids might have been affected by the consumption of a recent meal [50], although, in clinical practice, fasting is rarely required among individuals with type 2 diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, fatty acids were only measured in plasma samples collected at study baseline; thus, we were unable to consider how the change in fatty acid values during the study follow-up might have influenced the exposure–outcome association. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, our study considered only two individual fatty acids (DHA and LA), since the resolution of the employed high throughput NMR platform was limited in terms of individual fatty acid types, and only allowed robust quantification of DHA within n-3, and LA within n-6. The specific set of measures was determined by their overall concentration in plasma and also on spectroscopic aspects, such as overlapping signals, which makes it challenging to quantify from native plasma where no lipid extraction is used [14]. LA and DHA were reported since they generate distinct peaks in the spectral data produced by the measurement, and we were able quantify them separately as part of our high-throughput service. However, fatty acid concentrations quantified by the NMR metabolomics platform were highly consistent with the concentrations compared with GC, the latter being challenging with large samples [46]. Further, NMR, is a novel technology with the potential of offering a cost-effective platform for multiple biomarker testing and has great potential in regard to fatty acid measurement. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further investigation of the benefits of n-3 fatty acid supplementation will, therefore, be required among people with type 2 diabetes and high CVD risks. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">The major strengths of this study are the large number of individuals with T2D from 5 independent cohorts as well as adjustment for an extensive set of relevant clinical covariates and multiple testing, which diminished the risk of false-positive results. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, the use of the NMR platform provided standardized measures of metabolites, allowing exploration of measures beyond routinely measured biomarkers. This method was faster, cheaper, and thereby more accessible than the more extensive MS-based metabolomics methods and could potentially be easier to adapt to a clinical setting, although it did not provide as in-depth a characterization as, for example, MS. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The use of medications agents may affect the metabolome substantially. In a recently published paper, also from the Biobanking and Biomolecular Resources Research Infrastructure consortium, significant associations between cardiometabolic agents and several of the measured metabolites were demonstrated (44). In the present study, results were adjusted for several medications commonly used in diabetes. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">We further recognize some limitations of the study. Metabolites were measured at one timepoint and therefore did not provide information regarding within-subject variation 
+in metabolite levels. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In some of the original studies, information regarding albuminuria measurements and history of micro- or macroalbuminuria was very limited. Further, we were limited by a low number of cases in the CODAM study, no diabetes duration in the RS study, and only having follow-up measurements from 2 cohorts. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Information regarding diet, which may affect the measured metabolites, was not available in all cohorts and not uniformly captured. Therefore, we could not  control for diet in this study. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Information regarding other renal markers, such as vitamin D, parathyroid hormone, and calcium, was also not available. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Since the samples originate from different studies, the storage time before metabolite measurements differed. Although all samples were stored at −80°C as recommended (45), we did find consistent results across studies, regardless of the year of sampling. This finding was also demonstrated by low heterogeneity between studies, suggesting no such influence. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further longitudinal studies are needed to clarify whether alterations in metabolite levels precede or are consequences of renal impairment and whether a biomarker panel of both amino acid and lipid measures could potentially lead to improved prediction in the development of DKD. XXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">However, our study presents important strengths: we used the case‐cohort design, which retains randomization, to both evaluate associations of 2-AAA and lysine with incident T2D and CVD. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our analyses were adjusted for multiple confounders within a well-characterized trial and, as an important novelty, we used repeated measurements of these metabolites, that allowed us to assess 2-AAA and lysine changes due to the dietary intervention. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Our study presents some limitations. First, we do not have available data on glycated hemoglobin (HbA1c), which was previously reported to be a biomarker of diabetes and CVD damage, independently of fasting glucose [23]. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, we did not find an effect of MedDiet on 1 year-changes in none of the studied metabolites. It may be possible that 1 year is not enough time to observe sound changes in metabolites, and as a consequence we did neither observe an association between 1-year changes of metabolites and the subsequent risk of T2D or CVD. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another limitation is that our results may be not generalizable because we used a Mediterranean population at high CVD risk. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, we cannot exclude the possibility of residual confounding regarding the observational associations between metabolites and cardiometabolic outcomes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further studies are needed to clarify the effect of diet on lysine, 2-AAA and pipecolic acid levels and the potential effect modification by dietary interventions on the CVD/T2D risk associated with these metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, new studies are needed to evaluate if lysine pathway metabolites may add value to the prediction of risk provided by HbA1c. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consequently, these results, especially those suggesting a potential interaction between the nutritional intervention and these 2 metabolites deserve further confirmation in independent prospective cohort studies and trials [24].</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">Our study has several strengths. To our knowledge, it is the largest to investigate the metabolic signature of atherosclerosis using both standard 1D and CPMG 1H NMR spectra with information on small molecules and lipoprotein subclasses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We replicated our findings in external independent populations and we used two phenotypes of atherosclerosis (CAC and IMT) to further increase the generalizability and robustness of our findings. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We characterized the underlying biological pathways associated with the metabolites of interest, highlighting extensive inter-connected disturbances of metabolism. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">One limitation of our study is the cross-sectional nature of associations of metabolites with sub-clinical atherosclerosis; however, we also examined our results in relation to prospective data using incident CVD events. Nonetheless, as with any observational study, causality cannot be inferred and further experimental and functional work is needed to further elucidate the metabolic pathways involved in atherosclerotic disease. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We studied metabolites present in blood which may not accurately reflect metabolic processes in atherosclerotic plaques and arterial tissue, although there is strong evidence to suggest that at least some blood biomarkers (e.g. cholesterol) are relevant to atherosclerosis and blood is a readily accessible tissue for identification of prognostic or diagnostic markers. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, since we used a untargeted metabolic profiling approach, some of the discovered metabolic features could not be annotated (as expected); however, most of the unannotated signatures correspond to broad signals most likely from protein residues which cannot be further annotated by NMR. At the same time, this untargeted (‘agnostic’) approach allows for the discovery of metabolites that are not part of targeted panels. Our analysis was limited to NMR and mass spectrometry data may offer additional insights not apparent based on NMR data alone. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Genetic approaches as well as mechanistic studies are now needed to further validate our results and to follow-up the possible entry points for investigation of novel targets or preventive strategies for atherosclerotic disease. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data"> &#160;</td>
+<td class="data">We are aware of certain limitations to our study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, due to differences in imputation reference panels between the studies included in the GWAS for glycine, sample sizes differed between the tested variants. Therefore certain loci, in particular those only covered in UK10K and rare variants, which have been shown to influence amino acid levels (13), may not have reached significance. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Secondly, some of the studies upon which our analyses were based were enriched for healthy participants, e.g., UK Biobank (55) and INTERVAL. It has recently been suggested that selection bias could theoretically lead to a false positive genetic association between an exposure and an outcome if both the exposure and the outcome influence the likelihood of an individual participating in the study (56). As individuals are not aware of their glycine levels, any such selection would have to be indirect through other factors that affect glycine and bias participation in each of the independent studies included in the same direction. We therefore consider the extent to which collider bias could be influencing the MR results due to a healthy participant effect to be small. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, despite undertaking sensitivity analyses, we cannot exclude the possibility that our findings may be driven by vertical pleiotropic effects of the genetic instruments. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As the metabolome is comprised of thousands of metabolites connected through numerous reactions, some of which may be unknown, the distinction between horizontal and vertical pleiotropy is difficult to make in the context of metabolomics. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The 2 SNP score, comprised of loci in genes of major enzymes of glycine catabolism, is the most specific score to the glycine pathway but still shows modest associations with some metabolites of which we cannot be sure that they are metabolically linked to glycine, e.g., the unknown metabolite X-16570, and with glycine-conjugated metabolites, which may have effects independent of glycine on cardiometabolic disease risk.  XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, we cannot fully exclude that glycine-independent mechanisms may have biased the genetically predicted association of glycine with disease risk. Moreover, as glycine is a metabolite on the intersection of many metabolic pathways, the genetic association of glycine with cardio-metabolic diseases may represent the causal effect of a metabolite to which glycine is metabolically close linked (e.g., tetrahydrofolate or serine).XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data"> &#160;</td>
+<td class="data">Similarly, the sensitivity of this proteome profiler approach for detecting subtle changes in low-abundance cytokines released from plaque tissue may not be sufficient, and more accurate measurements using ELISA may be more reliable.</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data"> &#160;</td>
+<td class="data">In this review, we have highlighted the scarcity of data outside  North America, Europe and high-income Asia-Pacific countries, leaving the global status of diabetes complications rates unclear, especially in low and middle-income countries. This gap in data stems largely from the lack of population-based systems quantifying healthcare utilisation because surveys and cohort studies are generally inadequate for the assessment of diabetic complications. The comparison of trends in complications has also been hampered by varied reporting methods, definitions of complications and methods to identify people with diabetes. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">CLINICAL OUTCOMES AND FUTURE PERSEPECTIVES =&gt; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  1. Declines in all-cause and CVD-related mortality may lead to proportional increases in other forms of  morbidity (e.g. renal disease, infections, cancers, and physical and cognitive disability), with important implications for the clinical and public health burden of diabetes.
+2. Future monitoring  of global trends in diabetes complications could been enhanced by implementation of standardised  reporting methods and the establishment of practical registries that suit the dual needs of population monitoring and providing feedback and decision support for clinical systems. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This review of international trends in diabetes-related complications reveals several key conclusions (see Textbox); XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX first,  rates of LEAs, acute complications, CVD and all-cause and CVD-related mortality among populations of people with diabetes are declining.  Data on trends in ESRD, diabetic retinopathy and neuropathy, non-CVD-related causes of death  and ‘emerging’ complications in these populations are scarce,  however, and, as such, conclusions are limited. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, inspite of notable declines in several diabetes complications, people with diabetes remain at significantly higher risk for these complications compared with people without diabetes. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, declines in all-cause and CVD-related mortality are leading to proportional increases in other forms of morbidity ,including  renal disease, infections, cancers, and physical and cognitive  disability, with important implications for the clinical and public health burden of diabetes. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Last, there is a genuine lack of  comparable data on trends in rates of diabetes complications, specifically from low-and middle-income countries. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore,  conclusions drawn from this work are limited to about a dozen  high-income countries in North America, Europe and East Asia and ,as such, this leaves the status of global trends in diabetes complications unclear. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The explanation for the decline in rates of diabetes complications among selected countries around the world is likely  multifactorial, involving trends in the underlying risk factors  of the population and changes in preventive care and medical treatment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Reductions in macrovascular complications in high-income countries are likely influenced by improved pharmacotherapy, CVD treatment procedures and better prevention strategies [73]. For example, large reductions in  smoking rates occurred in the 1970s and 1980s ,followed by gradual reductions there after [74,75]. Blood pressure control also improved in the 1980s and 1990s, driven by new evidence for treatment efficacy from clinical trials and better awareness of blood pressure as a key risk factor for CVD  [74,75]. In addition, lipid levels have declined overtime, likely due to increased use of lipid-lowering medications as well as reductions in trans-fat intake [73,76]. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These improvements in risk factor management in high-income countries have likely had additional benefits in terms of microvascular complications, which have been further buoyed by improvements in glycaemic control since 2000 [73, 76, 77]. In the USA, the improvements in risk factors are also likely driven by improvements in the organisation of care and initiatives to improve quality of diabetes care. Whether improvements in risk factors, treatment options and medical care also occurs in the majority of other countries in the world is unclear due to the lack of continuous monitoring systems.  Trends in rates of diabetes complications are also influenced by background trends in mortality. For example, the large reductions in CVD-related mortality in populations with diabetes that have been observed in the USA, Australia and several other countries in Northern Europe have increased survival rates, resulting in proportional increases in other causes of death, including those due to cancer, renal disease and infections.  XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The interpretation of trends in rates of diabetes complications also depends on which denominator population (diabetes or whole population) is used. This review has focused primarily on the average risk for the average person with diagnosed diabetes, independent of changes in prevalence of diabetes in the underlying population. When rates are calculated as the frequency of diabetes
+related complications in the general population, many countries reveal flat or even increasing trends because the increases in diabetes prevalence offset reductions in risk of complications within the diabetic population [19]. For example, while the average adult with diabetes in the USA has a lower risk of CVD than in previous decades, the average adult in the general population has an increased risk of diabetes-related CVD than in previous decades because of the large increase in diabetes prevalence. The fact that trends differ depending on the choice of general population denominator is a reminder that the burden of the wide spectrum of complications in those with diabetes will ultimately be influenced by efforts to prevent diabetes. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXFUTURE RESEARCH =&gt; Future monitoring of global trends in diabetes complications could be enhanced by implementing  standardised reporting methods and establishing practical  registries that suit the dual needs of population monitoring  and providing feedback and decision support for clinical systems. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">Strengths of the study include the use of a well-characterised clinical trial cohort, an efficiently designed case-cohort study to yield a powerful study for a range of endpoints, which were independently adjudicated according to pre-defined criteria. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Like other RCT populations, ADVANCE study participants represent a selected cohort. For instance, ADVANCE study participants were required to have a history of CVD or CVD risk factors. Therefore, our results may not be generalisable to all individuals with diabetes, although other risk factors we measured are generally associated with risk of major endpoints in the expected directions. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Amino acids were measured in pragmatically collected plasma samples in the context of a multi-national RCT and we cannot rule out the potential for differential pre-analytical sample handling or sample degradation during storage, which may have biased our results [44], although these samples were analysed at first thaw. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also present data suggesting broadly comparable concentrations of amino acids relative to other cohorts. Another potential limitation is the analysis of samples from non-fasted participants, although in clinical practice, fasting is rarely required among individuals with type 2 diabetes. NMR spectroscopy has been used to investigate changes in amino acids 30 min after a standardised liquid meal [45] and effects sizes were generally relatively small, although the immediate postprandial state is likely to give larger effect estimates than are at play in this study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Although the evidence from the present study suggests that these might only be very moderately useful biomarkers in incremental prediction of adverse events in individuals with type 2 diabetes, the pathophysiology underlying these associations and the possibility of intervention studies are intriguing and worthy of further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The causal pathway may not be unidirectional; a recent Mendelian randomisation study suggests that genetically elevated BCAAs (via impaired catabolism) are associated with increased risk of type 2 diabetes [34], although a better understanding of the underlying pathway is required to increase confidence in this observation [35]. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our data strongly support the need for further studies to determine why higher phenylalanine appears to be a consistently adverse signal for CVD outcomes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX That noted, counter-intuitively, we have reported that metformin in fact lowers, not raises, tyrosine levels in individuals with CVD and at high risk of diabetes [16]. The effect of other glucose-lowering drugs on amino acid profiles in individuals with diabetes would now be of interest. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further studies are now needed to validate our novel observations and to examine whether our findings may represent causal pathways. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Most notably, the identification of tyrosine as a potential marker of microvascular risk requires further study.</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data"> &#160;</td>
+<td class="data">First and foremost, the cross sectional design of our study poses a major limitation. The proposed implications should be read with caution, as causal inferences cannot be made. For example, previous work shows that diabetes
+might also cause impaired host defenses and thus predispose to infections [41, 42]. Although the analysis that excluded self-reported cases, presumably those with a longer diabetes duration and potentially lower host defense, showed comparable results (Appendix 2) to the analysis in the full population, we cannot draw firm conclusions with regards to the time-sequences of cause and effect. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There are some further limitations that merit discussion. First, the overall response rate was relatively low (44%). However, we find it unlikely that selective response would change the interpretation of our findings as there were no significant differences between the respondents and the non-respondents in a previous analysis [43]. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, we did not distinguish between past and chronic infection, and the estimated IB may have been flawed by the definition of our measures. As indicated previously, IB was based on seropositivity to antibodies (mostly IgG). Several potentially relevant chronic infections were not measured. Additionally, IgG antibodies only indicate prior infection (or vaccination), and not current infection, chronicity or duration of infection [24]. Additionally, we did not measure mode of transmission. Nevertheless, prior studies have also based their IB definitions on IgG antibodies, and there is no conclusive evidence that consideration of other markers of infection (e.g. endovascular or circulation DNA, antigens of pathogens) give more reliable results [42]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, as in many epidemiological studies, we partly defined our outcomes based on self-reported diagnoses, in line with previous analyses within the study population [3–5]. This could be problematic if differences in reporting occur. However, our restricted analyses (Appendix 2) suggest that this did not affect our results. In addition, our definition was based on a single measurement of e.g. fasting glucose and blood pressure. Although this applies similarly to all subgroups, more elaborate measurements, e.g. an oral glucose tolerance test for the identification of diabetes [44], and confirmation of diagnosis by a repeated measurement [45, 46], may have given more precise estimates of the prevalence across groups. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the results may have been affected by residual confounding. We were unable to adjust for potentially important factors, such as dietary intake, hygiene and (early life) living conditions in our analyses. In addition, numbers were too small to distinguish between generations. Moreover, we were not able to investigate whether treatment for infections (e.g. HCV [47]), the body’s immune response or the presence of the germ contributed to the associations found, which may have caused us to wrongly ascribe the results to the effects of the infections.</td>
+<td class="data">Nevertheless, the findings ask for further research into the nature of association of IB with metabolic risk factors in a longitudinal setting, including investigations of dose-response relationships and an investigation of possible underlying mechanisms leading to the incidence of metabolic risk factors for CVD. If the association and time-sequence are confirmed, a reduction in IB or treatment directed at effects of IB may possibly be investigated as a target for reducing ethnic disparities in metabolic risk factors.</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">The medical and research communities need to prepare to give meaningful and helpful recommendations to concerned patients, including the woman described in the opening paragraph. Much more work is needed, and quickly, on this exciting class of bioactive lipids.  XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data">Our analysis and prior studies derived a similar combination of fatty acids [12-15], but no previous studies to our knowledge evaluated T2D incidence as an outcome. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Strengths of this work include the standardised assay of fatty acid profiles in an EPIC-Inter-Act population with geographic diversity; the large study size (to our knowledge by far the largest among studies of fatty acid biomarkers), allowing various sensitivity analyses; and the generalisability of our findings, strengthened by our findings across 8 European countries and the US NHANES. By focussing on a single combination of fatty acids, we were able to report details of its association with incident T2D and metabolic, genetic, and dietary factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, this also limited our investigation of other fatty acid patterns, in particular in relation to omega-3 fatty acids. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Other limitations include possible residual confounding by factors unmeasured or measured imprecisely, although we adjusted for many covariates including major risk factors for T2D. Whether or not the combination of fatty acids itself caused the T2D onset remains unestablished. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Possible exposure misclassification due to single fatty acid measurements and possible outcome misclassification were limitations, but likely to be independent of T2D case status and fatty acid profiles, respectively. We found no strong reason to think that these limitations would alter the overall conclusions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Lastly, the generalisability of our findings might be limited to high-income Western populations, and fatty acid patterns in other populations with diverse genetic backgrounds and dietary patterns are of future interest. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Associations of gene variants with fatty acids and with incident T2D cannot be confounded by long-term lifestyle characteristics. Therefore, the specific gene variants, the identified combination of fatty acids, and the risk of T2D are likely to be on the same causal pathway, warranting future research to elucidate how insulin resistance specifically alters fatty acid profiles or vice versa. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, an association with ischaemic heart disease or stroke was not significant [15]. The inconsistency depending on outcome is predictable as DNL could promote insulin resistance, but suppress atherosclerosis [36]. Statins and other lipid-lowering drugs also alter fatty acid profiles [10] and have divergent effects on heart disease and T2D [40]. Thus, a fatty acid pattern can be a future focus of investigations of cardiometabolic diseases and related interventions. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The association of the FA-pattern score with incident T2D was not fully explained by any single fatty acid, but was partly attenuated by adjustment for odd-chain SFAs and VLSFAs. These SFAs are associated with lower risk of cardiometabolic diseases [16,41,42], while their biological roles remains understudied. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX High phospholipid VLSFAs may reflect high activity of PPARα, which leads to VLSFA synthesis and less insulin resistance, apoptotic cell death, and
+pancreatic dysfunction [41,43]. Blood odd-chain SFAs may partly reflect dairy consumption [3,44], gut microbiota [45], or endogenous synthesis through α-oxidation [46], and thus any correlates to those factors could explain our findings. Evidence for these mechanisms and relationships with other fatty acids remains scarce and deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The combination of fatty acids warrants further investigation of its determinants and potential application as a marker of metabolic characteristics.</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data">A strength of our study is its prospective design using general population-based cohorts. Study participants were initially free of MI, and thus we analysed only incident events. All samples were handled in a similar, unbiased manner. We controlled for a variety of demographic characteristics, lifestyle factors, medication and clinical variables. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX All data were collected and verified by trained personnel (16,23, 25) to reduce measurement error. We applied stringent QC procedures to our metabolite assays, (18) and observed no sources of systematic error. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Though nested case–cohort and case–control designs are less efficient than assaying the entire cohort, (43) we still observed associations with our approach. Also, associations for the LPC 18:2 and the metabolite score were similar for KORA and AGES-REFINE despite reports of potential bias with stratified case–control designs. (43) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">A limitation of using backward stepwise selection to reduce the set of predictors is that the pruning is done in an agnostic manner. Thus, the predictors selected may not represent the most meaningful or causal metabolites, but may be markers for unmeasured or unselected metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We were unable to control for dietary intake, which is associated with incident MI. (44) This may have affected our inability to identify associations with metabolites influenced by diet, for example, tryptophan. (45, 46) Additionally, the non-fasting status of the KORA S2 cohort may have introduced variability that obscured associations in this cohort. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A key point of all biomarker discovery studies is generalisability. We incorporated samples from Germany and Iceland indicating that our associations generalise across European populations.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">We suggest that future studies of MI and metabolic profiles collect detailed dietary information and use fasting samples. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although we provide substantial evidence for improved baseline discrimination for future incident MI for our novel biomarkers, future studies are needed to formulate and validate an incident MI risk scoring function based on these metabolite biomarkers.</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="data"> &#160;</td>
+<td class="data">In such instances, assessment of changes in metabolites across the diseased organ would prove more valuable, such as sampling arterial blood and the coronary sinus for the heart (see limitations of metabolomics described in the section Metabolomics), or having a tissue biopsy to compare against the serum/plasma sample. Nonetheless, due to the ease of obtaining a serum / plasma sample versus collecting a tissue biopsy or invasive catheterization, we must rely on molecular explorations in animal models of disease to confirm and / or understand novel metabolic alterations identified from human blood-based metabolomic signatures.</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">19</td>
+<td class="data"> &#160;</td>
+<td class="data">As described throughout this review, the estimated CVD burden of many risk factors is affected by the fact that limited data are available regarding population exposure and by likely or potential biases in the magnitudes of their effects. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To overcome the limitations of data on population exposure, researchers have used sophisticated statistical methods for pooling worldwide population-based surveys, (174) or proxy measures of risk factors exposure, eg, lung cancer death rates as a measure of cumulative life-long smoking and satellite-based measurement as a proxy for ambient PM pollution. (6, 175) XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nonetheless, the estimated exposures have moderate-to-large uncertainties, even for a risk factor such as diabetes mellitus that is commonly used in clinical settings. (79, 81) Furthermore, small effect sizes and publication and reporting bias can undermine the presumed causal associations; even when causality is accepted, these limitations lead to bias in the magnitudes of associations. (104) XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The estimated CVD burden of risk factors is relatively robust to these issues for those risks with high prevalence and large causal effects (Figure 8), a situation that for CVD risks may be limited to high blood pressure, high cholesterol (for effects on IHD), smoking (among men), and possibly harmful alcohol use (among eastern European men). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX If causal effects are large, but risk factor exposure is low, for example, in the case of smoking in Asian and African women, the estimated health burden is most sensitive to the quality of, and error in, exposure data. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The most common situation for CVD risks, however, is one of small effect sizes and high exposure levels, which applies to most dietary and environmental risks, physical inactivity, and high BMI and glucose. The estimated CVD burden of such high-exposure–and–low-effect-size risks is highly sensitive to bias and residual confounding in their effect sizes. At the extreme, the real estimated CVD burden of such risks can be zero if the causal association is spurious. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX More likely, the CVD burden may be overestimated by several-fold because inadequate adjustment and publication bias often lead to inflated effect sizes. (104) The proportional over-estimation of the CVD burden in the presence of bias and confounding is more severe in the case of small effect estimates. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For illustration, if one-half of the excess relative risk is attributable to residual confounding, and if the observed relative risk is 1.02, the CVD burden would be overestimated by 98% (1/1.02) for those risks with universal exposure. The overestimation would be 67% (1/1.5) if the observed relative risk is 1.50 and 50% (1/2)  if it is 2.0. Furthermore, the CVD burden of risk factors is estimated by comparing their actual levels in worldwide populations with some counterfactual optimal level. (9) XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Putting aside risks such as smoking, dietary trans fats, and binge drinking for which the optimal level in a population is unequivocally zero, the exposures used as counterfactual optimal levels in global
+analyses – eg, a systolic blood pressure of 110 to 115 mmHg, BMI of 21 to 23 kg/m2, vigorous levels of physical activity for the whole population, and a daily fruit intake of 300 g –(13) tend to be at the extreme levels in most epidemiological studies and
+hence are uncertain. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the effect sizes for the associations between risk factors and CVDs tend to attenuate with age, with relative risks approaching 1.0 in older ages. (40) Because most epidemiological studies do not enroll a sufficiently large number of older individuals to robustly estimate small effects at these ages, relative risks in ages &gt;75 years either are not estimated or have large uncertainty. This gap in data has required extrapolating effect sizes to older ages for population-based analyses. (13, 40) With CVD events and especially deaths increasingly shifting to older ages, this extrapolation increases the uncertainty of estimated CVD burden of risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">20</td>
+<td class="data"> &#160;</td>
+<td class="data">The histological analysis of A-SMase performed in the present study is limited by the fact that the method does not allow SMase activity assessment. However, the additional in vitro experiments provide evidence that the analyzed lipids are important for plaque inflammation and the induction of cellular apoptosis. Furthermore, no differential expression of enzymes was observed, which may be a power issue because of the small number of plaques used for RNA sequencing</td>
+<td class="data">As the synthesis and degradation of sphingolipids are tightly regulated by a broad spectrum of enzymes, RNA sequencing was performed to investigate whether an increase in plaque levels of sphingolipids and glycosphingolipids could be explained by differential expression of genes coding for enzymes involved in relevant pathways. In the current analysis, no significant differences in the expression of these enzymes were observed. This does not rule out the role of these enzymes in plaque progression, as enzyme activity or localization could also be involved and remain to be evaluated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  In addition, sphingolipids should be further evaluated as possible biomarkers of plaque vulnerability.</td>
+</tr>
+<tr>
+<td class="r data">21</td>
+<td class="data"> &#160;</td>
+<td class="data">The observational assessment of the effects of statins may be confounded, in particular by indication for treatment. However, the comparisons of metabolic changes over 2 time points reduced such confounding. Furthermore, the Mendelian randomization approach to proxy the metabolic effects of HMGCR inhibition is generally free of this limitation (18,40). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The rs12916-T allele in HMGCR has previously been rigorously associated with lower expression of HMGCR in the liver and lower circulating LDL-C levels (13,19), supporting the validity of this common variant as a genetic instrument. Information on statin type and dosage was generally not available; however, results were coherent across the 4 longitudinal cohorts despite large differences in demographics and follow-up time. The genetic analyses were also consistent across 8 cohorts with a wide age span. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The limited statistical power and the predominantly young study population preclude us from ruling out minor effects of statins on non-lipid biomarkers. Nonetheless, the results set upper limits for the effects of HMGCR inhibition on multiple circulating biomarkers not previously investigated. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">22</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Clinical behavior change efforts, health system changes, novel technologies, and robust policy strategies must complement and facilitate these individual food choices, which together will reduce cardiometabolic disease and economic burdens across the population.</td>
+</tr>
+<tr>
+<td class="r data">23</td>
+<td class="data">The strengths of this study are that we have measured a large number of biomarkers covering numerous pathophysiological pathways. We have also made use of k-fold cross-validation and machine learning methods that avoid the problem of overfitting when testing large numbers of associations and increase the generalizability of findings to other settings. XXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">There are also weaknesses. The sample size is modest and only one cohort has been studied and validation in external cohorts is needed. We used a dichotomous variable for albuminuria because no single method was used for all samples to assess albuminuria status. As a result there is potential for residual confounding because of albuminuria. However, a sensitivity analysis of the subgroup with albumin concentration data measured by a single method showed that the increment in AUROC achieved by adding biomarkers to the clinical covariates was not reduced by the use of a continuous measure of albuminuria rather than the dichotomous variable. Thus, we think it is reasonable to conclude that the biomarkers are not materially affected by residual confounding. Another weakness is that we only have limited data from blinded duplicate samples because of limited volume availability, although in general the repeatability data were good (see Supplementary Methods online). We also note that the effect of errors in measurement act to reduce the power to detect associations rather than introduce false positive associations. Third, we did not have a measure of every biomarker in every sample that required us to impute missing values. However, the degree of missng at random was not high with only 6 biomarkers in the study having ≥30% of values imputed, and a sensitivity analysis examining individual biomarker associations after adjustment for clinical covariates in the non-imputed data showed consistent associations with those seen in the imputed data set. In keeping with our aim to identify biomarkers that might improve clinical trial stratification we have restricted the study to individuals with CKD3 at baseline. It is not possible to conclude that biomarkers that are associated with progression at this stage will also be predictive of progression in individuals with CKD1 or CKD2 and studies are needed to examine biomarkers in such individuals. It should also be noted that panels of biomarkers predicting from earlier stages of renal disease are more likely to include biomarkers that are in the causal pathway, whereas panels predicting from CKD3 may include biomarkers altered secondarily because of declines in glomerular filtration. The study also does not identify</td>
+<td class="data">However, further studies of the generalizability of findings are warranted. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Validation in external cohorts is needed. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is not possible to conclude that biomarkers that are associated with progression at this stage will also be predictive of progression in individuals with CKD1 or CKD2 and studies are needed to examine biomarkers in such individuals. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Identified novel associations of biomarkers that warrant further investigation for relevance to pathogenesis of kidney disease in type 2 diabetes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">24</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Going forward, it is reasonable to advocate more systematic population-based data to better understand why the decades-long decline in CVDs continues in high-income countries, and to document its early and subsequent stages in middle-income countries. Such knowledge may help further accelerate the decline in high-income countries and extend it to other regions where they remain the leading cause of mortality (and, paradoxically, their absolute mortality and morbidity burden is set to rise due to population aging). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The availability of electronic population-based data on hospitalisation and mortality, and the ability to link across them, as well as regular health and nutrition surveys mean that such data can be obtained with relatively modest additional investments to bring together existing data sources and complement them with additional ones. These data have national coverage, and also allow time trends and subnational variations and inequalities to be studied. (5, 8, 305) Such data exist in most high-income and some middle-income countries but their use requires overcoming the increasing bureaucratic and legal obstacles to using and linking across administrative data on health risks and outcomes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In lower income countries in Africa and Asia, the first step may be to assess trends in CVD mortality and subsequently incidence without the current overreliance on models. This in turn requires strengthening vital registration and disease and risk factor surveillance systems in these settings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">25</td>
+<td class="data">The strength of this study is the ability to differentiate a wide range of cardiovascular diseases in a validated electronic health record linkage.</td>
+<td class="data">The accuracy and amount of phenotypic detail recorded in such databases is limited. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Residual confounding due to diet, physical activity, stress, and environmental factors might be a potential source of bias. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although coding for type 2 diabetes is prone to error in clinical practice, (29) coding error is unlikely to be an important source of bias in our study because our analyses, based on the diagnostic (11) marker of HbA1c, were consistent with the overall results. XXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The age-specific prevalences of type 2 diabetes we estimated are similar to those from a national survey done at a similar time to our study. (30) XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Error might occur in the recording of the cardiovascular outcomes; however, those that are more reliably coded (such as non-fatal myocardial infarction) might therefore be expected to show stronger associations with type 2 diabetes than diseases that are less reliably coded (such as stable angina). The fact that we did not observe this potential result suggests that the heterogeneity is real. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXWe noted similar associations with type 2 diabetes when endpoint ascertainment was restricted to hospital admissions and deaths, which was reassuring. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our lifetime risks were somewhat artificial, because they were based on extrapolation of event rates reported in people entering the cohort at different ages, but this design did mean that they were more contemporaneous than estimates from long-term follow-up of cohorts diagnosed decades ago. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Heart failure and peripheral arterial disease are the most common initial manifestations of cardiovascular disease in type 2 diabetes. The differences between relative risks of different cardiovascular diseases in patients with type 2 diabetes have implications for clinical risk assessment and trial design. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">26</td>
+<td class="data">A strength of our study was that desaturase activities were calculated on the basis of fatty acid compositions in four different lipid pools. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It was, therefore, possible to evaluate consistencies between pools in the calculated desaturase activities and we were able to demonstrate complete consistency for elevated SCD-16 activity in white Europeans compared with African Caribbeans or Asian Indians. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These differences have not been investigated previously, but their strength and consistency in our analysis justifies further, dedicated confirmatory studies. By contrast, reduced D6D activity in Asian Indians and elevated D5D activity in African Caribbeans was restricted to activities calculated from the CE and PL pools. This suggests ethnic variation in desaturase activities in specific tissues, most likely the liver, and justifies further investigations of ethnic variation in tissue-specific desaturase activities. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Our study has limitations in that it was restricted to a subgroup of a larger cohort [27] and both the African Caribbean and Asian Indian women were slightly but significantly younger than the Europeans. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies [1,28-30], including the full cohort study from which the present analysis was drawn [27], report that, compared to European women, African Caribbean women have higher BMI, higher or similar systolic and diastolic BP, similar HDL cholesterol, lower triglycerides and decreased insulin sensitivity, whereas Asian Indian women have higher or similar BMI, similar blood pressure, lower or similar HDL cholesterol, higher or similar triglycerides and lower or similar insulin sensitivity. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Ethnic differences in these measures in the present study were, therefore, broadly similar to previous findings, although in our smaller subgroup we found no significant difference in triglyceride levels between European and African Caribbean women. The systematic multivariable analysis we adopted was designed to minimize any effects of these differences in risk factors on relationships between desaturase activities and ethnicity. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A further potential limitation was that the study from which the present analysis derives did not include recording of dietary information. There is undoubtedly considerable ethnic variation in dietary habits, but it is important to note that our analysis concerned measures derived from precursor-to-product ratios, which should be relatively uninfluenced by variation in absolute levels of either precursors or products. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Genetic variation might underlie the lower D6D activity in Asian Indians but definitive studies of ethnic variation in the Fads2 gene that codes for D6D have yet to be carried out. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX D5D is coded by the Fads1 gene and it has been suggested that the higher arachidonic acid levels in African Caribbeans could reflect ethnic differences in Fads1 genotype [19,20]. However, as with the Fads2 gene, ethnic variation in Fads1 genotype has yet to be explored in depth. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found no evidence for an association between SCD activity and insulin sensitivity but previous studies have reported positive [13] or negative [15] associations between SCD activity and insulin sensitivity so this issue remains unresolved. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">27</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">28</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Future studies will be necessary to compare metabolite profiles in intracellular versus extracellular compartments, to define tissue-specific responses to ischemia and injury, and ultimately to further define the functional roles for the observed metabolic alterations in animal models. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, further testing in larger cohorts will be necessary to confirm these preliminary findings, to define the specificity of the metabolic changes in the presence of comorbid conditions, and to extend their relevance to subgroups based on sex and race. Furthermore, while the findings in the PMI cohort suggest that our early markers are particularly useful in diagnosing very recent onset of injury, cohorts of “normal” MI patients presenting soon after symptom onset will be needed to  further assess its clinical performance. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Large-scale studies will ultimately be necessary to identify any subtle potential metabolic alterations secondary to medications. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Beyond the diagnostic utility we demonstrate here, other metabolic signatures may predict disease, establish a reference for return to normality, or aid in the design of new therapeutics for metabolic modulation.</td>
+</tr>
+<tr>
+<td class="r data">29</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">It may be that dual agonism with PPAR-a/Y agonists will provide additional benefits above and beyond those achieved with sole activation of either PPAR-a or PPAR-Y.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

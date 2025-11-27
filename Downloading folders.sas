@@ -1,0 +1,10 @@
+filename in '/home/ajay_malkani0/Literature Search/modified sets';
+filename out zip '/home/ajay_malkani0/Literature Search/modified sets.zip';
+data _null_;
+  length fname mname $256 ;
+  infile in('*') filename=fname ;
+  input;
+  mname = scan(fname,-1,'/\');
+  file out member=mname;
+  put _infile_;
+run;

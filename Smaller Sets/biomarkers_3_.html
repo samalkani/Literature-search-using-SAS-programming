@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Biomarkers data set 3</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.BIOMARKERS_SORTED_3">
+<caption aria-label="Data Set REF.BIOMARKERS_SORTED_3"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Strengths</th>
+<th class="header" scope="col">Weaknesses</th>
+<th class="header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data"> &#160;</td>
+<td class="data">We acknowledge some limitations. First, given the substantial heterogeneity of DKD progression, there may be subgroups for whom our signatures may not be optimal. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Additional studies to evaluate genes involved in citrate production and conversion to aconitate will shed light on our current findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additional research using independent cohorts and targeted assays are needed to clarify these associations and shed further light on biological mechanisms underlying metabolite levels and DKD progression. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For future work, we will use independent cohorts with varying clinical risk profiles to further evaluate our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   A future aim is to evaluate our models on clinically distinct patient populations (e.g., by albuminuria group), and develop new signatures using an expanded set of metabolites.  XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, non-targeted metabolomics by flow-injection analysis cannot distinguish between metabolites with identical sum formula and only reports relative abundance change. In future work, we will use targeted gas chromatography-mass spectrometry or liquid chromatography–tandem mass spectrometry methods to replicate these findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, our “two-stage” approach to modeling kidney disease progression via eGFR slope has the advantage of being easy to interpret and analyze since standard statistical methods can be employed. However, this approach could entail an efficiency loss when there are missing data or irregular spaced repeated measures. A future aim is to develop appropriate weighting methods for unbalanced data. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, eGFR decline may not always be linear. However, despite the linearity assumption, eGFR slope offers ease of biological interpretation, and permits application of standard statistical modeling methods. Importantly, the CRIC Study has produced notable findings with eGFR slope as a marker for kidney disease progression (39,40). Nevertheless, we aim to examine nonlinear trajectories in future work. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">The strengths of the current study include the use of an efficiently designed case-cohort study from a wellcharacterised clinical trial to yield a powerful study for a range of outcomes, which were independently adjudicated according to pre-specified criteria. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study included multiple plasma fatty acids and the ability to adjust for multiple covariates including lipids and lipid-lowering drugs, such as statins. We also considered the percentage that individual fatty acids contributed to total fatty acids, as well as the absolute levels of fatty acid, and both measures are important for interpreting fatty acid values since an increased intake of a specific fatty acid could alter the relative percentage of other fatty acids while their absolute levels are unlikely to be altered. XXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The present study, however, has several limitations. First, as the study cohort was derived from a randomised trial of individuals with type 2 diabetes, our results may have limited generalisability to broader populations. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, as fatty acids were measured in pragmatically collected plasma samples in a randomised trial, we cannot rule out the potential for differential pre-analytical sample handling or sample degradation during storage, which may have biased our results [49]. Further, as plasma samples were collected from non-fasted participants, the levels of fatty acids might have been affected by the consumption of a recent meal [50], although, in clinical practice, fasting is rarely required among individuals with type 2 diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, fatty acids were only measured in plasma samples collected at study baseline; thus, we were unable to consider how the change in fatty acid values during the study follow-up might have influenced the exposure–outcome association. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, our study considered only two individual fatty acids (DHA and LA), since the resolution of the employed high throughput NMR platform was limited in terms of individual fatty acid types, and only allowed robust quantification of DHA within n-3, and LA within n-6. The specific set of measures was determined by their overall concentration in plasma and also on spectroscopic aspects, such as overlapping signals, which makes it challenging to quantify from native plasma where no lipid extraction is used [14]. LA and DHA were reported since they generate distinct peaks in the spectral data produced by the measurement, and we were able quantify them separately as part of our high-throughput service. However, fatty acid concentrations quantified by the NMR metabolomics platform were highly consistent with the concentrations compared with GC, the latter being challenging with large samples [46]. Further, NMR, is a novel technology with the potential of offering a cost-effective platform for multiple biomarker testing and has great potential in regard to fatty acid measurement. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further investigation of the benefits of n-3 fatty acid supplementation will, therefore, be required among people with type 2 diabetes and high CVD risks. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">However, our study presents important strengths: we used the case‐cohort design, which retains randomization, to both evaluate associations of 2-AAA and lysine with incident T2D and CVD. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our analyses were adjusted for multiple confounders within a well-characterized trial and, as an important novelty, we used repeated measurements of these metabolites, that allowed us to assess 2-AAA and lysine changes due to the dietary intervention. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Our study presents some limitations. First, we do not have available data on glycated hemoglobin (HbA1c), which was previously reported to be a biomarker of diabetes and CVD damage, independently of fasting glucose [23]. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, we did not find an effect of MedDiet on 1 year-changes in none of the studied metabolites. It may be possible that 1 year is not enough time to observe sound changes in metabolites, and as a consequence we did neither observe an association between 1-year changes of metabolites and the subsequent risk of T2D or CVD. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another limitation is that our results may be not generalizable because we used a Mediterranean population at high CVD risk. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, we cannot exclude the possibility of residual confounding regarding the observational associations between metabolites and cardiometabolic outcomes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further studies are needed to clarify the effect of diet on lysine, 2-AAA and pipecolic acid levels and the potential effect modification by dietary interventions on the CVD/T2D risk associated with these metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, new studies are needed to evaluate if lysine pathway metabolites may add value to the prediction of risk provided by HbA1c. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consequently, these results, especially those suggesting a potential interaction between the nutritional intervention and these 2 metabolites deserve further confirmation in independent prospective cohort studies and trials [24].</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Our results are reliable based on the three-stage design. XXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, there are several limitations in our study. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The association between neuroendocrine stress response-related miRNAs and T2DM could not be proved causality; follow-up studies are needed to confirm our findings. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Experimental study is needed to clarify the role of these miRNAs in the molecular mechanisms of T2DM. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The association between neuroendocrine stress response-related miRNAs and T2DM could not be proved causality; follow-up studies are needed to confirm our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Experimental study is needed to clarify the role of these miRNAs in the molecular mechanisms of T2DM.</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Further validation studies in larger sample size are still needed before the clinical application miR-375 as a biomarker for prediabetes and T2D.</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data"> &#160;</td>
+<td class="data">Distinct predictive signatures may be discovered in different studies due to differences in the metabolites measured, or differences
+in the genetic and environmental background of the study population. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The relatively large overlap of our biomarker panel with known markers of type 2 diabetes, however, suggests that our results are robust and stable. Replication of our findings in the DESIR data also shows that the predictive model trained using Finnish individuals generalised to independent French individuals, despite the potential variability due to the demographic difference. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX α-HB was quantitatively measured in the BPS dataset, but using an untargeted platform in the DESIR dataset. Moreover, three of the metabolic markers, [Hyp3]-BK, X-12063 and X-13435, were not measured in the DESIR study. Despite these differences, we confirmed the high predictive performance and added predictive value of the selected metabolic markers in the independent study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">As these amino acids are consistently found in many studies of prediabetes (i.e. impaired glucose tolerance, impaired fasting glucose, insulin resistance or impaired insulin sensitivity) and type 2 diabetes [9], they may have high potential for routine use as predictive biomarkers, and further translational research is needed to facilitate their clinical use. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">Numerous beneficial characteristics of NMR outweigh its limited resolution and sensitivity.  XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NMR thus offers unique opportunities to understand systems biology, discover biomarkers and potential therapy targets, and translate laboratory findings to clinical applications. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Outstanding opportunities exist in the application of NMR-based metabolomics to non-health related fields as well. In particular, for any metabolite of moderate size, NMR is the essential technique for structure determination. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, because of the increasingly realized complexity of biological mixtures, reliable detection, unknown identification and quantitation (especially of a large pool of metabolites) continue to constitute daunting challenges. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHowever, due to the cost and effort required to acquire a large number of samples, most early validation studies currently rely on relatively moderate sample sizes. As a result of such limitations, potentially confounding factors including diet, age, gender and subtle differences in pathology can strongly affect the performance of the derived biomarkers. Efforts to take these factors into account are still nascent. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">There is also increased interest in developing biological validation (in addition to the analytical and clinical validation) of identified biomarkers, in order to reduce the number of false positive biomarker candidates that arise, and to provide deeper biological insight. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, some parts of metabolism are insufficiently understood or quite complicated, such that it can be challenging to derive specific biological meaning for the promising biomarker candidates. We believe that efforts to translate metabolite biomarker panels for clinical applications and to find biological connection between the disease state and the derived biomarker panel are best pursued in parallel. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, greater insight into metabolic perturbations can lead to novel drug targets, which constitutes another exciting and growing area of opportunities in metabolomics. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With appreciation of the advantages of NMR for metabolomics applications as well as its challenges, there have been multifaceted efforts to boost sensitivity, resolution and the speed of data acquisition, and to improve quantitative accuracy. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Improved methods to combine and compare metabolite data from NMR and MS, for exploiting their combined strengths for unknown metabolite identification and biomarker discovery, are currently being developed, and these efforts will likely deliver important results. NMR-based metabolomics is anticipated to witness further improvements in the number, accuracy and speed of metabolite identification and quantitation, and thus greatly impact the understanding of systems biology with the hope of helping to manage widespread human diseases.</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">To the best of our knowledge, the present study demonstrated for the first time that peripheral blood miR‑15a may serve as a potential predictive biomarker in T2D and pre‑diabetes. The high stability of miRNAs in human peripheral blood renders them ideal biomarkers for disease detection (14). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">One of the limitations of the present study was the small sample size, and therefore these results require further investigation in a larger population sample. Additionally, the present study focused exclusively on the association between blood miR‑15a expression levels and T2D / pre‑diabetes, and did not investigate other miRNAs. . XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Therefore, miR‑15a was suggested as an important mediator of β cell function and insulin synthesis, and a possible therapeutic agent for diabetes (33) XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nevertheless, further studies in our laboratory are underway to examine the significance of other whole blood miRNAs as predictive tools for T2D and pre‑diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, although the results of the present study demonstrated that blood miR‑15a is differentially expressed between patients with T2D, pre‑diabetes individuals, and healthy controls, the clinical application of miR‑15a in predicting T2D and pre‑diabetes requires further investigation and optimization.</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">The strengths of this study are that we have measured a large number of biomarkers covering numerous pathophysiological pathways. We have also made use of k-fold cross-validation and machine learning methods that avoid the problem of overfitting when testing large numbers of associations and increase the generalizability of findings to other settings. XXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">There are also weaknesses. The sample size is modest and only one cohort has been studied and validation in external cohorts is needed. We used a dichotomous variable for albuminuria because no single method was used for all samples to assess albuminuria status. As a result there is potential for residual confounding because of albuminuria. However, a sensitivity analysis of the subgroup with albumin concentration data measured by a single method showed that the increment in AUROC achieved by adding biomarkers to the clinical covariates was not reduced by the use of a continuous measure of albuminuria rather than the dichotomous variable. Thus, we think it is reasonable to conclude that the biomarkers are not materially affected by residual confounding. Another weakness is that we only have limited data from blinded duplicate samples because of limited volume availability, although in general the repeatability data were good (see Supplementary Methods online). We also note that the effect of errors in measurement act to reduce the power to detect associations rather than introduce false positive associations. Third, we did not have a measure of every biomarker in every sample that required us to impute missing values. However, the degree of missng at random was not high with only 6 biomarkers in the study having ≥30% of values imputed, and a sensitivity analysis examining individual biomarker associations after adjustment for clinical covariates in the non-imputed data showed consistent associations with those seen in the imputed data set. In keeping with our aim to identify biomarkers that might improve clinical trial stratification we have restricted the study to individuals with CKD3 at baseline. It is not possible to conclude that biomarkers that are associated with progression at this stage will also be predictive of progression in individuals with CKD1 or CKD2 and studies are needed to examine biomarkers in such individuals. It should also be noted that panels of biomarkers predicting from earlier stages of renal disease are more likely to include biomarkers that are in the causal pathway, whereas panels predicting from CKD3 may include biomarkers altered secondarily because of declines in glomerular filtration. The study also does not identify</td>
+<td class="data">However, further studies of the generalizability of findings are warranted. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Validation in external cohorts is needed. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is not possible to conclude that biomarkers that are associated with progression at this stage will also be predictive of progression in individuals with CKD1 or CKD2 and studies are needed to examine biomarkers in such individuals. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Identified novel associations of biomarkers that warrant further investigation for relevance to pathogenesis of kidney disease in type 2 diabetes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data">There are generally good correlations of HbA1c with serum fructosamine and GA. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fructosamine and GA have been proposed to be useful tools for monitoring short term glycemic control. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These biomarkers not only reflect well glycemic control in hematologic disorder, but also represent postprandial glucose fluctuation. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Serum 1,5-AG may be useful for estimating within-day glycemic excursion. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Nevertheless, there are no definitive guidelines for using alternative biomarkers as adjuncts to standard markers of glycemia, such as HbA1c, fasting glucose, or self-monitoring blood glucose measures (49). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Long-term prospective studies are still lacking. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Further larger cohort studies are warranted to determine whether alternative biomarkers have potential utility for early diagnosis, management of diabetes, and prevention of diabetic complications.</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data">More than being simple markers, which vary depending on physiological or pathological processes, recent observations suggest a functional role of circulating miRNAs. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, the observations from the currently available studies are difficult to compare because of the heterogeneity of the technical methods used and the small and heterogeneous cohorts investigated. As the impact of these shortcomings is not precisely evaluated and not considered in most studies, a top priority is to establish a consensus to standardise the methodology used and to improve reproducibility. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">A considerable amount of research efforts need to be invested to determine whether circulating miRNAs profiles are of use in routine hospital practice, but given the potential advantages, the challenge is undoubtedly worth it. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data">This especially include patients with rapid changes of glucose homeostasis and larger glycemic excursions (ie, temporarily high blood glucose spikes), red blood cell disorders and CKD. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The diagnostic efficiency of GA seems superior to that of fructosamine over a broad range of clinical settings (Table 1), and is attributable to the fact that the fructosamine reflects a total concentration of glycated serum proteins, which can fluctuate in response to a variety of systemic disorders. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Conversely, GA can be expressed as the ratio of GA to total albumin, thus minimizing the interference due to the concentrations of glycated and non-glycated albumin. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The current method for measuring GA is also better standardized and less susceptible to pre-analytical variables than fructosamine. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additional advantages of GA over HbA1c are represented by its lower cost and the portability of commercially available reagents to conventional laboratory instrumentation. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+<td class="data">Although further studies are needed to definitely establish whether GA may complement (or even replace) conventional measures of glycemic status such as HbA1c, it is undeniable that GA is already helping the clinical management of patients with diabetes in whom HbA1C values are unreliable.</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data">Importantly, our results were also replicated in an animal model of glucose intolerance, suggesting that circulating miR-192 and miR-193b either play an integral part in the metabolism of carbohydrates in mammals or are a reflection of a fundamental process involved in it. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Our study presents some limitations, the most relevant being the relatively modest sample size. However, the fact that we were able to reproduce our results in a second cohort and an animal model of glucose intolerance gives strength to our data. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another limitation is the fact that we studied subjects already displaying an overt hyperglycemic phenotype. It would be interesting to perform a retrospective study analyzing archival samples from prediabetic subjects obtained before they develop prediabetes. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Future analyses in alternate contexts of hyperglycemia, such as those that may be attained by acute or progressive streptozotocin treatment in mice, could shed light upon the regulation of c-miR-192. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data"> &#160;</td>
+<td class="data">Based on the current study, we speculate that miR-126 secretion could be stimulated by insulin and suppressed by high blood glucose. The sample size of the current study is relatively small. As a result, the findings should be considered preliminary and require further studies, ideally together with other molecular markers. XX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, there is a lack of generally accepted standards for qRT-qPCR in body fluids. It is possible that caenorhabditis elegans miRNA (C. elegans) is spiked in control Minas [29]. We do, however, believe that no currently available methods are ideal. Since the factors remain unknown that could lead to biological variation independent of the disease being studied, and the effect on specific miRNAs have not been characterized, the use of any endogenous controls could introduce significant bias. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The use of “invariant” miRNAs as endogenous controls has been proposed by some investigators, but tends not to affect the data significantly. Also, such a practice may not adjust for true biological variability since the “invariant” miRNAs may not be truly invariant. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In our experiment, we did not use an internal control, producing further limitations. Nevertheless, we used identical amounts of serum for the assay, as reported earlier [30,31]. We understand that such a method is not commonly used, and may introduce technical problems. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Based on the current study, we speculate that miR-126 secretion could be stimulated by insulin and suppressed by high blood glucose. The sample size of the current study is relatively small. As a result, the findings should be considered preliminary and require further studies, ideally together with other molecular markers. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In future work, we will consider using multiple controls (for example, both external and several internal miRNAs control). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further studies with a large cohort of patients are required to validate and develop miR-126 as a serum biomarker for T2DM and pre-diabetes, and possibly for monitoring disease progression and treatment response.</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data">Strengths of this study include the large, community-based sample, the availability of both HbA1c and fasting glucose measurements for comparison to fructosamine and glycated albumin, the rigorous measurement of potential confounding variables, and the long-term prospective follow-up of participants with high retention (&gt;90% contact rate).</td>
+<td class="data">The fructosamine and glycated albumin assays also have their own limitations. Alterations in serum protein turnover will affect the values of these assays and it remains unclear whether fructosamine should be corrected for total serum protein concentration. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Conditions that may affect the interpretation of fructosamine and glycated albumin values include liver disease, hyperuricemia, acute illness or infection, and thyroid dysfunction (36). XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Important limitations of our study include the reliance on single measurements of fructosamine and glycated albumin at baseline, a limited number of fasting glucose and serum creatinine measurements during the follow-up period, that retinal photographs were taken in one eye only (4), and that the retinal exam was conducted at visit 3 and that measurements of fructosamine, glycated albumin, HbA1c, were only available at visit 2 (3 years earlier). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The reliance on self-report to identify diabetes cases is also a limitation; but self-reported diabetes in the ARIC Study has been shown to be highly reliable and specific (37). The consistency of our results across different cases definitions of diabetes including those incorporating glucose measures is reassuring. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Nonetheless, future studies including randomized clinical trials will be needed to evaluate whether fructosamine or glycated albumin testing in the management of diabetes can improve clinical outcomes.</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Furthermore, screening a large cohort of plasma samples of susceptible subjects will further determine the usefulness of miR-126 expression as a potential pre-DM biomarker.</td>
+</tr>
+<tr>
+<td class="r data">19</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">20</td>
+<td class="data">The primary strength of this study is that, to our knowledge, we were among the first to adopt a targeted metabolomic approach at population level and included a large sample from three independent, well-described study populations. Furthermore, our targeted metabolomic platform covered a wide variety of metabolites with known identity and quantitative measurements. Because we used a prospective design with consecutive follow-up, we were able to investigate time-dependent exposure disease associations.</td>
+<td class="data">The study, however, had several limitations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, because we used independent study populations, the conditions of biosample collection, storage, and preparation were not necessarily the same, which may be a source of variation. In the KORA and TüF studies, fasting blood samples were collected from all participants, whereas in EPIC-Potsdam only a small proportion of participants provided fasting blood samples. Nevertheless, we did not observe an effect modification of fasting status on the association between metabolite factors and T2D risk, and we could reproduce very similar metabolite factors comparing fasting to non-fasting samples. Furthermore, the metabolomic analyses were based on serum samples in the EPIC-Potsdam and KORA studies but on plasma samples in the TüF study. As previously reported (56), the correlation between these serum and plasma metabolites was high; however, the absolute metabolite concentrations were higher in serum, which could lead to systematic changes. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, the analytical method detected most of the metabolites with high specificity; however, it may not have detected all possible interferences among metabolites. Of the metabolites that we identified, diacylphosphatidylcholine C38:3 and sphingomyelin C16:1 may be interfering compounds for sphingomyelin C24:1 and diacyl-phosphatidylcholine C30:2, respectively. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, we only had a limited number of incident T2D cases available from KORA. We may not have had sufficient statistical power, and the replication results have to be interpreted with caution. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fourth, there is a chance that reverse causation may explain the results, implying that overt diabetic conditions that were undiagnosed may have caused these metabolite changes. When we accounted for this issue, the results remained robust. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Last, because this was an observational study, we cannot prove causality but only show associations. However, the identified metabolites were also correlated to established T2D biomarkers as well as to measures of insulin sensitivity and secretion in a different population, which underlines the biological plausibility of the results. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The metabolites could also serve as markers for specific metabolic pathways that are deranged and, thereby, allow the implementation of individualized preventive and therapeutic strategies. However, future investigations are warranted to calculate in detail the individual risks and to better understand the metabolic effects of these biomarkers and their biological mechanisms. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Beyond the classic pathways, these candidates point toward a novel role of phospholipid and lipoprotein metabolism in T2D pathophysiology. Future studies should further elucidate the biological mechanisms. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">21</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">22</td>
+<td class="data">Thus with our observation of the association between ferritin and diabetes, as well as the association between each of hepatic enzymes (representing hepatic steatosis) and adiponectin with ferritin on the one hand and with diabetes on the other, we believe it is a strength of our study to have accounted for these confounders in our analyses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study has several strengths, with its prospective design, inclusion of both men and women, large sample size, and adjustment for a comprehensive battery of risk factors and confounders including measurement of dietary factors by a 7-day food diary. Previous validation studies on this cohort demonstrated that dietary diaries were superior to other methods of assessment of dietary intake [33, 34]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A strength of our study is that as excessive dietary iron intake is a potential reason for variation in iron stores, we adjusted our analyses for dietary iron-related variables (total energy intake, iron intake, and red and processed meat intake), as well as plasma vitamin C, which affects iron absorption, and found that ferritin was associated with diabetes independently of these dietary factors. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As ferritin is also an acute-phase reactant and as such reflects not only body iron stores but also subclinical inflammation, we tried to minimise potential confounding by inflammation by adjusting our analyses for three markers of inflammation (CRP, fibrinogen and IL-6), thus making our study more robust than a previous study that adjusted for CRP alone [2]. We were rigorous in our attempts to account for the potential confounding effect of obesity by adjusting all analyses for BMI, and by also adjusting for central obesity (waist circumference). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Limitations of our study merit consideration. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We measured serum ferritin as the only marker of iron storage, but did not measure other markers of iron overload such as transferrin saturation, derived from serum iron concentration and total iron-binding capacity. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although a diagnosis of haemochromatosis is made with combined information on ferritin, transferrin saturation, ALT, liver biopsy and genetic mutations for haemochromatosis, we attempted to exclude the possibility of haemochromatosis in our study by excluding those participants who had ferritin elevated more than threefold above the upper limit of normal. We further applied more stringent criteria by excluding from analysis those who had ferritin levels greater than twice the upper limit of normal, with unaltered findings. Our approach of quartiles among the normal range and the clinically raised ferritin group excluding those with very high levels, offers a clinical utility that highlights that it is those with ferritin elevated above the normal range who are at greatest risk of developing diabetes. Such an approach was not taken by previous studies as they reported results for quintiles of the ferritin distribution [2], whereby the top quintile included those with levels both below and above the clinically raised level. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We have not been able to exclude the possibility that a small number of people with elevated ferritin may have developed haemochromatosis-related diabetes rather than type 2 diabetes, but this is unlikely in the absence of marked hyperferritinaemia, which we were careful to exclude. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A further limitation is that we could not specifically measure the known non-genetic causes for iron accumulation, including transfusion iron overload or defective erythropoiesis. Iron overload of undetermined origin includes alcoholic liver disease, non-alcoholic fatty liver disease and chronic hepatitis C infection, although the mechanisms for iron deposition in these conditions is unknown. We did not screen for hepatitis C status, but we would expect very low prevalence in this low-risk population as suggested by the estimated prevalence of between 0.55 and 0.7% in England and Wales in 1991– 1996 [32]. We did, however, measure and include in our analyses both alcohol intake and two measures of hepatic function that are markers for non-alcoholic fatty liver disease. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, it should be noted that, for pragmatic reasons, in this large cohort study of &gt;25,000 persons, we could only ascertain diagnosed cases of diabetes, thus undiagnosed diabetes was not ascertained biochemically, which would have the overall effect of smaller numbers of cases. We can, however, be reasonably confident that we have minimised the main concern of a potential misclassification of true case participants as control participants in instances of undiagnosed diabetes or failure to self-report diabetes. We can confirm that none of the controls had an HbA1c value &gt;6% (control men: HbA1c range 3.5–5.9%, control women: range 3.2–5.9%), thus reducing potential bias due to undiagnosed diabetes in the control group. Our case ascertainment of diagnosed cases was thorough, with information on self-report supplemented by information from external sources such as general practice records and hospital records as well as death certificates. Our validation of self-report against medical records in 12 of the general practices enabled accurate case ascertainment of clinically diagnosed diabetes. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">We report a strong negative correlation between adiponectin and ferritin (r −0.21 to −0.28, p&lt;0.0001). Although the mechanism underlying this association is not clear, it is plausible that it works through the recently described association of ferritin with abdominal fat [31]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These findings have implications for increasing our understanding of the aetiology of type 2 diabetes and merit further study in future studies that help to clarify causality and advance this area of research. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Ethnicity data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.ETHNICITY_SORTED_2">
+<caption aria-label="Data Set REF.ETHNICITY_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">Impact of HCV infection and ethnicity on incident type 2 diabetes: findings from a large population-based cohort in British Columbia</td>
+<td class="data">SUMMARY OF THE STUDY FINDINGS =&gt; In this large, population-based longitudinal cohort of 847 021 individuals in British Columbia, we found a higher incidence rate of type 2 diabetes in individuals with HCV infection compared with those without (5.85 vs 5.40 per 1000 PYFU, respectively; p value&lt;0.001). The highest diabetes incidence rate was in South Asian people with HCV infection, with 14.7 cases of incident diabetes per 1000 PYFU (95% CI 12.87 to 16.78). Furthermore, the incidence rates of diabetes were higher in both people with and without HCV infection among East Asian and South Asian people, compared with the overall population. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The findings from both PS matched and weighted analyses showed that individuals with HCV infection were more than twice as likely to develop type 2 diabetes compared with those without infection. The incidence rate of diabetes in non-Asian BC residents without HCV infection was 5.02/1000 PYFU (95% CI 4.96 to 5.08) compared with 5.56/1000 PYFU (95% CI 5.39 to 5.74) in those with infection. It is important to note that these incidence rates are unadjusted. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX By matching individuals with HCV infection to those without infection based on PS to create balance in the baseline characteristics, and by adjusting for confounders such as sex, age and other comorbidities, we assessed the effect of HCV infection on incidence of diabetes while minimizing bias. Furthermore, when looking at the combined effect of HCV infection and ethnicity, we observed an increased risk of diabetes associated with HCV infection across all ethnicities. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX South Asian people had the greatest diabetes risk compared with Others. Of note, East Asian people without HCV infection had a similar diabetes risk as Others without infection; however, with HCV infection, this risk was much higher compared with Others with HCV infection, reinforcing the potential of effect modification in East Asian people. The stratified analysis in each ethnic group showed that HCV infection may have a greater impact on diabetes risk in Asian population compared with Others. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Based on current evidence, it is unclear why chronic HCV infection may have a greater impact on diabetes risk in East Asians. However, it is known that Asian population has a higher risk of developing non-alcoholic fatty liver disease (NAFLD) with lower weight and BMI compared with other ethnic groups, which in turn can also increase the risk of developing metabolic diseases. (41–43) It is suggested that differential distribution of visceral adipose tissue, high cholesterol diet and genetic background may be associated with the development of NAFLD in Asian people. (41) Perhaps chronic liver diseases such as NAFLD or hepatitis C infection have a greater impact on developing diabetes in Asian population due to genetic or biological differences in gastrointestinal disorders. More research is needed to understand the ethnic differences in the relationship between HCV infection and diabetes. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX COMPARISON WITH EXISTING LITERATURE =&gt; Overall, the findings from this study support the mounting evidence in the literature that showed an association between HCV infection and metabolic diseases. (4–7) XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a cohort study based in Taiwan, Lin et al (5) found that individuals with HCV infection had over 60% higher hazard of developing diabetes compared with those without infection (aHR 1.63 (95% CI 1.31 to 2.02)). Our analysis indicated an even higher hazard, as individuals with HCV infection in the BC-HTC experienced more than 2.32 times higher hazard for diabetes than those without infection. Furthermore, this analysis showed an increased risk of diabetes in Asian population. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In East Asian people, HCV infection had the greatest relative impact on incident diabetes compared with other groups (aHR 3.07 (95% CI 2.43 to 3.88)). XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, South Asian people had the greatest risk of diabetes with and without HCV infection compared with other groups. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies based in the USA have shown the presence of ethnic disparities in diabetes (44–46); however, there is limited evidence on the impact of HCV infection on diabetes in South and East Asian population. Asians have a high prevalence of cardiometabolic diseases and South Asians have a particularly high risk of diabetes. (18, 19, 47, 48) XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Burden of HCV is very high in some Asian countries such as Pakistan, India and China. (49) HCV infection may further increase the risk of diabetes in populations with higher burden of diabetes if HCV is not treated early in the course of infection. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that existing disparities in diabetes burden could be further exacerbated by HCV. However, curative HCV treatment could reduce HCV indented disparities in diabetes burden. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; Individuals who are affected by diabetes and HCV infection concurrently are at an increased risk of other morbidities, including the progression of liver-related and non-liver-related diseases, and mortality. (52) XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our analysis showed that HCV infection increases the risk of diabetes in the overall population and has a greater relative impact on diabetes in East Asian people compared with other ethnicities. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, South Asian population experienced the greatest risk of diabetes even without HCV infection, and the risk increased further with infection. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Several studies have shown that successful HCV treatment among HCV-positive individuals is, in turn, associated with decreased incidence of diabetes. (53–56) These findings indicate that early treatment of HCV infection may reduce disparities in diabetes incidence to some extent. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Based on the increased diabetes risk associated with chronic HCV infection among East Asian people and the relative high risk of diabetes in South Asian people, it is essential to scale up the care and screening programs for not only chronic HCV infection but also diabetes and other metabolic diseases. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results of this study further highlight the need for early diagnosis of HCV infection, linkage to care and continued care and screening for HCV-related chronic diseases. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">Ethnicity-specific BMI cutoffs for obesity based on type 2 diabetes risk in England: a population-based cohort study</td>
+<td class="data">Using electronic health records from approximately 1·5 million individuals, of whom 97 823 were diagnosed with type 2 diabetes during a median follow-up of 6·5 years, we provide new BMI thresholds for obesity to trigger action to reduce the risk of developing type 2 diabetes in Black, south Asian, Chinese, and Arab populations living in England.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our data address the ongoing debate around the interpretation of recommended BMI cutoffs for identifying obesity in minority ethnic populations. For an equivalent age-adjusted and sex-adjusted incidence of type 2 diabetes at a BMI of 30·0 kg/m² in White populations, we found lower BMI cutoffs for south Asian (23·9 kg/m²), Black (28·1 kg/m²), Chinese (26·9 kg/m²), and Arab (26·6 kg/m²) populations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Obesity, defined as a BMI of 30·0 kg/m² or more, is a widely used measure and an important risk factor for the development of type 2 diabetes. (21) However, the appropriateness of this BMI cutoff in non-White minority ethnic populations is contentious, and remains a subject of debate because of important limitations in the evidence base. (3, 4, 22, 23) XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previously reported studies that attempted to identify BMI cutoffs for obesity in multi-ethnic populations relied on prevalence data, (12) in which BMI and type 2 diabetes status were ascertained at the same timepoint, lacked precision because of small sample sizes, (10, 12, 13) used surrogate markers (12) and self-reported data, (10, 11) and included relatively few ethnic groups. (13) XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX WHO and NICE both recommend a BMI cutoff of 27·5 kg/m² to define obesity in south Asian and Chinese populations to trigger lifestyle interventions. (3, 4) NICE also suggest that this lower BMI threshold should be used to trigger action to prevent type 2 diabetes among Black populations. (24) XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study clearly showed that, compared with the risk of developing type 2 diabetes at a BMI of 30·0 kg/m² in White populations, the equivalent risk among south Asian individuals occurred at a BMI of 23·9 kg/m², a cutoff much lower than the recommended ethnicity-specific cutoff of 27·5 kg/m². Our ﬁndings are consistent with previous studies in suggesting that the cutoffs currently recommended by WHO and NICE should be reduced when applied to non-White populations. (10–13) XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For example, in the SABRE (Southall and Brent Revisited) cohort study (13) of Europeans (n=1356), south Asians (n=842), and African-Caribbeans (n=335) in north and west London, UK, aged 40–69 years at baseline (recruited between 1988 and 1991) and followed up for a median of 19 years, age-adjusted and sex-adjusted BMI cutoffs for obesity were 25·2 kg/m² for south Asians and 27·2 kg/m² for African-Caribbeans. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found that the incidences of type 2 diabetes among south Asian subpopulations (ie, Indian, Pakistani, Bangladeshi, Nepali, Sri Lankan, and Tamil) were equivalent to that in the White population at consistently much lower values of BMI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, when examining Black ethnic subgroups (ie, Black Africans, Black Caribbean, Black British, and other Black people), we found that the incidences of type 2 diabetes were equivalent to that in the White population at lower BMI values only for Black Caribbean individuals and Black people of other ethnic origins. We also found that BMI cutoffs for overweight based on the risk of type 2 diabetes were lower for south Asian, Black, Chinese, and Arab populations than for White populations (25·0 kg/m²), suggesting that the recommended BMI cutoff for overweight to trigger action to reduce the risk of type 2 diabetes should also be lowered in these groups. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    Improving and optimising access to weight management services and therapies for individuals belonging to minority ethnic populations would facilitate the population based management of obesity. However, access to weight management services in England is largely determined by BMI cutoffs, which, as our study shows, are inadequate for establishing the risk of type 2 diabetes among non-White minority ethnic populations. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The choice of a BMI cutoff for obesity related to type 2 diabetes risk has a profound effect on patient care, including the referral of patients to weight management services, opportunistic and proactive screening for type 2 diabetes within the population, and raising awareness more generally. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Currently, WHO-recommended and NICE-recommended BMI cutoffs for obesity do not provide an adequate basis for taking action. NICE’s recommendation for preventing type 2 diabetes among Asian (south Asian and Chinese) populations uses the lower BMI threshold of 27·5 kg/m² to indicate the risk for type 2 diabetes equivalent to a BMI of 30·0 kg/m² in White populations. NICE have also indicated that this lower BMI threshold of 27·5 kg/m² for Asian populations should be used to trigger action to prevent type 2 diabetes among Black populations. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Conversely, our data reveal various BMI cutoffs to identify obesity based on type 2 diabetes risk among Black ethnic subgroups. There are well established and effective lifestyle strategies for the prevention, and to delay the onset, of type 2 diabetes for those at risk. (5) Furthermore, optimised glycaemic control facilitates the prevention and reduced progression of the longer-term complications of type 2 diabetes. (6–9) However, without effective prevention and early diagnosis of type 2 diabetes, these advantages cannot be fully realised. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The risk of type 2 diabetes for several minority ethnic groups is under-recognised due to the existing BMI cutoff criteria recommended by WHO and NICE. This under-recognition could hinder opportunities for the increased prevention and early diagnosis of type 2 diabetes for patients in these minority ethnic groups. It is therefore crucial to revise the classification of obesity among minority ethnic populations using BMI cutoffs that more appropriately apply to them. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To conclude, we provide compelling data to support a complete revision of the BMI cutoffs currently used to trigger action to prevent type 2 diabetes in England. Such a revision should ensure the provision of appropriate clinical surveillance for patients in minority ethnic populations, commensurate with their greater risk of type 2 diabetes, that would help to prevent the future onset, and therefore facilitate early and effective treatment, of type 2 diabetes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">Serum metabolic signatures of coronary and carotid atherosclerosis and subsequent cardiovascular disease</td>
+<td class="data">In this study of over 7000 participants from three prospective population-based cohorts, we present the metabolic signature of atherosclerosis offering insights into the widespread systemic disturbances underlying atherosclerosis. Atherosclerosis was associated with disturbances of inter-connected pathways related to lipid, fatty acid and carbohydrate metabolism, BCAA and aromatic acid metabolism, TCA and urea cycle, and muscle metabolism and showed a largely consistent pattern between coronary and carotid atherosclerosis. Subsequently, these metabolites were also associated with incident CVD events highlighting the importance of these pathways in progression to clinical CVD. The fact that the majority of these associations attenuated substantially after adjustment for conventional CVD risk factors suggests that these metabolites lie on pathways closely associated with CVD risk factors. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Beyond KEGG pathways, replicated metabolites highlight oxidative stress and inflammatory pathways. For example, 5-oxoproline and glutamate, both inversely associated with CAC and IMT, are involved in both synthesis and degradation of glutathione. Glutathione deficiency contributes to oxidative stress, which plays a key role in the pathogenesis of atherosclerosis. (38, 39) N-acetylneuraminic acid, positively associated with CAC and IMT, is the major form of sialic acid in mammals and serves as a biomarker of a sustained inflammatory response with subsequent effects on atherosclerosis. (39, 40) Glycoprotein acetyls have previously shown associations with risk of MI and stroke, (41) and here, we also report consistent effects with CAC and IMT. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, lactate, also associated positively with IMT, formed from pyruvate under insufficient oxygen supply (hypoxia), is an indicator of inflammation. Local hypoxia can occur in highly active inflamed tissues where demands from increased cellularity exceed oxygen supply, a feature of atherosclerotic plaque. (42) Hypoxia has been hypothesized to stimulate pro-atherosclerotic processes, including deficient lipid efflux, inflammation, interference with macrophage polarization and glucose metabolism. (43) XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The four metabolites linked to sugar and carbohydrate metabolism (D-glucose, 1,5-anhydrosorbitol, D-mannose, and myo-inositol) were all directly associated with both CAC and/or IMT after adjustment for CVD risk factors. 1,5-anhydrosorbitol, a marker of glycaemic control, has previously been associated with CVD and kidney disease and highlights the close association of atherosclerotic disease, diabetes and insulin resistance. (38, 44, 45) Mannose has repeatedly been associated with pre-diabetes, incident Type 2 diabetes, (46) and all-cause mortality, (47) and here, we highlight associations with atherosclerosis and incident CVD, independent of glucose. In this regard, mannose showed stronger correlations with lipids and N-acetylglycoproteins than with glucose (Figure 4). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Mannose has a central role in glycation processes of lipoproteins that in turn may play a role in the initiation and development of atherogenesis. N-glycans are up-regulated in pro-inflammatory settings and have been found on the  cell surface in early stages of atherosclerotic plaque development. (48) Taken together these data suggest that mannose could also affect CVD risk through non-glucose dependent pathways. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Energy metabolism, TCA cycle and glycolysis, were also central pathways associated with atherosclerosis. Alanine is synthesized directly from pyruvate, a product of glycolysis,which can supply the cells with energy through the TCA cycle in aerobic conditions. Increased glucose utilization has been shown in high-risk atherosclerotic plaques. (49) In turn, citrate is an intermediate and key energy metabolite in the TCA cycle and has previously been associated with cardiovascular mortality. (50) Reduced oxygen levels in presence of atherosclerosis may affect the TCA cycle since it is oxygen dependent. Creatine, an amino acid derivative, reflects changes of energy metabolism in the muscles; it is transported through the circulation and taken up by tissues with high energy demands, with creatinine as a degradation product. Their levels have been inversely associated with fat intake in animal studies. (51, 52) XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The lipoprotein profiles analyses confirmed previous observations investigating the associations of these lipids with subclinical atherosclerosis, (53) MI, and stroke. (41) Here, we further show a largely consistent picture between coronary and carotid atherosclerosis and with cardiovascular events. Association of triglycerides with atherosclerotic disease and future events was positive even within HDL particles in support of previous observations. Conversely, not all HDL cholesterol was inversely associated with atherosclerosis highlighting the fact that causal association of HDL with lower CVD risk may be limited to certain particles (i.e. not the ones containing triglycerides).  XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, LDL and VLDL was consistently positively associated with higher CAC and IMT and higher risk of CVD events with a small trend showing stronger associations with decreasing density of lipoproteins. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The molecular interaction gene network map (Supplementary material online, Figure S6) further depicts the interconnections between inflammatory, insulin, and lipid pathways reflected by metabolite markers of atherosclerosis. For example, the network includes fibronectin 1 (FN1), which is involved in cell adhesion and migration processes including wound healing, blood coagulation, and host defence; genetic polymorphisms within this gene have been associated with adverse lipid levels and coronary heart disease. (54, 55) Other examples include CCAAT/enhancer-binding protein beta, a master regulator of immunity and inflammation, other immunity related genes (e.g. PI3K complex), and pathways related to betaine-homocysteine metabolism (BHMT), glycolysis (pyruvate kinase), and angiogenesis (ANGPT4).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       CONCLUSIONS =&gt; In summary, in this study of over 7000 participants from three prospective population-based cohorts, we found strong associations between serum metabolites observed on 1H NMR spectroscopy and subclinical atherosclerosis which was largely consistent between the two vascular beds (coronary and carotid arteries). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our metabolic and gene networks reveal highly interconnected system level metabolic disturbances in atherosclerosis, much of which overlaps with the known cardiovascular risk factors. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Ethnic differences in infectious burden and the association with metabolic risk factors for cardiovascular disease: a cross-sectional analysis</td>
+<td class="data">SUMMARY OF KEY FINDINGS =&gt; We found a higher IB among the 18 to 70-year old participants of Turkish and Moroccan origin in our study than among those of Dutch origin. This increased IB was significantly associated with a higher odds of diabetes, but the association was not as clear for elevated cholesterol and hypertension. In line with this finding, IB attenuated the ethnic disparities in diabetes. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX DISCUSSION OF KEY FINDINGS =&gt; As expected, the Turkish and Moroccans had a higher IB than the Dutch. This was in line with previous reports signaling a higher prevalence of individual infections in these groups than the Dutch [26, 27]. The findings are also in line with the ethnic differences in IB reported in two studies from the US [23, 24]. In both studies, the IB was lower among the largely European origin population than among the other ethnic groups. As the prevalence of several infections was also found to be higher among other populations originating from low income countries living in the Netherlands, such as the Surinamese, Antilleans and Egyptians [26, 27, 36], a higher IB may also be expected in these groups. The finding that ethnic minorities have a higher IB than the general Dutch population is likely related to background prevalence in the country of origin, in combination with increased early life exposure before migration, or exposure during travel to their region of origin post migration. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Both Turkey and Morocco are countries with an increased background prevalence of, for instance, HAV and HBV compared to the Netherlands, and have been reported to have lesser hygienic circumstances [37]. Differences in IB may also be partly explained by increased susceptibility related to a lower socioeconomic position of ethnic minority groups or by differences in proportion vaccinated for HBV [23]. Poor circumstances may subject populations to social stress, which can down regulate the immunity, thus making these groups more susceptible to infections [38]. Additionally, the transmission dynamics may also be important. The historically high infection rates among ethnic minorities may partly remain due to the fact that minority populations live and work together, even as their socioeconomic positions change [23]. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The consistently positive association of IB with prevalent diabetes and the non-significantly positive associations with elevated cholesterol and hypertension in our population support a possible association between IB and these metabolic risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies have been inconsistent. For example, several studies reported positive associations with diabetes and its clinical markers [18, 19], elevated cholesterol [20, 21] and hypertension [19, 22] while others reported no association of IB with these factors [39, 40]. The differences between other studies and ours may be due to several reasons. The differences may simply reflect differences between the populations studied. Previous studies often did not included ethnic minority groups or did not adjust for ethnic differences in the analyses, despite known ethnic differences in infections and in metabolic risk factors [3–5]. Another possible explanation might be the lack of a consistent IB definition. Different studies have, for various reasons, used different combinations of chronic or past infections to define the IB.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In our study, for instance, we were unable to include several infections (e.g. C. pneumoniae, cytomegalovirus and Epstein-Barr virus were not measured) that have been associated with metabolic risk, and included by others in their definition of IB. On the other hand, we included data on HAV, HBV and HCV, which some but not all of these other studies included. The inconsistency across studies may also reflect the lack of insight into the exact mechanisms of risk and indicates the importance of further work to determine which infections or combinations of infections associate most strongly with metabolic risk. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consistent with the lack of ethnic specific data on the association of IB with metabolic risk, there is also a lack of data on the possible contribution of IB to ethnic disparities in diabetes, elevated cholesterol and hypertension. Our findings suggest that IB may contribute to differences in, particularly, diabetes between the ethnic groups. If confirmed in larger studies among multiethnic populations, the potential implication is that reducing the burden of infections or timely initiation of treatment directed at diminishing or reversing its effects might contribute to reducing disparities between ethnic groups.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The mechanisms by which IB works (e.g. epigenetic effects or inflammatory processes) should then be studied, as well as specific patterns of infections, currency and chronicity of infections and the association of these with incidence of metabolic risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Unfortunately, the power of our study and availability of specific data limited a preliminary exploration of such specific patterns. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, our study showed that Turkish and Moroccan adults in Amsterdam have a higher IB than Dutch adults and that a higher IB was associated with differences in metabolic risk factors, in particular diabetes. Due to the cross-sectional nature of the study, we cannot draw any conclusions with regards to the time sequences of cause and effect. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">An Expanded Genome-Wide Association Study of Type 2 Diabetes in Europeans</td>
+<td class="data">In this large-scale study of T2D genetics, in which individual variants were assayed in up to 238,209 subjects, we identified 13 novel T2D-associated loci at genome-wide significance and refined causal variant location for the 13 novel and 69 established T2D loci. We also found evidence for enrichment in regulatory elements at associated loci in tissues relevant for T2D and demonstrated tissue-specific enrichment in regulatory annotations when T2D loci were stratified according to inferred physiological mechanism. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We calculate that the present analysis, together with loci reported in other recent publications (9), brings the total number of independent T2D associations to 128 distinct signals at 113 loci (Supplementary Table 3). Lead SNVs at all 13 novel loci were common (MAF &gt; 15%) and of comparable effect size (1.07 =&lt; OR =&lt; 1.10) to previously identified common variant associations (2,4). Associations at the novel loci showed homogeneous effects across diverse ethnicities, supporting the evidence for coincident common risk alleles across ancestry groups (2). Moreover, we conclude that misclassification of diabetes subtype is not a major concern for these analyses and that the HLA-DQA1 signal represents genuine association with T2D, independent of nearby signals that influence T1D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We observed a general increase in the size of credible sets with 1000G imputation compared with HapMap imputation. This is likely due to improved enumeration of potential causal common variants on known risk haplotypes rather than resolution toward low-frequency variants of larger effect driving common variant associations. These findings are consistent with the inference (arising also from the other analyses reported here) that the T2D risk signals identified by GWAS are overwhelmingly driven by common causal variants. In such a setting, imputation with denser reference panels, at least in ethnically restricted samples, provides more complete elaboration of the allelic content of common risk haplotypes. Finer resolution of those haplotypes that would provide greater confidence in the location of causal variants will likely require further expansion of trans-ethnic fine-mapping efforts (2). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The distinct signals at the established CCND2 and TP53INP1 loci point to contributions of low-frequency variant associations of modest effect but indicate that even larger samples will be required to robustly detect association signals at low frequency. Such new large data sets might be used to expand the follow-up of suggestive signals from our analysis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The discovery of novel genome-wide significant association signals in the current analysis is attributable primarily to increased sample size rather than improved genomic coverage. Although we queried a large proportion of the low-frequency variants present in the 1000G European reference haplotypes and had &gt;80% power to detect genome-wide significant associations with OR &gt; 1.8 for the tested low-frequency risk variants, we found no such low frequency variant associations in either established or novel loci. While low-frequency variant coverage in the current study was not complete, this observation adds to the growing evidence (2,4,9,46) that few low-frequency T2D risk variants with moderate to strong effect sizes exist in European ancestry samples and is consistent with a primary role for common variants of modest effect in T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The current study reinforces the conclusions from a recent study that imputed from whole-genome sequencing data—from 2,657 European T2D case and control subjects rather than 1000G—into a set of GWAS studies partially overlapping with the present meta-analysis. We demonstrated that the failure to detect low-frequency associations in that study is not overcome by a substantial increase in sample size (9). It is worth emphasizing that we did not, in this study, have sufficient imputation quality to test for T2D associations with rare variants and we cannot evaluate the collective contribution of variants with MAF  &lt; 0.5% to T2D risk. The development of T2D involves dysfunction of multiple mechanisms across several distinct tissues (9,29,31,47,48). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When coupled with functional data, we saw larger effect estimates for enrichment of coding variants than observed with HapMap SNVs alone, consistent with more complete recovery of the causal variants through imputation using a denser reference panel. The functional annotation analyses also demonstrated that the stratification of T2D risk loci according to primary physiological mechanism resulted in evidence for consistent and appropriate tissue-specific effects on transcriptional regulation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These analyses exemplify the use of a combination of human physiology and genomic annotation to position T2D GWAS loci with respect to the cardinal mechanistic components of T2D development. Extension of this approach is likely to provide a valuable in silico strategy to aid prioritization of tissues for mechanistic characterization of genetic associations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Using the hypothesis-free pathway analysis of T2D associations with DEPICT (32), we highlighted a causal role of mTOR signaling pathway in the etiology of T2D not observed from individual loci associations. The mTOR pathway has previously been implicated in the link between obesity, insulin resistance, and T2D from cell and animal models (44,49). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Adiponectin, Insulin Sensitivity, β-Cell Function, and Racial/Ethnic Disparity in Treatment Failure Rates in TODAY</td>
+<td class="data">The present investigation of racial / ethnic contrast in adiponectin, insulin sensitivity, and b-cell function in TODAY at randomization and over time demonstrates that:
+1. NHB had significantly lower total adiponectin, HMWA, and HMWA–to–total adiponectin ratio at baseline compared with the other two groups.
+2. Treatment-associated change in HMWA over time was significantly different among the three racial / ethnic groups, with a lower percentage increase over the first 6 months in NHB.
+3. Early change in HMWA, in the first 6 months of treatment, was a significant independent predictor of progression to glycemic failure.
+4. Baseline HMWA did not predict glycemic failure nor was it different between those who failed versus those who did not fail treatment.
+5. Treatment-associated change in total and HMWA was significantly lower in those who failed treatment versus those who did not fail irrespective of race / ethnicity.                                                                             6. There were no racial /ethnic-related differences in insulin sensitivity and b-cell function at baseline and over time. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The TODAY study of obese youth with type 2 diabetes randomly assigned to metformin alone, metformin plus rosiglitazone, or metformin plus lifestyle showed that glycemic failure rates were higher in NHB (52.8%) versus NHW (36.6%) and H (45.0%), with race / ethnicity alone having a significant effect beyond the treatment effect (1). Similar racial / ethnic disparity, with higher HbA1c in black versus white youth with type 2 diabetes, was reported from a pediatric diabetes clinic (20). XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To probe the metabolic / hormonal mechanism(s) potentially responsible for the racial / ethnic disparity in therapeutic failure rates in TODAY, we targeted 1) adiponectin because it is known to vary by race / ethnicity (7–9,21) and 2) insulin sensitivity
+and b-cell function because of the well-established racial / ethnic contrast (2–5,22). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Adiponectin has antidiabetic properties (12, 13, 23, 24): it suppresses hepatic glucose output, lowers systemic glucose concentrations (13,25), stimulates skeletal muscle glucose uptake, and promotes b-cell function and survival (13,25). Adiponectin concentrations are low in obesity, and in states of insulin resistance, type 2 diabetes, and cardiovascular disease (26). Adiponectin levels in youth with type 2 diabetes are significantly lower compared with equally obese peers without diabetes and correlate positively with insulin sensitivity and first-phase insulin response and negatively with the proinsulin-to-insulin ratio in youth with and without diabetes (7,27,28). Therefore, adiponectin levels may carry prognostic value for diabetes course beyond the currently recognized set of risk factors. Racial / ethnic differences in adiponectin have been previously described in youth and adults (7–9,29). NHB youth have significantly lower adiponectin concentrations compared with their white peers irrespective of adiposity (7,8,29). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Studies of HMWA reveal similar racial / ethnic contrasts in adults (21). In line with these observations, the current study showed that NHB youth with type 2 diabetes had significantly lower total adiponectin and HMWA concentrations at the time of randomization in TODAY even after adjusting for the higher BMI in NHB. An additional novel finding was that the HMWA–to–total adiponectin ratio was significantly lower in NHB than in the other two groups. Contrary to our postulate, however, baseline adiponectin did not provide any prognostic value with respect to glycemic failure. Baseline adiponectin was neither a predictor of glycemic failure in Cox proportional hazards analysis (Table 2) nor were baseline adiponectin levels different between those who failed versus did not fail (Supplementary Table 3). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Adiponectin levels in adults increase with treatment of diabetes, and this effect is most pronounced with thiazolidinediones (30–32). With rosiglitazone treatment at 4 or 8 mg/day, adiponectin levels increase by ;50–200% after 3–6 months in adults with type 2 diabetes, with improvements in glycemic control and insulin sensitivity (30–32). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With respect to metformin treatment in adults with type 2 diabetes, most studies (33,34)-but not all (35,36)-show no change in adiponectin levels. In the Diabetes Prevention Program (DPP), however, metformin intervention in impaired glucose tolerant adults was associated with a significant increase in adiponectin from baseline to year 1 (24). Results on the effect of metformin treatment on adiponectin concentrations in youth are contradictory. Some studies show no change in obese insulin resistant normoglycemic adolescents (37,38), whereas others demonstrate increases after 3 months of metformin at 850 mg twice daily in youth with impaired glucose tolerance (39). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Trials combining metformin with lifestyle intervention in obese children with normal glucose tolerance showed an increase in adiponectin levels after 3 (40) and 6 months (41,42). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Studies in youth with type 2 diabetes examining change in adiponectin associated with metformin or thiazolidinedione are lacking. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the present investigation, total adiponectin and HMWA increased during the first 6 months in the three racial / ethnic groups (Fig. 1D). However, those in the metformin plus rosiglitazone group had significantly larger increases over time compared with those in the metformin alone and metformin plus lifestyle groups (Supplementary Fig. 2 and Supplementary Table 2). This is in agreement with observations in adult type 2 diabetes showing consistent increases in adiponectin with rosiglitazone or thiazolidinedione treatment (30–32), which is not necessarily the case with metformin (33,34). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX An important observation that emerged from this investigation is that treatment associated changes in HMWA were proportional to the effectiveness of treatment in preventing glycemic failure (hazard ratio 0.55 in the total cohort, 0.52 in NHB, 0.58 in H, and 0.63 in NHW) (Table 2, model 5). In proportional hazards modeling, changes in total adiponectin and HMWA remained significant determinants of progression to glycemic failure even after adjusting for baseline HbA1c and oDI, important determinants of glycemic failure (16). Moreover,  treatment associated change in total adiponectin and HMWA was significantly lower in those who failed treatment versus those who did not (Fig. 3). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Lastly, our finding that the metformin plus rosiglitazone group had larger increases in HMWA over time compared with those in the metformin alone and the metformin plus lifestyle groups lends further support for the TODAY main outcome, which showed that the combination of metformin plus rosiglitazone was superior to metformin in sustaining durable glycemic control, with glycemic failure rates of 38.6% compared with 51.7% for metformin and 46.6% for metformin plus lifestyle (1). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Collectively, these novel observations underscore the utility of adiponectin in youth type 2 diabetes as a biomarker of treatment response predictive of glycemic efficacy consistent with adult data (6). This combined with the discovery that the increase in HMWA was significantly lower in NHB than in H and NHW (Fig. 1D) provides a possible explanation for the higher therapeutic failure rates in NHB than in the other two racial / ethnic groups. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The question remains though whether the lower increase in HMWA in NHB is a biological/genetic phenomenon or consequent to inadequate treatment adherence. However, adherence to the medication regimen, defined by pill count, did not differ by race / ethnicity in TODAY (1) nor did the current results differ when the analyses were performed with or without adjustment for medication adherence. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is no current literature addressing whether adiponectin response to pharmacotherapy of youth type 2 diabetes differs by race / ethnicity. With respect to the postulated racial / ethnic-related contrast in the pathophysiological components of type 2 diabetes as a potential explanation for the racial / ethnic disparity in therapeutic failure rates, surrogate estimates did not differ by race / ethnicity at baseline or over time (Table 1 and Fig. 1). This divergent observation from the existing literature (4) may stem from the use of surrogate estimates that are not as sensitive as the gold standard of the clamp method. In addition, before enrollment in TODAY, patients were treated with a variety of modalities, insulin, and / or other medications, which may have modified insulin sensitivity and secretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In summary, these observations support the validity and the value of HMWA as a biomarker predictive of glycemic response to treatment in youth with type 2 diabetes. The significantly lower increase in HMWA in the first 6 months in NHB may explain the higher therapeutic failure rates in NHB compared with the other two racial / ethnic groups. Therapeutic modalities that more effectively increase adiponectin levels may yet prove beneficial in NHB as well as all youth with type 2 diabetes.</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">Adiponectin levels predict prediabetes risk: the Pathobiology of Prediabetes in A Biracial Cohort (POP-ABC) study</td>
+<td class="data">In our biracial cohort study of healthy offspring of patients with diabetes, we found an inverse association between adiponectinemia and the risk of incident prediabetes / diabetes during longitudinal follow-up. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Among initially normoglycemic persons, an approximately 5 μg/dL higher baseline plasma adiponectin level corresponded to approximately 40% lower rate of progression to prediabetes / diabetes during a mean follow-up period of 2.6 years. Among the 110 participants who reached an end point, only 10 participants progressed directly to T2DM, whereas the vast majority (100 participants) progressed to prediabetes. Thus, our findings are particularly germane to the pathobiology of prediabetes. Despite the well-known ethnic and gender differences in plasma adiponectin levels, (20–22) which were evident in the present study, the association of adiponectin status with incident prediabetes was quite consistent across gender and ethnicity in our cohort of African-Americans and European Americans with parental history of T2DM. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The point estimates of decreased risk for prediabetes were of the same order of magnitude in black and white offspring (0.44 and 0.48, respectively), although the 95% CI was wider among the latter. Notably, adjustment for BMI increased the adiponectin-associated OR for prediabetes from 0.48 to 0.61, with a wider 95% CI. However, the observation of a nominal reduction (approximately 40%) in the risk of incident prediabetes, despite adjustment for BMI, suggests that the decreased prediabetes risk associated with higher baseline adiponectin levels is partly but not entirely mediated by adiposity-related mechanisms. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several previous cross-sectional and longitudinal studies have established that low adiponectin levels are associated with increased risk of T2DM. (5–11) In the prospective Diabetes Prevention Programme (DPP), which enrolled participants with prediabetes, an approximately 3 μg/mL higher baseline adiponectin level predicted a 20–40% lower risk of progression to T2DM during approximately 3 years of follow-up. (11) In the present report, we found that an approximately 5 μg/mL (1 SD) higher baseline adiponectin levels predicted a 40% lower risk of progression from normoglycemia to prediabetes. The latter finding indicates that the association of adiponectin with diabetes risk is evident at a much earlier stage in the pathogenesis of dysglycemia. Thus, the ability to maintain high adiponectin  production might be protective of dysglycemia in persons at high risk for T2DM, whereas hypoadiponectinemia could be a risk factor for the initiation of early glucose abnormalities leading to prediabetes and diabetes. These notions are consistent with the favorable cardiometabolic profile of adiponectin that has emerged since its discovery. (1–11 32 33) XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The mechanisms whereby adiponectin exerts its favorable cardiometabolic effects are not fully understood, but could involve improvement in insulin action, decreased inflammatory tone, interaction with fibroblast growth factor (FGF)-21 and amelioration of lipotoxicity, among others. (34–39) In rodent models, overexpression of adiponectin is associated with several beneficial effects, including improved metabolic flexibility, decreased inflammatory markers, decreased steatosis, improved insulin sensitivity, decreased apoptosis and preservation of β cell function. (35 36) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX An interaction between adiponectin and FGF21, a potent regulator of metabolism and energy utilization, has also been reported. (38 39) The administration of FGF-21 decreases blood glucose levels and increases insulin sensitivity in mouse models of obesity and insulin resistance, through upregulation of adiponectin expression. (39) Furthermore, FGF-21 is involved in the clearance of toxic ceramides in obese animals, and adiponectin-knockout mice appear to be refractory to the ceramide-lowering effects of FGF-21. (39) These data indicate that adiponectin may be a critical mediator of the favorable metabolic and insulin sensitizing effects FGF-21. (39 40) XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX At the clinical level, the improvement in insulin sensitivity following treatment with PPAR-γ agonists has been shown to be mediated, at least in part, by upregulation of adiponectin expression. (41 42) From the foregoing, interventions that increase adiponectin levels would be attractive candidates for clinical trials, with the goal of diabetes prevention and improvement in cardiometabolic health. Interventions that have been reported to increase adiponectin levels include exercise, (43) weight loss, (44) smoking cessation (45) and treatment with PPAR-γ agonists, (41 42 46 47) PPAR-α agonists, (48) ACE inhibitors (49) and angiotensin II receptor blockers. (50) In clinical trials, many of the aforementioned interventions have been associated with favorable glucoregulatory outcomes. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Indeed, prediabetic participants randomized to the lifestyle intervention arm in the DPP experienced an increase in circulating adiponectin levels, and showed a 58% relative risk reduction in incident diabetes, compared to the placebo group. (11) Cross-sectional and longitudinal studies have previously reported a consistent association between low adiponectin levels and prevalent T2DM, impaired glucose homeostasis and an unfavorable cardiometabolic profile. (2–11)  XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXCONCLUSIONS =&gt; In conclusion, among healthy African Americans and European Americans with parental history of T2DM enrolled in the POP-ABC study, baseline adiponectin levels were inversely related to the risk of incident prediabetes. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This predictive relationship was evident, despite gender and ethnic differences in baseline adiponectin levels. Based on our finding, it can be predicted that interventions that boost adiponectin levels may offer protection against the risk of dysglycemia, regardless of gender or ethnicity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">Diabetes risk and amino acid profiles: cross-sectional and prospective analyses of ethnicity, amino acids and diabetes in a South Asian and European cohort from the SABRE (Southall And Brent REvisited) Study</td>
+<td class="data">We report novel ethnicity-specific data regarding the associations between AAs and incident diabetes in over 19 years of follow-up. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We demonstrate significant positive associations between baseline branched chain AAs, tyrosine and alanine and incident diabetes in middle-aged European men in accord with previous studies [4–9, 27]. In South Asian men, the same AAs, plus phenylalanine, were more strongly associated with incident diabetes compared with Europeans. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In European men, obesity and insulin resistance, together with age, smoking, HDL-cholesterol level and alcohol consumption partially or completely accounted for the majority of associations between AAs incident diabetes. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, in South Asian men, the adverse associations were, with the exception of phenylalanine, generally only moderately attenuated on adjustment for insulin resistance, smoking, HDLcholesterol, alcohol intake and creatinine level, and remained statistically significant. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Tyrosine and the combination of branched chain and aromatic AAs were particularly strongly associated with incident diabetes even after multivariable adjustment in South Asian men. Adjustment for tyrosine made a small (approximately 5%) contribution to explaining the ethnic difference in the incidence of diabetes. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cross-sectional associations at baseline between AAs and markers of insulin resistance and glycaemia generally followed the patterns observed for incident diabetes, with the exception of histidine, which was minimally associated with markers of insulin resistance in South Asian men.  XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Associations between branched chain AAs and obesity, although present, were weaker in South Asian than European participants. The latter findings, together with the weaker attenuation of AA associations with incident diabetes, suggest that conventional measures may not capture the best indicators of diabetes risk in South Asian individuals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX COMPARISON WITH OTHER STUDIES =&gt; Although it did not have European comparators and was only a small cross-sectional analysis, the study by Tai et al [7] reported strong associations in South Asian and Chinese men of relatively low body weight between insulin resistance and branched chain and aromatic AAs and for a combination of isoleucine, leucine, phenylalanine, tyrosine and methionine. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These associations were independent of dietary protein intake and BMI [7]. This is compatible with our cross-sectional finding of weaker associations between obesity and branched chain AAs in South Asian men, suggesting that increases in these AA levels may be driven by insulin resistance to a greater extent than obesity in South Asian individuals or that measures of obesity may be less satisfactory in this population.  XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another small cross-sectional study in younger (age 35–45 years) Indian Asians living in India found strong correlations between isoleucine, leucine and phenylalanine and obesity in people with a high BMI both with and without type 2 diabetes, and lower correlations in those with a low BMI and no diabetes [11]. There was no comparator group, so we cannot compare the relative strength of the correlations. However, these findings are not inconsistent with ours, in that we also found significant correlations between branched chain and aromatic amino acids and measures of obesity, albeit weaker in the South Asian than in the European participants. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The findings of the Framingham Offspring Study for three AAs and for five AAs in the lower risk random cohort sample adjusted for age, fasting glucose level and BMI are comparable with our findings for European men for the upper vs lower quartiles of AA levels (although the linear association is attenuated), but they somewhat understate the associations observed in the higher risk South Asian men in our study [5]. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We had anticipated that the findings in the European and South Asian participants in the SABRE Study would most closely resemble the Framingham random cohort. European SABRE participants had comparable baseline levels of glucose, insulin and obesity, but were younger, were less likely to be hypertensive and had lower triacylglycerol levels, perhaps explaining the somewhat weaker associations of AAs with incident diabetes compared with those observed in the Framingham random cohort. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX South Asian SABRE participants, who were also younger, were more centrally obese and had higher fasting glucose and insulin levels, but experienced similar triacylglycerol levels and less hypertension than the Framingham random cohort. Associations between AAs and incident diabetes in South Asian individuals more closely resembled the stronger associations seen in the Framingham replication cohort (Malmo Diet and Cancer cohort [28]) and Framingham high-risk propensity matched cases and controls, despite having markedly lower overall obesity (BMI) than the latter group [5]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX POSSIBLE MECHANISMS =&gt; Possible mechanisms Branched chain and aromatic AAs have</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">Dietary diabetes risk reduction score, race and ethnicity, and risk of type 2 diabetes in women</td>
+<td class="data">In these cohorts of women, we observed that a higher dietary diabetes risk reduction score was inversely associated with risk of type 2 diabetes in women of all individual racial and ethnic groups as well as in overall minority women. Although the relative risk estimates were similar across racial and ethnic groups, the absolute risk difference for the same contrast in dietary score was larger for the minority women compared with NHW women. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although the importance of adopting a healthier lifestyle through modification of diet in diabetes prevention has been well established (27,28), there is limited evidence on whether these findings apply to racial and ethnic groups that are at elevated risk of diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In epidemiological analyses, evidence on racial and ethnic differences in the relation between diet and risk of diabetes has been inconsistent (5,29–31). XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this study, we found reduced risks of type 2 diabetes of similar magnitudes, with higher dietary diabetes risk reduction score representing healthier diet in all racial and ethnic groups. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Overall, these findings are consistent with those observed by Qiao et al. (32) in a study that examined racial / ethnic differences in the association between dietary quality, as measured by baseline Alternate Healthy Eating Index (AHEI), and the risk of incident diabetes. They found that higher dietary quality predicted lower risk of diabetes in white and Hispanic women but not in black or Asian women. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Compared with their findings, the associations we observed in the current study were generally stronger, possibly because we used updated dietary data and our dietary score reflected more recent findings for diet and diabetes risk. In addition, we found significant inverse associations in all racial and ethnic minority groups, whereas Qiao et al. observed wide CIs that precluded them from finding significant associations in all minority groups. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our overall findings are consistent with those of previous observational studies that were of predominantly NHWwomen (5–12,14–16). Few studies have compared associations between specific dietary factors such as GI and cereal fiber and risk of type 2 diabetes across different racial and ethnic groups. In our study, we observed that higher GI and lower cereal fiber intake were associated with greater risk of type 2 diabetes in minority women. These results are consistent with those from a few studies of minority women (33,34), although in another study cereal fiber was inversely associated with risk of type 2 diabetes in whites, but the role of GI and dietary fiber in diabetes in blacks was unclear (35). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In previous prospective cohort studies, daily servings of SSB consumption have been reported to be associated with increased risk of type 2 diabetes in both NHW and black women (13,14,36). We found a 25% higher risk of developing type 2 diabetes with an increase of one serving of SSB per day in NHW women and 16% higher risk in minority women. The association between SSB and type 2 diabetes risk may be mediated by weight gain because SSBs are energy-dense beverages that may induce weight gain (37). Prior research has shown that SSBs generate low satiety and are often consumed in addition to usual food intake, leading to an increased energy intake and ultimately weight gain (38). When we adjusted for BMI in a separate model, the association remained positive and significant in both NHW and minority women (data not shown), suggesting that the association of SSBs with type 2 diabetes risk cannot be entirely attributed to BMI. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to the potential harmful effects of SSBs on type 2 diabetes risk, there is strong epidemiologic evidence that supports a protective association of coffee with the risk of type 2 diabetes (8,21). In our study, we found a 10% reduction in risk of diabetes per one cup increase of coffee per day in NHW women and 12% reduction in risk in overall minority women. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is a dearth of evidence on racial and ethnic differences in the association between red and processed meat intake and risk of type 2 diabetes, but one study found risks that were similar in magnitude in Caucasian women and Japanese American women (29). The findings from the current study indicate that higher intake of red and processed meats is positively associated with type 2 diabetes risk in both white (34% higher risk) and minority (14% higher risk) women. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Furthermore, similar to the findings of Salmer ´on et al. (9), we found a significant positive association between trans fat intake and risk of type 2 diabetes in NHW women; however, the association was not significant in minority women. P:S was not significantly associated with type 2 diabetes risk in NHW or minority women. Further studies of intakes of different types of fats and red and processed meats and type 2 diabetes in different racial and ethnic populations are needed to confirm whether there are racial and ethnic differences in the association between these dietary factors and type 2 diabetes risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One notable finding of this study was that despite similar relative risk estimates across racial and ethnic groups, the absolute risk difference for the same contrast in dietary score was larger for minority women compared with white women. Minorities tend to have lower insulin sensitivity and insulin secretion capacity compared with NHWs, which could explain the high prevalence of insulin resistance and increased risk of diabetes in minority populations (4,5). Since minority populations are at higher absolute risk of type 2 diabetes, the benefit that can be conferred through a healthy diet may be greater in these populations than for NHW women, as suggested by our findings. Given expected mean differences in BMI across different racial and ethnic groups, we ran another analysis using waist circumference in a subset of participants (76%) who had this anthropometric data available. However, the magnitude of associations did not change appreciably by adjusting for waist circumference in place of BMI, although the CIs widened somewhat owing to smaller sample size (data not shown). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">Characteristics of glucose metabolism in Nordic and South Asian subjects with type 2 diabetes</td>
+<td class="data">In this study we examined ethnic differences in glucose and fat metabolism and energy expenditure in basal and clamp hyper-insulinemic conditions in subjects with T2D, of SA or NOR ethnicity, living in Oslo, Norway. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found evidence of ethnic differences in fasting endogenous glucose production, and indications of possible differences in the choice of substrates for energy expenditure both in basal and clamp conditions. The concept of ethnicity and ethnic groups is complex, consisting of both socio-cultural and biological components that are not clearly defined [12]. The term South Asian ethnicity is often used, although the South Asian region is diverse, with several countries (Pakistan, India, Bangladesh and Sri Lanka), and differences in culture, religion and diet. In diabetes research, using the term South Asian can nonetheless be justified, in view of the fact that the high prevalence of diabetes and increased insulin resistance is present in the whole region [13], particularly in urban areas, and also after migration to Western countries [1]. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+This study shows a significantly higher fasting (endogenous glucose production) EGP in SA compared to NOR patients, which was not explained by any of the examined possible confounding factors. During clamp hyperinsulinemia the EGP was lowered, and the ethnic difference was
+attenuated. Even so, EGP clamp was still not negligible, and constituted almost 40% of TGD in SA and 25% in NOR patients.  XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Hyperinsulinemia during clamp is often said to suppress EGP almost entirely [14,15], and euglycemic clamp studies are still frequently performed without the measurement of endogenous glucose production [16,17]. However, several authors have demonstrated that EGP clamp persists [18–20]. We here present further evidence that EGP clamp can be substantial in type 2 diabetic patients, even with serum insulin concentrations during clamp as high as 1000–1500 pM. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This finding underscores the importance of controlling for hepatic glucose production during clamp studies. Measuring EGP via the isotope tracer dilution method is both time consuming and costly. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In an attempt to find predictors for the estimation of EGP clamp from variables that are easier to measure, we looked at a group of variables which correlated with EGP clamp. Only FPG remained significantly related to EGP clamp in regression analyses, and it explained only 15% of EGP clamp variation in the whole patient group. When looking at the correlations in the separate ethnic subgroups, most variables only correlated significantly in the NOR group. The exogenous glucose infusion rate did not correlate to EGP clamp at all. In the SA group, the only significant correlation was between EGP clamp and TGD, merely reflecting the high percentage of EGPclamp in TGD in this group. We therefore suggest that measuring EGP clamp, in addition to the exogenous glucose infusion rate, is essential for correct estimation of total glucose disposal rate. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Some ethnic groups residing in tropical climates, including SA, have previously been shown to have lower (resting energy expenditure) REE than Westerners [21], however, several authors have advocated the need for adjusting REE for fat free mass (FFM) and fat mass (FM), as well as age and sex [4,22]. The lower REE in SA is in this way shown to be due to differences in body composition and not due to ethnicity per se. We find it to be the case also in our study. Our two ethnic groups display clear differences in body composition, and adjusting for these differences, mainly FFM, attenuates the ethnic difference seen in REE. This, however brings us back to the complex concept and definition of ethnicity, whence it can also be argued that lower FFM is an ethnic characteristic of South Asians. This has been described in other studies [23,24]. In basal, resting conditions, energy production is for the most part derived from lipids, and less from carbohydrates [25]. This is also reflected in our study, by the highly significant correlation between REE and fat oxidation in both ethnicities. In the SA subgroup, however, there is also a near-significant correlation between REE and EGP-basal. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This could signify increased use of carbohydrates as energy substrate in the fasting state in SA, to such an extent that it becomes important for the total REE. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, we did not find any ethnic differences in basal (respiratory quotient) RQ or in (change in respiratory quotient) DRQ from fasting to clamp hyperinsulinemic conditions, that would have clearly indicated an ethnic difference in metabolic flexibility. The values of basal RQ and DRQ in our subjects were comparable to the group with diabetes in the recently published study by van de Weijer [26]. In that study, they also demonstrated that insulin stimulated RQ is mainly dependent on glucose disposal rates, which in our study are similar in the two groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our NOR participants are significantly more obese than the SA, which could in part explain why there is no obvious ethnic difference in (total glucose disposal) TGD. After adjustment for difference in waist circumference, as well as the endogenous glucose production, the ethnic difference in TGD came closer to significance. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In our study we found a non-significant trend towards higher both oxidative and non-oxidative glucose metabolism in SA compared to NOR subjects in the basal, post-absorptive state. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The total EGP basal was significantly higher. This points towards a higher degree of hepatic insulin resistance in SA. One could speculate that a possible higher basal oxidative glucose metabolism in muscle, triggered by increased substrate availability
+from fasting hyperglycemia, leads to less use of lipids as energy substrate, again leading to lipid accumulation and further aggravation of the hepatic insulin resistance, as described in the metabolic inflexibility hypothesis [3]. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In postabsorptive conditions skeletal muscle contribution to total metabolism is modest [3]. A possible ethnic difference in muscle metabolism could thus have been masked. The hepatic insulin resistance could also initially have been caused by increased lipid storage in the liver due to adipose tissue overflow [2]. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Percentage truncal fat was similar in our two ethnic groups, although the NOR group was significantly more obese. In a previous study we found that even though a group of Pakistani and Norwegian subjects with T2D had similar abdominal adipose tissue distribution, the visceral adipose tissue was more metabolically active in the Pakistani subjects (Wium C, Eggesbo HB, Ueland T et al, 2013, unpublished data). An increased supply of NEFA from visceral adipose tissue to the liver would, in addition
+to the effect of increasing the insulin resistance, constitute a source of substrate for gluco-neogenesis. Gluconeogenesis is known to be increased in subjects with T2D, being in large part responsible for the increased post-absorptive EGP. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When using [6,6-2H2] glucose as tracer, Cori cycling is included in the estimation of the total glucose disposal, and has been shown to be increased 25% in T2D in general [27]. It is possible that the increase in non-oxidative glucose metabolism in SA in large part corresponds to increased Cori cycling, due to substrate availability through hyperglycemia in tissues, with lactic acid production in muscle or other tissues by anaerobic glycolysis, then transport back to the liver and re-use as substrate in gluconeogenesis, creating a vicious circle. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The data in this study are baseline results from a vitamin D intervention trial. It was therefore of interest to look for associations between baseline 25-hydroxyvitamin D levels and measures of insulin sensitivity and insulin secretion. We found significantly lower median 25-hydroxyvitamin D levels in the SA group. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Could differences in vitamin D status explain some of the ethnic differences in glucose metabolism? Several epidemiological studies have in recent years shown a relationship between vitamin D and diabetes [28,29], the metabolic syndrome [28], insulin resistance [30,31], and some studies also with insulin secretion [32]. However, in most of the published studies that report significant associations, or an effect of vitamin D intervention, the primary end points have been surrogate markers based on fasting blood values, like the HOMA indices [28, 33, 34]. The few studies using more sophisticated methods, like OGTT, IVGTT or clamps have usually not been able to show similar significant relationships [35–39]. We did not find any association between levels of 25-hydroxyvitamin D and TGD or AIRg. The question therefore still remains whether there is a genuine and causal relationship between vitamin D and diabetes, and we have to await results from randomised, controlled trials.  XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; We have demonstrated higher basal EGP in SA patients with established T2D. Clamp EGP can be substantial in patients with established T2D, and cannot be estimated from the surrogate markers measured. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found no ethnic difference in insulin sensitivity or in first phase insulin secretion. Findings of near
+significant correlations between REE, EE clamp and EGP in the SA group only, might indicate increased post-absorptive glucose metabolism in the SA group, at the expense of lipid metabolism, but these results have to be confirmed in larger studies. Finally, we found no indication of any relation between vitamin D and insulin sensitivity and secretion. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">Ethnic differences in glycaemic control in people with type 2 diabetes mellitus living in Scotland</td>
+<td class="data">The SCI-DC dataset allowed us to address different factors affecting glycaemic control in patients with type 2 DM across Scotland based on ethnicity using data collected since the introduction of the Quality Outcomes Framework in 2004 which may have been expected to reduce inequalities in glycaemic control. The other novel aspects of this work included separation of data for Indian and Pakistani populations (unlike conventional aggregation, perhaps also with Bangladeshis and Sri Lankans) in a South Asian group and presentation of data for African-Caribbean and Chinese populations with diabetes in Scotland for the first time. This separation is important since clear difference in CVD risk have been found between Indians and Pakistanis as demonstrated in QRISK2 risk calculator [16]. Distribution of age, sex and SES differed by ethnicity and were associated with differences in HbA1c suggesting that they may confound the association between ethnicity and glycaemic control. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study showed that Indians and Pakistanis have increased odds of suboptimal glycaemic control compared to the White Scottish population after adjustment for confounding variables. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also for the first time describe data on Chinese and African-Caribbean people with diabetes living in Scotland. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also demonstrate no increased prescription of insulin in several minority ethnic groups (Indian, Pakistani and Chinese) compared to the White Scottish group, despite these minority ethnic groups having suboptimal control. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although we did not aim to describe aetiological factors for type 2 DM, our study also showed that diabetes is accompanied by a lower BMI in ethnic minority groups when compared to the White Scottish population. These results, like several previous studies, support the concept that the association between BMI and type 2 DM risk differs between ethnic groups, with Asians (Chinese and South Asians) experiencing adverse metabolic effects at lower BMIs [7,17]. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Low socioeconomic status is known to be associated with poor health outcomes including mortality in type 2 DM in Scotland [14]. Whilst initial adjustments which included deprivation attenuated the odds of suboptimal glycaemic control in African-Caribbeans; in Indians and Pakistanis, the odds attenuated, but remained significantly higher. Recent data from London also demonstrated that whilst social deprivation had some influence on glycaemic control in South Asians and African-Caribbeans, differences remained after adjustment [12]. Also, our results suggest that Indians in particular live in less deprived areas compared to other ethnic groups in Scotland. However measurement of SES in ethnic minority groups is notoriously difficult and thus these findings should not be over-interpreted [18,19]. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It has been recognised that South Asians are less likely to receive insulin than the indigenous population in the UK, despite having poorer glycaemic control [9,10], although more recent data may suggest that insulin usage is increasing in South Asians [12]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A relatively recent study has shown SAs were more likely to receive oral hypoglycaemic agents (AOR 2.27; CI, 1.79–2.86) but less likely to receive insulin (AOR 0.54; CI, 0.42–0.69) than the white group [10]. Reasons for this possibly include increased reluctance to take up treatment [20], patients’ lack of understanding of their diagnosis [21] or attitudes shown by health professionals [22].  XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, our nationally representative data show that Indians and, more strikingly, Pakistanis had significantly increased odds of suboptimal control than the White Scottish population both before and after adjusting for potential confounders, whereas proportions with suboptimal glycaemic control were similar to the Scottish population in Chinese or African-Caribbean groups. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data">Ethnic variation in the activity of lipid desaturases and their relationships with cardiovascular risk factors in control women and an at-risk group with previous gestational diabetes mellitus: a cross-sectional study</td>
+<td class="data">Lipid desaturase enzymes have a wide tissue distribution and we evaluated desaturase activities on the basis of fatty acid compositions in a range of plasma lipid pools. Fatty acids in the FF pool would be expected to reflect adipose tissue metabolism, being largely the product of adipose tissue lipolysis and there is previous evidence for this with respect to SCD-16, SCD-18 and D5D activities [15]. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the TG pool, fatty acids would be expected to reflect fatty acid metabolism in the liver (following VLDL secretion) and be influenced by both recent meal content and by endogenous metabolism. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fatty acids in the CE pool would also be expected to reflect hepatic metabolism, but would relate to diet over preceding weeks to months. The fatty acid composition of the PL pool is more difficult to interpret [15] and it is, therefore, of interest that there were strong correlations between desaturase activities derived from CE and PL pool fatty acid compositions. Moreover, in general, ethnic differences in desaturase activities and associations between desaturase activities and metabolic risk factors were most apparent when desaturase activities were calculated from the fatty acid compositions of the CE and PL pools. Nevertheless, with standardization for potential confounders, lower SCD-16 activity was apparent in all pools in African Caribbean and Asian Indian women relative to white Europeans. Similar, though slightly less consistent differences were seen with SCD-18 activity. Overall, these observations strongly support the conclusion that white European women have higher SCD activity than Asian Indian or African Caribbean women. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Genetic variation has been reported in Scd-1 [16] but differences in polymorphism frequencies between Asian Indians, African-Caribbeans and white Europeans do not appear to have been described. We found D6D activity to be significantly lower in Asian Indian women relative to white Europeans. D6D metabolises the first step in conversion of the essential fatty acids linoleic (18:2 n-6) and alpha linolenic (18:3 n-3) to longer chain, polyunsaturated fatty acids and our observations are consistent with the proposal that reduced D5D activity might be responsible for lower polyunsaturated fatty acid concentrations in Asian Indians [17]. Genetic variation might underlie the lower D6D activity in Asian Indians but definitive studies of ethnic variation in the Fads2 gene that codes for D6D have yet to be carried out. D5D activity was significantly higher in African Caribbean women relative to white Europeans. D5D metabolises eicosatrienoic acid to arachidonic acid and higher arachidonic acid levels have been reported previously in people of Black African origin [18]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recent evidence has confirmed an association between high levels of C16 and C18 saturated fatty acids in the plasma PL pool and increased risk of CHD and between high levels of n-6 polyunsaturated fatty acids and decreased risk of CHD [21]. The relatively low SCD activity in Asian Indian women might be expected to be associated with higher C16 and C18 fatty acid levels and the relatively lower D6D activity with lower n-6 polyunsaturated fatty acid levels. Both characteristics we identified in Asian Indians would, therefore, accord with their elevated risk of CHD. However, no such consistencies could be inferred with regard to the relatively low risk of CHD in African Caribbean women. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Independently of ethnicity, SCD-16 activity was positively associated with BMI, waist circumference and serum triglycerides. Positive associations between SCD activity and adiposity have been reported previously [13,14], and a positive association with serum triglyceride concentrations is well-documented [11,22]. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The independent associations we observed between D6D and D5D activity and risk factors were generally similar to those described by others [13,15], with positive associations between D6D activity, adiposity and triglycerides and negative associations between these risk factors and D5D activity. Previous studies have found a positive association between insulin sensitivity and D5D activity, calculated from skeletal muscle phospholipid composition [23,24] but we found little evidence for associations between desaturase activities calculated from plasma fatty acids and either glucose levels or insulin sensitivity. The single positive association noted between insulin sensitivity and D5D activity derived from fatty acid ratios in the TG pool and may have been a chance finding. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With regard to ethnic variation in risk of T2DM, it could be speculated that the lower SCD activities in African Caribbeans and Asian Indians might contribute to increased levels of saturated fatty acids, increased levels of which may be associated with increased risk of T2DM [25,26]. However, given the overall lack of association between diabetes risk factors and desaturase activities, it seems unlikely that ethnic variation in desaturase activity contributes to ethnic variation in risk of T2DM.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; Despite low SCD activities in African Caribbeans and Asian Indians possibly contributing to a tendency to higher C16 and C18 saturated fatty acid levels, it seems unlikely, given the absence of any association between desaturase activities and plasma glucose concentrations or insulin resistance, that ethnic variation in desaturase activities contributes to ethnic variation in risk of T2DM. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Similarly, variation in desaturase activities showed no consistency with the lower risk of CHD in African Caribbeans. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, the relatively low D5D activity we observed in Asian Indian women suggests a contribution from lower desaturase activities to the higher risk of CHD in Asian Indians. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data">Health disparities in endocrine disorders: biological, clinical, and nonclinical factors--an Endocrine Society scientific statement</td>
+<td class="data">We summarized important areas for future research in areas of race / ethnic and sex disparities in endocrine disorders based on our literature review for this statement in Table 10. We also summarize in Table 11 areas for future research to address race / ethnic disparities in diabetes generated from the 2011 Strategic Planning Report of the Diabetes Mellitus Interagency Coordinating Committee (18, 19) that supplement those highlighted by our review. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several important themes emerged in examining our current understanding of disparities in endocrine disorders. Compared with NHW populations, there are certain disorders for which NHB populations have a lower incidence (e.g. macrovascular complications of diabetes mellitus and osteoporotic fractures) or a similar incidence (e.g. thyroid cancer); however, once they have the disorder, NHBs have worse outcomes and higher mortality. This is likely related to inadequate access to high-quality health care among minority populations. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, NHBs with diabetic nephropathy have lower mortality on dialysis than NHWs, despite a higher incidence of ESRD. Understanding the factors contributing to better survival will be beneficial in extending dialysis survival for other race / ethnic groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although osteoporotic fractures are more common in NHW women, preventive interventions should target all race / ethnic groups to reduce the morbidity and mortality associated with fractures. In addition to exploring the etiology for these disparities in clinical, population based, and health services research studies, basic science and translational studies are also needed to explore underlying molecular mechanisms that may contribute to disparities.  XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Obesity is an important contributor, not only to diabetes risk in minority populations, but also to sex disparities in thyroid cancer, which is more common in women. This suggests that population interventions targeting weight loss may have a favorable impact, even on non-diabetes-related endocrine disorders. Our statement also highlights important implications regarding the definition of obesity in different race / ethnic groups. Fat distribution is an important determinant of risk of metabolic disorders such as type 2 diabetes and CVD, and there is evidence that current cut-points for WC may underestimate disease risk in Asian-Americans and overestimate disease risk on NHB women. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX . NHW females suffer osteoporotic fractures more frequently than their male counterparts; XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data">The role of ethnicity in predicting diabetes risk at the population level</td>
+<td class="data">The aim of this study was to assess the impact of including detailed ethnic predictors in a population-based risk tool for diabetes. In addition to identifying relative hazards of developing diabetes by ethnicity, this study provides estimates of the predicted number of cases in a provincial population by ethnicity for the next 10-year period. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Using a population-based cohort, this study confirmed that those of non-Caucasian descent are at increased risk for developing diabetes and consistent with previous research, hazard ratios were highest among south Asians (Abate and Chandalia 2001). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In terms of overall model performance, no additional predictive value was detected when adding detailed ethnic predictors. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX At the population level, distribution of diabetes risk was similar in the population, particularly between DPoRT and the full ethnicity model. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study suggests that using DPoRT in its current form is sufficient for accurately predicting diabetes cases in ethnically diverse population. The finding that the algorithm to predict diabetes that uses detailed ethnicity did not significantly differ from one that uses a broad categorization of ethnicity can be explained by two mechanisms involving statistical prediction and population disagreement index (PDI). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results from this study using a population-based risk prediction tool are similar to other studies with clinical risk functions, which demonstrate good discrimination, even when applied to multiethnic cohorts (D’Agostino et al. 2001, Mann et al. 2010). There are several reasons why a clinically important risk factor may not improve the performance of a prediction tool. Even though a variable is independently associated with an outcome, it may not provide incremental improvements in test characteristics in the context of existing predictors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This phenomenon has also been shown for other clinical predictors and outcomes such as C-reactive protein for cardiac risk prediction (Lloyd-Jones et al. 2006). In fact, research has shown that although a battery of novel risk factors have been developed for the prediction of major coronary heart disease (CHD) events, these novel factors have been generally unimpressive in their ability to improve CHD prediction (Wilson et al. 2005). Furthermore, it has been shown that for a variable to make significant improvements in discrimination (i.e., improvement in AUC from 0.8 to 0.9) its multivariable odds ratio must be 6.9 or greater. Pepe et al. (2004) suggesting that in order for detailed ethnicity to improve the algorithm beyond its current discrimination, the adjusted hazard ratio must be very large in magnitude. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Interestingly, the model without ethnicity in any form was not detectably worse in terms of model performance such that discrimination and calibration were only marginally decreased compared to DPoRT. This is likely due to the fact that many of the reasons that ethnicity plays a role in diabetes risk are related to other factors
+captured in the model. In particular, socioeconomic status, obesity (particularly younger onset of obesity), and other lifestyle factors have been shown to be related to both ethnicity and diabetes risk (Abate and Chandalia 2001). Most importantly,
+immigration status, captured in the model, may explain a significant amount of the variability in diabetes incidence that is associated with ethnicity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The diminishing return on model performance when adding statistically significant predictors to the model was also noted in the model building process of DPoRT and was one of the reasons that DPoRT maintained good discrimination, even with considerable constraints on variable selection (Rosella et al. 2010).  XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The population disagreement index (PDI) is an extension of the idea of population attributable risk (PAR). PAR describes the impact of a risk factor on population risk as a function of the prevalence of the exposure and the relative risk of disease (Levin and Bertell 1978). In this study, the estimate of relative risk in PAR is translated into the disagreement between observed and predicted (expressed as a ratio between observed and predicted) and the prevalence of the exposure is translated to the prevalence of the population where the disagreement exists. Therefore, PDI describes the impact of disagreement between observed and predicted risk for a risk tool as a function of the proportion of the population where that disagreement exists. PDI exemplifies how overall population risk is driven by where the cases lie in the population. This means that a large relative discrepancy between observed and predicted that is concentrated in a subgroup that covers a small proportion of the population will have less impact on the overall population estimate of diabetes compared with disagreement of the same magnitude that affects a larger proportion of the population. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This finding emphasizes an important difference between individual and population risk prediction; differences in individuals or subgroups may be important if the algorithm were to be applied to an individual, but these differences may not be as critical if applied for aggregate population estimates. This also signifies a potential difference in the way that algorithms must be validated, depending on
+whether they are intended for use on the individual or in small subpopulations. Of course, in the same way PAR is affected by the prevalence of the risk factor in the population, the influence of disagreement within ethnic groups is affected by the
+ethnic composition of the population. Ethnic composition in a population can changeover time and the impact of this on the validity of the algorithm should be continually assessed. The use of prediction tools at the individual level or in small
+subpopulations must be independently validated in specific subpopulations and used with caution where evidence of poor fit is occurring. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The purpose of this study was to examine the impact of ethnicity on population risk prediction and not to validate it for use within specific ethnic groups. Nonetheless, looking at performance within ethnic groups provides important information about diabetes risk by ethnicity. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX DPoRT performed well in all ethnic groups, especially in females, with the exception of south Asian males where even with the inclusion of full ethnic information the algorithm resulted in an under-prediction of diabetes risk. This can indicate that there is an aspect of diabetes risk in this population which is not captured by either the variables in DPoRT or detailed ethnicity. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This result is consistent with emerging evidence about the nature of metabolic risk in south Asian males. This population has significantly more insulin resistance than Caucasian populations even in the absence of excessive obesity (Abate and Chandalia 2001). It has been proposed that the excessive insulin resistance in Asian Indians could be explained by an abdominal fat distribution which may be genetically determined (Banerji et al. 1999). Detailed radiographic and anthropometric measures in Asian and Caucasian men showed that for a given BMI or waist circumference, south Asian men had approximately 6% higher total body fat than Caucasian men. Other studies have shown that adjustments for BMI or waist circumferences to define obesity do not entirely account for possible differences in inherent insulin resistance in the south Asian population (Chandalia et al. 1999). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several physiological mechanisms for this occurrence have been proposed including that south Asian men have a defect in adipose tissue metabolism, which occurs independently of obesity or abdominal fat distribution. These abnormalities of adipose tissue metabolism are concomitant with insulin resistance (Abate et al. 2004). These studies indicate that there may be an important aspect of diabetes risk which is not captured by simply including ethnicity and BMI along with the other predictors of the model. The type of detailed physiological information which may be needed is not captured at the population level nor is it feasible to include in a tool such as DPoRT. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regardless, these differences did not affect the performance of the model and the validity of overall population estimates of diabetes and, consistent with other prediction tools, has reaffirmed that using a measure that has a statistically significant association with a disease is not enough to improve predictive performance of a model (Pencina et al. 2008). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another difficulty in estimating the ethnicity-diabetes risk among males is the possibility of confounding by physical activity. Immigrant men are more likely to engage in jobs that require physical activity on a daily basis (Norman et al. 2002) which has been shown to reduce the risk of developing diabetes (Qi et al. 2008). This may explain why the full ethnicity algorithm actually performs worse than DPoRT for some ethnic groups. Inclusion of full ethnic information may result in over-fitting
+of the model. This phenomenon was also seen during DPoRT creation. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies indicate that weight cut-offs may differ in their associated risk for diabetes within ethnicity groups and that different cut-offs should be used to identify those at high risk (Barba et al. 2004, Diaz et al. 2007). Our study suggests that as long as additional risk factor differences among ethnic groups are captured in the prediction algorithm, the difference may not actually be as substantial as previous noted. This difference may be due to the fact that previous studies did not fully account for possible confounders including age and additional metabolic disorders (Barba et al. 2004). X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study examined the interaction between age specific BMI and ethnicity and found no significant differences. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This analysis provides adjusted hazard ratios and risk estimates to quantify the impact of ethnicity on diabetes risk using a prospective population-based cohort study in Ontario. This is the first study that reports 10-year risk and number of cases of diabetes from a prediction model according to ethnicity. These estimates provide key information for predicting diabetes risk at the provincial or national level, particularly in the increasingly multiethnic Canadian population. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Secondly, this study shows that DPoRT in its current form is as effective or in some cases better than the algorithm with full ethnic information for predicting diabetes risk at the population level. Furthermore, it also appears to work well within ethnic groups, in particular for women. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data">Insulin resistance and body fat distribution in South Asian men compared to Caucasian men</td>
+<td class="data">This study first compared characteristics of body fat content and
+distribution between South Asian and Caucasian men having similar BMI. It then examined the functional characteristics of adipose tissue, particularly as related to insulin sensitivity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BMI, WAIST CIRCUMFERENCES, AND % TOTAL BODY FAT =&gt; For a given BMI or waist circumference, South Asian men had approximately 6% higher total body fat than Caucasian men. Our findings indicated that the threshold for obesity in South Asians is approximately 2 kg/m2 lower than in Caucasians. A waist circumference of 10 cm lower in South Asians confers a similar estimate of % body fat. The findings correspond to reported data [12]. These discrepancies should be considered to be indicative of body fat content, and adjustments required for BMI or waist circumferences to define obesity do not entirely account for possible differences in inherent insulin resistance in the South Asian population. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ETHNIC DIFFERENCES IN VISCERAL FAT =&gt; We did not find that South Asians preferentially deposit fat in visceral adipose tissue. Even though South Asians had a higher % body fat, they did not have a higher absolute amount or % of total fat as visceral fat (Table 1). This was particularly evident when the two groups were matched for % body fat (Figure 3). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In fact, ratios of intraperitoneal fat / abdominal subcutaneous fat were higher in Caucasian men than in South Asians. The ratios observed in Caucasians are similar to those reported for a large population of Caucasian men in the Dallas Heart Study [13]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The lower ratios found in South Asians indicate that they are not prone to preferential deposition of body fat in the visceral compartment; this makes it unlikely that the increased insulin resistance found in South Asians can be explained by preferential accumulation of visceral fat. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TRUNCAL SKINFOLDS AND HIP CIRCUMFERENCE =&gt; In spite of higher % body fat for a given BMI in South Asians, there were no differences in hip circumferences between the two groups, or in waist-to-hip ratios. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, truncal skinfolds thicknesses were higher in South Asians. This implies that South Asians show a preferential accumulation in truncal fat over gluteofemoral fat. Thus, if South Asians have preference for body fat compartmentalization, it is for truncal subcutaneous fat, and not visceral fat. This finding is consistent with our previous reports, which have also shown a strong relationship between  subcutaneous fat and insulin resistance [3,9]. Furthermore, we have for the first time shown that truncal skinfolds predict % total body fat independent of ethnicity (figure 1). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ADIPOCYTE SIZE =&gt; A potentially important finding in this study was that South Asians had larger abdominal subcutaneous adipocytes than Caucasians. This was true even when the two groups were compared at similar body fat contents (Figure 3). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is a growing body of evidence that large adipocytes are dysfunctional. Large adipocytes have been shown to predict insulin resistance and type 2 diabetes independent of obesity [14]. Enlarged subcutaneous abdominal adipocyte size, but not obesity itself, predicts type II diabetes independent of insulin resistance [15]. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is conceivable that genetic factors influencing adipocyte size may play a role in insulin resistance. Even if a predisposition to insulin resistance observed in South Asians cannot be attributed to preferential accumulation of visceral fat, it can still be asked whether all of the excess insulin resistance observed in the South Asian population can be explained by a hidden high body-fat content, or perhaps an excess of truncal subcutaneous fat. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As shown previously [3] and again in Figure 2, increasing body fat content is accompanied by progressively lower insulin-mediated glucose disposal rates. This makes it likely that a portion of the greater insulin resistance observed in South Asians can be explained by ‘‘hidden’’ obesity, i.e., excess body fat content not seen with standard BMI or waist circumference measurements. It is further possible that a predisposition for deposition of fat in the trunk accentuates insulin resistance.  XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies have shown that truncal fat is metabolically more active than lower body fat [16,17]. If so, a maldistribution of body fat in South Asians could contribute significantly to their greater insulin resistance. This study provides several lines of evidence to support the concept that preferential accumulation of truncal fat in South Asians is accompanied by a metabolic profile that predisposes to insulin resistance and type 2 diabetes. The finding of large adipocytes is consistent with previous studies showing ‘‘dysfunctional’’ characteristics of large cells. In our study, abdominal adipose size was inversely correlated with both glucose disposal rates and with adiponectin levels (Figure 2B and 2C).  XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further, when subgroups were matched for % body fat, adipocytes size was still significantly greater in South Asians. In addition, glucose disposal rates and adiponectin levels were lower, and leptin levels were higher in South Asians (Figure 3) confirming our previous reports [18]. The current study thus provides insights as to why South Asians are predisposed to insulin resistance compared to Caucasians. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, for a given BMI, waist circumference, or waist-to-hip ratio they carry a higher % total body fat than Caucasians. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, they preferentially accumulate body fat in truncal (and abdominal) Subcutaneous adipose tissue (although not in visceral adipose tissue). This maldistribution of body fat gives rise to metabolic abnormalities beyond total body fat such has been previously reported. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX And third, South Asians have larger adipocytes, higher NEFFA and lower adiponectin which suggest a dysfunctional adipose tissue playing a role in metabolic abnormalities beyond total and truncal fat.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXCONCLUSIONS =&gt; This study shows that when South Asian men are compared to Caucasians, they have a higher % total fat for a given BMI and they preferentially accumulate this fat in truncal adipose tissue. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, they do not preferentially accumulate intraperitoneal fat. Truncal adipose tissue in South Asians is characterized by abnormally large adipocytes which likely are dysfunctional—as shown by high levels of NEFA and low levels of adiponectin. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These abnormalities in adipose tissue appear to contribute importantly to increased insulin resistance observed in South Asians. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data">Increased prevalence of insulin resistance and nonalcoholic fatty liver disease in Asian-Indian men</td>
+<td class="data">These studies demonstrate that the prevalence of insulin resistance in healthy, young, lean Asian-Indian men is 3- to 4-fold greater than lean men of other ethnic groups. Furthermore, when adjusted for the (insulin sensitivity index) ISI, this increased prevalence of insulin resistance in Asian-Indian men was associated with an ~2-fold increase in (hepatic tri-glyceride) HTG content and plasma IL-6 concentrations compared with Caucasian men. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, there were no differences in the prevalence of insulin resistance among Asian-Indian women compared with the other ethnic groups, suggesting a potentially important protective role of estrogen in this process (16, 17). XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is increasing evidence for a causal relationship between hepatic steatosis and hepatic insulin resistance both in rodent models with hepatic steatosis and in patients with non-alcoholic fatty liver disease (4, 18–25). Short-term high-fat feeding in rats has been shown to result in hepatic steatosis and hepatic insulin resistance, which were both reversed after treatment with the mitochondrial uncoupling agent 2,4-dinitrophenol (21). XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Comparable results were observed in patients with severe lipodystrophy where chronic leptin replacement therapy was shown to reverse their hepatic steatosis and hepatic insulin resistance (18). In addition, rosiglitazone treatment in patients with T2DM has been shown to lower HTG content and ameliorate hepatic insulin resistance (26, 27). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, recent studies have demonstrated that a relatively small weight loss (~8 kg) in patients with poorly controlled T2DM reversed their hepatic steatosis and normalized fasting plasma glucose concentrations, rates of hepatic glucose production, and hepatic insulin responsiveness (19). XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The molecular mechanism of fat-induced hepatic insulin resistance is unclear; however, recent studies in rodents suggest that intracellular increases in diacylglycerol activates protein kinase Ce, which activates a serine kinase cascade that in turn blocks insulin stimulation of IRS-2 tyrosine phosphorylation, an early step in insulin signaling (21, 22, 25). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recent studies have also suggested that visceral adiposity may play an important role in causing hepatic insulin resistance through its release of fatty acids and adipocytokines to the liver via the portal vein (28–31). However, we found no differences in the circulating concentrations of adiponectin or TNF-a between the Asian-Indian men and Caucasian men, suggesting that these adipocytokines are not likely playing a major role in causing the increased prevalence of insulin resistance in the Asian-Indian men. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, we did observe an ~2-fold increase in plasma IL-6 concentrations in the Asian-Indian men that persisted even after adjustment for the ISI. Recent studies in rodents have demonstrated that acute infusions of IL-6 caused insulin resistance in both liver and skeletal muscle (32). Whether this increase in plasma IL-6 concentration is playing a causative role for the increased prevalence of insulin resistance in the Asian-Indian men or is secondary to the hepatic steatosis and insulin resistance remains to be determined. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also assessed pancreatic B cell function in a subgroup of Asian-Indian men and Caucasian men and found that there was an ~30% increase in basal   cell responsivity (Phib) in the Asian-Indian men compared with the Caucasian men. However, this compensatory increase in pancreaticB cell function was inadequate for their degree of insulin resistance as reflected by a 60% reduction in the disposition index in the Asian-Indian men. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In summary, the results of this study indicate that the prevalence of insulin resistance is 3- to 4-fold higher in young, lean, healthy Asian-Indian men compared with men in other ethnic groups. This increase prevalence in insulin resistance in the Asian-Indian men was associated with increased HTG content
+and plasma IL-6 concentrations. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These data suggest that Asian-Indian men may be genetically predisposed to develop hepatic steatosis and hepatic insulin resistance at a lower BMI than other ethnic groups. Furthermore, increased prevalence of non-alcoholic fatty liver disease in the Asian-Indian men has important implications for future health risks in these individuals because this condition is associated with steatohepatitis, which may progress to cirrhosis and end-stage liver disease. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, these data suggest that there are significant ethnic differences in the pathogenesis of insulin resistance between Asian-Indian men and Caucasian men, which may have important therapeutic implications for prevention and treatment of T2DM in this ethnic group and possibly explain the lower efficacy of lifestyle intervention in the Indian diabetes prevention study compared with the U.S. and Finnish diabetes prevention studies (33–35). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data">Ethnicity and type 2 diabetes: focus on Asian Indians</td>
+<td class="data">5. PREVENTION OF DIABETES IN ASIAN INDIANS: TARGETING INSULIN RESISTANCE =&gt; 5.1 DIET AND EXERCISE =&gt; Reduction in dietary fats and caloric intake will promote weight control and reduce insulin resistance. Dietary composition may independently affect insulin resistance. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regular exercise increases the number of capillaries surrounding muscle fibers and also increases the skeletal muscle fiber composition that favors insulin-mediated glucose disposal (Utriainen et al., 1996). Bouts of exercise stimulate translocation of GLUT-4 to the plasma membrane and increase glucose transport in skeletal muscle (Thorell et al., 1999). The signal that mediate exercise-induced GLUT-4 recruitment differs from those that mediate insulin-induced recruitment, in that insulin receptor expression and PI-3-kinase activity is not required for the exercise effect (Lund, Holman, Schmitz, &amp; Pedersen, 1995; Wojtaszewski et al., 1999). Instead, activation of the 5-AMP-activated kinase may have a role (Hayashi, Hirshman, Kurth, Winder, &amp; Goodyear, 1998). Exercise-induced production of NO and subsequent production of cyclic GMP may be involved in the regulation of glucose transport in muscle, independent of the effects of NO on vasodilatation (Young, Radda, &amp; Leighton, 1997). X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Bradykinin may also play a role in exercise-induced glucose transport, since it is released from muscle during exercise and, in cells expressing bradykinin receptors, it stimulates GLUT-4 translocation (Kishi et al., 1998). Muscle has high levels of bradykinin receptors, and as with the glucose uptake stimulated by exercise, bradykinin-stimulated glucose uptake is not blocked by inhibitors of PI-3 kinase (Kishi et al., 1998). XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The beneficial effect of exercise on insulin activity has recently been confirmed in the IRAS (Mayer-Davis et al., 1998). There is some evidence that implementation of dietary modification and regular exercise is feasible and is an effective modality for prevention of diabetes. In a Swedish non-randomized study (Eriksson &amp; Lindgarde, 1991), a 6-year intervention with diet and exercise advice resulted in 50% reduction in the incidence of diabetes in middle-aged men who volunteered to participate in the intervention group compared to those who were not willing to participate and thus served as controls. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Pan et al. (1997) reported on the marked decline in cumulative incidence of diabetes among subjects with IGT in the City of DaQing in China after 6 years of intervention with either a diet, exercise, or combined diet and exercise program. The incidence of diabetes was 67.7% in the control group compared with 43.8% in the diet group, 41.1% in the exercise group, and 46% in the diet plus exercise group. Interestingly, the intervention was equally successful in normal weight and obese people. The incidence of new diabetes was exceptionally high in this study where randomization was made by the clinic and not by the individual. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The Finnish Diabetes Prevention Study included lifestyle modifications to prevent diabetes in middle-aged IGT subjects and showed feasibility of lifestyle intervention in motivated individuals (Uusitupa et al., 2000). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A similar study is being conducted in US by the NIH. The results of these studies will provide evidence for effectiveness of diet and exercise to prevent or delay the onset of diabetes in high-risk individuals. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 5.1.1 BIGUANIDES =&gt; Although the liver is the primary site of action of the biguanide drugs such as metformin, in vivo studies indicate that metformin also increases glucose uptake into peripheral tissues (Inzucchi et al., 1998). Metformin improves glycemic control in monotherapy and in combination with other hypoglycemic agents. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Metformin may also delay or prevent the onset of diabetes in high-risk individuals. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX THIAZOLIDINEDIONES (TZDs) =&gt; TZDs increase the disposal of glucose in peripheral tissues in animals and humans with insulin resistance, including subjects with type 2 diabetes (Inzucchi et al., 1998). How these agents increase insulin-mediated glucose
+uptake is unclear. They appear to act as a ligand for a nuclear receptor, the peroxisomal proliferator-activated receptor-g (PPAR-g), augmenting the insulin action by enhancing insulin signaling at a post-receptor step (Lehmann et al., 1995). The effects of these agents in skeletal muscle may be direct or indirect. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Treatment of insulin-resistant rodents with TZDs restores the expression and translocation of GLUT-4 in adipocytes (Hofmann, Lorenz &amp; Colca, 1991). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TZDs also overcome the TNF-a-induced inhibition of insulin-stimulated glucose transport in adipocytes (Szalkowski, White-Carrington, Berger, &amp; Zhang, 1995). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In insulin-resistant rats given high-fat diets and insulin-deficient rats with streptozocin-induced diabetes, TZD treatment increases insulin-stimulated glucose uptake in muscles (Hofmann et al., 1991). TZDs do not increase the expression of GLUT-4 in rodent muscle or human muscle cells, although they do induce expression of GLUT-1 (Ciaraldi &amp; Henry, 1997). Furthermore, TZDs do not restore defective insulin-stimulated GLUT-4 translocation in muscle in insulin-resistant Zucker rats (Hirshman, Fagnant, Horton, King, &amp; Horton, 1995).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

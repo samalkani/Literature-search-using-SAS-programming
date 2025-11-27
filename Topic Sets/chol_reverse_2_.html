@@ -1,0 +1,1469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.accessiblecaption
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.aftercaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.batch
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7px;
+}
+.beforecaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.body
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodydate
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  width: 100%;
+}
+.bycontentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.byline
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.bylinecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.caption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.cell
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.container
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.contentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contentprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contents
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.contentsdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.contenttitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.continued
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  width: 100%;
+}
+.data
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasis
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataemphasisfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataempty
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datafixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datastrong
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.datastrongfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.date
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.document
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.extendedpage
+{
+  background-color: #FFFFFF;
+  border: 1pt solid #000000;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+.fatalbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.folderaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.frame
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.graph
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.header
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.headersandfooters
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.index
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.indextitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.linecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.note
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notebanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.output
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.pageno
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+.pages
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.pagesdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.pagesitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.pagesproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagesprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagestitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.paragraph
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.parskip
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.prepage
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitlefixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooter
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooteremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooteremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooterempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowfooterstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheader
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderemphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderemphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowheaderstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemfooter
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemtitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systitleandfootercontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.table
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+  border: 0;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+  border: 0;
+}
+.titleandnotecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.titlesandfooters
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.usertext
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warnbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Cholesterol reverse transport (cholesterol ester (CE) + HDL)</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Liver to Tissues (cholesterol deposition (Anti-Atherogenic))</td>
+</tr>
+<tr>
+<td class="c systemtitle3">Cholesterol reverse transport data set 2</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="1" cellpadding="7" rules="none" frame="box" summary="Procedure Print: Data Set REF2.CHOL_REVERSE_SORTED_2">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="l header" scope="col">Title</th>
+<th class="l header" scope="col">Research_Gaps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="l data">HDL and type 2 diabetes: the chicken or the egg?</td>
+<td class="l data">(A) Significance of HDL-C optimal ranges =&gt; (1) Bidirectional correlation =&gt; HDL dysfunction + T2D exists. (2) Optimal range of plasma HDL-C concns exists in humans. (3) Raising HDL-C from very low to levels in the optimal range =&gt; translate to benefit. (4) HDL proteome dictates its lipidome + HDL particle functionality. (5) Understanding HDL functionality in diabetic individuals =&gt; cruscial step to better glucose homeostasis. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) However, the interrelation between HDL lipidome, proteome and particle functionality is a missing part of the puzzle, which remains as yet unsolved.  XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="l data">HDL Particle Subspecies and Their Association With Incident Type 2 Diabetes: The PREVEND Study</td>
+<td class="l data">(A) HDL particle =&gt; protective effects on B-cells in vitro =&gt; mediating cellular cholesterol efflux (CEC) + possibly anti-oxidant function. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) +ve correlation =&gt; CEC + large + medium HDL particles + HDL size + inverse correlation =&gt; CEC + small HDL particles. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Another study =&gt; CEC only assoc. HDL particle concn =&gt; link impaired HDL function =&gt; adiposity and / or IR =&gt; smaller HDL particles. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (D) Key process =&gt; link T2D development + HDL function =&gt; proprotein convertase substilisin / kexine type 9 (PCSK9) pathway =&gt; affects B cell function =&gt; regulating cellular cholesterol homeostasis. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (E) PCSK9 =&gt; regulates sphingosine-1-phosphate =&gt; important mediator of HDL function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Antioxidative function of HDL =&gt; HDL metric possibly involved in maintaining B-cell function =&gt; impaired in metabolic syndrome post-correction for HDL-C. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) HDL remodelling =&gt; changes in cholesteryl ester transfer protein (CETP) activity =&gt; CETP =&gt; affected by TG-rich lipoprotein + phospholipid transfer protein (PLTP). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Admin of CETP inhibitors =&gt; reduces T2D risk BUT higher PLTP activity =&gt; increasing T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Alterations in HDL particle profile by changes in CETP + PLTP =&gt; affect T2D development. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J)Serum paraoxonase-1 (PON1) =&gt; antioxidative enzyme =&gt; associates =&gt; large HDL particles =&gt; relates to PLTP activity =&gt; impaired in metabolic syndrome PON-1 =&gt; did not predict T2D development =&gt; role of the anti-oxidative enzyme in T2D development uncertain</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="l data">Plasma Metabolomics Identifies Markers of Impaired Renal Function: A Meta-analysis of 3089 Persons with Type 2 Diabetes</td>
+<td class="l data">(A) Key associations eGFR =&gt; circ =&gt; amino acid, TG&#39;s, lipids in VLDL sub-classes, FFA&#39;s, lipids in HDL subclasses crossectionally. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) None of the metabolites sug. assoc. =&gt; urinary albumin excretion. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) eGFR inversely assoc. , TG&#39;s, lipid measures in VLDL subclasses, sphingomyelin, FA&#39;s, omega-6 + linoleic acid. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) eGFR -ve assoc. lipid measures except TG&#39;s in HDL sub-classes. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Associations with lipid measures + longitudinal measures with / without diabetes endpoints of ESRD + macro / microvascular complications. Lipids in HDL +ve assoc. with longitudinal eGFR slopes among T2D =&gt; non sig. after FDR correction =&gt; low power of the study =&gt; needed more patients. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Intermetabolite relatedness =&gt; reduce no of tests. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Targeting HDL cholesterol + phospholipids =&gt; future therapeutic approach =&gt; HDL increasing agents =&gt; torcetrapib in high risk CVD =&gt; increase high risk of mortality + morbidity (unknown mechn). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Increasing HDL via infusion in T2D increased plasma insulin activated adenosine 5&#39; monophosphates-activated protein kinase. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Impaired eGFR =&gt; none of the metabolites assoc. with urinary albumin excretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Cholesterol + phosphoglycerides in HDL subclasses =&gt; better kidney function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) High levels of AA&#39;s, FA&#39;s, lipids in VLDL subclasses + TG&#39;s in all lipoproteins =&gt; Impaired kidney function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Alterations in metabolome of renal impairment in T2D to importance in non-albuminuric DKD =&gt; early stage disease before albuminuria. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Further longitudinal studies needed of AA&#39;s, lipid measures =&gt; improved prediction of DKD.</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="l data">Selecting likely causal risk factors from high-throughput experiments using multivariable Mendelian randomization</td>
+<td class="l data">(A) Introduce MR-BMA =&gt; Multivariable MR =&gt; allows for analysis of high throughput experiments. This model averaging procedure =&gt; prioritises + selects causal risk factors =&gt; Bayesian Framework =&gt; high dimensional set of related canadidate risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) A common feature of statistical techniques used for variable selection MR-BMA DOES NOT  provide unbiased estimates, BUT causal estimates from MR-BMA have reduced variance, MR-BMA improves over unbiased approaches like IVW, in terms of (1) MSE + detection of true risk factors. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Aim =&gt; detect causal risk factors, rather than unbiasedly estimates the magnitude of their causal effects. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) MR-BMA =&gt; MR approach =&gt; analyse high dimensional set of risk factors XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) When analysing many risk factors jointly =&gt; important assumption of MR-BMA =&gt; sparsity =&gt; proportion of true risk factors vs all risk factors =&gt; considered small. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) MR-BMA =&gt; evaluates all possible combns of risk factors exhaustively (shotgun stochastic search), there is an upper bound =&gt; maximum model size =&gt; keep computation tractable. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Sparsity =&gt; common assumption =&gt; high throughput data =&gt; best models only contained 1 - 3 metabolites as risk factors (the model allows for up to 12 risk factors) BUT maximum model size should be adjusted if models including many risk factors are expected  or evidenced in the data. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) MR-BMA approach applied to a dataset of NMR metabolites =&gt; included predominantly lipid measurements =&gt; using variants associated with lipids =&gt; instrumental variables. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SNP&#39;s (genotypes) variants &lt;=&gt; Risk factors (phenotypes) metabolites &lt;=&gt; Outcomes age-related macular degeneration. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Previous MR analyses =&gt; 3 lipid measurements =&gt; HDL-C potential causal risk factor for AMD (age-related macular degeneration). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Multivariable MR =&gt; confirmed HDL-C as a potential causal risk factor for AMD =&gt; +large or extra-large HDL particles =&gt; likely to be driving the disease. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) MR-BMA =&gt; other areas of application-imaging methods of heart + CAD, body composition + T2D blood cell traits + atherosclerosis. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Multivariable MR accounts for measured pleiotropy =&gt; facilitates the selection of suitable genetic variants for causal analyses. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Genetic predictors of a set of risk factors can be found, despite specific predictors e.g. heart measurement from cardiac imaging =&gt; difficult given widespread pleiotropy. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) MR-BMA =&gt; causal inference =&gt; obtained through using the data to identify the causal risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Multivariable MR estimates the direct effect of a risk factor =&gt; outcome, BUT not total effect as estimated in standard univarible MR. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Multivariable MR / Multivariable regression =&gt; regression co-efficients =&gt; association of each variable =&gt; outcome when other are held constant. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Goal of MR-BMA =&gt; variable selection NOT precise estimation of causal effect =&gt; variable selection =&gt; shrinks estimates towards null =&gt; when there is a causal effect + unbiased estimates =&gt; when there is no causal effect. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Mediating effects between risk factors =&gt; MR-BMA =&gt; identifies the risk factor most proximal to + direct effect on the outcome. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) If risk factors forms a signalling cascade =&gt; identify the downstream risk factor in the cascade + direct effect on outcome NOT upstream factors at the beginning of the cascade. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Risk factor =&gt; Outcome BUT is the causal effect is mediated by another risk factor =&gt; it will not be selected in MR-BMA. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Care needed when selecting a hyper-parameter =&gt; prior probability =&gt; priori expected no of causal risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Results =&gt; robust to a wide range of prior specifications for the parameter + prior variance of causal parameters =&gt; specified + tested =&gt; robustness. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) If genetic variants =&gt; weak predictors of risk factors =&gt; introduces weak instrument bias. (1) Univariable 2 sample MR =&gt; any bias due to weak instruments =&gt; null =&gt; no inflated type 1 error rates (detecting sig. difference when there is none). (2) Multivariable MR =&gt; weak instrument bias =&gt; any direction =&gt; BUT bias tend towards zero with increased sample size =&gt; increased instrument strength. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Selection of risk factors only possible =&gt; genetic variants =&gt; predictors of these risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Challenge of multivariable MR =&gt; design of meaningful study =&gt; choice of genetic variants + risk factors =&gt; important for interpretation of risk factors prioritised ranking of risk factors =&gt; conditional =&gt; genetic variants. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Our example  =&gt; extra large + large  HDL-C concns =&gt; used lipid related genetic variants =&gt; instrumental variables. Plus recommended to use =&gt; risk factor + 1 or (ideally) multiple genetic variants =&gt; strong instrument. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Caution =&gt; interpretation of null findings =&gt; non-lipid risk factors =&gt; deprioritised in terms of statistical power =&gt; choice of variants. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Instrument selection + general study design =&gt; essential to MR-BMA =&gt; user =&gt; critical =&gt; choice of genetic variants + risk factors =&gt; perform model checks + transparent in removal =&gt; outlier / influential genetic variants. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Genetic variant need to distinguish between risk factors =&gt; check correlation structure =&gt; genetic associations + selected genetic variants exclude pairs of risk factors =&gt; extremely strongly correlated.  XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Our example =&gt; included risk factors =&gt; absolute correlation &lt;0.99 =&gt; not able to include more than 3 measurements =&gt; lipoprotein category (cholesterol content, TG content, diameter), caution not to over-interpret findings =&gt; specific measurements vs correlated measures excluded from analysis (phospholipid + cholesterol ester content). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Multivariable MR =&gt; assumption =&gt; no unmeasured horizontal pleiotrophy =&gt; variant do not influence the outcome except via measured risk factors =&gt; it is a common + untestable assumption in MR =&gt; active area of research =&gt; robustify MR against violations of this assumption. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Robust methods of MR =&gt; MR-Egger =&gt; specific assumption about the behaviour of pleiotrophic variants. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Genetic Variants (SNP&#39;s) genotypes &lt;=========&gt; Risk factor (phenotype)   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Pleiotropic effects =======&gt; complicates relation between SNP&#39;s + risk factors ==&gt; addition of MR-Egger (uncorrelated (InSIDE assumption)) ==&gt; reduces complications of pleiotropic effects with a specific assumption. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) MR-PRESSO =&gt; exclude outlying variants =&gt; potentially pleiotrophic. X XXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="l data">Serum metabolic signatures of coronary and carotid atherosclerosis and subsequent cardiovascular disease</td>
+<td class="l data">(A) 7000 participants + 3 prospective popn-based cohorts =&gt; present metabolic signature of atherosclerosis offering  insights =&gt; sytemic disturbances underlying atherosclerosis. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Atherosclerosis =&gt; associated with disturbances of interconnected pathways related =&gt; lipid, FA + CHO metabolism BCAA + AAA metabolism, TCA + urea cycle + muscle metabolism =&gt; largely consistent pattern between coronary + carotid atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Metabolites above associated with =&gt; incident CVD events =&gt; highlighting the importance of these pathways =&gt; progression to clinical CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Majority of these associations =&gt; attenuated substantially after adjustment for  conventional CVD risk factors =&gt; suggesting =&gt; metabolites lie on pathways closely associated with CVD risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Beyond KEGG pathways =&gt; replicated metabolites highlight oxidative stress + inflammatory pathways. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) 5-oxoproline + glutamate =&gt; inversely associated CAC (chronic aortic calcification) + IMT (inter-medial thickness) =&gt; involved =&gt; synthesis + degradation glutathione. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Glutathione deficiency =&gt; oxidative stress =&gt; key role in pathogenesis of atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) N-acetylneuraminic acid =&gt; +vely associated with CAC + IMT =&gt; major form of salic acid in mammals =&gt; biomarker sustained inflammatory response =&gt; subsequent effects =&gt; atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Glycoprotein acetyls have previously shown =&gt; associations with risk of MI + stroke =&gt; consistent with CAC + IMT. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Lactate =&gt; +vely associated with IMT formed from pyruvate under insufficient O2 supply (hypoxia) =&gt; indicator of inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Local hypoxia =&gt; occurs in highly active inflammed tissues =&gt; demands of increased cellularity exceed O2 supply =&gt; feature of atherosclerotic plaque. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Hypoxia =&gt; stimulate proatherosclerotic processes =&gt; including =&gt; deficinet lipid efflux, inflammation, interference with macrophage polarization + glucose metabolism. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) 4 metabolites =&gt; sugar + CHO metabolism =&gt; (D-glucose, 1,5-anhydrosorbitol, D-mannose + myo-inositol) =&gt; directly associated =&gt; CAC +/- IMT post adjustment for CVD risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) 1,5-anhydrosorbitol =&gt; marker of glycaemic control =&gt; previously associated with CVD + kidney disease + close association =&gt; atherosclerotic disease, diabetes + IR. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Mannose =&gt; repeatedly associated =&gt; prediabetes, incident T2D + all cause mortality =&gt; in this study =&gt; highlight associated =&gt; atherosclerosis + incident CVD =&gt; independent of glucose. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Mannose =&gt; stronger correlations =&gt; lipids + N-acetylglycoproteins vs glucose. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Mannose =&gt; central role in glycation processes of lipoproteins =&gt; may initiate development of atherogenesis. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) N-glycans =&gt; upregulated in proinflammatory settings =&gt; found on cell surface =&gt; early stages of atherosclerotic plaque development. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Data =&gt; mannose could also affect CVD risk =&gt; through non-glucose dependent pathways. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Energy metabolism, TCA cycle + glycolysis =&gt; central pathways associated with atherosclerosis. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Alanine =&gt; synthesized directly from pyruvate, a product of glycolysis =&gt; supply cells with energy through TCA cycle =&gt; aerobic conditions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Increase glucose utilization =&gt; in high risk atherosclerotic plaques. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Citrate =&gt; intermediate + key energy metabolite in the TCA cycle =&gt; previously associated with CV mortality. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Reduced O2 levels in the presence of atherosclerosis =&gt; affect TCA cycle which is O2 dependent. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Creatine, an amino acid derivative =&gt; reflects changes of energy metabolism in the muscles =&gt; transported through the circulation =&gt; taken up by tissues with high energy demands =&gt; with creatinine as the degradation product. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Creatinine levels =&gt; inversely associated with fat intake in animal studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Lipoprotein profiles analyses =&gt; confirmed association of these lipids with subclinical atherosclerosis, MI + stroke. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Further show =&gt; consistent picture between coronary + carotid atherosclerosis + CV events. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Association of TG&#39;s + atherosclerotic disease + future events was +ve even within HDL particles =&gt; supports previous observations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Conversely not all HDL cholesterol was inversely associated with atherosclerosis highlighting the fact that causal association of HDL with lower CVD risk may be limited to certain particles (i.e. NOT the ones containing TG&#39;s). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) In contrast =&gt; LDL + VLDL =&gt; consistently +vely associated =&gt; higher CAC + IMT + higher risk of CVD events + small trend =&gt; strong associations with decreasing density of lipoproteins. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Molecular interaction gene network map =&gt; interconnections between inflammatory, insulin + lipid pathways =&gt; metabolite markers of atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Fibronectin 1 (FN1) =&gt; involved in cell adhesion + migration processes, including wound healing, blood coagulation + host defence; genetic polymorphisms within this gene =&gt; associated with =&gt; adverse lipid levels + CHD. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) CCAAT / enhancer-binding protein beta =&gt; master regulator of immunity + inflammation =&gt; other immunity related genes =&gt; (e.g. P13K complex) + pathways related to betaine-homocysteine metabolism (BHMT), glycolysis (pyruvate kinase) + angiogenesis (ANGPT4). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Summary =&gt; strong associations between serum metabolites =&gt; observed on 1H NMR spectroscopy + subclinical atherosclerosis =&gt; largely consistent between to vascular beds (coronary + carotid arteries). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) Metabolic + gene networks =&gt; highly interconnected system  level metabolic disturbances =&gt; atherosclerosis =&gt; overlaps with the known CV risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) Genetic approaches as well as mechanistic studies are now needed to further validate our results and to follow-up the possible entry points for investigation of novel targets or preventive strategies for atherosclerotic disease. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="l data">Plasma Lipidomic Profiling and Risk of Type 2 Diabetes in the PREDIMED Trial</td>
+<td class="l data">(A) Baseline LP (LPC + LPE), PC-PL, SM + CE scores =&gt; inversely assoc. with risk of T2D, BUT baseline TAG, DAG + PE scores directly assoc. with T2D. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) 1 year changes in these scores =&gt; assoc. beyond baseline levels =&gt; mainly non-significant =&gt; BUT point estimates remained in the same direction, BUT 1-year changes had suboptimal power. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) LPC&#39;s + LPE&#39;s =&gt; grouped as LP&#39;s =&gt; reduced risk of T2D. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) LPC levels were lower in individual&#39;s with obesity, IR + T2D, increased levels of LPC&#39;s =&gt; indicators of metabolic health =&gt; obesity, LPC =&gt; glucose lowering + anti-inflammatory effects. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) LPC + LPE levels =&gt; lower in T2D + patients with T2D, with lower levels of these lipids =&gt; increased risk of CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Similarly to LP =&gt; PCPLs inversely related to T2D. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Plasmalogens =&gt; roles as endogenous anti-oxidants limiting the oxidn of other lipids + reduced risk of T2D through other beneficial mechns =&gt; antiapoptotic + anti-inflammatory functions. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) EPIC-Potsdam study =&gt; inverse assoc. of SM&#39;s + T2D consistent with the results of current study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Patients with prediabetes / diabetes =&gt; inverse associations plasma odd-chain SM&#39;s + T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Knockout model of SM synthase =&gt; mitochondrial dysfunction + impaired glucose-stimulated insulin secretion =&gt; mechanistic support for our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Inverse association of CE&#39;s + T2D =&gt; previous cross-sectional studies =&gt; strong direct associations with T2D. Similar inverse assoc. CE&#39;s + CVD in the PREDIMED trial =&gt; possible =&gt; detected the defined &quot;atherogenic lipoprotein phenotype&quot; =&gt; patient at high risk of T2D (high plasma levels of TAG&#39;s, low levels of HDL + atypically dense LDL particles). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) LDL particles are loaded with TAG&#39;s instead of CE&#39;s + after the hydrolysis of TAG&#39;s in the liver =&gt; lipid-depleted LDL particles (small + dense) =&gt; released. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) By losing their lipid core =&gt; the particles lose anti-oxidant vitamins =&gt; oxidatively damaged =&gt; trigger foam cell formation =&gt; atherosclerosis. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Lipoprotein phenotype =&gt; IR + eventually T2D. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) DAG, TAG + PE scores =&gt; strongly assoc with higher risk T2D. High circ levels of DAG + short TAG&#39;s =&gt; assoc. with T2D. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Our findings =&gt; confirm +ve assoc =&gt; highlighting adverse role of short + saturated + low unsaturated species. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) After adjusting for individual TAG for total TAG score =&gt; odd chain TAG&#39;s inversely assoc. with T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Odd chain FA&#39;s =&gt; especially C15:0 + C17:0 =&gt; biomarkers of diary product intake =&gt; inversely assoc. with T2D + CVD. Important to consider specific FA content of TAG&#39;s =&gt; plasma risk profiles for T2D. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Our results =&gt; confirm previous studies =&gt; PE&#39;s assoc. with high fasting glucose + T2D. PE&#39;s are a minor species in plasma =&gt; important structural lipids in membranes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Increased PE&#39;s + imbalance between PC + PE =&gt; related to obesity + NAFLD =&gt; related to T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Our results =&gt; important implications =&gt; clarify the biological mechns =&gt; link between dyslipidaemia + T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Subjects of high T2D risk + plasma lipid profile =&gt; high levels of DAG&#39;s, short TAG&#39;s + PE&#39;s + low levels of LP&#39;s, PC-PL&#39;s, SM&#39;s + CE&#39;s =&gt; also identified before T2D onset =&gt; enable early intervention.</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="l data">Metabolomics insights into early type 2 diabetes pathogenesis and detection in individuals with normal fasting glucose</td>
+<td class="l data">(A) Popn-based prospective study =&gt; individuals with NFG at baseline =&gt; 95 progressed to T2D =&gt; FU period of 20 years. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Information =&gt; discrete set of 19 metabolites associated with T2D incidence =&gt; improved the capability of predicting incident T2D beyond the predictions made using only the clinical risk factors obtained in routine care. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Significant biological finding =&gt; enrichment in the nitrogen metabolism pathway =&gt; T2D risk. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Genetic approach =&gt; additional evidence =&gt; markers identified in the nitrogen metabolism pathway =&gt; glycine + phenylalanine =&gt; may be causal vs associative  =&gt; suggesting =&gt; alterations in this pathway + it&#39;s components =&gt; contribute to the earliest stages of T2D pathogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Prior clinical metabolomics studies =&gt; focused =&gt; mixture of individuals =&gt; normoglycaemia + prevalent dysglycaemia =&gt; our study novel =&gt; study of participants =&gt; normoglycaemic =&gt; progressed to T2D. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Studying individuals =&gt; progressed =&gt; normoglycaemia =&gt; T2D =&gt; eliminate confounding of our results by processes that occur in response to development of dysmetabolism (IFG or IGT). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Main clinical finding =&gt; present study =&gt; metabolites substantially improved =&gt; ability to predict T2D beyond prediction achieved using conventional risk factors =&gt; individuals with normoglycaemia (based on fasting glucose). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Our findings =&gt; slightly different vs previous metabolomics studies =&gt; not able to show that metabolites materially improved T2D risk prediction vs other clinical risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Possible explanation =&gt; study popn =&gt; in normoglycaemia individuals, blood glucose + traditional T2D risk factors =&gt; may not be as strong predictors of future T2D vs those with dysglycaemia. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Novel risk factors =&gt; metabolites =&gt; stronger predictive capability.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) AUC of clinical risk factors in normoglycaemic individuals =&gt; &gt; 80% =&gt; slightly higher than reported in other recent studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Suggests =&gt; differences in the length of FU or inclusion of different ethnic groups =&gt; affect the predictive capability of traditional T2D risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Another possible explanation =&gt; increased predictive ability of metabolites =&gt; related to the methodological approach implemented in this study. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Predictive capability observed in this study similar to predictive performance observed in recent studies using similar mechine learning approaches to prioritise metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Normoglycaemic individuals included in this study =&gt; selected because =&gt; normal fasting glucose, normal glucose tolerance + HbA1c. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Different, more stringent thresholds for &#39;normal&#39; =&gt; chosen (esp. subtle elevations in fasting glucose =&gt; those who developed T2D vs those who did not) =&gt; the data provide insight into early T2D pathogenesis among those currently considered clinically normoglycaemic. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Convergence of selected metabolites =&gt; nitrogen metabolism pathway =&gt; serving as nitrogen donors =&gt; urea cycle =&gt; this pathway may influence the early pathogenesis of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Data =&gt; MR experiments =&gt; further support =&gt; components within this pathway =&gt; causal role in T2D development =&gt; confounding effects =&gt; obesity or lipid abnormalities =&gt; less likely. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Our study =&gt; genetically increased glycine =&gt; reduced odds of T2D =&gt; consistent =&gt; previous epidemiological studies =&gt; directionality + effect sizes. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Conflicts with previous MR analysis =&gt; no association =&gt; single genetic variant for glycine or glycine-serine ratio + diabetes-related traits. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) More precisely estimated effect sizes =&gt; using data from the largest metabolites meta-genome-wide association studies currently available + increase in the no of genetic variants used to proxy glycine here =&gt; explain the difference between these two MR studies. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Phenylalanine =&gt; different studies =&gt; direct association between this metabolite + T2D risk, BUT no MR analysis for phenylalanine on T2D risk =&gt; yet conducted. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Present study =&gt; particular biomarkers previously associated with T2D risk (e.g. TAG&#39;s (low carbon number) or 2-aminoadipate) =&gt; relevant even before initial glycaemic perturbations. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) In contrast =&gt; BCAA&#39;s associated with T2D incidence in previous studies =&gt; not prioritized by our selection algorithm. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Our findings =&gt; highlight early metabolite changes in pathogenesis of T2D =&gt; consistent  =&gt; recent MR analysis finding =&gt; elevations in BCAA&#39;s occur after development of IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Results of our popn-based analysis =&gt; interpreted with caution =&gt; several limitations =&gt; unmeasured factors =&gt; (Changes in lifestyle factors, medications or insulin secretion  resistance over time) =&gt; influenced our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) MR approach =&gt; available for metabolites in the nitrogen metabolism pathway =&gt; partially mitigates this concern =&gt; suggests =&gt; genetically driven glycine + phenylalanine =&gt; related to risk of T2D independently of potential confounders. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Our results =&gt; internally validated =&gt; not confirmed in a separate prospective cohort. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Lack of independent validation =&gt; lack of availability of comparable cohorts of normoglycaemic individuals =&gt; developed T2D =&gt; necessary data were available. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Internal validation approach =&gt; 40% of the sample + running 100 iterations =&gt; allows us to rule out other potential confounding issues =&gt; e.g. compatibility between metabolomics platforms or available standards in libraries, even when similar platforms were used. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Five TAG&#39;s =&gt; prioritized by our methodological approach BUT did not find significant enrichment of pathways associated with these species. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Reason for this =&gt; software used for pathway enrichment analysis =&gt; provide poor reporting for lipid classes + pathways OR because only 5 TAG&#39;s in a particular metabolic pathway =&gt; less likely than expected by chance for enrichment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Most prioritized metabolites correlate with baseline  clinical risk factors =&gt; BMI, 2h glucose, HOMA-IR, HDL-c + TAG&#39;s BUT associations of metabolites with T2D in normoglycaemic individuals remained after risk factor adjustment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Participants of study =&gt; European descent. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Further work =&gt; our findings can be replicated by an independent cohort of same ethnicity + extend study =&gt; other racial / ethnic groups. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) CONCLUSIONS =&gt; study identifies a discrete set of metabolites that signal increased risk for T2D among normoglycaemic individuals =&gt; these metabolites involved + play causal role =&gt; early stage T2D pathogenesis. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) Last, we recognise that participants in this study were all of European descent. Further work is needed to determine whether our findings can be replicated in an independent cohort of the same ethnicity and to extend the study to other racial/ethnic groups. XXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="l data">Circulating microRNAs and diabetes: potential applications in medical practice</td>
+<td class="l data">(A) Field in it&#39;s infancy =&gt; circulating miRNA&#39;s =&gt; various potential applications in medical practice =&gt; biomarkers of diabetes + associated complications. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Different applications =&gt; envisoned =&gt; prediction of disease, detection + monitoring of it&#39;s complications, evaluation of treatment efficacy + characterisation of pathogenic traits =&gt; IR for T2D + the autoimmune process for T1D. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Improvements =&gt; standardisation of pre-analytical + analytical methods are needed + additional studies on larger cohorts =&gt; before circulating miRNA&#39;s =&gt; introduced into medical practice, miRNA&#39;s =&gt; introduced into medical practice, miRNA&#39;s bonafide biomarkers for diabetes in the future. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) miRNA&#39;s will complement existing biomarkers =&gt; esp. early identification =&gt; high risk of developing T2D + complications. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) miRNA&#39;s =&gt; contained in vesicles or associated with HDL =&gt; can be transferred into recipient cells =&gt; could be involved in cell-to-cell communication. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) A series of studies =&gt; investigated =&gt; miRNA&#39;s as intercellular mediators in diabetic conditions =&gt; new mechanisms in diabetes pathogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Precise potential of circulating miRNA&#39;s in complex + multifactorial diseases e.g. T2D =&gt; further confirmation  =&gt; as biomarkers + involvement in disease mechns. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) A considerable amount of research efforts need to be invested to determine whether circulating miRNAs profiles are of use in routine hospital practice, but given the potential advantages, the challenge is undoubtedly worth it. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="l data">Comparative study of glucose homeostasis, lipids and lipoproteins, HDL functionality, and cardiometabolic parameters in modestly severely obese African Americans and White Americans with prediabetes: implica</td>
+<td class="l data">(A) African Americans (AA&#39;s) experience T2D + CV morbidity + mortality disproportionately more vs White Americans (WA&#39;s). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Exact contributions of obesity =&gt; T2D + CHD in AA&#39;s remain debatable. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Whether severe obesity =&gt; differentially modifies the metabolic mediators + precursor&#39;s of pre-diabetes + T2D + CVD in AA&#39;s + WA&#39;s =&gt; remains to be investigated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Increased epidemic of obesity =&gt; impact on glucose regulation, prediabetes + T2D =&gt; US ethnic + racial popns =&gt; comprehensive assessment of clinical + metabolic characteristics =&gt; modestly severe obese AA&#39;s vs WA&#39;s with prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) BMI &gt;30kg/m2 + prediabetes =&gt; &gt; Class III obesity + mean BMI &gt; 35kg/m2 + lean body fat &gt; 40% in both groups. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) BMI + % body fat greater in AA&#39;s vs WA&#39;s with prediabetes. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (g) Pathogenic Mechns =&gt; prediabetes, impaired glucose + T2D =&gt; abnormalities B-cell secretion, hepatic glucose prodn + glucose disposal (insulin-mediated [Si] + non-insulin-mediated [Sg + GEZI] glucose disposal) =&gt; prediabetes + T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Abnormalities increase AA&#39;s vs WA&#39;s =&gt; increased IR (lower Si or higher HOMA-IR) + hyperinsulinaemia + hepatic glucose overprodn or hepatic IR =&gt; healthy non-obese + mildly obese AA&#39;s vs WA&#39;s. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Abnormalities come before development of prediabetes + T2D in AA&#39;s by decades. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Current study =&gt; modestly severely obese AA&#39;s =&gt; lower fasting + post glucose challenge serum glucose levels  vs WA&#39;s with prediabetes, BUT AA&#39;s have increased HbA1c levels vs WA&#39;s. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Current study =&gt; mean fasting + post challenge levels + corresponding serum insulin + C-peptide levels =&gt; lower in modestly severely obese AA&#39;s vs WA&#39;s with prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Previous study =&gt; mildly obese or overweight AA&#39;s =&gt; prediabetic subjects =&gt; prior poor B-cell function, (assessed by serum insulin + C-peptide levels). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Current study =&gt;  modestly severely obese AA&#39;s above point (L) =&gt; not the same. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Current study =&gt; serum insulin + C-peptide response =&gt; OGTT =&gt; corrected for prevailing glucose (insulinogenic index, insulin / glucose or C-peptide / glucose ratios) levels were similar in AA&#39;s + WA&#39;s with prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Use of FSIVGTT =&gt; examines in detail =&gt; B cell function + insulin sensitivity in modestly severely obese AA&#39;s vs WA&#39;s with prediabtes. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Modestly severely obese AA&#39;s with prediabetes =&gt; fairly well preserved B-cell function + ability to compensate =&gt; prevailing skeletal muscle IR vs WA&#39;s counterparts. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Obesity =&gt; major cause of IR in general popn + T2D =&gt; no significant differences in Si values =&gt; modestly severe obese AA&#39;s + WA&#39;s with prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Previous studies =&gt; in vivo total body glucose disposal consists =&gt; insulin mediated (Si) + non-insulin-mediated or glucose-mediated (Sg or GEZI) glucose disposal. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Previous demonstrated =&gt; (Si) is lower + (Sg) is higher in healthy AA&#39;s with / without history of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Interesting that =&gt; higher Sg + GEZI values in obese AA&#39;s with prediabetes vs WA&#39;s. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Our data =&gt; greater Sg + GEZI values =&gt; important compensatory mechns =&gt; maintain normal / nearly normal glucose tolerance =&gt; modestly severely obese AA&#39;s with prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Mechn =&gt; putative  greater Sg + GEZI values =&gt; remains to be elucidated in obese + non-obese AA&#39;s with / without prediabetes. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Typical lipid + lipoprotein profiles =&gt; assoc. =&gt; obesity, T2D, IR + metabolic syndrome =&gt; higher serum TG + lower HDL-C levels. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Insulin-resistant AA&#39;s =&gt; normal or higher HDL-C + apoA1 levels + lower serum TG levels vs WA&#39;s XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Current study =&gt; modestly severely obese, IR, AA&#39;s with prediabetes =&gt; sig. lower serum TG levels, normal / higher HDL-C level + HDL / TG ratio + apoA1 level vs WA&#39;s with similar IR (Si). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Our Findings =&gt; favourable lipid + lipoprotein profiles in obese + non-obese AA&#39;s =&gt; independent of degree of obesity =&gt; lower serum TG levels + normal / higher HDL-C + apoA1 levels in AA&#39;s + other blacks of African ancestry. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) HDL =&gt; important anti-atherogenic lipoprotein =&gt; several critical roles in lipid transport + atherogenesis . Anti-atherogenic function of HDL =&gt; PON1 activity =&gt; cosegregation with HDL in the circulation. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) PON1 =&gt; Inhibits oxidn of LDL, suppresses inflammation , improves endothelial function + injury repair (anti-apoptotic effect) + increased reverse cholesterol transport activity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Recent findings =&gt; PON1 activity =&gt; 50% redn in non-diabetic post menopausal AA women vs WA&#39;s =&gt; unexpected. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Our previously study =&gt; oxidised LDL + CRP levels =&gt; higher in non-diabetic, postmenopausal AA women vs WA&#39;s =&gt;  suggested that HDL was dysfunctional in AA&#39;s =&gt; play a critical role in atherogenesis in AA. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Our study =&gt; did not examine =&gt; potential effects of the severity of obesity =&gt; cardiometabolic markers in AA&#39;s + WA&#39;s with prediabetes. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) Present study =&gt; modestly severely obese + prediabetes =&gt; PON1 + oxidized LDL levels =&gt; not different in WA&#39;s + AA&#39;s =&gt; surprising + unexpected =&gt; further examined =&gt; qualitative functions of HDL =&gt; subclinical inflammation CRP + adipocytokines (IL-6). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) Previous studies =&gt; increased CRP levels in obese AA&#39;s vs WA&#39;s XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L1) Current study =&gt; CRP + IL-6 levels =&gt; not statistically significant =&gt; modestly severely obese AA&#39;s with prediabetes vs WA&#39;s. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M1) Serum adiponectin =&gt; (very potent adipose derived insulin sensitizer) =&gt; redn rates of T2D, metabolic syndrome + CAD. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N1) Serum adiponectin levels =&gt; redn in AA&#39;s + patients with obesity + IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O1) Current study =&gt; adiponectin levels =&gt; lower BUT not significantly different =&gt; modestly severely obese AA&#39;s vs WA&#39;s with prediabetes. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P1) Mechns =&gt; unknown =&gt; adaptive metabolic processes associated with severe degree of obesity =&gt; partly responsible. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q1) Several metabolic paradoxes in modestly severely obese AA&#39;s with prediabetes vs WA&#39;s. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R1) Modestly severely obese AA&#39;s + WA&#39;s with prediabetes =&gt; similar glucose responses + Si values =&gt; BUT req&#39;d diverse regulatory mechns. XXX X</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="l data">Effect of uridine on energy metabolism, LPO, and antioxidant system in the myocardium under conditions of acute coronary insufficiency</td>
+<td class="l data">(A) Occlusion of LCA (left coronary artery) for 60min =&gt; reduced ATP content in the rat heart by 35% vs intact animals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) The content of another macroergic compounds (Phosphagens =&gt; macrogenic compounds =&gt; energy storage compounds =&gt; high energy phosphate compounds =&gt; found in muscle tissue). XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) The type of biomolecule used as a phosphogen is dependent on the organism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Majority of animals =&gt; arginine as phosphagen BUT phyllum Chordata (animal with spinal cords) =&gt; use creatine. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Creatine phosphate (CP), or phosphocreatine (PCr) =&gt; made from ATP by enzyme creatine kinase reversible reaction. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Creatine + ATP &lt;=&gt; Creatinine kinase &lt;=&gt; Creatine phosphate + ADP + H+ XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Creatine phosphate also considerably decreased by 59%. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Deficiency of macroergic compounds in ischaemic myocardium =&gt; prounced accumulation of lipid peroxides (by 97%). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Plus suppression of SOD activity (by 28%) + glutathione system =&gt; decrease content of reduced glutathione (by 30%). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Respiratory Chain (electron transport chain (ETC)) =&gt; Electrons leak from ETC =&gt; 2 electrons + O2 + 4H+ ==&gt; 1 electron + 2H2O + O2 =&gt; Superoxide anion O2(-) + Superoxide anion O2(-) =&gt; superoxide dismutase (SOD) =&gt; O2 + Hydrogen Peroxide (H2O2) =&gt; glutathione peroxidase =&gt; H2O XXXXXXXXXXXXX GSH (reduced glutathione) =======================&gt; GSSG (oxidised glutathione). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GSSG (oxidised glutathione) =================&gt; GSH (reduced glutathione) X  NADPH ==================================&gt; NADP+ XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NADP+ ==================================&gt; NADPH XXXXXXXXXXXXXXXX Glucose-6-phosphate ====================&gt; glucose-6-phosphogluconate X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Reperfusion to restore the flow of oxygenated blood =&gt; ischaemic tissue =&gt; oxygen free radicals =&gt; reperfusion-induced injury. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Serum paraoxonase activity increased 93% =&gt; HDL-associated enzyme =&gt; anti-atherogenic + anti-oxidant properties =&gt; prevent lipid oxidn in HDL. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Admin =&gt; uridine 5min prior to LCA occlusion =&gt; limits changes of energy metabolism in ischaemic myocardium + preserved high content ATP + creatine phosphate. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Uridine =&gt; prevented overprodn =&gt; lipid hydroperoxides + inhibition (anti-oxidant system) AOS enzymes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) (5-hydroxydecanoate) 5-HD =&gt; admin 5 min before uridine injection + LCA occlusion =&gt; abolished the protective effect of this prepn. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Animals in this group =&gt; content of ATP + creatine phosphate =&gt; remained at control level. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Prevention =&gt; lipid hydroperoxide overprodn + AOS activation by uridine =&gt; abolished =&gt; blockade of mitoKATP channels. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Findings =&gt; energy stabilizing effect of uridine + capacity to prevent LPO intensification + AOS inhibition =&gt; related to activation of mitoKATP-channels. (S) 5 min after admin of the nucleoside (uridine) =&gt; intact rats =&gt; blood content increased 11-fold vs baseline value (65.3 +/- 3.6 vs 5.9 +/- 0.3 umol/l). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Similar increased =&gt; animals receiving uridine injection before LCA occlusion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Sharp increase in uridine concn =&gt; elimination. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Rate of uridine elimination in blood =&gt; similar in both animals with / without LCA occlusion =&gt; no difference in concn between two groups. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Uridine content =&gt; rats =&gt; AMI =&gt; 15min after IV injection =&gt; sharply decreased to 10.3 +/- 0.9umol/l =&gt; dropped below baseline =&gt; 30th min (4.9 +/- 0.5umol/l). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) 15min post uridine injection =&gt; blood uridine levels =&gt; 18.5 +/- 1.7umol/l (intact rats) 2-fold lower than in rats with AMI (p&lt;0.05). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) 30th min post uridine injection =&gt; uridine redn to 12.4 +/- 0.8 umol/l. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Excessive concns of uridine in these animals (8.0 +/- 0.6 umol/l) persisted over 60 min. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Previously reported =&gt; considerable disturbances of energy metabolism in ischaemic myocardium =&gt; post 15min after LCA ligation + peaked post 30min. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Our findings =&gt; coincided with accelerated elimination of uridine from the circulation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Related to increased myocardial demands for uridine under hypoxic conditions =&gt; activation of intracellular defense + adaptation mechns, esp. during periods of pronounced energy metabolism disturbances. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Our experiments =&gt; uridine =&gt; increased myocardial resistance to O2 deficiency under conditions of AMI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) In animals with MI =&gt; uridine =&gt; rapidly disappears from circulation =&gt; promotes anti-ischaemic cardiomyocyte defense mechns =&gt; stabilization of energy metabolism + maintenance of balance of LPO + AOS. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Experiments =&gt; selective mitoKATP channel blocker =&gt; 5HD =&gt; suggest =&gt; realization of protective effect of uridine =&gt; related to mitoKATP channel. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Current + previous studies =&gt; uridine promising cardioprotective prepn for prevention + therapy of AMI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="l data">Nuclear magnetic resonance lipoprotein abnormalities in prediabetic subjects in the Insulin Resistance Atherosclerosis Study</td>
+<td class="l data">(A) Several novel findings: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) Broad range of abnormalities in lipoprotein composition precedes the onset of diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) Associations for small HDL particle concn + large VLDL size =&gt; independent of the greater IR present in prediabetic subjects. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (3) Findings =&gt; consistent across glucose tolerance categories + in the 3 ethnic groups of the IRAS. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Results based to 2 statistical approaches: XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) Logistic regression analyses with incident diabetes as the dependent variable. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) ANCOVA models with the lipid variables of interest as respective dependent variables. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Both approaches yielded similar results =&gt; strengthens results of the present study + conclusion we would like to draw from these results. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Present study =&gt; evidence that abnormalities in lipoprotein composition =&gt; occur before the onset of T2D =&gt; contribute to the increased CVD risk in prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Highly significant findings (P=0.001) are robust =&gt; given the number of hypothesis tested + use of stepwise methods =&gt; replication in other data sets =&gt; warranted. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Previous report (gradient gel electrophoresis) =&gt; small LDL particles =&gt; identified as a risk factor =&gt; developing diabetes in elderly individuals. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) This study =&gt; subjects with small dense LDL particles =&gt; &gt; 2-fold increase risk of incident diabetes over 3.5 years =&gt; independent of age, sex, glucose tolerance + BMI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Adjustment =&gt; fasting insulin or TG&#39;s =&gt; rendered assoc. non-significant =&gt; suggested =&gt; small dense LDL =&gt; reflects underlying IR (represented =&gt; TG&#39;s or increasing fasting insulin levels) =&gt; rather than =&gt; causal relation between this lipoprotein phenotype + development of T2D. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) No measure of IR available for this report. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Present study =&gt; LDL size =&gt; assessed by NMR technology =&gt; related to incident diabetes =&gt; BUT adjustment for IR (directly measured) =&gt; association =&gt; non-significant. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Indication =&gt; assoc. with LDL size to incident diabetes =&gt; explained by inverse assoc of LDL size with IR =&gt; shown in previous cross-sectional studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Present study =&gt; VLDL particle size + small HDL particles vs LDL particle size =&gt; significant contributors to incident diabetes. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) VLDL particle size + small HDL particles relation to incident diabetes was independent of metabolic covariate + IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Previous reports =&gt; VLDL size + small HDL particles or HDL size (inversely) =&gt; increase IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) NMR-identified lipoprotein abnormalities =&gt; prevalent in patients with T2D =&gt; attributed underlying increase IR vs diabetic state itself. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) NMR =&gt; used to investigate compostional lipoprotein abnormalities =&gt; several previous studies involving T2D popns + diabetic mice, patient with T1D, T2D or IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Cross-sectional study =&gt; relation of small HDL to renal dysfunction =&gt; T1D patients. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Placebo-controlled intervention trial =&gt; Atorvastatin =&gt; redn concns of medium + small VLDL + large + medium LDL + increased concns of large HDL. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Findings  =&gt; consistent =&gt; 3 ethnic groups =&gt; IRAS + subjects with NGT or IGT at baseline =&gt; gender interaction =&gt; borderline significance =&gt; logistic regression models =&gt; findings =&gt; supportive of previous analyses =&gt; San Antonio Heart Study =&gt; pre-diabetic women =&gt; greater burden of cardiovascular risk factors vs men. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Relatively small number of cases =&gt; incident diabetes in women (n=76) + in men (n=53), =&gt; findings interpreted with caution. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) How might relation of lipoprotein size + subclass compostion =&gt; incident diabetes be explained? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Causal relationship might exist =&gt; alterations in lipoprotein size + subclass composition =&gt; directly affect pathophysiology of T2D =&gt; increased IR +/- impaired insulin secretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) FFA&#39;s =&gt; released from VLDL particles =&gt; excess FFA&#39;s =&gt; directly affect IR =&gt; inhibiting hepatic glycogen synthesis + glucose oxidn.  XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Present Study =&gt; relation of VLDL size to incident diabetes =&gt; redn after adjustment for IR =&gt; indicates that increased IR in prediabetic individual contributes  =&gt; associations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Previous report =&gt; clamp techniques used to assess IR =&gt; large VLDL particle concn =&gt; primary abnormality =&gt; complex lipoprotein subclass pattern =&gt; increased IR (High serum TG&#39;s, redn LDL size, increased overall LDL particle concn, redn large + increased small HDL particles). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Common genetic factors =&gt; underlie demonstrated lipoprotein abnormalities + diabetes risk. A no. of studies =&gt; small dense LDL =&gt; genetically influenced  =&gt; common polymorphism =&gt; cholesterol ester transfer protein gene =&gt; affects HDL + LDL particle size. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Potential candidate genes linking IR + dyslipidaemia =&gt; hepatic lipase gene + FA binding protein gene 2. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Lipoprotein abnormalities =&gt; assoc developing T2D risk =&gt; pro-atherogenic state in prediabetic individuals. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Prediabetic state =&gt; increased prevalence of cardiovascular risk factors =&gt; (previous studies) =&gt; present report =&gt; extends this knowledge =&gt; abnormalities of suze + composition of both VLDL + HDL particles =&gt; CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Present study =&gt; lipoprotein parameters in prediabetic subjects =&gt; resembled =&gt; overt diabetic patients vs that of non-converters. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Pro-atherogenic risk profile in prediabetic individuals =&gt; further supported =&gt; data from Nurses&#39; Health Study =&gt; risk of developing CVD in prediabetic women increase before onset of diabetes. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Present study =&gt; supportive data =&gt; explain this finding =&gt; whether these demonstrated proatherogenic lipoprotein abnormalities in prediabetic individuals =&gt; related to IR, OR impairment of insulin secretion =&gt; ongoing analyses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) A range of lipoprotein abnormalities in prediabetic individuals. Plus extend previous work =&gt; pro-atherogenic state in healthy, non-diabetic subjects who subsequently develop diabetes. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Import clinical + public health implications =&gt; rationale =&gt; aggressive prevention strategy =&gt; individual =&gt; high risk of developing diabetes e.g. IGT. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Prevention strategy =&gt; yields potentially favourable eff</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

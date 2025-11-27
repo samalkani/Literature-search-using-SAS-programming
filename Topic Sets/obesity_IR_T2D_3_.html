@@ -1,0 +1,1568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.accessiblecaption
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.aftercaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.batch
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7px;
+}
+.beforecaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.body
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodydate
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  width: 100%;
+}
+.bycontentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.byline
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.bylinecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.caption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.cell
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.container
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.contentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contentprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contents
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.contentsdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.contenttitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.continued
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  width: 100%;
+}
+.data
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasis
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataemphasisfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataempty
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datafixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datastrong
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.datastrongfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.date
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.document
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.extendedpage
+{
+  background-color: #FFFFFF;
+  border: 1pt solid #000000;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+.fatalbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.folderaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.frame
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.graph
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.header
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.headersandfooters
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.index
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.indextitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.linecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.note
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notebanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.output
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.pageno
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+.pages
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.pagesdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.pagesitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.pagesproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagesprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagestitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.paragraph
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.parskip
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.prepage
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitlefixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooter
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooteremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooteremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooterempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowfooterstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheader
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderemphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderemphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowheaderstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemfooter
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemtitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systitleandfootercontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.table
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+  border: 0;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+  border: 0;
+}
+.titleandnotecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.titlesandfooters
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.usertext
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warnbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Obesity + IR + T2D data set 3</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="1" cellpadding="7" rules="none" frame="box" summary="Procedure Print: Data Set REF2.OBESITY_IR_T2D_SORTED_3">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="l header" scope="col">Strengths</th>
+<th class="l header" scope="col">Weaknesses</th>
+<th class="l header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="l data">A major strength of our study is the large sample size drawn from English primary care electronic health records, with linkage to secondary care records. This large sample size enabled us to reliably estimate BMI cutoffs for overweight and obesity for the four main minority ethnic populations currently living in England. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The inclusion of the Arab population and the sufficiently granular categorisation of Black and south Asian individuals into ethnic subgroups is instructive, permitting clinicians to manage health-care needs related to these ethnic groups at much lower BMI values. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Ascertainment of type 2 diabetes diagnoses from electronic health records was by a validated algorithm designed to minimise miscoding and misclassification of diabetes type, thereby reducing the likelihood that individuals with type 1 diabetes or other forms of diabetes were included in our study population. (17) Restriction of the study sample to individuals with at least 12 months of continuous registration before their initial diagnosis of type 2 diabetes ensured that diagnoses were truly incident. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXX</td>
+<td class="l data">A limitation of our study is that, even though individuals registered in the CPRD are representative of the general adult population in the UK, (14) individuals with a recorded BMI measurement might not necessarily be representative of the general UK population. BMI data, if not recorded as part of registration with a general practitioner, tends to be recorded opportunistically (ie, when the patient is using health-care services for other reasons or when a BMI measurement is of direct clinical importance). X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We reduced this possibility by only using the first BMI value recorded from the registration date (these values would have probably been recorded for administrative and not health reasons).  XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our ﬁndings of lower BMI cutoffs for obesity in minority ethnic populations compared with White populations living in England apply only to the risk of developing type 2 diabetes, and might not apply to other endpoints, such as cardiovascular disease or all-cause mortality. Type 2 diabetes was chosen as the outcome of interest because it is the most specific obesity-related complication and a chronic, progressive disease with considerable health and socioeconomic costs. (21) XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BMI is a simple, inexpensive surrogate measure of body fat used in primary and secondary care, and is the subject of national and international guidelines on assessing adiposity. (3, 4, 28) Unlike BMI, body composition measures (eg, waist to hip ratio and total body fat) are not routinely measured in primary or secondary care, but might help to explain differences in the risk of type 2 diabetes between populations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In primary care, height and weight measurements are recorded as part of routine care by trained staff using medical grade anthropometric equipment. However, we were unable to verify whether all the individuals were measured in a similar and uniform manner across the practices over the 28 years between 1990 and 2018. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The generational status of minority ethnic populations in electronic health records in primary and secondary care is not recorded. Therefore, we cannot be certain of the extent to which our findings are applicable to future generations or to minority ethnic populations living in other countries or their country of origin. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Whether lower BMI cutoffs in non-White populations are due to differences in body composition, biochemical characteristics, lifestyle factors (eg, physical activity or diet), the genetic architecture of type 2 diabetes, or lifestyle–gene interactions remains unclear. (25–27) Future studies that examine the relative contributions of these mechanisms to the development of type 2 diabetes might help to explain our study findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further research is required to examine whether the same ethnicity-specific BMI cutoffs for overweight and obesity can be applied to trigger action to prevent type 2 diabetes in other countries.</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">However, there are some limitations in the current studies. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, the physiological roles of miR-320 under normal conditions in various organs are missing. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, the effect of miR-320 on glucose and lipid metabolism is not investigated by the mutual regulation of multiple organs. Furthermore, certain organs are composed of a variety of cell types, and different cell types may interact with each other by exosomes and other vesicles. Considering that the glucose and lipid metabolism disorder-associated diseases are systemic diseases, we should also pay attention to the interaction of miR-320 among certain organs and cell types. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, studies have reported the roles of miR-320 in various disease conditions using animal models, for example, I/R injury, but the expression patterns of miR-320 in related patients were less investigated, which limited the clinical prospect. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the mechanisms and functions of miR-320 were mainly investigated using expression vectors rather than genetically modified animal models. Although studies using miR-320 transgenic mice have been reported [150], up to now, the studies using miR-320 genetic knockout animal models have not been reported, which might be partially due to side effects on POLR3D. As reported previously, miR-320 is encoded directly upstream of the cell cycle gene POLR3D, which is a conserved subunit specific to RNA polymerase III and affects the overall function of the cell [19, 20]. It is worth noting that these models may be achieved by CRISPR-Cas9 or single base site-directed mutations, without affecting the function of POLR3D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">These results gave us implications that the miR-23a-3p–NEK7–-NLRP3 axis could be utilized as a potential therapeutic target in the alleviation or treatment of type 2 diabetes mellitus in the future.</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="l data">Strengths of the study are that we screened a large number of middle aged individuals from the Swedish general population and included both men and women with a spectrum of glucose impairments, none of whom were receiving treatment for diabetes. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Furthermore, we used the same inclusion criteria when selecting the validation cohort from the larger-population-based SCAPIS cohort. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we obtained similar results for the profiles of gut microbiota when using two different bioinformatics methods, indicating robust correlations between microbial features and deterioration of glycemic responses in our cohorts. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Although biotin deficiency in T2D has been reported (Maebashi et al., 1993) and several studies indicate that supplementation with biotin may improve glucose metabolism (Albarracin et al., 2008; Fernandez-Mejia, 2005; Lazo de la Vega-Monroy et al., 2013), there is no conclusive evidence, and future studies are required to accurately determine whether biotin deficiency plays a role in the pathogenesis and development of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Future studies should test whether restoration of altered microbial functions, such as butyrate production, in individuals with IGT and CGI might constitute a precision medicine approach to prevent or delay the progression to T2D. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">We acknowledge some limitations. First, given the substantial heterogeneity of DKD progression, there may be subgroups for whom our signatures may not be optimal. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Additional studies to evaluate genes involved in citrate production and conversion to aconitate will shed light on our current findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additional research using independent cohorts and targeted assays are needed to clarify these associations and shed further light on biological mechanisms underlying metabolite levels and DKD progression. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For future work, we will use independent cohorts with varying clinical risk profiles to further evaluate our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   A future aim is to evaluate our models on clinically distinct patient populations (e.g., by albuminuria group), and develop new signatures using an expanded set of metabolites.  XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, non-targeted metabolomics by flow-injection analysis cannot distinguish between metabolites with identical sum formula and only reports relative abundance change. In future work, we will use targeted gas chromatography-mass spectrometry or liquid chromatography–tandem mass spectrometry methods to replicate these findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, our “two-stage” approach to modeling kidney disease progression via eGFR slope has the advantage of being easy to interpret and analyze since standard statistical methods can be employed. However, this approach could entail an efficiency loss when there are missing data or irregular spaced repeated measures. A future aim is to develop appropriate weighting methods for unbalanced data. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, eGFR decline may not always be linear. However, despite the linearity assumption, eGFR slope offers ease of biological interpretation, and permits application of standard statistical modeling methods. Importantly, the CRIC Study has produced notable findings with eGFR slope as a marker for kidney disease progression (39,40). Nevertheless, we aim to examine nonlinear trajectories in future work. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="l data">However, our study presents important strengths: we used the case‐cohort design, which retains randomization, to both evaluate associations of 2-AAA and lysine with incident T2D and CVD. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our analyses were adjusted for multiple confounders within a well-characterized trial and, as an important novelty, we used repeated measurements of these metabolites, that allowed us to assess 2-AAA and lysine changes due to the dietary intervention. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Our study presents some limitations. First, we do not have available data on glycated hemoglobin (HbA1c), which was previously reported to be a biomarker of diabetes and CVD damage, independently of fasting glucose [23]. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, we did not find an effect of MedDiet on 1 year-changes in none of the studied metabolites. It may be possible that 1 year is not enough time to observe sound changes in metabolites, and as a consequence we did neither observe an association between 1-year changes of metabolites and the subsequent risk of T2D or CVD. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another limitation is that our results may be not generalizable because we used a Mediterranean population at high CVD risk. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, we cannot exclude the possibility of residual confounding regarding the observational associations between metabolites and cardiometabolic outcomes.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Further studies are needed to clarify the effect of diet on lysine, 2-AAA and pipecolic acid levels and the potential effect modification by dietary interventions on the CVD/T2D risk associated with these metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, new studies are needed to evaluate if lysine pathway metabolites may add value to the prediction of risk provided by HbA1c. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consequently, these results, especially those suggesting a potential interaction between the nutritional intervention and these 2 metabolites deserve further confirmation in independent prospective cohort studies and trials [24].</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="l data">The main strengths of our study include the case-cohort design nested within the PREDIMED trial, which enables the extension of the identified lipid patterns to all PREDIMED participants. Additionally, the analyses considering the complete lipidome allowed us to observe the effect of each lipid metabolite and each lipid group in the context of co-existing and interacting with the other plasma lipids. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">We acknowledge that despite our extensive adjustments, residual confounding cannot be ruled out. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, our results may not be generalizable to other populations because all study participants lived in a Mediterranean country and were at high cardiovascular risk. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additionally, many of the participants who developed diabetes during the trial were people at high risk at baseline. At baseline, case subjects with T2D presented high mean levels of fasting glucose (117 +/- 18 mg/dL), which could be because many had prediabetes at baseline. Thus, the baseline lipid biomarkers could reflect an established prediabetic profile rather than a non-diabetic risk profile. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this context, a recent study reported that plasma lipid profiles were similar in subjects with both prediabetes and diabetes (6), which indicates that our identified lipid patterns may be discriminating progressors versus non-progressors rather than healthy subjects versus subjects with T2D. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">However =&gt; one HRC limitation is the absence of indels: these make up 4% of total variants in the phase 3 1000G reference panel (18)XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The present study was limited to individuals of European ancestry: integration of these data with large-scale GWAS data from other major ancestral groups (as is being pursued by the DIAMANTE consortium) is expected to provide an additional boost to locus discovery, and to support further increases in causal variant resolution, most obviously at loci where extensive LD within European subjects limits the power of fine-mapping XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Both sites are present in the Genome Aggregation Database (28) and met quality control criteria in our data (average imputation quality &gt;0.7; association signal visible in multiple contributing studies), but their precise contribution to T2D-risk requires further in vitro and in vivo validation (THE CONTRIBUTION OF LOWER-FREQUENCY VARIANTS). XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Altered glycation has the potential to impact on multiple processes, and global perturbation of ST6GAL1 has broad effects including, in St6gal1 knockout mice =&gt; increased body weight and visceral fat accumulation (41).</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Thus, whether certain dietary factors interact with the potential BCAA-biosynthetic component of the gut microbiome pattern, thereby affecting BCAA levels, deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Despite the accumulating evidence that BCAAs are related to T2D pathogenesis, whether increased BCAA levels are a cause or consequence of T2D has not been elucidated. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX LysoPC is a signaling molecule involved in atherogenic and inflammatory processes (49), of which the major function needs to be clearly elucidated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Given that food intake and relevant nutrients possibly interact with the environment and the gut microbiome, and that these interactions would be reflected in the blood metabolites, the links among dietary intake, gut microbiota and metabolic biomarkers and their associations with T2D must be further investigated. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Because the response to the specific stimulus (e.g. chemicals, nutrients, etc.) can be distinct depending on gender and ethnic group (62), separate analysis in a certain population is required to apply the identified metabolites for planning the preventive strategy as well as for pharmacological targeting to treat T2D.</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="l data">Strengths of the study include the use of a well-characterised clinical trial cohort, an efficiently designed case-cohort study to yield a powerful study for a range of endpoints, which were independently adjudicated according to pre-defined criteria. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Like other RCT populations, ADVANCE study participants represent a selected cohort. For instance, ADVANCE study participants were required to have a history of CVD or CVD risk factors. Therefore, our results may not be generalisable to all individuals with diabetes, although other risk factors we measured are generally associated with risk of major endpoints in the expected directions. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Amino acids were measured in pragmatically collected plasma samples in the context of a multi-national RCT and we cannot rule out the potential for differential pre-analytical sample handling or sample degradation during storage, which may have biased our results [44], although these samples were analysed at first thaw. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also present data suggesting broadly comparable concentrations of amino acids relative to other cohorts. Another potential limitation is the analysis of samples from non-fasted participants, although in clinical practice, fasting is rarely required among individuals with type 2 diabetes. NMR spectroscopy has been used to investigate changes in amino acids 30 min after a standardised liquid meal [45] and effects sizes were generally relatively small, although the immediate postprandial state is likely to give larger effect estimates than are at play in this study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Although the evidence from the present study suggests that these might only be very moderately useful biomarkers in incremental prediction of adverse events in individuals with type 2 diabetes, the pathophysiology underlying these associations and the possibility of intervention studies are intriguing and worthy of further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The causal pathway may not be unidirectional; a recent Mendelian randomisation study suggests that genetically elevated BCAAs (via impaired catabolism) are associated with increased risk of type 2 diabetes [34], although a better understanding of the underlying pathway is required to increase confidence in this observation [35]. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our data strongly support the need for further studies to determine why higher phenylalanine appears to be a consistently adverse signal for CVD outcomes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX That noted, counter-intuitively, we have reported that metformin in fact lowers, not raises, tyrosine levels in individuals with CVD and at high risk of diabetes [16]. The effect of other glucose-lowering drugs on amino acid profiles in individuals with diabetes would now be of interest. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further studies are now needed to validate our novel observations and to examine whether our findings may represent causal pathways. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Most notably, the identification of tyrosine as a potential marker of microvascular risk requires further study.</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="l data">Our results are reliable based on the three-stage design. XXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">However, there are several limitations in our study. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The association between neuroendocrine stress response-related miRNAs and T2DM could not be proved causality; follow-up studies are needed to confirm our findings. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Experimental study is needed to clarify the role of these miRNAs in the molecular mechanisms of T2DM. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">The association between neuroendocrine stress response-related miRNAs and T2DM could not be proved causality; follow-up studies are needed to confirm our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Experimental study is needed to clarify the role of these miRNAs in the molecular mechanisms of T2DM.</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="l data">Our findings are slightly different from those of previous metabolomics studies, which were not able to show that metabolites materially improved type 2 diabetes risk prediction over other clinical risk factors [11, 15, 16] XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">We acknowledge that the results of our population-based analysis should be interpreted with caution since several limitations such as unmeasured factors (e.g. changes in lifestyle factors, medications or insulin secretion and resistance over time) might have influenced our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The lack of independent validation is due to the lack of availability of comparable cohorts of normoglycaemic individuals who developed type 2 diabetes for whom the necessary data were available. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Five TAGs were prioritised by our methodological approach but we did not find significant enrichment of pathways associated with these species. This might be because the software we used for pathway enrichment analysis may provide poor reporting for lipid classes and pathways or because only five TAGs in a particular metabolic pathway are likely to be less than expected by chance for enrichment. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Last, we recognise that participants in this study were all of European descent. Further work is needed to determine whether our findings can be replicated in an independent cohort of the same ethnicity and to extend the study to other racial/ethnic groups. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Further validation studies in larger sample size are still needed before the clinical application miR-375 as a biomarker for prediabetes and T2D.</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">The current results emphasize that progressively larger sample sizes, coupled with higher density sequence-based imputation (13), will continue to represent a powerful strategy for genetic discovery in T2D and in complex diseases and traits more generally. At known T2D-associated loci, identification of the most plausible T2D causal variants will likely require large-scale multiethnic analyses, where more diverse haplotypes, reflecting different patterns of LD, in combination with functional (31,50,51) data allow refinement of association signals to smaller numbers of variants (2) XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">In such instances, assessment of changes in metabolites across the diseased organ would prove more valuable, such as sampling arterial blood and the coronary sinus for the heart (see limitations of metabolomics described in the section Metabolomics), or having a tissue biopsy to compare against the serum/plasma sample. Nonetheless, due to the ease of obtaining a serum / plasma sample versus collecting a tissue biopsy or invasive catheterization, we must rely on molecular explorations in animal models of disease to confirm and / or understand novel metabolic alterations identified from human blood-based metabolomic signatures.</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="l data">confounding factors =&gt; dietary FA intake + highlights that MR studies have the power to disentangle causal mechanisms that may be obscured in cross-sectional studies XXXXXXXXXXXX   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    Strengths of study =&gt; extensive testing for violations of MR assumptions + replication of main findings using large independent cohorts (different methods for quantification) + use of gold standard measures for IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    Pleiotropy =&gt; no evidence, genetic instruments showed associations with cardiometabolic traits that were in expected directions + causal estimates agreed between different analysis methods. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">The study did not evaluate the longitudinal effect on CVD. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Limitations of our study =&gt; moderate power in MR studies + inherent limitations of untargeted metabolomics discovery platform =&gt; metabolite capture (e.g. polar amino acids) + separate sugars + other non-polar molecules. Untargeted metabolomics =&gt; detected several thousand metabolic features =&gt; but limited availability of standard compound spectra in in-house + public libraries =&gt; prevented quantification of the entire spectrum of plasma metabolome =&gt; biased pathway enrichment analysis. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Causal relationships =&gt; consistent across studies BUT vaildation required of physiologic models of IR =&gt; some sources of bias e.g. canalization (unmeasured horizontal pleiotropy) =&gt; cannot be eliminated. Unique contribution of this study =&gt; assess causal effects on the plasma metabolome COULD NOT =&gt; examine reverse causality due to lack of genetic instruments available for majority of metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Future studies =&gt; hypothesized but untested relationship with cardiovascular disease requires further investigation. The effect of IR =&gt; elevated tyrosine =&gt; non-significant tendency in all cohorts =&gt; reached nominal significance after =&gt; combn of estimates in meta-analysis =&gt; Future studies =&gt; considerable risk of result being false +ve due to multiple testing =&gt; further investigation in larger MR studies (not been reported before). Associations between worse IR / T2D risk + circulating tyrosine levels =&gt; established in observational + longitudinal studies (42, 43)  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Speculation =&gt; the identified association between tyrosine + increased T2D risk =&gt; due to concomitant IR =&gt; observed trends need to be confirmed through larger samples. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Relative circulating levels =&gt; POA + OA =&gt; unlikely to reflect endogenous biosynthesis. Further experimental investigation =&gt; exact contributions of SCD-1, exogenous source, catabolism + excretion.</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="l data">To the best of our knowledge, the current study was the first study showing that acylcarnitines could effectively predict incident diabetes, by an accurate quantification of relevant metabolites (18). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">However, our study also has some limitations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, only 77% of participants were successfully followed up, and a few baseline characteristics were found different comparing those lost to follow-up with all eligible participants, including more urban residents, and high levels of educational attainment, family income, and plasma triglycerides (13). Nevertheless, the follow-up rate was comparable to other prospective studies conducted in comparable age-groups (44,45). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, the diagnosis of diabetes in the current study was based on either self-report, taking diabetes medications, or a single fasting glucose, which did not constitute a rigorous evaluation for the presence or absence of diabetes. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, our participants are limited to middle-aged and elderly Chinese adults, who might have a higher risk of developing diabetes than Caucasians and younger adults. Thus, it is unknown whether the results could be extended to other age, racial, and ethnic groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, although our results were internally
+cross-validated, it is critical that they are independently replicated in different prospective cohorts. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">These findings need to be replicated in other populations, and underlying biological mechanisms should be elucidated in future studies. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">19</td>
+<td class="l data">The present report has several strengths, by extending the previous observations in important directions. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, we demonstrate in a prospective study that the previously reported association of lower adiponectin levels with increased risk of T2DM manifests at a more proximal stage, and is evident during transition from normoglycemia to prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, our findings suggest that the putative mechanisms whereby adiponectinemia interacts with glucose homeostasis to confer protection against dysglycemia are operative even in persons who are among the highest risk groups for diabetes, namely, offspring of parents with T2DM. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, our findings were obtained from a biracial cohort and were consistent in men and women, indicating that the known gender and ethnic differences in adiponectin expression do not abrogate the interaction between adiponectinemia and glucose homeostasis. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we have used</td>
+<td class="l data">The present report has some limitations related to the population studied: our findings were obtained from offspring of parents with T2DM. As these participants represent a selected group at high risk for diabetes, the strong association between baseline adiponectin levels and incident prediabetes may not be exactly applicable to individuals without a family history of diabetes, or the general population. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, our analyses focused on baseline adiponectin levels; thus, our assessment did not include the potential effects of changes in adiponectin secretion that may have occurred during the course of the POP-ABC study. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">The mechanisms whereby adiponectin exerts its favorable cardiometabolic effects are not fully understood, but could involve improvement in insulin action, decreased inflammatory tone, interaction with fibroblast growth factor (FGF)-21 and amelioration of lipotoxicity, among others. (34–39) XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">20</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Clinical behavior change efforts, health system changes, novel technologies, and robust policy strategies must complement and facilitate these individual food choices, which together will reduce cardiometabolic disease and economic burdens across the population.</td>
+</tr>
+<tr>
+<td class="r data">21</td>
+<td class="l data">This is the first population-based study on AA profiles with a large number of South Asian migrants and native Europeans conducted in the same setting and with a lengthy follow-up. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, loss to follow-up did not differ by ethnicity, and it is unlikely that the strengths of the associations within ethnic groups would differ in those lost to follow-up. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">However, the study was conducted only in middle-aged men and the findings may not apply to women or other age groups. Loss to follow-up occurred in approximately one-third of the participants, and while the baseline characteristics of the whole study group and those with follow-up data only were almost identical, it is likely that those lost to follow-up would be more at risk of developing diabetes and have more adverse outcomes, leading to a possible underestimation of the associations between AAs and incident diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We did not have baseline measures of hepatic function; hence we could not explore hepatic effects on AA levels and associations. In addition, many associations have been compared within and between ethnic groups, and although the trends are consistent with previously published results in European populations, caution is needed in interpreting multiple comparisons. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, comparisons of AA associations with incident diabetes within and between South Asian subgroups are based on small numbers and should be interpreted with caution. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">Abdominal adipose tissue in South Asian individuals contains larger and more dysfunctional adipocytes [37]. It has also been suggested that increased AA levels may result from increased protein turnover in association with increased central obesity and reduced lean body mass [7]; this is a plausible, but untested, explanation for the increased levels of isoleucine, tyrosine, alanine and glutamine seen in our more centrally obese South Asian men. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further research is needed to understand the role of diet in the relationship between serum AA levels and risk of diabetes XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">22</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Although our study has several strengths, we also acknowledge some limitations. First, based on our previous studies, we had expected greater IR (Si) and hyperinsulinemia in African Americans with modestly severe obesity and prediabetes than their white American counterparts, but this was not the case. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, our observation suggests a possible ethnic and racial threshold effect of obesity (BMI) on glucose homeostasis, insulin sensitivity, and lipid and lipoprotein metabolism, as well as cardiometabolic parameters. This hypothesis deserves further elucidation. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Third, the study was cross-sectional, and hence cause-effect relations among the degree of obesity and cardiometabolic parameters could not be ascertained. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fourth, the respective putative mechanisms of the paradoxical relationships of IR versus TGs and HDL-C and HDL-C/TG ratio in obese African Americans could not be ascertained in our study. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Fifth, we did not measure the visceral abdominal adiposity that is well established as an important determinant of IR in white Americans, but not in African Americans and other black populations (32–34). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sixth, there was a sex imbalance with more females than males (8–10:1) in both white Americans and African Americans. However, excluding males from
+our analyses did not change the mean values of the anthropometric and metabolic parameters or the relationships of BMI and the Si and cardiometabolic parameters in both ethnic groups. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the genetic markers for the paradoxical relations of IR and CVD risks in African Americans are not known. Thus, an understanding of the genomic and/or proteomic basis of IR and glucose homeostasis, lipid and lipoprotein synthesis, and catabolism in modestly severely obese African Americans is warranted. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">The mechanism of the putative greater Sg and GEZI values, however, remains to be elucidated in obese and nonobese African Americans with and without prediabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The reasons for the IR and lipid / lipoprotein paradox in blacks are unknown. In this regard, ethnic and genetic interactions have been implicated in hepatic lipid and lipoprotein synthesis and clearance as possible mechanisms for the paradoxical differences in lipids / lipoproteins in obese and non-obese African Americans and blacks residing in diverse populations (23). XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We suggest that longitudinal studies of underlying putative mechanisms and molecular targets for glucose homeostasis, lipid/lipoprotein metabolism, and HDL functionality in a large sample of obese African Americans and white Americans are warranted.</td>
+</tr>
+<tr>
+<td class="r data">23</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Chronically increased fat oxidation, especially in the setting of decreased mitochondrial function, might also contribute to the accumulation of lipid products that have been implicated in the pathogenesis of diabetes (41). Whether these pathways contribute to increased diabetes risk in human hemochromatosis, however, is unknown. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We previously demonstrated no change in basal or insulin-stimulated (in vivo) pAkt in skeletal muscle (18), and herein we shown that the increased hepatic glucose production occurs in the face of paradoxically increased insulin signaling in liver (Fig. 5D and E). Why insulin signaling is upregulated is not known. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Levels of the insulin-sensitizing adipokine have been shown to be elevated in Hfe-/- mice (18), but other unknown factors may also contribute, including compensation for decreased insulin levels (17) or decreased inflammatory signaling in macrophages based on their lower iron content (42). Why this increased insulin signaling does not translate to decreased levels of gluconeogenic enzymes is unclear and is under investigation.</td>
+</tr>
+<tr>
+<td class="r data">24</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Although recent studies in ZDF (fa/fa) rats suggested an important role for the ceramide pathway in the late destructive phase of lipid overload in the pancreatic β cells [16], the overall underlying mechanisms leading to lipoapoptosis remained poorly understood. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Taking into account that mir-375 also regulates insulin secretion, mir-375 could emerge as a potential therapeutic target for prevention and intervention of β-cell dysfunction and β-mass loss in type 2 diabetes.</td>
+</tr>
+<tr>
+<td class="r data">25</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">Future studies will address whether the AcylCN profile can serve as a biomarker to assess the response of obese and T2DM participants to interventions. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">26</td>
+<td class="l data">&nbsp;</td>
+<td class="l data">The major limitation of this study is the number of subjects investigated. The number was limited by the complexities of the metabolic and imaging studies. For this reason, addition studies are needed to confirm our conclusions. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One other limitation of the study is that South Asians had higher percentage of subjects with family history of diabetes which could be a confounding factor. However, the ethnic differences in insulin resistance also translate in to higher prevalence of type 2 diabetes in South Asians and random selection of healthy young volunteers is bound to result in this difference in family history of diabetes between Caucasians and South Asians. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One other limitation of this study is lack of dietary information in the two groups. However, reported frequency of exercise was similar in both the groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although we have shown that abnormalities in adipose tissue amounts, distribution, and function can account for a significant portion of the predisposition of South Asians to insulin resistance, we cannot rule out the possibility that genetic factors of a more generalized nature also contribute to insulin resistance. For example we have shown that South Asians have a relative increase in a polymorphism of ENPP1/PC-1 that has been reported to be associated with increased insulin resistance and predisposition to type 2 diabetes [5,6]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="l data">The major limitation of this study is the number of subjects investigated. The number was limited by the complexities of the metabolic and imaging studies. For this reason, addition studies are needed to confirm our conclusions. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

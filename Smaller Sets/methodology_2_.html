@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Methodology data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.METHODOLOGY_SORTED_2">
+<caption aria-label="Data Set REF.METHODOLOGY_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">HERMES: a molecular-formula-oriented method to target the metabolome</td>
+<td class="data">Our results demonstrate that a conventional LC/MS-based untargeted metabolomic experiment can contain up to ~50 times more nonspecific and redundant data points than sample-specific and selective ones, which can account for as much as 90% of the MS2 acquisition run time in a state-of-the-art iterative DDA experiment. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These results are consistent with the findings of previous studies that relied on isotopes to annotate metabolomics data (3). XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although HERMES was validated by using a 13C-based credentialing approach, it does not require isotopic labeling but instead implements a molecular-formulaoriented method that is generally applicable to all sample types. Thus, HERMES provides a broad-scope solution to annotate the large number of ‘junk’ MS1 and MS2 signals, which lead to low-quality MS2 spectra, false-positive identifications and an overall low number of identified metabolites. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX By applying HERMES, MS2 coverage is improved by focusing MS2 acquisition time on sample-specific, MS1 preannotated, and biologically relevant compounds. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to DDA, the continuous targeted MS2 acquisition in HERMES does not acquire MS1 scans nor use dynamic exclusion, allowing a cleaner and easier deconvolution and thereby increasing the quality of MS2 spectra and the number of identified metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This is also a differentiating element compared with DIA, where multiple precursor ions, including redundant and biologically irrelevant ions, are simultaneously fragmented. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although HERMES relies on high-resolution MS data, it can be applied to the full range of HRMS instrumentation and mass resolution.  XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We tested HERMES using an LC-quadrupole time of flight MS at ~30,000 resolution; the only drawback was that certain isotopic patterns were difficult to annotate because of lower isotopic fidelity and possible interferences, as shown in Extended Data Fig. 1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The coverage of compounds detected by HERMES in any given sample is determined by the list of molecular formulas. We currently provide ready-to-use lists for most important databases in biomedical and/or enviromnental studies: HMDB, ChEBI, NORMAN, KEGG, LipidMaps (28), and LipidBlast (29), which can be used individually or merged in a customized way, leading to &gt;1 × 103–1 × 10 4
+ unique molecular formulas.  XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Yet HERMES provides maximum experimental flexibility by allowing users to add new molecular formulas not reported in public databases (30), including in-silico secondary metabolism prediction (31,32,33). Such as environmental microbial degradation, biotransformations of gut and soil / aquatic microbiota, or small peptides such as dipeptides and tripeptides. Therefore, in a context where virtually all known molecular formulas (&gt;1 × 103–1 × 10 4 ) can be covered, we believe that ‘untargeted’ and ‘broad scope targeted’ are interchangeable terms to define HERMES. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Future developments should provide optimized maximum ion injection time and collision energies for each inclusion list entry to reduce the number of MS2 scans required, and improve the quality of MS2 spectra, particularly for low-intensity SOIs. Also, the ability to annotate in-source fragments by HERMES is determined by the size and content of public (and in-house) MS2 databases. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In-source fragments from metabolites that are not present in a MS2 database, or do not contain low-energy MS2 data, will not be annotated. As a rough guide, we currently filter out ~10% of the SOIs as in-source fragments; however, this percentage may change as more metabolites are added to MS2 databases.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the use of sample-specific and high-quality MS2 spectra linked to pre-annotated precursor ions (that is, molecular formula, adduct) should restrict the range of known and unknown chemical structures for in-silico MS2 fragmentation tools. This includes the possibility to find unknown isomeric forms from known molecular formulas, provided that these novel structural isomers produce sufficiently specific fragmentation spectra. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">Cognitive analysis of metabolomics data for systems biology</td>
+<td class="data">Outlook on the Future use of AI in Metabolomics Data Interpretation =&gt; The future is in improved AI cognition. AI-based NLP literature searching addresses a major challenge in metabolomics: the categorization of metabolite relationships within biological contexts. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We have demonstrated four workflows that highlight the potential for AI-assisted analysis of metabolomics experiments. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A complete targeted or untargeted mass spectrometry workflow will always be necessary to formally identify dysregulated metabolites, however literature-evidence was used to accelerate this process. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Literature searching allowed for the prioritization of understudied metabolites with respect to a disease or condition of interest. Natural language processing software quickly identified relevant articles, pointing to the pertinent research that was performed on a particular metabolite. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With this information, research workflows were accelerated, providing an understanding of biological activity of metabolites in the specific disease condition, reducing the need for expert-level knowledge. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">State of the Field in Multi-Omics Research: From Computational Needs to Data Mining and Sharing</td>
+<td class="data">Challenges abound – from dealing with biological complexity, to over-simplified models, to technological limitations associated with data generation, to organization of high throughput data for comprehensible visualization, to drawing meaningful conclusions. In this treatise, we did not cover the success achieved with multi-omics in various domains of microbial, plant, animal, and biomedical research in recent times to keep the scope focused and relevant to a diverse audience. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this document, we have not touched upon several upcoming and exciting areas of multi-omics research as they are yet to mature. For instance, single-cell multi-omics are currently driven with efforts mostly at the genomic (single cell DNASeq), transcriptional (e.g., single cell/single nuclear) and epigenomic (single ATAC-Seq, single cell bisulfite sequencing) levels. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX They are currently in the early stages of inception and, as more promising works will ensue, researchers will reach precision with efficient capture of single cell proteomics and
+metabolomics. Currently, some early single cell proteomics work is emerging in the mass spectrometry driven omics area of proteomics (e.g., SCOPE2) (Specht et al., 2019). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX From collective experience and evidence, the key to effective exploratory data analysis, hypothesis generation and interpretations is reliant – to an extent – on understanding the underlying methods used to build or digest them and draw inferences. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With more high dimensional biological data generation in various arms of biology, be it plant, microbial, developmental/disease biology, and future implementation of various multi-modal multi-omics, it will be more likely to observe growth of such ML/DL methods. Hence, the applied ML/DL community in the bioinformatics domain will have to generate models that are interoperable, stable, and well benchmarked at various regularizations (tunable) for users to derive robust reproducible results. Alternatively, such ML/DL developers and researchers can also clarify the uncertainty bounds associated with their tools for the user community. As a nascent field, there is a dearth of studies or benchmark tools and resources to direct an upcoming community, but this review. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Ion mobility collision cross-section atlas for known and unknown metabolite annotation in untargeted metabolomics</td>
+<td class="data">In this work, we developed a large-scale ion mobility CCS atlas, namely, AllCCS, to support metabolite annotation in IM–MSbased metabolomics. Although several experimental CCS databases have been developed (22,24,26,47), AllCCS is unique because it provides a unified platform to store, standardize and share experimental CCS values from different labs and instruments. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One possible concern is the inconsistency across different IM–MS instruments. A recent work from Schmitz group observed that most compounds have &lt;1% errors between traveling wave IMS (TWIMS) and DTIMS, but some compounds showed larger deviations up to 6.2% (48). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, in AllCCS, we developed a five-step standardization procedure to automatically clean up and unify the experimental CCS records, which facilitates overcoming the variations from different instruments and labs. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  . The improvements of CCS prediction are attributed by three major factors (Supplementary Table 7): (1) AllCCS used large and widecoverage CCS records to train the machine-learning-based prediction model; (2) the use of a five-step standardization strategy and unified CCS values overcome the biases across different instruments and labs and improved the data quality of the training set; (3) the selection of optimized molecular descriptors (MDs) improved the prediction accuracy. In addition, AllCCS includes the representative structure similarity (RSS) score to estimate the prediction accuracy for one compound. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    Finally, although we focus on metabolites, AllCCS also supports the CCS prediction for other small molecules, like drugs, natural products, pesticides etc. Metabolite annotation is one of the major bottlenecks for untargeted metabolomics. Metabolite annotation usually requires high quality of experimental MS/MS spectra. However, many experimental factors, such as high sample complexity, low concentration and co-elution of isobaric metabolites, present challenges to acquire high quality of MS2 spectra. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, the measurement of CCS value is less affected by experimental factors, and could be accurately acquired from molecular ions even with low abundances. Now, the use of multi-dimensional match, including CCS match provides multi-dimensional characterization of metabolites. For example, ~75% of low abundant features have reduced candidate numbers with the addition of CCS match (Supplementary Fig. 14). We demonstrated that the addition of CCS values to the multi-dimensional match improved the annotation confidence with reduced false candidates and improved ranks of correct candidates. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Currently, AllCCS does not directly process raw IM–MS data files. Instead, we aim to incorporate AllCCS into other data processing tools (e.g., MSDIAL451) to accelerate the workflow from raw data processing to compound identification. In addition, developers could also integrate AllCCS with other data processing software tools such as XCMS52 and MZmine (53). Unknown metabolites are generated from endogenous and exogenous resources, and have no standard MS/MS spectra available. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Currently, unknown metabolite annotation is mainly
+performed using in-silico MS/MS tools (e.g., MS-FINDER45 and SIRIUS54). XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this work, we further demonstrated that AllCCS provided a promising strategy to integrate the predicted CCS and in-silico MS/MS tools for unknown annotation, and facilitated extending the assessment of metabolic pathways and activities with new chemical structures. These unknown metabolites were created from KEGG compounds via in-silico enzymatic reactions, because KEGG covers ~6000 species and various compounds, including primary metabolites, secondary metabolites from plant and bacterium, and xenobiotic compounds (55). In the future, other databases such as RECON56 are also good choices for metabolic reconstruction towards human metabolism study. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we believe this strategy will have more powerful prospects when combined with other data processing tools (e.g., MS-DIAL4) and advanced algorithms (e.g., GNPS9 and MetDNA10). Taken together, the AllCCS atlas has provided a high-quality and unified CCS database for IM–MS, and further opens a new avenue for known and unknown metabolite annotation in IM–MS-based untargeted metabolomics. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">Comprehensive Isotopic Targeted Mass Spectrometry: Reliable Metabolic Flux Analysis with Broad Coverage</td>
+<td class="data">MFA plays an important role in systems biology research as a highly useful technique to determine dynamic metabolic reactions in the metabolome (1,19,32,35,40,70–72). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, metabolite coverage in MFA is limited to a relatively small number of metabolites, mostly of central carbon metabolism  XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Central carbon metabolism (CCM), including glycolysis, tricarboxylic acid cycle and the pentose phosphate pathway, is the most fundamental metabolic process in the activities of living organisms that maintains normal cellular growth). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, MS detection in MFA requires optimal sensitivity, since isotopic peaks tend to exponentially decrease with m/z. While a number of previous approaches have been developed, (26,27,34,70,73) broad and reliable detection of cellular flux currently remains a challenge. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this study, we have described an innovative CIT-MS strategy to enable broad MFA (Figure 1) for the reliable and routine measurement of biological systems such as cell models. CIT-MS is based on LC-MS/MS detection, since it provides excellent sensitivity for detecting exponentially decaying isotopic signals. In addition, large-scale LC-MS/MS has been established to measure levels of up to ~1,900 metabolites/features (50,51). XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Toward turning this approach into a practical tool in MFA, we have developed and optimized LC-MS/MS data collection and analysis approaches, isotopic peak identification methods, and computational algorithms. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Starting with a list of 310 metabolites for which all (unlabeled) chemical standards were available in-house, the isotopic MRMs were assembled depending on the number of carbon atoms (for 13C-tracking) in the precursor and product ions. After data collection, MID and ME were calculated to correct for natural abundance. Similar to KFP, (25–28) our novel approach was developed to study flux but was able to derive relative flux, which is highly useful in comparative MFA. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Taking this pilot study for example, accurate quantitation of 46 metabolites will cost a lot of time, effort, and expense; for best quantitation, stable isotope labeled internal standards (iSTDs) are often required, but many iSTDs are not commercially available and/or very expensive. In contrast, the approach described herein does not require absolute quantitation, which significantly reduces experimental efforts in terms of both time and complexity. Notably, our method still well meets the requirement to investigate flux changes, when comparing biological systems under different status. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In an initial validation, our results indicated excellent CIT-MS performance in MFA as determined by glucose isotopologue standards (Figure 2). Cumulatively, these data showed that CIT-MS has good analytical performance for reliable and broad MFA. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a proof-of-principle study using Myc-On and Myc-Off Tet21N cells, 142 of 310 unlabeled metabolites were detected. We further found that 80 metabolites were able to be enriched by U-13C6-glucose (Figure 3), most of which achieved steady state within 96 h of isotopic culturing (Figures 4 and S2–S4). The PCA score plot showed Myc-On and Myc-Off cells to have dramatically different enrichment profiles under the steady state (Figure 5A). Univariate testing showed significant (p &lt; 0.05) enrichment differences in 37 metabolites, nine of which also had FC &gt; 2 or &lt; 0.5 (Figure 5B). These findings suggest our novel CITMS method to be highly applicable and scientifically relevant to Myc(oncogene)-related metabolic reprogramming (40,61,65,66). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We further applied CIT-MS in a pseudosteady state MFA study. Within 27 h of isotopic culturing, we determined 46 metabolites for which disappearance of the unlabeled form followed an exponential decay function. Based on fR values, Myc-On and Myc-Off cells clearly had differential flux profiles under the pseudosteady state (Figure 6). In particular, 8 metabolites had significantly downregulated flux in Myc-On cells (p &lt; 0.05 and FC &lt; 0.5), and 18 metabolites were significantly upregulated (p &lt; 0.05 and FC &gt; 2) (Table 2). Interestingly, 5 and 3 metabolites had relative flux present only in Myc-On and Myc-Off cells, respectively. Notably, some of these metabolites were rarely connected to the Myc oncogene or more broadly, cancer. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A primary argument for CIT-MS over existing MFA approaches is broader coverage of the metabolome. For instance, a comparison of various methods for flux analysis of Mycinduced metabolic reprogramming in B-cells showed isotopically non-stationary 13C flux analysis to achieve maximum resolution, although enrichment could only be determined for 18 amino acids (40). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A recent comprehensive 13C-MFA of E. coli metabolism using traditional GC-MS returned seven validated metabolites for analysis, all representative of central carbon metabolism (71). In contrast, 142 targeted metabolites were reliably detected using our proposed method; while 80 were found to be enriched, and 46 were successfully fitted to exponential decay. Therefore, CIT-MS provides increased metabolome coverage for routine flux analysis, a readily apparent benefit to current techniques. In addition, some studies have proposed methods for high-resolution (HR) 13C MFA (74–79). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CIT-MS can be used as a complementary approach to HR 13C MFA, and based on MRM detection, it provides unique advantages of high sensitivity and specificity which are highly useful to access lowabundance metabolites and isotopic peaks (80). While detailed biological interpretation is out of the scope of this study, our MFA results from Tet21N cells fit well with previous studies. As is well-known, Myc causes significant alterations in global gene and protein expression, and activation of the Myc oncogene facilitates proliferation through metabolic reprogramming (36,40,61,65,66). XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Under the steady state, we found that significant metabolites in Myc-On cells all had low enrichment compared to Myc-Off cells, especially amino acid and TCA cycle metabolites (Figure 5B). Additionally, fR values of many TCA cycle metabolites were decreased in Myc-On cells under the pseudosteady state, while glutamine flux was increased in these cells (Table 2). These results indicate that Myc-On cells are less dependent on glucose in the metabolome. In fact, previous studies showed that Myc-induced metabolic reprogramming resulted in glutamine addiction, despite the abundant supply of glucose. In addition, glutamine addiction was correlated with Myc-induced redirection of glucose carbon away from mitochondria, as a result of the Warburg effect (66,81,82). Furthermore, it would be very interesting to carry out further biological validation of the significant metabolites in Figure 5B and Table 2, especially those present only in one group of cells (Myc-On or Myc-Off). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX . Currently, we are making significant efforts to the analytical process to accommodate automation and assist with the deconvolution / computation process. Eventually, the CIT-MS method will be simple to conduct, incorporating an add-in package into the commercial software. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Hydroxysteroid 17-β dehydrogenase 13 variant increases phospholipids and protects against fibrosis in nonalcoholic fatty liver disease</td>
+<td class="data">We found lower prevalence of fibrosis (Figure 1 and Table 1) and increased concentration of phospholipids in the livers of subjects carrying the HSD17B13 rs72613567:TA variant compared with non-carriers (Figure 2). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Analysis of the liver transcriptome using RNA-seq and qPCR revealed marked downregulation of multiple inflammation-related gene sets (Figure 3). X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Plasma concentrations of the key proinflammatory cytokine, IL-6, were lower in carriers of the HSD17B13 variant as compared with non-carriers (Figure 3). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Metabolic pathways contributing to (intrahepatic triglyceride) IHTG synthesis, including (De-novo lipogenesis) DNL and the rate of in vivo lipolysis and hepatic insulin sensitivity, were unaltered in carriers of the HSD17B13 variant compared with non-carriers (Figure 4). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The prevalence of fibrosis, the most important predictor of mortality in NAFLD (17), was significantly lower in carriers compared with non-carriers of the HSD17B13 variant (Figure 1 and Table 1), consistent with the study of Abul-Husn et al. (1) and that of Pirola et al. in 356 patients with biopsy-proven NAFLD (3). In the latter 2 studies, as in the present study, the HSD17B13 variant was not associated with a change in steatosis (Figure 1) (1, 3). In a larger study comprising 756 adults with biopsy-proven NAFLD, Ma et al. found increased steatosis in carriers compared with non-carriers of the HSD17B13 variant (rs72613567:TA) (2). Unlike previous studies, features of non-alcoholic steatohepatitis (NASH) were similar in our data (Figure 1 and Table 1). This could reflect a smaller sample size compared with previous studies. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Concentrations of hepatic phospholipids, including PCs and PEs, but not other lipids including triglycerides, DAGs, or ceramides, were increased in variant allele carriers compared with non-carriers (Figure 2). This lipid pattern is geometrically opposite to that seen in deficiency of choline, an essential nutrient, in which concentrations of PCs and PEs are decreased (18, 19). Dietary restriction of choline predisposes to fatty liver in humans, and its daily requirements to prevent liver dysfunction are highly variable (18, 20, 21). In mice, dietary restriction of choline and/or genetic inhibition of hepatic PC synthesis lead to liver inflammation, NASH (22), and liver failure (23). In contrast, increasing PC synthesis by choline treatment has been shown to prevent both sugar- and alcohol-induced cirrhosis in rats in carefully performed studies published in 1949 (24). Moreover, dietary supplementation of PC has been shown to protect against alcohol-induced liver fibrosis and cirrhosis in non-human primates, possibly by promoting collagen breakdown (25). Decreased expression of a phospholipid degrading enzyme PLD4 (Figure 3C) suggests that the phospholipid surplus could be secondary to the reduced degradation of phospholipids in HSD17B13 variant carriers as compared with non-carriers. Phospholipids constitute the surface layer of lipid droplets, and their excess could be hypothesized to enhance storage capacity of lipid droplets, in keeping with increased hepatic expression of a key lipid droplet protein, LPIN3, in HSD17B13 variant carriers (Figure 3C). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The present data thus raise the possibility that the HSD17B13 variant might protect against progressive liver disease, perhaps especially in choline-depleted individuals, by increasing synthesis and/or decreasing breakdown of hepatic phospholipids. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The molecular mechanisms linking phospholipids and progression of fibrosis are poorly understood, but at least in choline- and methionine-depleted models include altered redox status and inflammation (26). XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Analysis of the liver transcriptome in 86 subjects using RNA-seq revealed downregulation of 254 gene sets while only 2 gene sets were upregulated in carriers compared with non-carriers (Figure 3). The down-regulated genes were predominantly key inflammatory genes, such as ALOX5 and TGFB2. In keeping with the gene expression data, plasma concentrations of IL-6, a proinflammatory cytokine that has increased concentrations in NASH (27), were decreased in carriers of the HSD17B13 variant as compared with non-carriers (Figure 3D). These data are consistent with previous data on effects of the HSD17B13 variant on the liver transcriptome in the study of Pirola et al. who compared 8 carriers to 5 non-carriers (3). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Free fatty acids originating from lipolysis and DNL are two major pathways contributing to IHTG synthesis (16). Although steatosis was not different in the present study or studies by Abul-Husn et al. (1) or Pirola et al (3), pathways of IHTG could still be different, as has been described for the PNPLA3 I148M gene variant (28). However, the HSD17B13 variant does not seem to alter either DNL or adipose tissue lipolysis when measured using state-of-the-art isotope techniques, including deuterated water and glycerol. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Unlike NAFLD associated with the PNPLA3 I148M and the TM6SF2 E167K gene variants, common NAFLD is characterized by insulin resistance (29). This is the first study to our knowledge to quantify insulin sensitivity using the euglycemic clamp technique combined with infusion of tritiated glucose between HSD17B13 variant allele carriers and non-carriers. No data on glucose and insulin concentrations were reported in studies by Abul-Husn et al. (1) or Ma et al. (2). Unlike the latter studies, in the study of Pirola et al. (3), homozygous variant allele carriers were significantly less obese than the heterozygous subjects or noncarriers (3). We found that the HSD17B13 variant allele did not affect any measure of insulin sensitivity. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX If viewed from the perspective of the effect of choline deficiency on insulin sensitivity, previous studies in mice fed a choline-deficient diet, which induces steatosis and mild inflammation, showed that mice do not exhibit insulin resistance (30). Thus, the higher concentrations of PCs and PEs in carriers than non-carriers of the HSD17B13 variant would not be expected to change insulin sensitivity.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; We conclude that carriers of the HSD17B13 variant are protected against liver fibrosis and that they have phospholipid surplus in the liver and marked downregulation of genes and plasma cytokines related to inflammation. Steatosis and pathways leading to steatosis, including DNL and lipolysis, are unchanged. All of these features are geometrically opposite to those observed in choline-deficient models in mice and humans and suggest that HSD17B13 might be an attractive pharmaceutical target in liver disease. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">METLIN: A Tandem Mass Spectral Library of Standards</td>
+<td class="data">In this chapter, METLIN’s evolution since its beginnings, its tools for metabolite identification and future developments have been discussed. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It has adapted and developed its tools to not only facilitate the identification of known compounds (with or without MS/MS spectra) but also the discovery of unknown compounds. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Ultimately, it is safe to say that METLIN’s goal from its inception of facilitating metabolomics research has not changed, although its library and tools have continuously evolve to meet the changing needs of modern metabolomics research as well as other chemical entities. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">Metabolomics for Investigating Physiological and Pathophysiological Processes</td>
+<td class="data">Small molecules are essential to life. They are the molecular bricks and mortar for cells. They provide the chemical fuel for cellular processes, the fences to maintain cellular integrity, the buffers to help cells tolerate environmental stressors, and the messengers for many important cellular signaling events. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Metabolomics offers the opportunity for scientists to further explore these known functions of small molecule metabolites with much greater detail and far greater precision than ever before. The increasingly broad coverage available (up to 1,000 identified compounds for certain biofluids), the greater sensitivity (as little as 1 uL of material), the much improved analytical software, and the trends to more accurate quantification are making certain types of novel metabolomics experiments possible that were only dreamt of a few years ago. These technological developments are providing scientists with the means to identify completely new or previously unknown functions for existing metabolites (84, 98, 488, 529). They are also allowing scientists to identify or characterize previously unknown compounds with far greater speed and accuracy than ever imagined (9, 379, 380). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This review has attempted to provide a window on some of the more recent developments in metabolomics, especially as they pertain to our understanding of the pathophysiology and biochemistry of a number of important diseases. The central take-home message from the sections covering patho-physiology and metabolomics is that some metabolites, especially when present at high levels, can function as slow-acting poisons (i.e., metabotoxins). Furthermore, the symptoms or central characteristics of each disease can be largely accounted for by the targeted action of these compounds on specific genes, proteins, cells, tissues, or organs. This alternative view of looking at chronic disease from a metabolite perspective is opening the door to new ways of detecting, new ways of treating, and possibly new ways of preventing these conditions (35, 513). By adopting this small-molecule perspective and continuing to borrow some of the concepts and practices commonly used in toxicology, metabolomics may help with the identification of many new metabotoxins that cause conditions previously ascribed to defective genes or misfolded proteins. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition to covering some of the “bad” metabolites found in our bodies, this review has also attempted to highlight the roles that “good” metabolites can play in health and normal physiology. In particular, it has featured the many roles that small molecules have as hormones or signaling molecules. It has also highlighted the mechanisms by which certain metabolites protect and heal tissues in the intestine, how specific metabolites facilitate gut-brain communication, or how selected compounds activate or train the immune system. The key take-home message from these sections on general physiology is that metabolites are absolutely essential as signaling molecules. Indeed, their roles in organ, tissue, or cellular signaling may be far more important than their roles as molecular fuels or molecular bricks and mortar. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Unfortunately, the existing biases in many public pathway databases (which only depict catabolic or anabolic pathways; Refs. 69, 143, 225) are leading many metabolomic researchers to under-interpret their results or ignore the possibility that their metabolomic data are providing valuable insights into previously unknown signaling processes. Likewise, the tendency of most public pathway databases to ignore the polygenomic nature of most vertebrate genomes (which consist of both a host genome and a large and complex microbial genome) and the polygenomic, multi-organ nature of many important pathways (such as polyphenol metabolism, drug metabolism, or bile acid metabolism) is leading to an under-appreciation of the role that microbial metabolism, organ metabolic specialization, and microbial metabolite signaling can play in vertebrate physiology. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">PROMIS, global analysis of PROtein-metabolite interactions using size separation in Arabidopsis thaliana</td>
+<td class="data">Most common strategies to elucidate protein–small-molecule interactions start with a single protein or metabolite bait and exploit affinity purification in combination with MS detection (5, 6). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These methods are labor-intensive, often require transgenic lines, and provide information restricted to the used bait. In consequence, although recent literature suggests a still unexplored wealth of protein–metabolite interactions, their true extent remains unknown (1). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As described here, using co-elution behavior during (size-exclusion chromatography) SEC offers an attractive means to obtain a much more comprehensive view of potential protein–metabolite complexes. SEC is an accepted method to separate and characterize protein–protein complexes. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Herein, and to our knowledge for the first time, we report its suitability for the global identification of protein–small-molecule interactions. We could previously demonstrate that small molecules are retained in the protein complexes during lysate preparation and size separation, without the need for prior chemical cross-linking (11). This approach seems to be surprisingly robust given the time it takes to complete the separation (¬3 h), the various dilutions introduced both during lysate preparation and subsequent fractionation step, and the largely polar nature of the small molecules that can easily dissolve in the used buffer. This would indicate that many of the cellular (Protein metabolite interactions) PMIs are in fact very stable, possibly due to a combination of low Kd values and long dissociation time. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (KD is the dissociation constant and is the concentration of ligand, which half the ligand binding sites on the protein are occupied in the system equilibrium, the lower the KD value (lower concentration) and thus the higher the affinity of the antibody. KD value. Molar concentration (sensitivity)). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, this seems to be in contrast with the Kd value of 500 uM measured for the pantothenate–KPHMT1 interaction. Therefore, one has to assume that additional factors also may contribute to the observed stability that is not reflected when determining Kd values in a binary system. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Such factors may be additional protein partners, post-translational modifications, or even co-eluting RNAs. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As PROMIS is a novel approach, we were careful in performing a number of positive and negative controls that will be summarized here. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 1) Already in our preceding study, protein-free small-molecule extract was used as a negative control to exclude the unlikely possibility that free metabolites would elute in the high-molecular weight fractions. Indeed, this was not the case (11). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 2) As described under “Results,” when querying how many of the known protein–metabolite interactions would be represented in our data, we showed that our approach retrieves five times more of the known PMIs than expected by chance. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 3) We could separate exogenously added proteinase inhibitors together with their respective protease targets. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a follow-up experiment, we could also demonstrate that PROMIS can be used to discover novel protein–small molecule interactions. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 1) By combining the co-elution data with biochemical knowledge, we were able to predict two novel PMIs, namely KPHMT1–pantothenate and MTI–MTA, for which we could trace down the binding and determine the Kd value of the binary complex. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 2) By combining PROMIS with AP, we identified a novel interaction between Tyr–Asp and the glyceraldehyde-3-P dehydrogenase enzyme. It is worth mentioning that an analogous combination of PROMIS and (Affinity purification) AP experiments led to the discovery of a novel interaction between 2,3-cAMP small molecule and Rbp47b protein (34). Importantly, we could show that the 2,3-cAMP binding to the Rbp47b is relevant in vivo-promoting stress granule formation. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Based on the above evidence, we are convinced that our method, named PROMIS, provides a reliable means to isolate, separate, and characterize protein–metabolite interactions from native cellular lysate, close to the in vivo situation. Most importantly and in contrast to other methods, a single PROMIS experiment can be used to deduce interactions between many metabolites and many proteins, enabling a system-wide view into the interactome. Notably, both protein–protein and protein–small-molecule complexes can be traced in a single experiment. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .  Nevertheless, even a single experiment such as the one provided here allows meaningful hypothesis without the need for additional experiments. Looking at the co-elution of a metabolite with the enzymes involved in its metabolism proved successful to find novel putative regulatory mechanisms. As presented herein and using Tyr–Asp as an example, when combined with orthogonal experimental approaches, PROMIS allows us to trace protein interactors also in the absence of literature knowledge. A point of criticism may be that when deciding for a targeted approach such as AP or TPP anyway, PROMIS is needless. But as evident from the above, had it not been for the PROMIS experiment, we would never have selected Tyr–Asp for further analysis. In other words, a PROMIS experiment delineates a set of small molecules that are retained in the protein complexes and thus are (i) likely involved in regulation and signaling, and (ii) are accessible to biochemical characterization. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, as described previously, both AP and TPP, however successful in retrieving true targets, are also known to generate numerous false positives. A combination of the methods (AP, TPP, and PROMIS) can be seen as a logical way to distinguish true from false interactors. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As any other approach that starts with a cellular lysate, there are other points to be considered. The choice of buffering conditions will affect measured interactions with higher salt concentrations favoring hydrophobic over ionic bindings. Many weak and transient interactions may be lost. Crushing organelles may lead to formation of false interactions, which do not occur in vivo. Using isolated organelles may circumvent the last issue, but as with the other mentioned approaches that look into protein–protein interaction and PMI, it is rarely done as it is laborious, time-consuming, and often simply infeasible. As a much simpler alternative, we propose to filter the interaction data, taking advantage of the subcellular localization available for a majority of the Arabidopsis proteins (15) but increasingly for the small molecules (36). XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, a modification of the protocol would be required to tap into membrane proteins. For instance, it was demonstrated (8) that inclusion of the mild detergent during cell extraction liberates membrane proteins without affecting protein–ligand interactions, as determined in the TPP study. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX One last issue is data analysis. Following the approach taken for protein–protein complexes, we applied deconvolution to split elution profiles into single peaks. This was necessary as we expected that a single metabolite can interact with different proteins, resulting in multiple elution maxima across the separation range. We anticipated that the majority of the small molecules, e.g. dipeptides or cyclic nucleotides, will have few specific protein partners, which would justify using Pearson correlation cutoff and peak maxima to define candidate interactors. A single protein peak is expected to correspond to a single metabolite peak, and thus they should mirror each other with respect to their elution pattern. The choice of Pearson correlation of &gt; 0.7 was based on the ROC curve, and it seemed to be a good compromise between true positives and the false positives ratio. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nevertheless, there are metabolites for which multiple proteins would contribute to a single elution peak, obscuring elution profile and data analysis. The extreme case presented here
+is PLP, which is a cofactor for more than a 140 different enzymatic reactions (22). PLP’s elution profile spans 21 of the 37 protein fractions (from 506 to 42 kDa), with two major elution peaks, but also with additional minor maxima that were not
+selected during deconvolution. If we consider only the major peaks and use our prediction cutoff (COR &gt; 0.7 and MAX +/- 1 fraction), we retrieve 34 of the 76 experimental protein interactors found in the Stitch database and present in our dataset. But if we consider the whole elution span, we would increase the identification to 69 proteins, which is nearly 90%. Therefore, in cases of metabolites like PLP, co-presence may be a better criterion to define interaction. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, PROMIS, based on the co-elution of proteins and metabolites, offers a novel, powerful tool to explore the protein–metabolite interactome, and it could prove essential to understand how differences in the small-molecule interactome contribute to the developmental, environmental, and/or genetic readouts. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">Metabolomics and Isotope Tracing</td>
+<td class="data">An important direction in metabolomics is standardization of analytical procedures (Salek et al., 2015). This addresses several needs. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, while the individual steps of analysis are not especially complicated, building an effective integrative workflow remains tricky. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, standardization of chromatography is needed to enable effective sharing across laboratories of peak identities. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Well-vetted libraries of exact mass and retention time should eventually enable automated quantitation of known metabolites. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Standardized procedures should also include posting of annotated data tables, including measured masses, retention times, and individual sample peak intensities, to public repositories. With continuous improvements in instrumentation, standardization of protocols, and automation of data analysis and sharing, metabolomics is poised to be increasingly broadly available and useful to biologists over the coming decade. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX STRENGTHS =&gt; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX WEAKNESSES =&gt; XXXXXXXXXXXXXXXXXXXXXXXXXXXXX FUTURE RESEARCH =&gt; What are the frontiers? One immediate need is better understanding the scope of metabolites. There is a vast gulf between the ~ 200 water-soluble metabolites that many labs now routinely measure, and the ~ 10,000 peaks that are found in a typical LC-MS run. Most of this difference is the result of individual metabolites producing many different ions, due to adduct formation and in-source fragmentation (Mahieu and Patti, 2017). After accounting for these phenomena, however, there may still be more unknown than identified metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A longer term goal is to capture the spatial organization of metabolism. Genetically-encoded fluorescent metabolite reporters provide an unmatched combination of spatial and temporal 
+resolution and are amenable to live imaging. Effective ones are available, however, for only a few metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A promising alternative is imaging mass spectrometry (BodzonKulakowska and Suder, 2016). Since there is no chromatographic step to separate isomers and in-source degradation products, a key challenge in imaging mass spectrometry is ensuring accurate peak identification. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Current methods have a spatial resolution of about 20 µm, which is sufficient to assess metabolite levels in different tissue and tumor regions, but not across subcellular organelles. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To determine organellar metabolite levels, an auspicious approach is rapid organelle purification, which is facilitated by genetically encoding an affinity tag on the organelle of interest (Chen et al., 2016). Metabolomics can then be performed as for any other sample. Users need to be mindful of the potential for metabolite alterations, either due to continued enzymatic activity or metabolite leakage during the purification process. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Imaging mass spectrometry and organelle purification will both be most valuable in combination with isotope tracing. A key opportunity is to use multiple tracers and measurement methods to reveal metabolic activity across tissues, cell types, and intracellular organelles. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A major challenge will be making sense of the data. Graphical representation of labeling patterns and intuitive data interpretation is likely to continue to be important, but, as complexity increases, mathematical modeling may become more central to driving biological discovery. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This Primer explicitly does not discuss large-scale quantitative flux analysis, because it currently relies on modeling that is beyond the capacity of most labs. Development of software that makes quantitative flux analysis broadly accessible is an important goal.  For such efforts to maximize their impact, they must ultimately allow flux determination in multi-compartment systems, including organs connected via the circulation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For such efforts to maximize their impact, they must ultimately allow flux determination in multi-compartment systems, including organs connected via the circulation. Combined progress in experimental and computational methods hold the potential to produce a picture of metabolism in action, in space and time. The resulting knowledge should inform many of society’s greatest challenges, from green technology to cancer therapy. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">Drug discovery and development: Role of basic biological research</td>
+<td class="data">6. IF AT FIRST YOU DON&apos;T SUCCEED (AND YOU WON&apos;T), LEARN, THEN TRY AGAIN =&gt; Fig. 5 provides a schematic of many of the activities that occur during the drug discovery and development process. Note that many molecules, both  new molecular entity&apos;s (NMEs) and new biological entity&apos;s (NBEs) are considered in the discovery phase at the left to yield a single approved medicine. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The flow of new information from basic science, through preclinical and clinical development, to Food and Drug Administration filing along with critical activities at each stage is depicted. Also critical, however, are the reverse arrows at the bottom showing that later preclinical and clinical data identifying deficiencies (failures) in some molecular approaches provide feedback to inform the conduct of studies at earlier stages of discovery and development that are more likely to yield successful medicines. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With long time lines for drug discovery and development, and high failure rates, many investigators will work in a therapeutic area such as AD for years without seeing a new generation of medicines. This can be frustrating but other therapeutic areas such as cancer and heart disease have also gone through long periods of incremental scientific advances before the introduction of markedly more effective therapeutic agents. Analyses that take the long-term view of the drug development process indicate that incremental learning shared across the various disciplines involved in the process and across the stages of drug development is key to the delivery of new medicines [29]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sharing of precompetitive data and clinical trial results by commercial sponsors is also important for the advance of science and contributes toward the more rapid introduction of new medicines [29,30]. Incentives that provide intellectual property protections for investment in expensive, high-risk research directed toward areas of high unmet medical need can encourage both investment and data sharing by commercial sponsors [31]. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data">Deciphering lipid structures based on platform-independent decision rules</td>
+<td class="data">Experiments carried out for rule development and verification =&gt; The experimental execution is described in detailed protocols presented in Supplementary Note 1 and Supplementary Table 1. Data obtained are discussed in the main text and shown in Supplementary Tables 2 to 10, and Supplementary Figure 13. No statistical testing was applied. Further information is provided in the Life Sciences Reporting Summary published alongside this paper. Detailed data and further details on results are available online (see “Data availability” at the end of this section). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Application note 1 =&gt; Collision energies in mass spectrometry are considered optimal for a subclass / adduct when both the head group and chain fragments are equally well represented. Since these energies vary depending on the subclass / adduct, as a tradeoff we selected energies which delivered the best overall result with the platform we used for the given lipidome in control experiment 1. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Application note 2 =&gt; The basic fragment rules are based on published results (8,21). They were adapted and extended by visual inspection of spectra from control experiment 1 and biological data. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We determined detectable fragments, identified mandatory fragments, derived intensity rules, and extracted decisive differences for many isobaric / isomeric subclasses / adducts. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further, we determined intensity relationships characteristic for sn-position assignment. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we found novel fragment ion relationships, such as the relative intensity of the sodiated form of a carboxylated chain fragment that allowed for differentiation between 1,2- and 1,3-diacylglycerols at optimal collision energies, and demonstrated the software’s capability to distinguish regio-isomers under certain chromatographic conditions (Supplementary Fig. 4 and Supplementary Table 14). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We defined more than 1,000 decision rule sets for lipid subclasses/adducts for various MS platforms and experimental conditions. These decision rule sets cover the major lipid subclasses and mass spectrometers commonly used today and will serve as a point of entry for investigators unfamiliar with lipid data analysis. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The direct visual feedback particularly provides an easy introduction to fragmentation patterns of lipids. Importantly, decision rule sets developed are provided along with software for the algorithm, which can be downloaded from http://genome.tugraz.at/lda2. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, raw data, results of detailed analysis, comments about information content that can be derived from the various adduct ions, and suggestions about optimal collision energies for subclasses / adducts are available. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Application note 3 =&gt; In general, isobars or isomers from different lipid subclasses / adducts are chromatographically separated only slightly, and such separation cannot be judged from MS1  spectra. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, we expanded our algorithm to separate MS1 peaks consisting of pairs of isobaric or isomeric subclasses / adducts. The algorithm extracts ion chromatograms from the absolute intensities of distinct fragments belonging solely to one or the other species, and computes the retention time (RT) maxima of either lipid species. A weighted mean (based on abundances of the fragments) is used to estimate the RT of such maxima. If there is at least one MS/MS scan between the maxima, or the maxima are in the vicinity of two different adjacent MS/MS spectra (in the range of 20% of the distance between the spectra), the mean of the two RTs is defined as the position of the split of the MS1 peak. If the RT cannot be determined using absolute intensities, the same procedure is applied to relative intensities. If this also fails, the MS1  peak intensity is distributed according to the intensities of the distinct fragments. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, for isobars /isomers of different subclasses / adducts (e.g. protonated PC and PE), this approach is highly inaccurate and should be avoided, because intensities of the fragments typically do not reflect the MS1 intensities. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To verify this, we pooled lipid standards of PC, PE, LPC, and LPE subclasses, where isomeric species can be observed as protonated and sodiated adduct ions, and deliberately worsened chromatography parameters to generate overlapping MS1 peaks (Supplementary Fig. 14). This experiment revealed that a successful peak split primarily depends on the availability of MS/MS scans. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Whereas successful splits were frequent for PC/PE species and for platforms with high MS/MS scan rates, less well-separated LPC/LPE species were often left unsplit (Supplementary Table 4). Nonetheless, the presence of either isomer was detected in almost all cases (97%). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Application note 4 =&gt; LDA detects and assigns structural isomers of the same lipid subclass/adduct from a shared MS1 peak, whereupon the abundance of the MS1 peak is split according to intensities detected in the MS/MS spectra (Supplementary Fig. 12). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To this end we determined detection rate, accuracy, and variability of results obtained from experiments with structural isomers mixed in concentration ratios up to 1:20. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As expected, results varied depending on MS ion mode and ionization mode (Supplementary Tables 6 and 7, and Supplementary Fig. 13). Whereas negative ion mode generally produced results with low coefficients of variation, positive ion mode led to results with high coefficients of variation due to low abundance chain fragments. In fact, at higher concentration ratios, chain fragments of low abundance species are not detectable at all. An interesting showcase for a potential pitfall due to a low MS/MS sampling rate was found for PE acquired on QTOF in positive ion mode. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Whereas chromatographically separated isomeric PE 36:4 species produced excellent lipid molecular species ratios, mixed PE 36:2 species produced much higher abundances for PE 18:0/18:2 in comparison to PE 18:1/18:1. The reason is that, in this particular case, the QTOF instrument reported MS/MS spectra only at the end of the MS1  peak; therefore, the slightly earlier eluting PE 18:1/18:1 yielded lower 18:1 chain intensities. Interestingly, chain fragments of some species reflect the true ratios quite well (e.g. PC 34:0 in negative ion mode), while others usually underestimate the true ratio (e.g. PE 36:4). Generally, to derive absolute intensities of pairs of structural isomers from the same MS1  peak, calibration curves are strongly recommended. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Application note 5 =&gt; In a benchmark test of (Lipid Data Analyser) LDA versus LipidBlast7, we used data from both the first control experiment and the biological experiment, both acquired on Orbitrap Velos Pro in CID +50% and -50%, and on 4000 QTRAP +45 eV and -45 eV, respectively. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For LipidBlast evaluation, we used the recommended MSPepSearchGUI (http://peptide.nist.gov/software/ ms_pep_search_gui/MSPepSearch.html). The same m/z tolerances were applied in both LDA and LipidBlast. The specificity and sensitivity of LipidBlast depend on a so called matching factor (22), a value ranging from 0-999. Using the default setting of 450 for the matching factor, many lipid standards in control experiment 1 were not detected. Consequently, the matching factor was lowered to 10, in which case LipidBlast detected almost all of the lipid standards in negative ion mode. Further reduction did not improve the sensitivity of LipidBlast. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In positive ion mode, irrespective of the matching factor setting, LipidBlast was not able to identify as many lipid molecular species as was LDA. Details about the LipidBlast parameters are given in Supplementary Note 2. In this benchmark, we used only lipid subclasses / adducts that both LDA and LipidBlast are able to detect. Correct assignment of lipid species and lipid molecular species identified in liver lipidomes was verified by manual inspection of the spectra, and by aligning them with the respective retention time data.  (23). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Code availability and technical details =&gt; The algorithm presented is embedded in the Java software package LDA (version 2.5.2) which performs MS1  peak deconvolution (13), and supports several operating systems such as Windows, MacOS, Linux and other Unix-based systems. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Calculations were performed on a 64-bit Windows 7 desktop PC equipped with an Intel Core i7-2600 CPU at 3.4GHz and 16GB RAM under Windows 7. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Decision rule sets were tested on the following MS/MS platforms: 4000 QTRAP and QTRAP 6500 from AB Sciex; G6550A QTOF from Agilent Technologies; Orbitrap Elite, Orbitrap Velos Pro in CID and HCD mode, and Q Exactive from Thermo Fisher Scientific; SYNAPT G1 HDMS QTOF from Waters. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The primary raw data format is mzXML24; however, the software allows for direct processing of vendor formats from AB Sciex, Agilent Technologies, Bruker Daltonics and Thermo Fisher Scientific by an integrated version of msConvert25, as we obtained permission for redistribution of vendor-provided libraries from respective mass spectrometer manufacturers. For Waters “.raw” directories, installation of Mass++ (http://masspp.jp) is required. LDA including the decision rule sets is freely available from (http://genome.tugraz.at/lda2). The source code is released under a GNU GPL v3 license and is available from https:// github.com/ThallingerLab/LDA2/releases/tag/2.5.2. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Data availability =&gt; Data and analysis of results from control experiments 1-3, the biological experiment, LipidBlast benchmarking, HCD characterization, and detection of regio-isomers are available from the MetaboLights26 repository with accession numbers MTBLS394 (Control experiment 1), MTBLS391 (Control experiment 2), MTBLS398 (Control experiment 3), MTBLS396 (Biological experiment), MTBLS397 (Benchmarking), and MTBLS462 (HCD characterization and regio-isomers), respectively. Raw data and results are available from authors’ website too (http://genome.tugraz.at/lda2). Detailed data documentation can be found in Supplementary Note 5. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data">A simple and rapid LC-MS/MS method for therapeutic drug monitoring of cetuximab: a GPCO-UNICANCER proof of concept study in head-and-neck cancer patients</td>
+<td class="data">Cetuximab is a paradigmatic (example) drug for the development of a bioguided medicine in oncology, because it has been approved in patients with Ras wild-type tumors only (17). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Consequently, huge resources have been engaged to the widespread genotyping of Ras in all cancer patients scheduled for anti-EGFR therapy (18). Although identifying mutated patients to be selected for other treatment modalities proved to be helpful, a significant subset of patients with wild-type cancer will still fail to respond to cetuximab-based regimen, despite favorable molecular and pharmacogenomic profile at the tumor level. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A rising hypothesis is that beyond possible downstream deregulations at the tumor level, upstream pharmacokinetic issues, in particular low circulating drug levels, could explain poor efficacy in some patients treated with standard yet insufficient dosing (19). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To date, little is known about the pharmaco-kinetics of monoclonal antibodies (20) and developing specific bio-analytical methods to measure plasma concentrations in routine patient has remained a challenging task for years (21). Most of the methods currently used, either as part of registration clinical trials or academic studies are based upon immuno-assay such as canonical ELISA methods (22), although other emerging immune-based techniques have been recently proposed (23). Regarding cetuximab, all clinical reports published thus far were based upon ELISA measurement of drug levels in plasma using frequently in-house methods (3–5). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although highly sensitive and fully validated, ELISA techniques suffer from a variety of downsides, ranging from time-consuming, multi-steps procedures to possible lack of robustness, cost-effectiveness issues unless large analytical batches are to be performed and possible operator-dependent or laboratory-dependent results if not performed in expert analytical centers. In addition, although commercial kits are now made available, only few clinical pharmacokinetics laboratories in cancer centers or in University-Hospitals have the expertise in properly handling in-house ELISA procedures, which can be a limitation to the widespread use of this technique as part of routine therapeutic drug monitoring at the bedside. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this respect, we have developed an original and simple LC-MS method to assay cetuximab in plasma which fulfills the contradictory criteria of sensitivity, simplicity, robustness and low cost for routine TDM. This original method is based on a fast sample preparation workflow coupled with a robust LC-MS/MS detection. The combination of a simple and rapid (i.e., 2 hrs) pellet digestion and a high-pH reverse phase peptides fractionation prior to the low-pH LC separation provided efficient quantification of residual and maximal cetuximab concentrations in all tested samples. The level of ionization suppression, determined at about 50% only, highlights the effectiveness of the fractionation protocol. It can be related to the complementarity between the high-pH fractionation and low-pH reverse phase chromatography, and the optimized washing and elution conditions during SPE. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Quantification based on cetuximab calibration standards, processed similarly and simultaneously to the clinical samples, coupled to internal standardization by SIL-peptides spiked at an early step in the protocol demonstrated high repeatability and reproducibility, in line with the latest bioanalytical recommendations, and method’s performance in terms of analytical range and sensitivity was fully in line with available data regarding circulating cetuximab concentrations in patients with cancer (3–5). Additionally, reproducibility, precision and transfer across laboratories of protein measurements with stable-isotope dilution and triple quadrupole instruments are already well demonstrated (24, 25). The new protocol is based on a similar approach and could be thus easily transferred in any hospital laboratory equipped with standard triple quadrupole instruments. Of note, affinity reagents and full-length stable-isotope-labeled antibody (8, 9) were avoided to facilitate inter-laboratory exchanges and /or maintain cost-effectiveness. In addition, all reagents are commercially available, including the cetuximab standard which was the pharmaceutical product (Erbitux®) obtained from the hospital pharmacy after dilution in human plasma. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several advantages are associated with the direct use of the pharmaceutical product as a standard: the drug is easily available at low cost from institution’s pharmacies (in this study, spare residual stock solution to prepare infusions were used instead of being discarded) and as a pharmaceutical form the solution is already highly characterized and standardized worldwide. These characteristics would ensure similar performance of the assay among different institutions, thus facilitating its transferability and ensuring a high potential for better harmonization of results between laboratories. Together with the good precision and accuracy of our assay, it paves the way for easier cross-validation of cetuximab assay among clinical pharmacokinetics laboratories. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When tested as part of a pilot-study in cetuximab-treated patients, this original method proved its robustness and its full ability to discriminate non-responding patients from patients with clinical benefit, based upon the monitoring of residual and maximal concentrations, with no need to perform neither population-based identification of individual PK parameters nor simulation of complete exposure levels such as AUC determination. This method was used in actual routine setting of our institute, so as to test its performances in real-life conditions. For instance, sampling was performed by routine-care maids, and samples were next proceeded to the laboratory as routine tubes, with no absolute control on shelf and transport conditions from bedside to bench. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Still, matrix effect was never an issue by our robust analytical conditions, despite the fact that samples may have stayed unattended before being transferred to the laboratory and that routine patients are much more polymedicated than usually observed in actual clinical trials. Indeed, no inclusion criteria but being treated with cetuximab was retained, and a variety of staging, co-medications, and exact localization of head-and-neck cancer were considered. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Still, this diversity was not a confounding factor in this pilot-study. For instance, patients with metastatic diseases were found to be equally distributed in non-responding patients and in patients with clinical benefit (data not shown). Similarly, concomitant radiotherapy, or the use of carboplatin VS. cisplatin to be associated with 5-FU did not impact on clinical outcome either (data not shown). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found that cetuximab exposure levels were highly variable among patients. For instance, trough levels spanned over the 0–74.6µg/ml range, whereas Cmax levels were in the 65.1–201.6µg/ml range, meaning that for some patients, the residual concentrations in cetuximab were higher than the maximal concentrations reached at the end of the infusion for other patients. Conversely for some other patients, the maximal concentration was lower than the residual concentrations observed elsewhere. This discrepancy accounts for all the possible causes of variability in the PK of monoclonal antibodies, i.e. antigenic burden, changes in proteolytic degradation rates, influence of clinical covariates such as albumin or gender, presence of antibodies directed towards chimeric cetuximab, or even genetic polymorphisms (i.e., affecting the FcγR family), although these latter have been shown to have limited impact on cetuximab PK or clinical outcome (26, 27). In addition, as already shown by other groups (4, 5) , we observed that efficacy was related to cetuximab pharmacokinetics because both Cmin and to a lesser extent Cmax levels were higher in stable/responding patients than in progressive disease patients. A marked difference in Cmin values was first evidenced (p&lt;0.01) and ROC analysis identified that residual concentrations above 33.8 µg/ml were significantly associated with clinical benefit, with 87% sensitivity and 78% specificity. Of note, a weaker statistical difference was observed as well between stable / responding and non-responding patients in their respective Cmax values. Still, further ROC analysis identified a target Cmax (113.2 µg/ml) to be reached to ensure clinical benefit with cetuximab, but with a sensitivity weaker than for Cmin (i.e., 67%). In addition, Fischer exact test was not significant for Cmax values, whereas it was significant for Cmin, thus suggesting that residual concentrations (trough levels) could be a more relevant threshold to be respected to achieve clinical benefit eventually. Of note, the fact that Cmin could be more critical than Cmax values for therapeutic efficacy with cetuximab is consistent with the PK/PD relationships of most monoclonal antibodies used to treat solid tumors. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Massive antibodies hardly penetrate solid tumors indeed and therefore it is usually acknowledged that only extracellular targets of the external cell layer of the tumor mass will be easily reachable throughout time. In particular with cetuximab, it has been already shown in experimental models that distribution decreases with the increasing distance from blood vessels, and that little antibody is found in hypoxic regions such as tumor core (28). Consequently, rather than reaching elevated Cmax values and therefore large quantities of plasma 
+cetuximab that will be unable to penetrate in-depth tumor tissues eventually, ensuring a constant inhibition of the available EGFR targets on tumor surface with sustained trough levels is probably a better way to maximize efficacy. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Here, all the patients displayed wild-type status on KRas and NRas and therefore should theoretically respond to anti-EGFR therapy. However, 40% of them had progressive disease, despite favorable downstream pharmacogenomic profile. Our data suggest therefore that patients with cetuximab residual concentrations below 34 µg/ml should probably have their dosing personalized to upper doses, so as to increase exposure levels and improve efficacy. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Of note, here no such PK/PD relationship was evidenced with toxic-events. However, in this pilot-study most of the adverse-events we observed (i.e., hematological toxicity or renal impairment) could hardly be attributed to anti-EGFR therapy, but rather to the associated chemotherapy, i.e. cisplatin, carboplatin and 5-FU, despite efforts to customize dosing (27–29). In this respect, the fact that no relationship could be evidenced here between cetuximab exposure levels and treatment-related side effects cannot lead to the conclusion that such link does not exist, owing to the limited number of patients included in this preliminary study and the fact that here, no typical cetuximab-related toxicities (e.g., hypomagnesaemia, skin toxicity) were recorded to fully test this hypothesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the number of patients enrolled in this pilot-study and the duration of the observation period were both too small to evaluate properly survival. However, we observed that among the 9 deceased patients, dead individuals in the low Cmin subgroup (4 patients) had a mean survival of 4.8 months (range: 4–15 months), whereas the ones in the high Cmin subgroup (5 patients) had a mean survival of 13.1 months (range: 10–42 months). Although to be considered only as a trend with no statistical meaning, this observation was in line with the positive impact we evidenced between higher residual concentrations of cetuximab and clinical efficacy. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; Although monocentric and conducted on a limited subset of patients, this prospective proof-of-concept study strongly suggests that monitoring cetuximab residual concentrations using an original mass spectrometry technique is feasible, rapid and cheap, while providing relevant information to forecast clinical efficacy, in addition to standard downstream pharmacogenomic testing at the tumor level. This method could therefore be used as a convenient tool for implementing therapeutic drug monitoring strategy with cetuximab for early decision-making (i.e., maintaining standard dosing or increasing cetuximab dosing beyond 250 mg/m² QW) so as to ensure a maximal efficacy in patients with head-and-neck cancer. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data">Metabolomics: beyond biomarkers and towards mechanisms</td>
+<td class="data">NOVEL BIOLOGICAL INSIGHTS =&gt; Advances in metabolomic analysis have allowed us to gain a novel understanding of metabolism for various states, processes and diseases, and a few of the most recent studies exemplifying the novel biological insights that can be gained with the use of metabolomics are discussed below. These studies collectively show how information at the metabolite level, particularly when combined with other techniques, can lead to successful association of metabolites with phenotypical causality, thus bringing us closer to a mechanistic understanding of metabolism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ROLE OF BACTERIAL BIOFILMS IN CANCER =&gt;  A recent study carried out on a patient population investigated in more detail a previously validated biomarker for colon cancer, N1, N12–diacetylspermine (DAS) (69). In this study, a multidisciplinary approach was used that combined four different metabolomic tools with traditional biochemical techniques. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, it revealed that only DAS, and not its precursors, was correlated with biofilm presence as well as with colon cancer, and that DAS is probably a metabolic end-product of polyamine metabolism. The metabolomic approaches used included untargeted analysis (BOX 1) to compare normal tissues to the tumour tissues, both of which were either associated with or devoid of biofilms. This was followed by a targeted validation step (BOX 1) to confirm the fold change in metabolites and expand the analysis to other metabolites in related pathways. Nanostructure-imaging mass spectrometry (NIMS) (70) (BOX 1) revealed the in situ localization of DAS in the mucosal layer of the colon where the biofilms resided. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Global isotope metabolomics was further used to investigate the metabolic fate of a stable isotope of DAS in colon cancer cell lines, confirming that it is indeed an endproduct of metabolism and is not involved in any other metabolic pathways. In order to determine the source of the metabolite (the patient versus the biofilm), patients were treated with antibiotics to remove the biofilms (this was confirmed by fluorescent in situ hybridization (FISH) (Fluorescence in situ hybridization (FISH) is a laboratory technique for detecting and locating a specific DNA sequence on a chromosome. The technique relies on exposing chromosomes to a small DNA sequence called a probe that has a fluorescent molecule attached to it.) analysis), and their samples were analysed for the presence of DAS. In these tissues, DAS concentrations were similar to those previously measured in biofilm-negative patients, showing that the elevated DAS levels seen in biofilm-positive patients originated from the biofilms. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In line with this, immuno-histochemical analysis of patient samples did not show any change in protein levels of enzymes involved in DAS production. As DAS is a metabolite of polyamine precursors, and polyamines have been associated with various cellular responses including increased cellular proliferation, the propensity of colon cells to over-proliferate in the presence of biofilms was investigated and confirmed by immuno-histochemistry. In addition, immunofluorescence revealed the presence of pro-inflammatory cytokines in biofilm-covered tissues. This inflammatory state was observed in normal-looking tissues that were associated with biofilms, suggesting that such tissues might be in a pro-carcinogenic state and that biofilm formation indeed promotes colon tumorigenesis (71).  XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In sum, this example shows how a combination of several metabolomic approaches with orthogonal biological techniques can be used for the initial metabolite discovery, leading to the elucidation of the potential role of biofilms in colon carcinogenesis (FIG. 3). According to this study, colonic bacteria utilize polyamines to build biofilms (producing DAS), and this biofilm formation induces pro-inflammatory and pro-carcinogenic effects in the host tissues, increasing the risk of tumour formation. 
+Interestingly, some metabolomic studies have associated DAS with other cancers, including cancers of the lung (72), breast (73), blood (74) and bladder (75), as well as identifying it as a dietary metabolite (76). Thus, further studies assessing the roles of diet and bacteria in cancers are of the utmost importance. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX METABOLIC REGULATION OF CELL PLURIPOTENCY =&gt; At the epigenetic level, metabolites have been shown to regulate pluripotency in human (Embryonic Stem) ES cells, with a recent study revealing a metabolic switch during the transition between human naive and primed ES cells (2). It has been found that this switch is regulated by nicotinamide N–methyltransferase (NNMT), which controls SAM levels that are required for histone methylation.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Analysis of oxygen consumption rates revealed that primed human ES cells have a lower mitochondrial respiration capacity than naive human ES cells, and transcriptomic analysis confirmed a downregulation of mitochondrial electron transport chain genes in the primed state. The transition from naive to primed human ES cells also involved reduced WNT signalling and increased hypoxia-inducible factor 1α (HIF1α) stabilization (shown by proteomic analysis). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Untargeted and targeted metabolomics based on gas chromatography and liquid chromatography mass spectrometry (GC–MS and LC–MS) (BOX 1) revealed concomitant changes in metabolic pathways, including glycolysis, fatty acid β-oxidation and lipid biosynthesis. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Transcriptomic and genomic analyses showed that the genes involved in these pathways were also changed. The use of WNT inhibitors and the generation of HIF1α-knockout cells by CRISPR–Cas gene editing further demonstrated that WNT activity is required for the naive state, and that HIF1α is required for human ES cell transition to the primed state. Furthermore, the loss of NNMT in naive human ES cells was associated with an increase in repressive histone marks (histone 3 Lys27 trimethylation; H3K27me3) in developmental and metabolic genes that regulate the metabolic switch in naive to primed cells. Collectively, this comprehensive analysis showed that both NNMT and the metabolic state regulate ES cell development. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NOVEL THERAPY FOR CARDIOVASCULAR DISEASE =&gt; Another example shows how using metabolomics, together with other techniques, can lead to the establishment of a new therapeutic approach — in this case, for decreasing the risk of CVD. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Initially, using untargeted metabolomics and then targeted metabolomics for validation and quantification (BOX 1), an association between an increased risk of CVD and plasma concentrations of choline, betaine and TMAO was established (19,77,78). This was further replicated in apolipoprotein E−/− mice, a mouse model that is highly susceptible to the formation of atherosclerotic plaques — the primary cause of CVD — that were fed highcholine and high-TMAO diets, showing a significant correlation between plasma TMAO and the formation of atherosclerotic plaques. Functional experiments revealed that trimethylamine (TMA)-containing nutrients such as choline, phosphatidyl-choline and carnitine are dietary precursors for TMAO, and that liver flavin monooxygenases (FMOs; primarily FMO3) are responsible for converting TMA to TMAO. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Analysis of antibiotic-treated mice, together with the observation that the risk of CVD was transmissible upon microbial transfer, led to the conclusion that the microbiome generates TMA. As inhibition of FMO3 can produce side-effects and thus does not provide a sustainable therapy, the next step was to search for an inhibitor of microbial TMA production and investigate its potential as a therapeutic for CVD. Using a structural analogue to choline, 3,3–dimethyl-1–butanol (DMB), found in extra-virgin olive oil, it was possible to inhibit microbial TMA lyases, which are responsible for TMA formation. In vivo experiments showed that TMAO levels were indeed reduced in mice fed with high-choline or high-carnitine diets when these mice were simultaneously treated with DMB.  XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Treatment with DMB also prevented atherosclerotic lesion development in apolipoprotein E−/− mice on a choline-enhanced diet (79). Altogether, this work led to the proposal of a novel therapy for CVD, which bypasses the issues that arise when using inhibitors targeted to a patient’s own proteins — an approach potentially resulting in various side-effects for the patient. Instead, this study showed that harmful metabolites can be inhibited at their earliest production, by ‘drugging’ the gut microbiome, which in the case of CVD is the source of the metabolite contributing to the disease. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX METABOLITE-DRIVEN REGULATION OF B-CELLS =&gt;  An important metabolite, 3–carboxy-4–methyl-5–propyl-2–furanpropanoic acid (CMPF), was recently identified in the plasma of humans with gestational diabetes, as well as in those with impaired glucose tolerance and type 2 diabetes (80). CMPF was identified by untargeted and targeted metabolomic analysis (BOX 1), with further validation by enzyme-linked immunosorbent assay (ELISA). Mice treated with CMPF at doses comparable to levels found in human individuals with diabetes developed glucose intolerance and impaired insulin secretion after an oral glucose-tolerance test. This was monitored using targeted mass spectrometry and ELISA to measure plasma and tissue CMPF concentrations, and also by glucose-stimulated insulin secretion (GSIS) tests. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Mechanistically, CMPF was shown to impair mitochondrial function, decrease 
+glucose-induced ATP synthesis and induce oxidative stress, as assessed by measuring mitochondrial membrane potential and with fluorescence- and bioluminescence-based assays, as well as gene expression analysis. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Inhibitors of organic anion transporters (OAT), which are responsible for the clearance of CMPF, blocked the transportation of CMPF into β–cells of the pancreas and prevented β–cell dysfunction. In line with this, treatment of pancreatic islets isolated from OAT3-knockout mouse models with CMPF had no effect on insulin content or GSIS. Altogether, the metabolite CMPF, identified by metabolomic analysis, provides a mechanistic link between β–cell dysfunction and diabetes and has been shown to function through impairing mitochondrial function and inhibiting insulin biosynthesis. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MECHANISM OF ISCHAEMIA-REPERFUSION INJURY =&gt; Steady state flux analysis was recently used to help to identify the mechanisms of ischaemia–reperfusion injury, which is a type of tissue damage resulting from oxidative stress and generation of reactive oxygen species (ROS) following the return of circulation to tissue regions previously deprived of oxygen. It was revealed that succinate, which is a metabolite of the tricarboxylic acid (TCA) cycle, is the driver of ROS generation, which can lead to heart attack and stroke following ischaemia–reperfusion injury (81). The authors also used a combination of untargeted and targeted metabolomics (BOX 1) to reveal an elevation of succinate levels across several organs in a mouse model of ischaemia. Mechanistic studies involving in silico modelling, mitochondrial membrane potential measurements, ratiometric assessment and fluorescence assays revealed that in ischaemia, succinate dehydrogenase (SDH) functions in reverse, accumulating succinate from fumarate. Upon reperfusion, succinate is oxidized and drives electrons back through the mitochondrial complex I, thus generating ROS. Together, these findings indicated that SDH could be a target for the prevention of ROS accumulation following reperfusion of ischaemic tissue. Accordingly, antimetabolite inhibitors of SDH prevented succinate accumulation, inhibiting electron flow through complex I and subsequent ROS production, and thereby providing protection from ischaemia–reperfusion injury. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX REGULATION OF CANCER CELL METABOLISM =&gt; In addition to the previous example, metabolic flux analysis was recently used to investigate the role of mitochondrial enzyme serine hydroxy-methyl-transferase (SHMT2) in human glioblastoma cells. Specifically, the roles of SHMT2 in central carbon metabolism and in regulating pyruvate kinase M2 (PKM2) activity were investigated and were further linked to glioma cell survival (82). In these experiments, SHMT2-knockdown cells were treated with uniformly labelled 13C-glucose and showed increased flux from pyruvate to lactate, citrate and alanine, with a concomitant increase in PKM2 activity and oxygen consumption rate. In addition, overexpression of RNAi-resistant SHMT2 cDNA reverted these effects, confirming that SHMT2 negatively affects PKM2. Thus, the stable isotope analysis showed that SHMT2 expression changes the metabolism of cancer cells and limits carbon flux into the TCA cycle via suppression of PKM2. This has been further shown to improve the survival of cells in ischaemic tumour regions. In addition, the study showed that the survival of cancer cells with high SHMT2 expression can be impaired if glycine decarboxylase is inhibited, as this causes accumulation of glycine, which then contributes to the production of toxic metabolites. Altogether, this series of experiments provided novel insights into cancer cell metabolism and demonstrated how metabolic changes can affect cell properties and responses — in this case, cell survival. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data">Can NMR solve some significant challenges in metabolomics?</td>
+<td class="data">10. BIOMARKER DISCOVERY AND TRANSLATION =&gt; In response to the growing need for improved diagnostic tests and new therapies, many biomarker discovery efforts are being made for translational applications focused on early disease detection, therapy prediction and prognosis, treatment monitoring and recurrence detection, as well as the important area of therapeutic target discovery. Numerous human diseases including inborn errors of metabolism, diabetes, cardiovascular disease, neurological diseases and cancer have been the targets of biomarker discovery efforts [4,108–111]. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our own work in biomarker discovery has mostly focused on identifying potential metabolite biomarkers for various types of cancers. For example, we have used NMR-based metabolite profiling to identify promising serum metabolite biomarkers of hepatocellular carcinoma [112], and pancreatic cancer [113]. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Using a combination of NMR and MS analysis, a panel of serum biomarkers consisting of amino and organic acids was identified for the early detection of breast cancer recurrence [114]. Separately, a combination of NMR and MS detected biomarker candidates were identified that can predict response to neoadjuvant chemotherapy for breast cancer [115]. Similarly, biomarkers for esophageal cancer have been identified using NMR or in combination with MS [116,117]. See Fig. 20 for examples of these studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In order to translate the discovered biomarkers to clinical use, a number of validation steps are needed [4,118]. A first step typically involves pre-validation of the putative biomarkers to reduce the number of false positive biomarker candidates, and to assess the overall accuracy of initial multivariate models. Multivariate models are typically cross-validated either by splitting the data into a training and testing set, or by using a leave-n-out procedure, with typically 1% &lt; n &lt; 30% for n samples. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The models are then evaluated by determining the diagnostic sensitivity and specificity, or more generally using a receiver operative characteristic (ROC) curve (Fig. 20c) to describe overall performance. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The robustness of models can be tested using Monte Carlo Cross Validation (MCCV) [119], in which the whole dataset is randomly divided into training and testing sets to assess not only the predictive model&apos;s average performance, but also its range (Fig. 20d) [115]. This process is then iterated hundreds of times to evaluate the average accuracy of the model. Validation studies for translational applications should be properly designed and ideally take into account biological or technical variations. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 11. CONCLUDING REMARKS =&gt; In summary, NMR spectroscopy continues to play a key role in the metabolomics field. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data">Metabolomic strategies for the identification of new enzyme functions and metabolic pathways</td>
+<td class="data">ENZYME DISCOVERY: ASSIGNING GENES TO KNOWN METABOLIC ACTIVITIES =&gt; The experimental workflows and examples discussed above implemented a ‘reverse genetics’ approach, whereby the coding gene of interest is initially chosen by bioinformatic means and the cognate function subsequently sought with activity-based metabolomics. Although this is a logical process for assigning function to unannotated genes, the reverse process, that is, assigning gene sequences to predetermined orphan metabolic activities or pathways, is largely excluded. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Orphan metabolic activities (A significant fraction (30-40%) of known metabolic activities is currently orphan. Although orphan activities have been biochemically characterized, we do not know a single gene responsible for these reactions in any organism.) are an alternative and growing problem within functional genomics, a consequence of many decades of pre-genomics enzymology research, as well as the recent and rapid rise in untargeted metabolomics data accumulation. For example, recent studies found that 30–40% of all enzymatic activities currently assigned an enzyme commission (EC) number are not associated with a defined genetic locus [70,71]. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although the methodology is not as well developed as for gene annotation, activity-based metabolomics is beginning to show promise as a valuable platform for de-orphaning metabolic activities, as illustrated by two recent studies. Both of these relied on a ‘forward genetics’ approach, whereby
+random mutagenesis of an organism’s genome was followed by metabolomics to identify specific mutant strains lacking the activity of interest.  XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX They were thus able to identify genetic loci not previously associated with starch metabolism. Although specific metabolic activities were not linked to these genes in this case, a more detailed analysis of the metabolomics data would likely pinpoint precise metabolic deficiencies for each tested strain, as previously discussed. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sidebar C: In need of answers
+(i) How can we best prioritize large-scale metabolomic-based functional genomics efforts?
+(ii) Which organisms have a large number of orphan enzymes and are therefore good models for the discovery of new enzymatic functions and new metabolic pathways?
+(iii) Which are the most complementary methods to confirm metabolomic results?
+(iv) Which enzyme classes present the larger potential for new catalytic functions? XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Defined phenotypic traits are not always associated with the presence or absence of metabolic activities of interest, nor are the global metabolic pathways to which they belong commonly known. Baran et al recently used a technique termed ‘metabolic footprinting’ to substantially enhance the throughput of metabolomic analysis of a library of randomly mutagenized bacterial strains of interest, for the identification of genes involved in the metabolism of test compounds [75]. Transposon mutagenesis libraries of E. coli and Shewanella oneidensis (more than 8,000 mutants) were grown in media containing compounds of interest, and a shortened LC-MS protocol (2 min per sample) was then used to analyse the supernatant from spent cultures. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This streamlined methodology was possible due to the substantially reduced quantity and diversity of metabolites present in the supernatant relative to cell lysates. Strains that had reduced metabolism (higher remaining levels) of the test compound of interest were analysed further to confirm the role of the target gene in the predicted metabolic pathway(s). This approach allowed the authors to assign ergothioneine histidase activity to the S. oneidensis gene SO3057. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; Enzymes control metabolism and are responsible for the formation of many of the most elaborate and interesting chemical structures in the natural world. Tools that enable rapid and unbiased functional assignment of unannotated enzymes are therefore valuable commodities in almost every field of natural science research. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Metabolomics has recently emerged as a leading technology in functional genomics, where in combination with modern genetic tools and recombinant protein techniques, it has enabled a unique perspective on the identification of the mechanistic properties of test enzymes either in vitro or ex vivo. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Overall, the capacity of metabolomics based approaches to not only explore unforeseen and diverse aspects of enzyme-catalysed chemical transformations, but also associate them to global metabolic pathways and physiological functions, will likely ensure its prominence as a key technology in functional genomics strategies in the foreseeable future. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data">Proteoform: a single term describing protein complexity</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="data">Procedures for large-scale metabolic profiling of serum and plasma using gas chromatography and liquid chromatography coupled to mass spectrometry</td>
+<td class="data"> &#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

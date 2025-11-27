@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Amino acids data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.AMINO_ACIDS_SORTED_2">
+<caption aria-label="Data Set REF.AMINO_ACIDS_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">Metabolomic Markers of Kidney Function Decline in Patients With Diabetes: Evidence From the Chronic Renal Insufficiency Cohort (CRIC) Study</td>
+<td class="data">Our study extended earlier work by evaluating associations between thirteen (previously identified (14)) urine metabolites and future kidney disease. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Multivariate analysis identified several metabolites associated with eGFR decline, after adjusting for clinical variables. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Survival analysis provided further validation of these models for a clinically important outcome, time-to-incident KFRT. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cross-validated accuracy of models were comparable, suggesting that clinical variables alone can achieve high model discrimination. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Nevertheless, inclusion of selected metabolites improved overall fit of the models, as evidenced by likelihood ratio and F statistics, indicating that these markers improved prognostication and might provide potentially relevant biological information over and above clinical variables. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Two of the selected metabolites, citric acid and aconitic acid, are part of the TCA pathway. Reduction of these two metabolites in the twenty-four hour urine may reflect a reduction of TCA cycle activity due to reduced mitochondrial function or content (14,27). XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Additional studies to evaluate genes involved in citrate production and conversion to aconitate will shed light on our current findings. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The other two metabolite features are annotated as (i) 3-hydroxyisobutyrate (3-HIBA) or 2-hydroxybutyrate and (ii) 3-methylcrotonylglycine or tiglylglycine. In a previous study with a small sample-size (14), 3-HIBA was reduced in patients with established DKD, whereas in the present study, higher 3-HIBA was associated with progressive DKD and time-to-incident KFRT. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 3-HIBA is a catabolic intermediate of branched chain amino acid (BCAA) valine and previous studies have shown that it drives vascular fatty acid transport and uptake into cardiac endothelial cells (28,29). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Furthermore, in endothelial cells 3-HIBA levels increase in response to pathways induced by the transcriptional coactivator PGC1a, and thus 3-HIBA may be a biomarker for PGC1a activity (28). Elevated plasma levels of BCAA30 and 3-HIBA29 have been shown to be associated with obesity and incident type 2 diabetes in humans (29) and rodents (31). XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 3-HIBA has also been associated with excess angiogenesis which could be a contributing factor to progressive DKD. Notably, 3-HIBA is indistinguishable from 2-hydroxybutyrate in our assay, and the latter, a hydroxy acid involved in propanoate metabolism, has a well-known positive association with insulin resistance and ketoacidosis (32–34). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the two metabolite features annotated as 3-methyl-crotonylglycine or tiglylglycine are metabolites of BCAA degradation and were reduced in our prior study in established DKD (14). Elevation of these metabolites indicates that shunting of BCAA catabolism is a risk factor for kidney disease 
+progression. Detailed pathway information on these selected metabolites has been previously published by our group (see the second and third figures in Sharma et al (14)). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Our study addresses several gaps in current DKD research. While a few prospective studies (7,12,13,35,36) have evaluated urine or plasma metabolites for future kidney disease, small sample-sizes have hampered the ability to validate results. Furthermore, statistical methods for building cross-validated multivariate models of multiple urine metabolites to classify and predict DKD, have not been fully exploited (37,38). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our CRIC sample of diabetic patients is one of the largest in the US, with comprehensive data on clinical factors, metabolite profiles, and extended follow-up with multiple longitudinal assessments of kidney function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We implemented rigorous statistical methods to select metabolites for eGFR decline, and these selected features were then tested for associations with incident KFRT. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, models were not trained on the incident KFRT outcome, so that overfitting is less likely for this outcome, and thus our hazard ratio estimates should be unbiased. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We used likelihood ratio tests, the most powerful statistical approach for evaluating the prognostic value of metabolite features when added to a model with clinical variables alone. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also calculated a cross-validated C-statistic, a popular measure of model discrimination; use of cross-validation reduces overfit and provides a more accurate assessment of how well the model will perform on independent test samples. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; While our study demonstrated that the clinical-variables only model had competitively good discrimination compared to other metabolite models, we identified several metabolites that offer biological insights in DKD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We identified key pathways including TCA cycle features and amino acid metabolism, further implicating mitochondrial function as a key parameter to monitor chronic organ dysfunction, as well as features linked with angiogenesis and/or insulin resistance and ketoacidosis. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX If replicated in other cohorts, these metabolites and related pathways could inform therapeutic targets for DKD, and improve clinical management of DKD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">Plasma Metabolomics Identifies Markers of Impaired Renal Function: A Meta-analysis of 3089 Persons with Type 2 Diabetes</td>
+<td class="data">In this study, we investigated associations between plasma metabolites and kidney function (cross-sectionally and longitudinally) in individuals with T2D. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The key findings include several novel associations between eGFR and circulating amino acids, TGs, lipids in VLDL sub-classes, free fatty acids, and lipids in HDL subclasses cross-sectionally. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX eGFR slopes associated with tyrosine and subclasses of HDL lipoproteins (before correction for multiple testing). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX None of the metabolites measured were significantly associated with urinary albumin excretion. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These findings are in line with results from a recent study in type 1 diabetes where metabolites were mainly associated with eGFR and not albuminuria (29). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The AAA phenylalanine was strongest inversely associated with eGFR levels, followed by the BCAA isoleucine and the polar amino acid glutamine. This result replicates findings from a recent study by Barrios et al, where a strong inverse cross-sectional association between phenylalanine and eGFR was demonstrated both in 926 individuals with T2D and 4838 individuals without diabetes, after adjusting for age, sex, BMI, statin use, and hormone replacement therapy (18). Barrios et al did not find an association between phenylalanine and longitudinal changes in eGFR, similar to the findings in this study. Higher phenylalanine and lower tyrosine levels due to impaired renal conversion of phenylalanine have previously been reported in renal disease (30,31). In our study, a positive association between tyrosine and eGFR was also observed cross-sectionally and longitudinally. Recently, the results of ADVANCE trial in 3587 individuals with T2D demonstrated a positive association of phenylalanine with macrovascular diseases and all-cause mortality; however, this was attenuated after adjustment for cardiovascular risk factors. Moreover, this study showed an inverse association between tyrosine and microvascular complications (17). XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This trial demonstrated that higher levels of aromatic (histidine) and branched-chain (leucine) amino acids were associated with a lower risk of all-cause mortality. This is in line with our findings in which histidine and leucine were inversely associated with eGFR. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a study by Niewczas et al comparing T2D progressors (n = 40) to ESRD and non-progressors (n = 40), higher levels of phenylalanine, tyrosine, and leucine were associated with a lower risk of  progression to ESRD during 12 years follow-up, albeit the results were not statistically significant after adjustment for HbA1c, albumin excretion, eGFR, and multiple testing (32). XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, we previously reported that higher glutamine was most significantly associated with having an HbA1c &lt; 53 mmol/L (33). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In this study, eGFR was inversely associated with TGs, lipid measures in VLDL subclasses, sphingomyelin, and fatty acids like omega-6 and linoleic acid but positively associated with lipid measures, except TGs, in HDL sub-classes. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This inverse relationship is in line with results in both individuals with and without diabetes from the previously mentioned study by Barrios et al (18). The associations between these lipid measures and longitudinal endpoints of ESRD and macro- or microvascular complications have to our knowledge not been tested in any study in people with T2D. We identified the lipids in HDL to be associated positively with longitudinal eGFR slopes among T2D, which became non-significant after FDR correction. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These could be correct signals reflecting cross-sectional results on eGFR in our study. The longitudinal results in our study may have missed the multiple testing threshold due to lower statistical power (n = 1100) compared to cross-sectional meta data where we had 3089 individuals.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, we cannot undermine the possibility of inter-metabolite relatedness as suggested by the sensitivity analysis (correlation heatmap) that may reduce the number of tests. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, in a longitudinal study by the FinnDiane Study Group including 3544 individuals with type 1 diabetes, the TG–cholesterol imbalance was associated with progression in albuminuria and all-cause mortality, as was a large HDL cholesterol (14). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Previous studies in large cohorts of dyslipidemia and DKD have demonstrated associations between routinely measured higher TG and lower HDL cholesterol levels to the progression of DKD in individuals with T2D (39,40). Higher TG and lower HDL cholesterol are clinical components of the metabolic syndrome and may also be consequences of the underlying insulin resistance (41). XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Targeting HDL cholesterol or phospholipids may be a future therapeutic approach, although previous clinical studies with HDL cholesterol increasing agents—for example, torcetrapib (42) in high-risk individuals of cardiovascular disease—have demonstrated increased risk of mortality and morbidity of unknown mechanism. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In a small study by Drew et al (n = 13), intravenous reconstituted HDL infusion in patients with T2D increased plasma insulin. It activated adenosine 5′-monophosphates–activated protein kinase in skeletal muscle when compared to placebo (43). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, the current largest-to-date study identifies metabolites associated with an impaired eGFR among individuals with T2D while none of the metabolites measured were significantly associated with urinary albumin excretion.  XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These results suggest that cholesterol and phosphoglycerides in HDL subclasses may be associated with a better kidney function while high levels of several amino acids and fatty acids, lipids in VLDL sub-classes, and TGs in all lipoproteins are associated with an impaired kidney function. The findings suggest alterations in the metabolome associated with renal impairment in T2D of primary importance in non-albuminuric DKD or the early stages of disease before development of albuminuria. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">A metabolomics-based molecular pathway analysis of how the sodium-glucose co-transporter-2 inhibitor dapagliflozin may slow kidney function decline in patients with diabetes</td>
+<td class="data">In this study, we investigated the effect of 12 weeks of treatment of dapagliflozin, an SGLT2i, on plasma levels of more than 800 identified metabolites.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In general, our results show that treatment of dapagliflozin in the fasting situation is associated with increased amino acid metabolites and reduced levels of lipid species from several subclasses. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We used a bioinformatic approach to delineate molecular pathways that may contribute to the renal protective effects of the SGLT2i dapagliflozin. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Overlap at the gene expression level between metabolites targeted by dapagliflozin and intra-renal transcripts associated with DKD pointed to upregulation of the metabolites belonged to the sub-pathway of BCAA, while the corresponding BCAAs were not changed (9). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Also, urea and urea cycle metabolites, including N2, N5 diacetyl-ornithine, N-delta-acetylornithine and argininate, were similarly increased in the two studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to the findings of Kappel et al, (9) we observed decreased levels of TCA metabolites. The reason for the different response is unclear but may be attributable to many factors such as different populations or treatment durations. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Whereas Kappel et al found increased levels of acetyl-, propionyl- and β-hydroxybutyrylcarnitine, we have observed increased levels of butyrylcarnitine (10) and, in this study, reduced plasma levels of myristoylcarnitine. When fatty acid oxidation is incomplete, surplus acyl-groups are exported from mitochondria as acylcarnitines (16).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Reduced levels of acylcarnitines could therefore reflect a larger degree of complete fatty acid oxidation. In contrast to the long-chain acylcarnitines, fasting increases the release of short-chain carnitines, including acetylcarnitine and propionylcarnitine from the hepatosplanchnic bed (17). Several 3-hydroxy fatty acids decreased by dapagliflozin and high levels of these fatty acids are markers of fatty acid oxidation disorders (18). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Together, these results could indicate improved fatty acid oxidation and an enhanced fasting response with a surplus of 2- and 4-chain carbons. Plasma metabolomics have also been investigated in animal models treated with SGLT2is. Treatment of obese non-diabetic mice with canagliflozin showed activation of catabolic pathways including fatty acid oxidation and signs of inhibition of mTOR, while there was activation of AMPK (19). XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In another study, the effects of ipragliflozin on metabolites were investigated in a model of diabetic nephropathy on Black and Tan BRachyury (BTBR) ob/ob mice (20). In line with our results, they observed that SGLT2is reduced the high levels of TCA cycle intermediates in the kidney of BTBR ob/ob mice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Collectively, findings from these cross-species studies underscore the metabolic effects of SGLT2is, which may potentially contribute to long-term clinical benefits. SGLT2i treatment increases haemoglobin and haematocrit. To what extent this is secondary to plasma contraction or increased red cell mass is unknown (21). Heme, an intermediate in haemoglobin metabolism, is one of the metabolites significantly increased after dapagliflozin treatment. Increased heme levels could reflect an increased heme synthesis, but also reduced degradation of heme by heme oxygenase. Reduced plasma levels of bilirubin could indicate reduced heme degradation because carbon oxide and biliverdin, which is further reduced to bilirubin, are the end-products of heme oxygenase activity (22). Regardless of the exact underlying mechanism, the increase in heme supports a potential effect of SGLT2is on haematopoiesis (23). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The molecular pathways selected through our bioinformatic approach have been associated with progressive renal function loss in patients with type 2 diabetes (24-26). The bioinformatics analysis showed that dapagliflozin treatment increased the TCA cycle activity. Expression of several TCA cycle enzymes was associated with increased eGFR, indicating a positive effect on renal mitochondrial function. Increased levels of metabolites and intermediates of the TCA cycle have been associated with DKD and endoplasmatic reticulum stress (24,27). The cause of the reduced levels of TCA-cycle intermediates is not clear, but may be explained by improved mitochondrial efficacy, as reflected by indications of a larger degree of complete fatty acid oxidation as well as increased gluconeogenesis, which may take place both in the liver and the kidney to compensate for urinary glucose loss. Additional support of the salutary effects on mitochondrial function is our finding that kynurenine was reduced while picolinic acid, a product of kynurenine metabolism, increased. This finding may indicate increased activity of the kynurenine pathway and increased production of quinolinic acid and NAD+ that may further support improved mitochondrial function after dapagliflozin treatment. Also, the increased plasma levels of NAA indicate improved mitochondrial function, specifically in the brain (15). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In line with these observations, a recent study showed that a metabolite panel previously associated with reduced mitochondrial function improved after dapagliflozin in patients with type 2 diabetes and chronic kidney disease (28). Moreover, studies in experimental animals have shown improved mitochondrial function both in the heart and renal tubules following treatment with SGLT2is (29,30). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These data together support the notion that long-term renal protective effects of SGLT2is may be mediated through amelioration of mitochondrial function. We also found the superpathway of citrulline metabolism to be associated with DKD progression and targeted/increased by dapagliflozin, as evidenced by the increase in urea and reduction in glutamine. The citrulline pathway involves nitric oxide synthase as one of the key enzymes which generates citrulline from arginine in a single reaction step. Nitric oxide synthase-derived nitric oxide exerts a wide array of effects and acts in the blood vessels as a potent vasodilator, exerting anti-thrombotic effects, and also has anti-inflammatory effects (31). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several studies have shown that SGLT2 inhibition in patients with type 2 diabetes improves endothelial function as measured by reactive hyperemia peripheral arterial tonometry and flow-mediated dilation and endothelial dysfunction has been associated with accelerated renal function decline (32-34). The exact mechanism of how SGLT2 inhibition improves endothelial function is not fully understood but may involve improved glycaemic and metabolic control, osmotic diuresis, and changes in sodium homeostasis as a result of increased natriuresis. The current study supports a potential role for improvements in endothelial function, through the citrulline pathway, as one of the potential mediators of the protective effects of
+SGLT2 inhibition on kidney function. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results of the bioinformatics approach indicated a change in the glycine degradation pathway after dapagliflozin treatment. Denovo creatine synthesis starts by the conversion of glycine and arginine to ornithine and guanidinoacetate by glycine amidinotransferase (GATM), and guanidinoacetate is then converted to creatine by guanidinoacetate N-methyl-transferase (GAMT), a reaction which is dependent on S-adenosylmethionine as methyl donor (35). In this study, plasma creatine levels increased, while the creatine precursor, guanidinoacetate, was reduced, indicating increased GAMT activity. Alternatively, reduced GATM activity explains reduced levels of guanidinoacetate and therefore increased creatine levels must be explained by causes other than changed synthesis, such as increased dietary intake of creatine. Overall, the bioinformatics analysis suggested reduced activity of the pathway, although we cannot rule out the possibility that increased creatine levels are the result of increased GAMT activity. Therefore, the suggestion of reduced glycine degradation should be carefully interpreted. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to previous studies, this study combined metabolomics and transcriptomics to identify metabolites and pathways associated with dapagliflozin response. This approach is potentially applicable in other chronic disease settings and can be used to identify novel biomarkers for disease progression and drug efficacy and safety monitoring.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, the molecular pathways targeted by dapagliflozin and associated with DKD suggest that molecular processes related to energy metabolism, mitochondrial function and endothelial function may be involved in the renal protective effects of dapagliflozin. These data confirm existing and offer novel hypotheses about the molecular effects of dapagliflozin in slowing the progression of DKD. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Lysine pathway metabolites and the risk of type 2 diabetes and cardiovascular disease in the PREDIMED study: results from two case-cohort studies</td>
+<td class="data">In the frame of the PREDIMED trial we found that XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) baseline lysine and especially 2-AAA circulating levels were associated with future risk of T2D but not with CVD risk; XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) a baseline diabetic status appeared to modify the association between baseline lysine levels and subsequent CVD risk so that only subjects who were diabetic at baseline exhibited an association between higher lysine levels and increased risk of future CVD; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (3) 1-year changes in lysine, 2-AAA and pipecolic acid were not associated with subsequent CVD or T2D risk; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (4) the MedDiet did not show any significant effect on 1-year changes neither in 2-AAA nor in lysine; XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (5) the MedDiet supplemented with nuts or with EVOO may be reducing CVD or T2D risk through the regulation of different biological mechanisms than those related to lysine degradation. However, MedDiet may be modifying the risk conferred by high levels of metabolites included in the lysine degradation pathway. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A previous work published by Wang et al. [5], found in two independent cohorts—Framingham Heart Study (FHS)-Offspring Cohort and Malmö Diet and Cancer Study (MDC)-Cardiovascular Cohort-that high 2-AAA predicted the risk of developing T2D in normoglycemic individuals.  XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results confirmed this association among subjects at high cardiovascular risk showing that the higher the baseline levels of 2-AAA, the higher the subsequent T2D risk in this Mediterranean population. This is an important replication and update of the results considering that all PREDIMED participants randomly selected for the T2D case-cohort were at high risk of developing CVD and had baseline glucose levels that can be considered as a proxy of a pre-diabetic status. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that it seems possible to predict the risk of developing diabetes conferred by 2-AAA even at a pre-diabetic stage. We found similar results for the association of lysine with T2D but this association was not as robust as that for 2-AAA. A recent small cross sectional study reported that 2-AAA was also associated with obesity and metabolic syndrome in addition to T2D [3]. Consistent with our results, they also reported that lysine presented similar but weaker associations with these metabolic conditions. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A mechanism potentially explaining these associations may be that 2-AAA is elevated in response to high glucose levels, leading to increased insulin secretion and promoting mechanisms involved in maintaining glucose homeostasis in early stages of insulin resistance [5]. In the case of lysine, it may be elevated at an early stage of this pathophysiological process to provide the 2-AAA substrate for a likely compensatory mechanism [3]. In concordance with these explanations, lysine was also found to be a predictor of insulin resistance and gestational diabetes during pregnancy in a previous study [18]. Moreover, both 2-AAA and pipecolic have been found to be elevated in diabetic corneas suggesting that this pathway may be also related to diabetes induced diseases [6]. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, we observed no association between baseline lysine, 2-AAA or pipecolic acid levels and subsequent incidence of CVD in non-diabetic subjects. However, the association of lysine with CVD was present in subjects with an initial diabetic status. Therefore, it is likely that this association may only be apparent among subjects with pre-existent T2D. In this context, diabetic status may behave as an effect modifier of the association between lysine and CVD. The p value for the interaction test was statistically significant, supporting this interpretation. This finding represents a novelty and deserves future replication in further independent cohorts. It can be speculated that this effect modification by pre-existent diabetes may suggest that lysine can be implicated in the development of complications associated with T2D, because high levels of lysine may represent a biomarker of a poorer control of glycemic levels in T2D. This interpretation should be taken with caution and further confirmation is needed. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition to the 2-AAA pathway of lysine degradation, L-homoarginine may be also synthesized from lysine catabolism and, this alternative pathway, involving arginine and nitric oxide synthesis [19, 20], may be related to CVD and T2D, as we have previously reported [21, 22]. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regarding the effect of the dietary intervention, we observed no effect of MedDiet on lysine, 2-AAA or pipecolic acid 1-year changes. Additionally, we did not find any significant multiplicative interaction between the MedDiet intervention and 1 year changes in lysine, 2-AAA or pipecolic acid. However, we found that Med-Diet may be modifying the effects of baseline lysine on CVD risk as we found a significant interaction between lysine and the intervention. In the same direction, results on 2-AAA and pipecolic acid pointed at the same effect of MedDiet + EVOO (non significant interaction). These results may be suggesting that although there is no  direct effect of diet on the levels of the metabolites, it is possible that MedDiet may be modifying the effects of metabolites on CVD or T2D risk by affecting other mechanisms that may involve different metabolic pathways, inflammation or oxidation.   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, our results provide an interesting independent replication of the association of 2-AAA with future risk of T2D, a similar association for lysine and pipecolic acid and a suggestion of a diabetes-dependent association of lysine with subsequent CVD risk. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">Glutamine blockade induces divergent metabolic programs to overcome tumor immune evasion</td>
+<td class="data">From the time of the pioneering work of Otto Warburg, the study of immune cell metabolism has been linked to our understanding of cancer cell metabolism as a paradigm for the behavior of highly proliferative cells (5, 50–54). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although both activated T cells and cancer cells use Warburg physiology and glutamine metabolism to fuel notably high proliferative rates (2, 54, 55), the precise role of Warburg physiology, an inherently less efficient mode of ATP generation than oxidative respiration, has not been established. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recent theories have suggested that highly proliferative cells engage Warburg physiology to maintain the activity of critical pathways such as the PPP that emanate from the glycolytic pathway (56). We show here that, although increased glucose uptake may fuel increased PPP activity (as observed in DON-treated T cells), the function of this pathway does not require that glucose is metabolized to lactic acid, that is, Warburg physiology. In other words, the PPP (pentose phosphate pathway) runs in parallel with glycolysis but is not necessarily dependent on it. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Assessing the causal association of glycine with risk of cardio-metabolic diseases</td>
+<td class="data">Based on a genetic discovery in up to 80,003 participants from five studies, we identify 22 loci not previously reported for glycine. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Two novel loci (PSPH and PHGDH) are located in genes encoding enzymes catalysing the de novo biosynthesis of serine—a pathway which has not previously been genetically associated with glycine, despite the close metabolic link between glycine and
+serine. We also identified two rare variants (in FGG and near KIF5B) not previously reported for metabolic traits, which corroborates previous evidence that rare genetic variation plays a role in amino acid levels (13). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Based on four genetic scores with different degrees of specificity to the glycine pathway, we demonstrate that low levels of glycine are genetically associated with higher risk of CHD, which supports a potential protective role of glycine against CHD. The effect size differs depending on the genetic score, with estimated effects of glycine on CHD increasing with the degree of specificity of the genetic score to glycine, which strengthens the evidence that the observed genetic associations are driven by glycine. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We furthermore found that glycine has similarly protective effects in men and in women, which contradicts findings by Hartiala et al., (7) who suggested that the sex-specific association of CPS1 with CHD may reflect a causal role for glycine on CHD in women only. We however show that, after taking into account the sex-specific effect sizes on glycine, the genetic association of glycine with CHD, based on CPS1 only and the four genetic scores for glycine, is similar in magnitude in both sexes. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that the inverse genetic association of glycine with blood pressure may at least partly explain the genetic glycine-CHD association. High blood pressure is a major risk factor for cardiovascular diseases (29) and glycine supplementation has been shown to lower blood pressure in rodents (30–32) and in one small intervention study on human participants (33). Our findings corroborate a potential blood pressure-lowering effect of glycine for the first time in a large-scale epidemiological setting. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A proposed mechanism through which glycine may lower blood pressure is by the glycine-gated chloride channels expressed on the endothelial surface, which upon binding of glycine induce membrane hyperpolarisation and thus the production of nitric
+oxide—a well-known vasodilator (34). Despite the strong genetic association of glycine with blood pressure, we cannot conclude that the genetic effect of glycine on CHD risk is entirely mediated through blood pressure, due to the limited power of the multivariable MR analyses. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Moreover, the absence of associations between glycine and stroke, for which hypertension is also a major risk factor (29), suggests that there also may be other physiological pathways through which glycine influences cardiovascular disease risk. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We however find no evidence for a role of glycine in lipid metabolism or blood cell traits, despite previous studies suggesting that glycine may regulate lipid metabolism (2) and platelet (35) and immune cell activation (36). XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There may be other mechanisms underlying the genetic glycine-CHD association which we could not investigate here. For example, glycine may protect against oxidative stress, as it is a substrate for the biosynthesis of glutathione—a major antioxidant in human cells (37, 38). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX While multiple observational epidemiological studies have linked high glycine levels to lower incidence of T2D (3, 4, 39), the genetic evidence for causality is weaker. MR analyses based on the larger but less specific genetic scores indicate no causal effect of glycine on risk of T2D, while variants in genes related to glycine catabolism drive associations of the 5 and 2 SNP scores with lower T2D risk. These findings suggest that overall levels of glycine may not be causal for T2D but that low glycine levels due to changes in the catalytic efficiency of the glycine cleavage system—the protein complex that catalyses the major catabolic pathway of glycine (40)—may cause higher risk of T2D. Coding mutations in genes of the glycine cleavage system have been identified as one of the causes of severe hyperglycinemia (41), a life-threatening inborn error of metabolism, and have been linked to higher risk of neural tube defects (42). To the best of our knowledge, this enzyme complex has not previously been linked to common cardio-metabolic diseases. An alternative interpretation of our findings is that overall glycine levels are causally associated with T2D risk, but that this association is masked by pleiotropic effects of CPS1. As CPS1 had a 10-fold stronger effect on glycine than most other glycine-associated variants, the genetic scores which included CPS1 in fact mostly represented CPS1. The CPS1 locus has widespread effects across the metabolome, which are not restricted to the glycine pathway, and has also been associated with other traits, of which some, including glycine, may protect against T2D while others could increase T2D risk. Therefore, the null-association based on the genetic scores including CPS1 may have been driven by glycine-independent pathways and may thus mask a true genetic association of glycine with T2D. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings do not entirely replicate the recently reported protective effect of glycine on T2D based on an MR analysis using five loci for glycine (3). The significant inverse genetic association of glycine with T2D risk reported by Merino et al. was largely driven by CPS1, of which the glycine-raising allele was nominally associated with lower T2D risk in the 11,600 T2D cases and 33,000 controls. Our analyses based on 74,124 T2D cases and 824,006 controls did not replicate the nominal association with T2D for CPS1, nor for the genetic scores that included CPS1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We find strong genetic evidence that low glycine levels are a consequence of IR, which suggests that the inverse association of glycine levels with incidence of T2D is at least partly driven by IR. Observational epidemiological research has previously described that measures of IR are inversely associated with glycine (43, 44) and rodent experiments suggest that increased oxidative stress caused by IR leads to a higher rate of glutathione synthesis, which may lead to glycine depletion (45). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another proposed mechanism that could link IR to lower levels of glycine is the increased demand for glycine to safely excrete fatty acyl-CoA esters which accumulate as a consequence of incomplete suppression of lipolysis and resulting high circulating levels of fatty acids in the insulin resistant state (46). Free fatty acids can lead to a build-up of beta oxidation intermediates, i.e., fatty acyl-CoA esters, which can upon trans-conjugation with glycine be safely excreted as fatty acyl-glycine (46, 47). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings raise the question whether glycine supplementation merits evaluation as a strategy to prevent cardio-metabolic disease. A variety of glycine supplements are available for purchase “over the counter” and are used without clinical follow-up for a wide range of indications. To consider the preventive value, the potential benefits and harms should be assessed. Effect sizes for CHD varied depending on the “specificity” of the genetic score and, in addition, CI across these estimates varied, ranging from 0.69 to 0.98 per SD higher glycine levels. However, the increase in the effect estimate of glycine with increasing specificity of the genetic score suggests that the benefit may be considerable. This, together with the feasibility of achieving the required glycine concentration in blood given its short half-life (48), and any potential harms arising, require piloting under controlled conditions. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In terms of safety, in vitro and animal-based evidence has suggested that glycine and serine may promote oncogenesis by fuelling one-carbon and folate metabolism (49). This is indirectly supported by a suggestive association between folic acid supplementation and cancer incidence (50). Furthermore, it was recently shown that a serine and glycine-depleted diet improves treatment response and survival in murine models of colorectal cancer and lymphoma (51). Our genetic analyses of three site-specific cancers where GWAS summary statistics were available to provide maximum power and specificity did not provide evidence that glycine levels increase the risk of breast, ovarian or prostate cancer. However, consortia data for other cancer sites and types are required to provide genetic evidence against an increased risk for site-specific cancers other than breast, ovarian and prostate, and a thorough assessment of the potential carcinogenicity of glycine is required before glycine supplementation can be considered even in an evaluative setting in human participants. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our investigation into the aetiological role of glycine metabolism in cardio-metabolic diseases has several strengths. The variance in glycine levels explained by the genetic score comprising 24 loci was more than 15%, which enabled us to conduct well powered MR experiments. The high proportion of explained variance can be attributed to the biological specificity of the exposure. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Secondly, we conducted a thorough assessment of pleiotropic effects of the genetic scores for glycine and generated a series of subsets of the full genetic score with increasing specificity to glycine metabolism, in order to reduce the likelihood of contributions of glycine-unrelated metabolic pathways to the causal effect estimate. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We adopted multiple MR approaches, including robust methods which are less sensitive to bias due to pleiotropic effects by a subset of genetic variants within the score (52–54), which further decreases the chance that the genetically determined effect estimate was driven by glycine-independent pathways.  XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, we show that low glycine is associated with higher incidence of CHD and that genetic scores for glycine are compatible with this relationship being causal. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We furthermore show that a glycine-lowering effect of IR may drive the consistently reported association between higher glycine and lower incidence of T2D, while the evidence for a causal relationship between glycine and T2D risk is weaker. XXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">Serum metabolite profile associated with incident type 2 diabetes in Koreans: findings from the Korean Genome and Epidemiology Study</td>
+<td class="data">In the present study, various biological pathways, including amino acid and choline-containing phospholipid metabolisms, were altered in the incident T2D group of our community-based cohort sample. Recent Korean reports have implicated seven metabolites (hexose, valine, and five PC aas) in obesity and T2D. These metabolites are related to the fat mass and obesity-associated (FTO) genotype (13). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Altered metabolites associated with genetic loci were also identified in Korean T2D subjects (14). Extending these previous analyses, which investigated only the cross-sectional association between metabolites and T2D, this study sought the metabolic profiles associated with incident T2D over an 8-year follow-up period. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX AMINO ACIDS =&gt; Previous studies have identified the branched-chain amino acids (BCAAs) as among the most consistent and important metabolites in dysregulation of the peripheral glucose metabolism. BCAAs and aromatic amino acids have been implicated in insulin resistance (27), obesity (28), diabetes risk (8, 29, 30) and coronary artery disease (31). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Similarly, increased isoleucine, valine, and tyrosine were predictive markers of future T2D risk in our present study, and were also correlated with metabolic markers of insulin resistance (HOMA-IR, HbA1C, and TG). The association between BCAAs and new-onset T2D might be explained by following mechanisms. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, the increased BCAAs may evoke catabolic materials (propionyl CoA and succinyl CoA), leading to accumulation of incompletely beta-oxidized fatty acids and glucose, impaired insulin effect, and (ultimately) disturbance of glucose control (32). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, the composition and derangement of the intestinal microbiota might induce diabetes development (33). According to recent research, higher BCAA levels are associated with gastro-intestinal microbiome patterns such as Prevotella copri and Bacteroides vulgatus species (34), suggesting a role for the human microbiome in the association between BCAAs and T2D development. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results imply that a healthier dietary pattern significantly reduces the likelihood of future T2D development. Thus, whether certain dietary factors interact with the potential BCAA-biosynthetic component of the gut microbiome pattern, thereby affecting BCAA levels, deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the mammalian target of rapamycin complex 1 (mTORC1) is important for insulin signaling and secretion and the proliferation of pancreatic beta cells. The primary regulator of mTORC1 signaling is leucine (35). Long–term elevation of these BCAAs may contribute to the hyperactivation of mTORC1 and Jun N-terminal kinase signaling, presumably causing impaired insulin signaling, and subsequent early dysfunction and destruction of beta cells (36–38). Despite the accumulating evidence that BCAAs are related to T2D pathogenesis, whether increased BCAA levels are a cause or consequence of T2D has not been elucidated. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Very recently, the causal association between BCAA metabolism and T2D was clarified in a Mendelian randomization study, using genetic proxies as instrumental variables. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Informally, in attempting to estimate the causal effect of some variable X (&quot;covariate&quot; or &quot;explanatory variable&quot;) on another Y (&quot;dependent variable&quot;), an instrument is a third variable Z which affects Y only through its effect on X. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For example, suppose a researcher wishes to estimate the causal effect of smoking (X) on general health (Y).[5] Correlation between smoking and health does not imply that smoking causes poor health because other variables, such as depression, may affect both health and smoking, or because health may affect smoking. It is not possible to conduct controlled experiments on smoking status in the general population. The researcher may attempt to estimate the causal effect of smoking on health from observational data by using the tax rate for tobacco products (Z) as an instrument for smoking. The tax rate for tobacco products is a reasonable choice for an instrument because the researcher assumes that it can only be correlated with health through its effect on smoking. If the researcher then finds tobacco taxes and state of health to be correlated, this may be viewed as evidence that smoking causes changes in health.) (30). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The authors identified the BCAA-raising polymorphisms by a genome-wide approach, and associated them with elevated T2D risk. This result supports a causal pathway of BCAA metabolism in T2D pathogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the present study, we found that higher levels of alanine and arginine increase the likelihood of incident diabetes. Alanine levels might increase when the metabolism is altered by glutamate turnover (39), when alanine is released from sites other than skeletal muscle, and when alanine production is disturbed by BCAA catabolism, which is associated with increased T2D risk. Arginine plays multiple beneficial roles against metabolic abnormalities, but might also induce oxidative stress (40). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Collectively, we speculate that altered amino acid metabolisms predict the future risk of T2D through mechanisms involving impaired BCAA metabolism, increased oxidative stress, and increased muscle protein degradation, which precedes the development of T2D.  XXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BIOGENIC AMINES =&gt; The biogenic amines spermine and spermidine are involved in several cellular processes, including DNA replication, RNA transcription, and protein biosynthesis (41). They also trigger glucose-stimulated insulin release (41); moreover, spermine is a possible glycation inhibitor (42, 43). Consistent with these studies, we found a negative association between blood spermine levels and new-onset T2D, emphasizing the importance of evaluating various metabolites, such as biogenic amines, in new-onset T2D prediction. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX HEXOSES =&gt; As expected, hexose level was positively associated with new-onset T2D in our present study, even after adjusting for confounding influencers of insulin resistance. Hexose comprises not only glucose, but all six-carbon monosaccharides. Increased hexose level may indicate pancreatic beta-cell dysfunction and insulin resistance. In previous studies, the six-carbon monosaccharide fructose was increased in T2D regardless of glucose level (44), and higher intake of fructose (including sweetened beverages) was associated with insulin resistance and the risk of new-onset T2D (45). Our result was consistent with the earlier results (44, 45), confirming that hexose metabolites are valuable for evaluating associations or predicting new-onset T2D in population-based samples. XXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GLYCEROPHOSPHOLIPIDS AND SPHINGOMYELIN =&gt; Consistent with earlier studies (6, 7), we found a possible involvement of phospholipid metabolism in incident T2D among our Korean population. Specifically, two LysoPC metabolites (17:0 and 18:2), 8 PC aa metabolites (32:1, 34:1, 36:1, 38:0, 40:1, 40:5, 42:1, and 42:5), 2 PC ae (34:3 and 36:3), SM(OH) 22:2, and SM 16:1 were significant predictors of T2D risk in this prospective study. Phospholipids such as PC and SM are the dominant components of cellular membranes and play an important role in cellular signal transduction (46). They also constitute most of the human lipoproteins (47). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The LysoPC 17:0 and 18:2 were negatively associated with incident T2D in our cohort. LysoPC a 17:0, found exclusively in dairy foods, is particularly effective in reducing T2D risk (48), indicating the beneficial effect of regularly consuming dairy products. LysoPC is a signaling molecule involved in atherogenic and inflammatory processes (49), of which the major function needs to be clearly elucidated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX PC aa is essential for the hepatic release of TG-rich very-low-density lipoprotein (46). On the other hand, PC ae is an antioxidant that inhibits lipoprotein oxidation (50). Previous studies have shown that PC ae levels are reduced in obese or insulin-resistant subjects (50, 51). Furthermore, reduced SM synthesis is associated with increased levels of reactive oxygen species and reduced insulin secretion (52). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The significant contributions of LysoPC, PC, and SM to T2D development in the present study, and the correlations of these metabolites with blood phenotype (observed as expected), support the hypothesis that altered choline-containing phospholipid metabolism potentiates the development of T2D. Several recent studies have also identified the metabolites associated with food intake, and related them to the metabolic diseases at the population level (53–58). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Untargeted metabolomics analysis in the subset of African Americans from the Atherosclerosis Risk in Communities (ARIC) Study cohort identified 48 pairs of significant association between diet and metabolites (53). Specifically, ‘sugar-rich foods and beverages’ were associated with metabolites related to oxidative stress and lipid profiles (53). Another approach to reveal the association between dietary pattern and plasma/urinary metabolites reported that O-acetylcarnitine and phenylacetylglutamine are positively associated with different food groups, red-meat and vegetable intakes, respectively (54). Given that diet can be a primary and secondary (by induction of metabolic responses) source of metabolites (57, 58), we further tested the interrelationships among dietary quality, metabolites, and T2D incidence. In this study, only 22 metabolites were significant predictors of incident T2D. After controlling for covariates, multiple regression analysis revealed that a healthier diet was significantly associated with reduced PC aa 32:1 level and increased the SM(OH) 22:2 level. To test whether each of these two metabolites may act as a mediator in the observed negative association between dietary quality and T2D risk, both dietary score and metabolite were considered in the Cox proportional regression model. The result showed that each metabolite and dietary score remained significant in combination, although the HRs were somewhat attenuated. This indicates that a better diet quality, characterized by well-balanced nutrient intakes reduces the future T2D risk both dependently and independently of intermediate metabolites. Given that food intake and relevant nutrients possibly interact with the environment and the gut microbiome, and that these interactions would be reflected in the blood metabolites, the links among dietary intake, gut microbiota and metabolic biomarkers and their associations with T2D must be further investigated. Indeed, the consumption of PC-containing foods such as meat and eggs reportedly increases the T2D risk (59), possibly through bacterial transformation of PC and consequent production of trimethylamine N-oxide (60, 61). In addition to the complexity and differences of etiology of T2D and environmental factors including diet, ethnic difference also should be considered to interpret metabolic profile in a specific population. Because the response to the specific stimulus (e.g. chemicals, nutrients, etc.) can be distinct depending on gender and ethnic group (62), separate analysis in a certain population is required to apply the identified metabolites for planning the preventive strategy as well as for pharmacological targeting to treat T2D. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, our study showed that metabolites relevant to amino acids, biogenic amines, spermine, hexoses, and choline-containing phospholipid metabolism are associated with incident T2D in a prospective community-based cohort study. Through targeted metabolite profiling, we elucidated the underlying biochemical pathway of T2D pathogenesis. However, many of the covered metabolites were choline-containing phospholipids with structural similarities and metabolic inter-relationships, which hindered the comprehensive assessment of the metabolic alterations preceding T2D. Our results confirm that metabolites beyond the conventional T2D risk factors are important for preventing or controlling the development of new-onset T2D. With this knowledge, we can develop strategies for early intervention against average-risk T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">Circulating amino acids and the risk of macrovascular, microvascular and mortality outcomes in individuals with type 2 diabetes: results from the ADVANCE trial</td>
+<td class="data">Although previous observational studies have reported associations of circulating BCAAs and AAAs with adverse outcomes in healthy people, the present report contrasts for the
+first time the associations of multiple circulating amino acids with the major vascular complications of diabetes. Rather than one (or more) amino acids being a consistent signal for adverse outcomes of any kind, we report that their associations with risk of macrovascular events, microvascular events and allcause mortality are strikingly different from each other. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A key finding is the inverse association of tyrosine with risk of microvascular events, independent of eGFR and urinary ACR. Although the evidence from the present study suggests that these might only be very moderately useful biomarkers in incremental prediction of adverse events in individuals with type 2 diabetes, the pathophysiology underlying these associations and the possibility of intervention studies are intriguing and worthy of further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The association of high circulating concentrations of BCAAs and AAAs with obesity has been known since the 1960s [29] and has been proposed to be at least partially mediated by insulin resistance. Insulin is thought to be a regulator of branched chain  α-keto acid dehydrogenase complex [30]. Insulin resistance may hence suppress BCAA catabolism, as suggested by associations noted in observational epidemiology studies [31–33]. The causal pathway may not be unidirectional; a recent Mendelian randomisation study suggests that genetically elevated BCAAs (via impaired catabolism) are associated with increased risk of type 2 diabetes [34], although a better understanding of the underlying pathway is required to increase confidence in this observation [35]. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is also the possibility that amino acids themselves (particularly BCAAs) may affect metabolism by suppressing postprandial glucose levels [36]. Increased protein turnover in people with central obesity may result in higher circulating levels of amino acids [37] and might therefore cause elevations in amino acids in people who are overweight and have type 2 diabetes. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There are hence a variety of potential mechanisms related to type 2 diabetes pathologies that might influence circulating amino acids in individuals with type 2 diabetes. Given this background, and prior findings in general populations of associations of specific amino acids with CVD [9–12], we wished to examine whether amino acid levels associated with adverse outcomes in individuals with type 2 diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the ADVANCE study, the BCAAs leucine, valine and isoleucine showed no association with macrovascular events, but low levels of leucine and valine were associated with increased all-cause mortality. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, the positive, albeit not independently predictive, association of phenylalanine with CVD and all-cause mortality we observed is broadly in line with other published data. There are limited intervention studies investigating the effect of amino acid supplements on health outcomes, with most research coming from short-term trials examining surrogate health markers in the sports science area [38]. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our data strongly support the need for further studies to determine why higher phenylalanine appears to be a consistently adverse signal for CVD outcomes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our study provides observations that are the basis for testable hypotheses investigating the effect of genetic variants, which are instrumental variables for circulating amino acids, on health outcomes [39, 40]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The inverse association of tyrosine with risk of microvascular events is perhaps the most intriguing individual finding from this study. Tyrosine itself was positively associated with baseline eGFR and inversely associated with baseline HbA1c and urinary ACR. Impaired conversion of phenylalanine to tyrosine has been reported in renal disease [41, 42]. Low tyrosine levels might therefore simply reflect impaired kidney function, which itself predicts future microvascular events. Tyrosine is also linked to catecholamine synthesis, which, also speculatively, might be relevant to our findings [43]. That noted, counter-intuitively, we have reported that metformin in fact lowers, not raises, tyrosine levels in individuals with CVD and at high risk of diabetes [16]. The effect of other glucose-lowering drugs on amino acid profiles in individuals with diabetes would now be of interest. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   CONCLUSIONS =&gt; In conclusion, we report distinct associations of different amino acids with risk of major adverse endpoints in individuals with type 2 diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">Profiling of Plasma Metabolites Suggests Altered Mitochondrial Fuel Usage and Remodeling of Sphingolipid Metabolism in Individuals With Type 2 Diabetes and Kidney Disease</td>
+<td class="data">There are several novel findings in this targeted plasma metabolomics study. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, profiling of plasma acyl-carnitines revealed evidence for incomplete FAO and intriguingly, accelerated catabolism of amino acids in individuals with T2DM and kidney disease. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, a reduction in plasma phosphatidylcholine levels and elevation of long-chain sphingomyelin and ceramide levels suggested remodeling of sphingolipids in T2DM with DKD. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we found that impaired renal filtration function and albuminuria levels were associated with different metabolite signatures. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Targeted metabolomics provides an excellent survey of energy-yield pathways and fuel substrate selection (5). In addition to incomplete FAO as indicated by an elevation in b-oxidation-derived even-number acyl-carnitines (Table 5 and Figure 1), our data point to an accelerated catabolism of amino acids, especially aromatic amino acids, in patients with DKD (23, 25). XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This is suggested by elevated levels of amino acid-derived acylcarnitines (C3, C5, C3-DC, C4-DC, C5-DC, and C6-DC) and lower plasma levels of tyrosine and tryptophan in participants with DKD (P = 0.002 and P = 0.014 in an unadjusted model, borderline significance after adjustment for age, sex, and ethnicity) (Table S1). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The depletion of aromatic amino acids has been reported by other studies in both diabetic and non-diabetic populations with chronic kidney diseases (6,11,29). It is worth noting that the flux of amino acids and its oxidation in mitochondria occur only under special circumstances such as aerobic physical exercise (30,31). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, the accelerated amino acid catabolism in DKD is intriguing, and the sensory signals that trigger amino acid flux and oxidation in these patients remain largely unknown. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, a large body of evidence has shown that excess intracellular and circulating acylcarnitines may exacerbate metabolic disturbance and lead to cytotoxicity (24,32,33). Hence, it is conceivable that accumulation of FAO and amino acid-derived metabolic intermediates in plasma may play a role in the progression of DKD (Figure 1). Another metabolic feature of DKD observed in the current study is the elevation of a cluster of dicarboxyl and hydroxyl acylcarnitines in plasma (Table 5 and Figure 1). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Increased formation of dicarboxyl and hydroxyl dicarboxylic acids via u- FAO and u-1 FAO and their conversion to the corresponding acylcarnitines may be attributed to acyl-CoA accumulation in DKD (34) u-Oxidation is a rescue pathway when mitochondrial fatty acid oxidation is impaired (27,34). A recent study by Kraus et al. indicated that endoplasmic reticulum stress might elevate short-chain diacid levels (22). Thus, accumulation of short- and long-chain dicarboxylacylcarnitines may indicate mitochondrial stress and /or endoplasmic reticulum stress that may lead to activation of alternative FAO pathways in DKD. Accumulation of acetyl-CoA-derived C2 (acetylcarnitine), as observed in our study, points to a mismatch between energy substrate flux and its utilization in DKD. However, due to the observational nature of our study, we are unable to elucidate whether the imbalance is due to accelerated flux or a reduced downstream utilization, or both. A strong body of evidence supports that mitochondrial function is markedly impaired in patients with DKD. A decrease in electronic transport chain activities accompanied by an overall reduction in mitochondrial content and PGC-1a expression has been found in diabetic kidney (9,35). Similar defects have been observed in diabetic islet, heart, and skeletal muscle (36). XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, impaired mitochondrial function may at least partially explain the substrate flux/oxidation imbalance in DKD. On the other hand, insulin resistance and other related metabolic disturbance in DKD may impair mitochondria and restrict its ability to select glucose as preferred substrate for oxidation (metabolic inflexibility) (35,37). Therefore, the increased flux of fatty acids and amino acids into mitochondria may be a compensation for impaired glucose utilization (38).  XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, fuel supply and oxidation may not necessarily be reduced in the presence of mitochondrial dysfunction. For instance, frank mitochondrial dysfunction in humans (e.g., myopathies with impaired electron transport chain activity) is accompanied by increased fuel flux and oxidation to compensate for the impaired ATP synthesis (39). Taken together, we postulate that both impaired mitochondria function and energy substrate oversupply in individuals with T2DM may be involved in intramitochondrial metabolic intermediates accumulation and their extracellular overflow to circulation. A future in vivo tracing study by isotope-labeled substrates may provide insights into substrate flux, selection, and oxidization in DKD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found that long-chain sphingomyelin and ceramides are elevated in participants with DKD, suggesting that the sphingomyelin-ceramide pathway may play a part in renal complications. The underlying pathological mechanisms may involve impairment of mitochondria function, enhanced generation of reactive oxygen species, activation of apoptotic pathway, elevation of inflammation tone, and endoplasmic reticulum stress (40). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The latter may contribute to the aforementioned overproduction of short-chain diacids and long-chain dicarboxylacylcarnitines in DKD (22). XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The observed pattern of reduction in phosphatidyl-choline and increment in sphingomyelin levels may suggest sphingolipid remodeling in DKD, as sphingomyelin can be synthesized from phosphatidylcholine by choline-phosphotransferase action (41). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another novel finding in our current study is the association of renal filtration function and albuminuria levels with distinct metabolite signatures. Early studies have found that both eGFR and ACR are independent predictors of CKD progression (42). In addition, genetic studies have found little overlap between loci of eGFR and ACR (43). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Association of sphingomyelin with albuminuria has been reported in diabetic patients, and inhibiting conversion of sphingomyelin to ceramide might protect kidney function and reduce albumin excretion in animal models (14,44,45). Interestingly, we found that metabolite signature for sphingomyelin-ceramide metabolism was independently associated only with albuminuria but not with renal filtration function in T2DM. These data echo findings from an early study showing that polymorphism of ceramide synthase 2 (CerS2) was associated only with changes in albuminuria but not eGFR in patients with diabetes (46). Our data reinforce the notion that albuminuria and decline of filtration function may represent complementary, if overlapping, manifestations of kidney damage (47). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX An inverse association of acylcarnitine levels with eGFR has been reported in non-diabetic populations (13). Our current study extended the early findings by showing that among many acylcarnitine sub-species that differed significantly between DKD versus non-DKD controls, only short-chain diacids and amino acid-derived acylcarnitines were strongly and independently associated with eGFR (Tables 2 and 3). This finding is principally agreeable with findings from an early, small study that reported that amino acid-derived acylcarnitines predicted progression to ESRD in T2DM (11).  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXCONCLUSIONS =&gt; In conclusion, our targeted plasma metabolomics study implicates altered energy substrate selection, imbalance of substrate flux and utilization, as well as remodeling of sphingolipids in T2DM with DKD. The association of distinct plasma metabolite signatures with eGFR and albuminuria suggest different pathophysiological processes underlying these 2 related manifestations of DKD in individuals with T2DM. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data">Improvement of myocardial infarction risk prediction via inflammation-associated metabolite biomarkers</td>
+<td class="data">Using a targeted metabolomics approach across three cohorts, we identified arginine, LPC 17:0 and LPC 18:2 as metabolite biomarkers for incident MI. Adding arginine, LPC 17:0 and LPC 18:2 to the FRS significantly increased the predictive value in fasting cohorts and in a meta-analysis of the three cohorts. These metabolite biomarkers were independent of conventional risk factors for MI, but strongly attenuated the hsCRP–MI associations indicating a potential role in systemic inflammation. Although this is the first time that these three metabolites in combination have been suggested as biomarkers for incident MI, each has been linked to CVD. (31–35). XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ARGININE =&gt; An SD increase in serum arginine concentrations was associated with a 26% higher risk of incident MI risk in the meta-analysis. Ornithine, a product of splitting urea from arginine, is associated with CHD. (36) A possible mechanism linking arginine and inflammation is production of oxygen radicals (O2−) and peroxynitrite. Arginine is metabolised to NO via the NO synthases NOS3 and NOS2 in vascular cells. (37) In the presence of high concentrations of O2−, NO reacts with O2− to generate peroxynitrite, reducing the bioavailability of NO and contributing to inflammatory processes. (38, 39) Additionally, peroxynitrite and O2− trigger the uncoupling of NO synthases, shifting the production of NO to O2−, (40) creating a feedback loop (figure 3). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX LYSOPHOSPHATIDYLCHOLINES =&gt; LPCs are associated with lipid metabolism, inflammation and MI. (31–34, 41, 42) In our study, participants with higher serum LPC 17:0 and LPC 18:2 concentrations had a lower risk of MI. LPCs also have a negative association with a combined CVD outcome of MI, ischaemic stroke and sudden cardiac death, (14) further supporting our findings, and LPC 18:2 is associated with CHD. (16) LPCs are associated with inflammatory processes via a variety of mechanisms (figure 3). LPCs can increase expression of NOS3, which is involved in NO synthesis. (31) LPCs can also drive production of antioxidant enzymes, for example, SOD3, which reduce superoxide anion concentrations (figure 3). (32) As a consequence, lower LPC concentrations may increase oxidative stress and promote inflammation as indicated by the negative association with hsCRP. Finally, LPCs increase the synthesis of prostaglandin I2 resulting in improved vasodilation. (34, 41) Thus, lower LPC concentrations may contribute to endothelial dysfunction, increasing the risk for MI. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX HIGH-SENSITIVITY C REACTIVE PROTEIN =&gt; hsCRP is a measure of systemic inflammation. Our three metabolite biomarkers explained 10% of the variation in hsCRP concentrations and attenuated the hsCRP–MI association coefficient by 34%–74%, making it no longer significant (see online supplementary table S6). Therefore, inflammation likely represents a pathway through which our novel biomarkers are associated with MI. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX       MI RISK PREDICTION AND PREVIOUS CVD STUDIES =&gt; Metabolomics can potentially reveal causal biomarkers with strong predictive value for CVD, (9) and baseline metabolomics profiles are associated with risk of death or incident MI. (11) Recently, there have been several metabolomic studies using general population-based cohorts. (14–16, 36) Stegemann et al used a shotgun lipidomics approach to identify lipid species associated with incident CVD. (14) Würtz et al used a Nuclear magnetic resonance (NMR)-based approach to identify CVD-associated metabolites and calculate a risk score for CVD. (15) Vaarhorst et al also used an NMR-based approach and identified metabolites associated with incident CHD; however, their score did not significantly increase CHD risk prediction. (36) Ganna et al used an LC-MS / MS-based lipidomics approach and associated LPC 18:2 with CHD. (16) Covering 140 metabolites, our MS approach is more comprehensive than that taken by Stegemann et al (135 metabolites), Vaarhorst et al (100 metabolites) or Würtz et al (68 metabolites), and with 266 incident MI events, our study is the largest by the number of MI events. Additionally, while previous studies assessed a combined cardiovascular endpoint, (11, 14, 36) we exclusively analysed incident MI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  CONCLUSION =&gt; We identified three metabolite biomarkers associated with incident MI which improved MI prediction when added to the FRS. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We replicated this MI prediction improvement in independent fasting samples. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These three metabolites were associated with hsCRP and attenuated the hsCRP–MI association while being independent of other traditional CVD risk factors, indicating a potential link to systemic inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data">The Emerging Role of Metabolomics in the Diagnosis and Prognosis of Cardiovascular Disease</td>
+<td class="data">ADDITIONAL CONSIDERATIONS FOR THE USE OF METABOLOMICS IN THE DIAGNOSIS AND PROGNOSIS OF CVD =&gt; Although the majority of this review has focused on how blood-based metabolomics can aid in the diagnosis and prognosis of various CVDs, patients with CVD often also have associated comorbidities, such as kidney disease and hepatic steatosis, as well as obesity and/or T2D (8,17). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In fact, obesity and/or T2D may add extreme complexity to the understanding of the metabolomic profile, because these conditions often result in significant pathology and perturbed metabolism in other peripheral tissues (e.g., skeletal muscle, liver, adipose tissue, among others), and these peripheral tissues also contribute to the circulating metabolomic profile measured in patients with CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Indeed, systemic insulin resistance is a hallmark feature of obesity and T2D, and metabolomic profiling in obese and/or diabetic subjects often reveals increases in circulating lactate levels (74,75), which on the surface suggest increases in anaerobic glycolysis (Figure 1). However, increases in anaerobic glycolysis are not consistent with systemic insulin resistance, which impairs glucose metabolism in numerous tissues, including skeletal muscle. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Conversely, proteomic studies have observed increases in the expression of glycolytic enzymes in vastus lateralis biopsies from obese and T2D patients (76). Furthermore, the source of elevated lactate in the circulation is difficult to ascertain, and can arise from other sources in addition to skeletal muscle. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Because adipose tissue dysfunction in obesity is often associated with tissue hypoxia (77), increased anaerobic glycolysis in the expanded adipose depots of obese individuals may also contribute to this elevation in circulating lactate. As circulating free fatty acids and triacylglycerols are markedly increased during obesity/T2D, fatty acid supply, uptake, and metabolism are frequently increased in peripheral tissues, such as the skeletal muscle and heart. Metabolomic profiling to assess alterations in fatty acid metabolism in obese and/or diabetic subjects has revealed increases in numerous circulating acylcarnitine species (52), whereas other studies have reported no differences (78). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It has been suggested that a very large portion of the circulating acylcarnitine pool arises from skeletal muscle-mediated export, and muscle biopsies in obese humans also demonstrate increases in M-C and L-C acylcarnitines compared with lean controls (79). Thus, assessment of acylcarnitine profiles via blood-based metabolomics supports increases in both skeletal muscle and myocardial fatty acid oxidation rates (see the section Metabolomics and CVD in Obesity and Diabetes), although additional investigation is required to determine the contributions individual organs make to the circulating acylcarnitine profile.  XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Circulating ketone bodies (e.g., b-hydroxybutyrate and acetoacetate) are frequently elevated in obese and/or T2D patients (80), and elevations in circulating ketone bodies predict worsening of hyperglycemia in men with or without newly diagnosed T2D (81). Changes in circulating b-hydroxybutyryl-carnitine may reflect changes in peripheral tissue ketone body oxidation because b-hydroxybutyryl-carnitine is a mitochondrial intermediate derived directly from b-hydroxybutyryl-CoA (30). Of interest, recent findings from the EMPA-REG OUTCOME trial have observed that treatment with the sodiumglucose cotransporter 2 inhibitor, empagliflozin, markedly lowers cardiovascular risk in T2D patients, including a 35% reduction in hospitalization for HF (82). As these exciting findings were associated with a significant increase in circulating b-hydroxybutyrate levels, it has been suggested that empagliflozin reduces cardiovascular risk by increasing ketone body uptake and oxidation in the heart (83). This is consistent with increased ketone body oxidation being a potential beneficial and adaptive mechanism in the failing heart (see the section Metabolomics and HF), and highlights the need to understand the significance of blood-based metabolomic profiles revealing perturbations in ketone body metabolism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Numerous studies have illustrated a tight correlation between circulating BCAA levels and risk for insulin resistance/T2D (2,75). Since these initial observations, several investigators have utilized novel metabolomic profiling techniques to implicate BCAAs in obesity and insulin resistance (2,17), with BCAAs and aromatic amino acids emerging as predictors of future T2D. Intriguingly, generation of an amino acid score on the basis of 3 of these amino acids (isoleucine, phenylalanine, and tyrosine) was found to significantly predict incident T2D (84). In light of findings suggesting impaired myocardial BCAA/BCKA metabolism in HF (63), it will be important to understand how the circulating BCAA profile in obesity reflects deranged systemic and myocardial metabolism. Taken together, although blood-based metabolomics is proving to be a powerful tool that can assist in the diagnosis and prognosis of CVD, in the context of obesity and/or T2D, caution must be applied in how we infer the associated peripheral metabolic perturbations. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FINAL SUMMARY AND IMPLICATIONS =&gt; Metabolomic profiling technologies have significantly evolved to a point where high-resolution and high-throughput assessment of thousands of metabolites within a biological sample can be performed with relative ease. Due to the expansive biochemical diversity of metabolites within the human metabolome, several complementary platforms and techniques are necessary for comprehensive metabolic characterization. These techniques, MS and NMR coupled with LC or gas chromatography, are exquisitely sensitive, generating the metabolic fingerprint of a biological sample that not only reflects the condition of interest, but also diet, drug effects, sex, and other comorbidities and exposures. Thus, human metabolomic studies are consequently prone to clinical confounding factors that may lead to spurious diagnoses / conclusions. Yet the application of metabolomic profiling to several large population-based epidemiological cohorts has allowed for robust statistical adjustment for potential confounders, and has resulted in externally reproducible findings. In addition, metabolomics has been applied in smaller
+studies of unique clinical scenarios that allow for serial sampling before and after a controlled biological perturbation (e.g., exercise testing, planned MI, drug administration, and so on). Such paired experiments allow subjects to serve as their own controls, mitigating the risk of confounding factors. In addition, emerging investigational techniques are integrating metabolomics with other “omics” platforms in order to gain insight into pathophysiological interactions of metabolites, proteins, genes, and disease states. Furthermore, the state-of-the-art metabolomic technologies now available provide us with a snapshot of the metabolic fingerprints of individual patients, which can serve as diagnostic and/or prognostic tools that can be used to identify impairments in systemic or myocardial metabolism occurring during the development and worsening of CVD, as well as identifying the types and timing of specific interventions / therapies. Thus, metabolomics is a powerful technology that is transforming our ability to predict, detect, and understand a myriad of cardiometabolic disease states, and to monitor the effectiveness of therapeutic interventions. In doing so, metabolomics continues to advance our societal objective of personalizing the practice of medicine. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data">Metabolomic Profiling of Statin Use and Genetic Inhibition of HMG-CoA Reductase</td>
+<td class="data">Metabolomic profiling of statin use in longitudinal cohorts uncovered an intricate association pattern of circulating lipoprotein, fatty acid, and metabolite changes, which adds to our understanding of the LDL-C–independent effects of statins. Statin use was associated with pronounced lowering of numerous lipids and fatty acids consistent with the cardioprotective effects. By contrast, statin use did not markedly affect the circulating levels of recently identified biomarkers for cardiometabolic risk such as amino acids, glycolysis- and glycogenesis-related metabolites, or ketone bodies (5,6,21,31). The genetic proxy for HMGCR inhibition gave rise to a strikingly similar association pattern, providing unconfounded evidence that the observed metabolic changes arise as a consequence of the mechanism-based effect of statins (Central Illustration). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These insights into an extensively studied therapeutic agent illustrate how metabolomics, combined with genetic proxies mimicking pharmacological action, can elucidate the molecular effects of known targets, clarify treatment indication, and potentially be used to inform drug development (19,20,34). XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Inhibition of HMGCR by statins leads to upregulated expression of LDL receptors in the liver, which in turn increases the uptake of circulating LDL particles. Using lipoprotein subclass profiling, statin therapy also was shown to be associated with considerable lowering of IDL and very small VLDL particle concentrations, beyond the anticipated decrease in LDL particles. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These remnant lipoprotein particles carry 20% to 30% of circulating cholesterol; they are small enough to enter the arterial intima and, therefore, possess the potential to cause atherosclerosis (14). Because total triglyceride concentration is highly correlated with the amount of IDL and small VLDL particles and their cholesterol levels, the triglyceride measure may partly reflect the cardiovascular risk mediated by the atherogenic remnant particles (14,15). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Indeed, accumulating genetic evidence suggests that triglyceride levels reflect causal processes related to coronary heart disease (13–15); however, the likely underpinning mechanism is the remnant cholesterol carried in the IDL and VLDL particles (14,15,35). Detailed lipoprotein profiling demonstrated that statins are effective in lowering remnant cholesterol, whereas triglycerides are only modestly decreased by statin therapy. These results suggest that statins are substantially more efficacious for lowering remnant cholesterol than would be projected based on their ability to lower triglycerides. If the cardiovascular risk reflected by triglycerides is due to remnant cholesterol rather than triglycerides per se (14,35), then our results indicate cardioprotective benefits of statins beyond LDL-C lowering and suggest broader indications for statins in treating remnant hyperlipidemia. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The fatty acid composition of lipoprotein lipids vary greatly depending on the abundance of cholesteryl esters, triglycerides, and phospholipids (36). In accordance with linoleic acid being the primary constituent of cholesteryl esters—the dominant lipid in LDL particles—statin therapy led to the greatest lowering of this omega-6 fatty acid. Absolute levels of omega-3 fatty acids were only modestly decreased, in agreement with prior studies (12,37). These results are consistent with omega-3 fatty acids being primarily bound to the phospholipids, which only account for some 30% of the lipids in LDL particles (36). Monounsaturated and saturated fatty acids were decreased to a broadly similar extent as total triglycerides and phospholipids, respectively, which is coherent with the main fatty acid compositions for these lipid classes (36). The changes in the relative fatty acid balance due to statin therapy were modest. Although lower levels of the ratio of omega-6 fatty acids to total fatty acids have been associated with higher cardiovascular risk (5,38), evidence for a causal relation is lacking. The overall consistency between the genetic and longitudinal association patterns indicate that the various fatty acid modulations are on-target effects of HMGCR inhibition rather than due to cholesterol independent properties of statins (37). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We also assessed whether statin therapy would be associated with biomarkers in various non-lipid
+pathways. (Glycoprotein acetyl) GlycA, a measure of systemic inflammation and a biomarker for CVD and all-cause mortality (5,6,32,33,39), was modestly lowered, in accordance with the proposed anti-inflammatory properties of statins (7,8). XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, both longitudinal and genetic analyses provided no evidence for substantial effects of statins on amino acids, glycolysis and gluconeogenesis metabolites, and ketone bodies. Several metabolites in these pathways have recently been shown to be risk markers for CVD and type 2 diabetes (5,6,17,21,31). Although the potential causal roles of these biomarkers remain unclear, our results suggested that statin therapy would not be efficacious for lowering the cardiometabolic risk associated with these markers. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; High-throughput metabolomic profiling in large cohorts with multiple time points and genetic information elucidated the pharmacological effects of statins on lipoprotein subclasses including their lipid constituents and fatty acid composition. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These results suggest a more efficacious role of statins for lowering remnant cholesterol levels than would be expected based on the ability of statins to lower circulating triglycerides. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The absence of robust associations of statin use with circulating amino acids, glycolysis and gluconeogenesis metabolites, and ketone bodies suggest minimal pleiotropic effects on these non-lipid biomarkers. As a corollary, statin therapy appears to have little or no efficacy on these novel markers of cardiometabolic risk. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The exquisite match between the metabolic association patterns from observational and genetic analyses serves as a proof of concept, illustrating how the combination of metabolomics and genetic proxies for drug mechanisms can facilitate the assessment of pharmacological action and on-target effects for known therapies and novel drug targets. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Although Mendelian randomization of drug targets has been used previously (19,20,34), our study was
+the first to our knowledge to combine the concept with observational results across a wide range of cardiometabolic biomarkers. As extensive metabolomics and genetic data are increasingly becoming available in large biobanks, such comprehensive molecular profiling can augment drug development in both preclinical and clinical trial stages to elucidate molecular mechanisms, clarify pleiotropic effects, and inform treatment indication. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data">Environment Impacts the Metabolic Dependencies of Ras-Driven Non-Small Cell Lung Cancer</td>
+<td class="data">These findings suggest increased glucose uptake in Kras-driven NSCLC is used to support both increased lactate production and increased TCA cycle metabolism, challenging the notion that tumors switch from oxidative glucose metabolism to aerobic glycolysis (Vander Heiden et al., 2009). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The exclusive metabolism of glucose to lactate by tumors has also been questioned by analysis of glucose fate in glioblastoma, lung cancers and liver cancers (Maher et al., 2012; Marin-Valencia et al., 2012; Yuneva et al., 2012). The finding that oxidative metabolism of glucose is increased in vivo raises the possibility that the use of glucose to support the TCA cycle is important to support cell proliferation under the conditions present in tissues.  It has been hypothesized that high flux through glycolysis benefits tumors by allowing ATP production in the absence of oxygen and by promoting anabolic metabolism (Gatenby and Gillies, 2004; Vander Heiden et al., 2009). Increased lactate production supports NAD+ regeneration in the absence of oxygen consumption and may provide other benefits to tumor cells related to altered pH or supplying lactate to other tumor cells (Sonveaux et al., 2008). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Near quantitative conversion of glucose to lactate is a phenotype observed in proliferating cells in culture, raising the possibility that a similar phenotype is present in proliferating cells of lung tumors. Because a substantial fraction of the tumor is not actively proliferating, the increase in oxidative glucose metabolism might reflect the metabolic phenotype of non proliferating cells. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In mouse breast cancer, proliferating and non-proliferating cells regulate glucose metabolism differently such that the non-proliferating cells select for increased pyruvate kinase activity, a regulatory state associated with increased oxidative glucose metabolism (Israelsen et al., 2013). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Differences in lactate production are present across the NSCLC models considered for this study. Whereas the KP, KPS, and xenograft models form tumors with a higher proliferative index, the LA2 model forms lower grade tumors. Consistent with a model where increased lactate production tracks with increased proliferation, lactate levels are increased in KP, KPS, and xenograft tumors relative to normal tissue but not in LA2 tumors. However, KPS tumors proliferate faster than KP tumor, and if anything lactate levels are lower in the KPS tumors arguing that lactate levels do not always scale with proliferation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX While all of the tumor models examined contain a high proportion of cancer cells relative to other cell types, differences in glucose metabolism are observed in different regions of human cancers (Hensley et al., in press). Thus, unknown factors driving tumor heterogeneity might also contribute to the metabolic phenotype differences observed in tumor tissue. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Decreased PDH flux has been described as a property of tumors, with PDH reactivation proposed as a cancer therapy (Michelakis et al., 2008). Surprisingly, glucose metabolism through PDH is increased in tumors relative to normal lung tissues and the cancer cells are dependent on this enzyme for tumor formation. Increased inhibitory phosphorylation of PDHE1α was also not observed in these tumors. One possibility is the lack of increased PDHE1α phosphorylation reflects increased oxygenation. Indeed, the lung is a relatively  well-perfused organ providing access to circulating nutrients and oxygen, although as lung cancers grow vascularization can become limiting and even large human lung tumors have elevated PDH flux (Hensley et al. in press). This suggests that oxidative glucose metabolism may provide benefits to tumor cells such as the production of aspartate (Sullivan et al., 2015) regardless of tumor size.  Despite exposure to among the highest oxygen tensions in the body, normal lung uses 30 - 50% of consumed glucose to make lactate and 20% to make CO2 while contributing relatively minor amounts to protein and lipid biosynthesis (Fisher, 1984). Outside of cytosolic ATP production and NAD+ regeneration, the benefit for normal lung physiology of relatively high flux to lactate remains unclear. Although the flux from glucose to lactate in the lung is high relative to other tissues, glucose also supports production of TCA cycle intermediates in the lung. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Notably, glucose fuels glutamate and glutamine production in lung tissue in rats and humans, and lung tissue is among the highest producers of glutamine (Hensley et al., 2013). Glutamine is the most abundant amino acid in tissue culture media and in the blood, yet in contrast to observations in cell culture, blood glutamine contributes minimally to both normal lung and lung tumor metabolism. Labeled glutamine was abundant in both tissues suggesting ineffective glutamine delivery cannot explain why this amino acid is not used as a fuel. Instead, both normal lung and lung tumors synthesize α-ketoglutarate, glutamate and glutamine from glucose-derived carbon. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This is consistent with findings in MYC-driven lung tumors and glioblastoma (Maher et al., 2012; Marin-Valencia et al., 2012; Yuneva et al., 2012) and may reflect the glutamine use to excrete excess nitrogen from amino acid catabolism (Stumvoll et al., 1999). Urea production for nitrogen excretion is restricted primarily to the liver and kidney in mammals, and glutamine carries excess nitrogen from peripheral tissues to these organs. Because the use of glutamine as a carbon source produces ammonia, glutaminase activity may be better tolerated in tissue culture where large media volumes prevent ammonia accumulation to toxic levels. However, because of an increased need for glutathione (Sellers et al., 2015), nucleotides, and amino acids; tumor nitrogen requirement is higher than that of normal tissues (Mayers and Vander Heiden, 2015). Nevertheless, the net production of glutamine by lung tumors despite the availability of this amino acid from the circulation suggests alternative sources of nitrogen are used, possibly reflecting the propensity of RAS-cancers to catabolize extracellular protein (Commisso et al., 2013; Kamphorst et al., 2015). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The use of pyruvate carboxylase appears to be an important for anaplerosis in tumors in vivo (Fan et al., 2009; Sellers et al., 2015). Consistent with these findings, genetic deletion of Pcx prevents tumor growth while genetic deletion or inhibition of glutaminase has no observable effect. The fact that opposite dependencies were suggested by cell culture experiments highlights the importance of selecting targets for cancer therapy based on nutrient use in a relevant tissue context. The possibility that tissue context is an important determinant of how tumors utilize nutrients might also explain why chemotherapies targeting nucleotide metabolism show efficacy based on cancer tissue of origin. More directly, it suggests that targeting PDH or PCX might inhibit lung tumor growth. In fact, lipoate derivatives act in part through PDH activity suppression and can be potent anticancer drugs in vivo (Zachar et al., 2011).  XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This study highlights the importance of model selection to identify metabolic cancer targets. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cell culture conditions are non-physiological with respect to nutrients, oxygen, and tolerance for excretion of toxic metabolites such as ammonia. Cell culture also selects for the most rapidly proliferating cells, and many tumor cells cannot be cultured in vitro. The fact that transplanted tumors exhibit a phenotype more similar to tumors arising in the lung that are never exposed to cell culture suggests that environment has a greater impact on how nutrients are utilized than genetic or epigenetic selection associated with cell line formation. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The similarities between Kras-driven NSCLC, an EGFR-driven lung tumor, and published studies of genetically distinct tumors further argues that tissue environment can dictate metabolic phenotypes across tumor types. This highlights the importance of considering environmental context in addition to genetics in metabolism studies, particularly in considering how best to target cancer metabolism. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data">Biomarkers of rapid chronic kidney disease progression in type 2 diabetes</td>
+<td class="data">In this study of individuals with type 2 diabetes and CKD3 we found that within a large set of candidate and global discovery biomarkers, at least 62 showed some evidence for association with subsequent rapid renal function decline. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Many of these biomarkers showed high correlations with each other and with clinical covariates so that a much sparser set of 14 biomarkers contained most of the predictive information beyond clinical covariates. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We found that the increment in prediction with these biomarkers was of sufficient magnitude that it would be useful for risk stratification into clinical trials. Some of the biomarkers identified in the most predictive panels are already known to be associated with eGFR (that is, β2-microglobulin and cystatin-C), whereas others have little or no prior data (for example, SDMA/ADMA ratio, FGF-21, and uracil). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The best biomarker panel for prediction consisted of the restricted clinical covariates along with 35 biomarkers; however, this was only modestly better than the best sparsemodel that only required measurement of 14 biomarkers. The expense and logistics associated with validation and subsequent utilization of any new panel means that the 14 biomarker panel represents a more pragmatic approach. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This panel of biomarkers now warrants further evaluation in other cohorts. We used clinical creatinine measurements to calculate eGFR in this study, and as there is considerable variability in this measure, it is unsurprising that the in-sample measure of creatinine was also selected in our biomarker panels. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Space does not permit a detailed discussion of each of the 14 biomarkers selected and some of the associations have been described elsewhere. (5,6) Here we focus on some of the more novel associations. One of the strongest predictive biomarkers in our study released during proteolytic breakdown of nuclear proteins and both have been studied as biomarkers for cardiovascular disease (CVD) (7–9). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SDMA is primarily excreted via the kidney and is strongly associated with renal function, (7) but there is also some evidence that the protein methyl-transferase PRMT5 that synthesizes SDMA regulates interleukin-2-gene expression, (10) suggesting that higher levels of SDMA might also reflect inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We did not find any association of SDMA with inflammatory biomarkers such as C-reactive protein, but there was a positive correlation (rho = 0.39) with interleukin-2 receptor α levels. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, rather than a bioactive effect of SDMA itself, the observed prediction in our study may simply indicate that SDMA accumulates when filtration falls and thus it is predictive because it is a good biomarker of filtration. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to SDMA we found that ADMA was only weakly inversely correlated with eGFR but more strongly correlated with arginine. The ratio may be a biomarker of these complex interactions and we note that was the ratio of SDMA/ADMA. SDMA and ADMA are models including the ratio yielded higher AUROCs than models including ADMA and SDMA separately. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX KIM-1 is a protein expressed on the apical membrane of proximal tubule cells. Its ectodomain is shed into the lumen and serves as a urinary biomarker of kidney injury, although there have been mixed results for it as a prognostic biomarker in diabetic kidney disease, (11,12). Studies have shown that KIM-1 expression is increased in the glomerulus in diabetic animal models (13) and is elevated in their plasma (14). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recently, it was reported that shed KIM-1 also serves as a blood biomarker of kidney injury in humans, as plasma KIM-1 levels were higher in patients with acute kidney injury than in healthy controls or postcardiac surgery patients without acute kidney injury (2). In that study serum KIM-1 level at baseline in type 1 diabetes patients strongly predicted rate of eGFR loss and risk of ESRD during 5–15 years of follow-up. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We identified associations with rapid progression of two fibroblast growth factor members FGF-21 and FGF-23. FGF-21 is a 181 amino acid polypeptide secreted predominantly by the liver and adipose tissue and has been shown to play an important role in lipid and energy metabolism (15,16). Previous studies have reported cross-sectional associations with eGFR (17). Median serum FGF-21 levels were  &gt; 7–15-fold higher in dialysis patients than controls (18,19) but fell after short-term angiotensin blockade (19). In cross-sectional studies FGF-21 levels were also elevated with albuminuria even when eGFR was  &gt; 60 ml/min (20). FGF-21 was independently associated with urinary albumin in type 2 diabetes (20). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The kidney has relatively low levels of FGF-21, (21) and FGF-21 activity depends on the tissue-specific expression of its cofactor Klotho β that is predominantly in the liver and adipose tissue rather than the kidney. Thus, association between FGF-21 and renal disease progression may reflect simple accumulation in renal disease. However, it might also reflect an antifibrotic response; it was shown that FGF-21 prevented the expression of profibrotic cytokines, including transforming growth factor-β1 in the kidney (22). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FGF-23 is a 32-kD bone-derived hormone with several known endocrine functions in the kidney, including the promotion of urinary phosphate excretion and the inhibition of the hydroxylation of 25-hydroxyvitamin D (23). Elevated FGF-23 was an independent risk factor for ESRD in patients with relatively preserved kidney function and for mortality across the spectrum of CKD (24). XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Recently, it was shown in 13,448 subjects of the Atherosclerosis Risk in Communities study (ARIC) that higher serum level of FGF-23 were associated with increased risk of incident ESRD, independent of the baseline level of kidney function and a number of other risk factors (25). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX C16-acylcarnitine was one of the strongest predictors of rapid progression in our study. Previously in the KORA cohort, acylcarnitines and especially the ratio of serine to glutarylcarnitine were associated with eGFR, (26) and in FinnDiane study urinary acylcarnitines were associated with</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data">Diabetes risk and amino acid profiles: cross-sectional and prospective analyses of ethnicity, amino acids and diabetes in a South Asian and European cohort from the SABRE (Southall And Brent REvisited) Study</td>
+<td class="data">We report novel ethnicity-specific data regarding the associations between AAs and incident diabetes in over 19 years of follow-up. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We demonstrate significant positive associations between baseline branched chain AAs, tyrosine and alanine and incident diabetes in middle-aged European men in accord with previous studies [4–9, 27]. In South Asian men, the same AAs, plus phenylalanine, were more strongly associated with incident diabetes compared with Europeans. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In European men, obesity and insulin resistance, together with age, smoking, HDL-cholesterol level and alcohol consumption partially or completely accounted for the majority of associations between AAs incident diabetes. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, in South Asian men, the adverse associations were, with the exception of phenylalanine, generally only moderately attenuated on adjustment for insulin resistance, smoking, HDLcholesterol, alcohol intake and creatinine level, and remained statistically significant. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Tyrosine and the combination of branched chain and aromatic AAs were particularly strongly associated with incident diabetes even after multivariable adjustment in South Asian men. Adjustment for tyrosine made a small (approximately 5%) contribution to explaining the ethnic difference in the incidence of diabetes. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cross-sectional associations at baseline between AAs and markers of insulin resistance and glycaemia generally followed the patterns observed for incident diabetes, with the exception of histidine, which was minimally associated with markers of insulin resistance in South Asian men.  XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Associations between branched chain AAs and obesity, although present, were weaker in South Asian than European participants. The latter findings, together with the weaker attenuation of AA associations with incident diabetes, suggest that conventional measures may not capture the best indicators of diabetes risk in South Asian individuals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX COMPARISON WITH OTHER STUDIES =&gt; Although it did not have European comparators and was only a small cross-sectional analysis, the study by Tai et al [7] reported strong associations in South Asian and Chinese men of relatively low body weight between insulin resistance and branched chain and aromatic AAs and for a combination of isoleucine, leucine, phenylalanine, tyrosine and methionine. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These associations were independent of dietary protein intake and BMI [7]. This is compatible with our cross-sectional finding of weaker associations between obesity and branched chain AAs in South Asian men, suggesting that increases in these AA levels may be driven by insulin resistance to a greater extent than obesity in South Asian individuals or that measures of obesity may be less satisfactory in this population.  XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Another small cross-sectional study in younger (age 35–45 years) Indian Asians living in India found strong correlations between isoleucine, leucine and phenylalanine and obesity in people with a high BMI both with and without type 2 diabetes, and lower correlations in those with a low BMI and no diabetes [11]. There was no comparator group, so we cannot compare the relative strength of the correlations. However, these findings are not inconsistent with ours, in that we also found significant correlations between branched chain and aromatic amino acids and measures of obesity, albeit weaker in the South Asian than in the European participants. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The findings of the Framingham Offspring Study for three AAs and for five AAs in the lower risk random cohort sample adjusted for age, fasting glucose level and BMI are comparable with our findings for European men for the upper vs lower quartiles of AA levels (although the linear association is attenuated), but they somewhat understate the associations observed in the higher risk South Asian men in our study [5]. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We had anticipated that the findings in the European and South Asian participants in the SABRE Study would most closely resemble the Framingham random cohort. European SABRE participants had comparable baseline levels of glucose, insulin and obesity, but were younger, were less likely to be hypertensive and had lower triacylglycerol levels, perhaps explaining the somewhat weaker associations of AAs with incident diabetes compared with those observed in the Framingham random cohort. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX South Asian SABRE participants, who were also younger, were more centrally obese and had higher fasting glucose and insulin levels, but experienced similar triacylglycerol levels and less hypertension than the Framingham random cohort. Associations between AAs and incident diabetes in South Asian individuals more closely resembled the stronger associations seen in the Framingham replication cohort (Malmo Diet and Cancer cohort [28]) and Framingham high-risk propensity matched cases and controls, despite having markedly lower overall obesity (BMI) than the latter group [5]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX POSSIBLE MECHANISMS =&gt; Possible mechanisms Branched chain and aromatic AAs have</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data">Validation of the association between a branched chain amino acid metabolite profile and extremes of coronary artery disease in patients referred for cardiac catheterization</td>
+<td class="data">Validated previous findings showing BCAAs + related metabolites =&gt; independently associated with extremes of CAD severity, even after adjusting for diabetes + measures of IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX               XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data">Glutamine and cancer: cell biology, physiology, and clinical opportunities</td>
+<td class="data">Recent advances in glutamine-based imaging, coupled with the successful application of glutamine metabolic inhibitors in mouse models of cancer, make it possible to conceive of treatment plans that feature consideration of tumor glutamine utilization. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A key challenge will be predicting which tumors are most likely to respond to inhibitors of glutamine metabolism. Neuroblastoma is used here as an example of a tumor in which evidence supports the utility of strategies that would involve both glutamine-based imaging and therapy (Figure 3). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Neuroblastoma is the second most common extracranial solid malignancy of childhood. High risk neuroblastoma is defined by age, stage, and biological features of the tumor, including MYCN amplification, which occurs in some 20%–25% of cases (31). Because MYCN-amplified tumor cells require glutamine catabolism for survival and growth (15), glutamine-based PET at the time of standard diagnostic imaging could help predict which tumors would be likely to respond to inhibitors of glutamine metabolism. Infusion of 13C-glutamine coordinated with the diagnostic biopsy could then enable inspection of 13C enrichment in glutamine-derived metabolites from the tumor, confirming the activity of glutamine catabolic pathways. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Following on evidence from mouse models of neuroblastoma, treatment could then include agents directed against glutamine catabolism (15). Of note, some tumors were sensitive to the ATF4 agonist fenretinide (FRT), alone or in combination with EGCG. Importantly, FRT has already been the focus of a Phase I clinical trial in children with solid tumors, including neuroblastoma, and was fairly well tolerated (81). XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="data">Circulating lysophosphatidylcholines are markers of a metabolically benign nonalcoholic fatty liver</td>
+<td class="data">Considering that among body fat and ectopic lipid compartments, liver fat content correlates most strongly with insulin sensitivity
+(9,10), the fact that some subjects can accumulate large amounts of fat within the liver yet remain insulin sensitive is an unexpected finding for many researchers. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, there is increasing data supporting the existence of such a phenotype (11,12,23), and the investigation of mechanisms determining this phenotype may help to advance our knowledge, specifically about signaling and detoxification pathways that are involved in the regulation of insulin sensitivity in NAFL. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the current study, using a plasma metabolomic approach, we first found that a metabolite pattern including the BCAAs leucine and isoleucine, ornithine, the acylcarnitines C3:0-,C16:0-, and C18:0-carnitine, and lyso-PC C16:0 was able to separate the insulin-sensitive from the insulin-resistant NAFL groups with a relatively high discriminative power. Interestingly, the same metabolomic pattern separated the NAFL groups after a lifestyle intervention, after liver fat content and insulin sensitivity had changed, yet similar relationships for liver fat and insulin sensitivity were still apparent between the groups. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX When we then studied the individual metabolites comprising this metabolomic pattern, we found lyso-PCs to most strongly correlate with insulin sensitivity in subjects with NAFL. These findings support that a metabolomic pattern, particularly one including lyso-PC C16:0, may be a circulating marker of insulin sensitivity in NAFL. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The metabolomic pattern that we have identified to separate the NAFL groups includes BCAAs. They were shown by interesting studies from Newgard et al., Gerszten, and others (19,24–26) to be important for the regulation of glucose metabolism. In addition, Perseghin and colleagues (27) showed that in first-degree relatives of type 2 diabetic individuals, not only glucose and fatty acid metabolism but also leucine metabolism showed resistance to insulin. In our present study, we also detected correlations of leucine and isoleucine with insulin sensitivity at baseline in our 40 subjects with NAFL. However, and in contrast to what we had expected, these relationships were positive. Interestingly, in the smaller group of 17 subjects without NAFL, these relationships were negative (both r &lt; -0.42 and both P &lt; 0.09). In addition, we detected a strong interaction effect of these circulating BCAAs with NAFL (both P &lt; 0.006) but not with BMI, to determine insulin sensitivity. Although we have no explanation for this novel observation, and cannot rule out that the relatively small sample size may have brought about this finding, it may be of importance for further studies on the role of BCAAs in the regulation of insulin sensitivity, particularly in the aspect of NAFL. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX What is known about the role of lyso-PCs in metabolism? Lyso-PCs in plasma are primarily generated from PCs of lipoproteins or from membrane-derived PCs by the action of secretory or lipoprotein bound phospholipase A2. Another source of plasma lyso-PC levels is the production from PCs by endothelial lipase as well as from HDL or oxidized LDL by lecithin-cholesterol acyltransferase, which is secreted from the liver. On the other hand, lyso-PCs can also be reacylated to PC by the action of lyso-PC acyltransferase. Interestingly, most recently, a study in mice identified palmitoyl-, stearoyl-, and oleoyl-lyso-PCs to be lower in the serum of NASH animals compared with animals with simple steatosis and suggested that high lyso-PC acyltransferase activity is involved in this process (28). By the action of lysophospholipase D / autotoxin plasma, lyso-PC can also be transformed to lysophosphatidic acid and sphingosine-1-phosphate, important extracellular signaling lipids with multiple biological functions  (29). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the bioavailability of choline, which is required for hepatic PC genesis, plays an important role in the pathophysiology of NAFL and its progression, and is regulated by the gut microbiome (30), may determine the plasma lyso-PC levels. Interestingly, recently lyso-PC C16:0 was found to enhance glucose uptake in an insulin-independent and protein kinase C-d–dependent manner in adipocytes (31). This finding was confirmed in vivo by glucose-lowering effects of lyso-PC C16:0 in type 1 and type 2 diabetes mouse models (31). Whether these effects and putatively beneficial effects of lyso-PC C16:0 on glucose uptake in other tissues translate into a positive effect on whole-body glucose uptake needs to be investigated in future studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to glucose metabolism, the role of lyso-PCs in the regulation of inflammation has been studied more extensively. It has been shown that lyso-PC C16:0 is able to inhibit reactive oxygen species production in stimulated polymorphonuclear leukocytes (32,33). As putative mechanisms of action, lyso-PCs activate G protein–coupled receptors (GPR4, G2A, and GPR119) that are involved, for example, in migration and apoptosis of immune cells, osteoclastogenesis and angiogenesis, and insulin secretion from b-cells (29). Importantly, lyso-PCs were recently found to enhance the suppressive function of human CD4+CD25+ regulatory T cells (Tregs) (34). Tregs secrete anti-inflammatory signals, inhibit macrophage migration, and induce non-inflammatory M2-like macrophage differentiation (35). In addition, defects in Treg function are considered to play a role not only in autoimmune diseases, such as autoimmune hepatitis (36), but also in other causes of hepatic inflammation (37,38). In agreement with an anti-inflammatory property of lyso-PCs, we detected strong negative relationships of total lyso-PCs and lyso-PC C16:0 with hs-CRP levels in our subjects with NAFL. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We then asked whether lyso-PC C16:0 levels also differ between insulin-sensitive and insulin-resistant subjects without NAFL. No such relationship was found. Importantly, the insulin-sensitive and insulin-resistant subjects in the respective NAFL and non-NAFL groups had very similar insulin sensitivity (Fig. 3). This indicates that lyso-PC C16:0 levels may be a good marker of subclinical inflammation and insulin resistance and may putatively protect from inflammatory processes, specifically in NAFL. In support of this hypothesis,we found lyso-PC C16:0 to be negatively associated with insulin resistance in subjects with high, but not low, liver tissue lipid content. Certainly, because of the very small sample size of this group, we cannot draw definite conclusions from this observation. Importantly, the replication was not only done in a separate population than the initial screening population but another method of measurement of lyso-PC C16:0 levels was also applied. Interestingly, in the large Relationship Between Insulin Sensitivity and Cardiovascular Risk (RISC) study, lyso-PCs were also found to negatively correlate with estimated hepatic insulin resistance (39). Also in agreement with our present data, the correlations were stronger in the subjects with NAFL compared with the subjects without hepatic steatosis (A.G., personal communication). Moreover, and in agreement with our hypothesis, our liver histology data indicate that hepatic inflammation is present when plasma lyso-PC C16:0 levels are low. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In summary, from a panel of 180 metabolites, the lyso-PC concentrations differed most strongly between insulin sensitive and insulin-resistant subjects with NAFL. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These relationships, as well as the correlations with insulin sensitivity, were still apparent after 9 months of lifestyle intervention. Interestingly, lyso-PC levels did not change during this intervention, indicating that they are genetically determined. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The fact that the correlations of lyso-PC levels with insulin sensitivity and with systemic and hepatic inflammation were less strong or absent when liver fat content was low, and the knowledge about the signaling properties of lyso-PCs, supports the hypothesis that a genetically determined high lyso-PC availability may protect specifically from fatty acid–induced insulin resistance and hepatic inflammation when NAFL is present. Alternatively, elevated circulating lyso-PCs may not be functionally active in this process but represent activated pathways in the synthesis or metabolism of phospholipids and phosphatidylcholine and, thus, in the generation of hepatic endoplasmic reticulum stress (40) (Supplementary Fig. 2). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">19</td>
+<td class="data">Branched-chain and aromatic amino acids are predictors of insulin resistance in young adults</td>
+<td class="data">BCAAs + AAAs levels predict insulin resistance index 6 years later in normo-glycaemic individuals even when accounting for baseline insulin resistance and conventional risk factors XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Amino acids mediate the risk for future diabetes because they are markers for the development of insulin resistance. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Limited added value of amino acid profiling =&gt; for the prediction of insulin resistance in young adults XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Accumulating evidence suggest =&gt; BCAAs + AAAs =&gt; associated with insulin resistance + hyperglycaemia =&gt; at a single time point (8 - 15, 27, 28) XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Several decades ago =&gt; study found that obese individuals had elevated concn =&gt; BCAAs + AAAs =&gt; these amino acids =&gt; correlated with insulin levels (7). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Demonstrated pronounced cross-sectional associations of amino acids =&gt; HOMA-IR + sex + obesity related effects (8 - 12) XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXPProspective analyses =&gt; BCAAs + AAAs =&gt; predict future impairment in insulin sensitivity in young adults. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Elevated BCAAs + AAAs =&gt; precede development of insulin resistance already in early adulthood XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Altered BCAAs + AAA metabolism =&gt; associated with impairment of insulin sensitivity prior to the effects observed for impaired glucose levels XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXArginine =&gt; effective stimulus for insulin secretion. No association between Arginine =&gt; insulin resistane index XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The risk for future diabetes induced by amino acids  is at least in part mediated through insulin resistance. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There was a significant cross-sectional associations =&gt; amino acids with insulin resistance index. The prospective associations =&gt; non-significant after adjustment for baseline HOMA-IR. Glutamine =&gt; inversely associated with 6-year glycaemia in women. Insulin resistance =&gt; suggested to underpin future diabetes in the case of =&gt; alanine + glutamine (14). Our results could suggest =&gt; altered concns of these gluconeogenic amino acids =&gt; impairment of insulin sensitivity =&gt; in a later stage of disease progression =&gt; than perturbed BCAA + AAA metabolism. Associations of amino acids =&gt; HOMA-IR =&gt; markedly different =&gt; for men + women. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">20</td>
+<td class="data">Identification of serum metabolites associated with risk of type 2 diabetes using a targeted metabolomic approach</td>
+<td class="data">In this prospective investigation using a targeted metabolomic approach at population level, we found increased concentrations of hexose; phenylalanine; and diacyl-phosphatidyl-cholines C32:1, C36:1, C38:3, and C40:5 and reduced concentrations of glycine; sphingomyelin C16:1; acyl-alkylphosphatidylcholines C34:3, C40:6, C42:5, C44:4, and C44:5; and lysophosphatidylcholine C18:2 to be independently predictive of T2D in EPIC-Potsdam. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The results agree with data from cross-sectional studies showing that patients with T2D had increased concentrations of sugar metabolites (13), acylcarnitines (14), and BCAA (13) and reduced concentrations of glycine (12). We were able to further replicate the results of Wang et al. (35), who recently reported that BCAA and aromatic amino acids predicted T2D in the prospective Framingham Offspring cohort and the Malmö Diet and Cancer study. In agreement with Wang et al. (35), we found higher concentrations of phenylalanine, isoleucine, tyrosine, and valine to be associated with increased risk of T2D and glycine to be associated with reduced risk of T2D. However, in the present study, BCAA and aromatic amino acids were linked to each other, and only phenylalanine was independently associated with T2D risk when accounting for the other metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BCAAs may serve as substrates for the glucose-alanine cycle in skeletal muscle. Through alanine aminotransferase–catalyzed transamination reactions, this may result in increased substrate availability for hepatic gluconeogenesis, thereby increasing hepatic glucose production (39). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Conversely, glycine is a gluconeogenic amino acid; therefore, reduced serum glycine may also reflect increased gluconeogenesis. Alternative theories suggest that glycine depletion may reflect glutathione consumption driven by oxidative stress (40) or abundance of incompletely oxidized fuels that are excreted as urinary acylglycine conjugates (41–43). The frequently observed increase of BCAA in subjects with insulin resistance is also believed to be the result of reduced activities of key BCAA catabolic enzymes in liver and adipose tissue (44). Furthermore, amino acids may directly cause muscular insulin resistance by disrupting insulin signaling (45). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The positive association between hexose and T2D risk remained significant after adjustment for glucose. This observation could be an artifact from the different methods used to measure hexose and glucose. However, it has to be noted that hexose represented not only glucose but also the sum of all six-carbon monosaccharides. Previous studies have shown that in addition to glucose, fructose levels were elevated in individuals with T2D (12) and that intake of fructose was positively associated with risk of insulin resistance and T2D (46). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In insulin-resistant conditions, the body aims to compensate for decreased glucose uptake of peripheral tissues through increased pancreatic insulin secretion (1). However, at the stage of overt insulin resistance, this system will eventually be exhausted, as caused by b-cell dysfunction and, subsequently, insulin secretion decreases (1). Phenylalanine, which was positively correlated to insulin secretion in the present study, may be involved in pathways to compensate early stages of insulin resistance through stimulation of insulin secretion. In contrast, increased hexose concentrations may indicate manifest insulin resistance and defect of b-cells.  XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX It is noteworthy that we observed significant associations between choline-containing phospholipids (i.e., diacyl-, acyl-alkyl-, and lysophosphatidylcholines and sphingomyelins) and T2D risk. Diacyl-phosphatidylcholines consist of glycerol linked to phosphocholine and two fatty acid residues, and removal of one fatty acid produces lysophosphatidylcholines. The corresponding acyl-alkyl-phosphatidylcholines comprise an ether linkage to one alkyl chain and one polyunsaturated fatty acid (47). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Sphingomyelins are built of a ceramide core linked to one fatty acid and a phosphocholine or phosphoethanolamine (Fig. 3). Together, these phospholipids make up the main constituent of cellular membranes and may be involved in cellular signal transduction (48). In addition, they represent a major fraction of the human plasma lipidome because they are most abundant in all lipoproteins (49). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Diacyl-phosphatidylcholines are particularly essential for hepatic secretion of triglyceride-rich VLDL particles and HDL (48), whereas acyl-alkyl-phosphatidylcholines may act as serum antioxidants to prevent lipoprotein oxidation (50). Their hepatic synthesis requires dietary choline (48). It was previously shown that choline-deficient mice on a high-fat diet showed reduced phosphatidylcholine biosynthesis and accumulated hepatic fat, but at the same time, they had reduced fasting insulin and improved glucose tolerance (51). In addition, impaired hepatic phosphatidylcholine biosynthesis led to reduced levels of plasma triglycerides and HDL cholesterol in vivo (52). Accordingly, phosphatidyl-cholines and sphingomyelins were positively related to plasma HDL cholesterol in the present study. Furthermore, acyl-alkyl-phosphatidylcholines were inversely correlated to plasma triglycerides, opposite to diacyl-phosphatidylcholines, and higher levels of acyl-alkyl-phosphatidylcholines but not diacylphosphatidylcholines were linked to improved insulin sensitivity and reduced insulin secretion. Previous studies reported that acyl-alkyl-phosphatidylcholine levels were lower in obese subjects and subjects with insulin resistance (50,53). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These mechanisms may contribute to the antithetical association between two phosphatidylcholine subclasses and T2D risk found in the present study and may indicate a key role of the type of linkage between phospholipid core and fatty acid residue. Furthermore, those phosphatidylcholines containing fatty acids with a lower number of carbons and double bonds were positively associated with T2D risk, contrary to those with a higher number of carbons and double bonds. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Similar observations have recently been reported for fatty acid compositions of erythrocyte membrane phospholipids (54) and triglycerides (55), suggesting that lipids with a shorter chain length and saturated fatty acid residues may trigger development of T2D, whereas those containing longer
+chains and unsaturated fatty acids may offer protection. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX SUMMARY =&gt; In summary, the present data suggest that the identified metabolites could be part of different pathways involved in the early genesis of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Therefore, these novel candidates could be useful in clinical practice to identify high-risk individuals earlier in order to delay or prevent disease onset. Furthermore, serum metabolites in this study predicted risk of T2D in a similar manner to a combination of classic risk factors; thus, their measurement may be a useful approach to predict T2D risk for individuals in the future. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX .  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, this prospective investigation using metabolomics data of independent study populations identified sugar metabolites, amino acids, and choline-containing phospholipids to be independently associated with risk of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

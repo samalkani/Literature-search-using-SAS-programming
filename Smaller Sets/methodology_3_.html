@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Methodology data set 3</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.METHODOLOGY_SORTED_3">
+<caption aria-label="Data Set REF.METHODOLOGY_SORTED_3"></caption>
+<colgroup><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Strengths</th>
+<th class="header" scope="col">Weaknesses</th>
+<th class="header" scope="col">Future_Research</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">By applying HERMES, MS2 coverage is improved by focusing MS2 acquisition time on sample-specific, MS1 preannotated, and biologically relevant compounds. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast to DDA, the continuous targeted MS2 acquisition in HERMES does not acquire MS1 scans nor use dynamic exclusion, allowing a cleaner and easier deconvolution and thereby increasing the quality of MS2 spectra and the number of identified metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Although HERMES was validated by using a 13C-based credentialing approach, it does not require isotopic labeling but instead implements a molecular-formulaoriented method that is generally applicable to all sample types. Thus, HERMES provides a broad-scope solution to annotate the large number of ‘junk’ MS1 and MS2 signals, which lead to low-quality MS2 spectra, false-positive identifications and an overall low number of identified metabolites. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Future developments should provide optimized maximum ion injection time and collision energies for each inclusion list entry to reduce the number of MS2 scans required, and improve the quality of MS2 spectra, particularly for low-intensity SOIs. Also, the ability to annotate in-source fragments by HERMES is determined by the size and content of public (and in-house) MS2 databases. XXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">As AI technologies evolve and improvements to AI-NLP databases and search platforms occur, this will facilitate even tighter integration of AI-NLP into metabolomics data analysis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Such changes include creating a distinct entity category representing metabolites, direct 
+import of MS and MS/MS data, prediction of related metabolites, and categorization of endogenous metabolites from exogenous drug compounds or environmental molecules. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A forward-looking example of metabolomics AI integration is an automated biomarker detection, identification and then quantification system. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Following data acquisition and feature annotation, AI-NLP searching of scientific literature databases is combined with MS/MS identification databases. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Resulting metabolite identifications of putative biomarkers would be validated with high throughput quantitative LC/MS system, thereby allowing complete biomarker workflows in batch without the need for expert user intervention. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX As NLP systems understand more types of biological relationships, we foresee being able to mine big data more effectively with the aim of connecting disperse clues to determine causal mechanisms linking metabolite with phenotype. That ability to ascertain the key causal action in the complex and heterogenous networks of biology is the linchpin for 
+predictive biology going forward. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Without that mechanistic knowledge, fields that depend on guided intervention, such as precision medicine, crop pest resistance and bioremediation, will remain correlative, non-specific and ultimately ineffective.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX We are only beginning to see how NLP derived literature evidence can improve biological interpretation and analysis of metabolomics data. Drawing on the knowledge of the global scientific literature, incorporation of NLP or other AI-based technologies into metabolomics data processing and 
+interpretation offers the opportunity to decipher those key connections and start to address 
+major health and environmental challenges. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data"> &#160;</td>
+<td class="data">Prevailing challenges remain in terms of maximizing information from a single cell (Macaulay et al., 2017) using current proteomics and metabolomics strategies, where barely a handful of metabolites are captured (Nemes et al., 2012). XXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, there are already some early exciting works of single cell multi-omics integration methods available that are upcoming in manifold [e.g., MAGAN (Amodio and Krishnaswamy, 2018), UnionCom (Cao et al., 2020) and non-manifold – such as LIGER (Welch et al., 2019) and MOFA+ (Argelaguet et al., 2020)]. Hopefully, these will be addressed and covered in future multi-omics efforts. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Here, we demonstrated that AllCCS outperforms other tools in terms of efficiency, accuracy and coverage. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, some limitations in CCS prediction are still presented. For example, most of metabolite ions have their unique CCS values, but some may have multiple CCS values for different conformations. Currently, AllCCS and other tools can only predict one CCS value for one conformation, presumably the most compact one. The introduction of quantum chemistry for conformation generation and 3-D molecular descriptors into the machine - learning-based prediction may help to address this challenge. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The second challenge is the CCS prediction of isomers (e.g., cis-trans isomers in lipids). Although the CCS prediction has made effective improvements to ~2% prediction errors, identification of metabolite isomers is still a challenge due to the limit resolution of ion mobility separation (e.g., 40–60 for DTIMS and TWIMS). We demonstrated this challenge with an example of four monosaccharide phosphate isomers, which were poorly separated with IM (Supplementary Fig. 18). However, these isomers would be partially separated with an IM resolution of 200, and baseline separated with an IM resolution of 500. Therefore, both CCS prediction and annotation accuracy will be further improved with the availability of high-resolution IM instruments, such as TIMS and cyclic IM. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">We believe the consistency of reported CCS values will be further improved with the launch of guidelines from IM–MS research community (17). In addition, every user could access AllCCS webserver to view, calculate and download both experimental and predicted CCS values in AllCCS. We are also working on deploying CCS values into HMDB and other popular databases to make it available for the wider community. With the rapid growing of reported CCS values, AllCCS will be continually expanded and updated, making it as a valuable resource for both IM–MS and metabolomics research. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXDifferent strategies have been developed for CCS calculation, such as MetCCS (27), LipidCCS (29), DeepCCS (30), ISiCLE (31), Dark-Chem (49), CCSbase (50) etc. However, the efficiency, accuracy and generalization capability for these methods need further improvements. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">In summary, we have developed a novel CIT-MS method for systemic and broad MFA and have successfully applied it for the discovery of altered metabolite enrichment and flux in cell metabolic reprogramming. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CIT-MS is able to cover flux of a variety of metabolites, including some previously less-studied ones. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Relative flux provides a simple approach to compare flux of a metabolite from different sample groups, which is sufficient in many biological studies. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CIT-MS is innovative and powerful and carries the advantages of broad coverage, easy implementation, fast throughput, and, more importantly, high fidelity and accuracy. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition, our approach can be easily expanded to include other tracers (such as 15N-tracers), a wide range of other metabolites, and various biological systems, such as gut microbiome, animal models, and humans. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The major limitation to implementation of CIT-MS is that the whole process is not fully automated yet. To monitor the full list of MRMs using LC-MS/MS, 7 injections are needed for each sample: 5 and 2 in positive and negative ionization mode, respectively, using the same collision energy and cell accelerator voltage for both polarities. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A second limitation is the realized MFA coverage. In theory, CIT-MS is applicable to any metabolite detectable by LC-MS/MS; we started with ~310 metabolites in the detection panel of our large-scale LC-MS/MS assay that are of strong biological significance (45,48,49,51–57). In this proof-of-principle project using Myc-On/Off cells as an example, although a marked improvement was seen compared to previous studies, (40,71) only 142 of 310 targeted metabolites were detected, and flux estimates were measured for only 46 of those metabolites. While this may be inherently due to Myc-biology, (36,40,65,66,81) CIT-MS generally requires a careful selection of metabolites and metabolic pathways to target. XXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Therefore, it is expected that the broader impacts of CIT-MS are multifaceted and include analytical technique developments that will ultimately provide a large number of scientists with highly reliable and robust methods and tools for characterizing metabolic flux in complex biological systems. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">While these findings are of interest, given the extensive literature on altered choline metabolism and liver disease (18–25), they do not prove cause and effect and call for further mechanistic studies.   XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   All of these features are geometrically opposite to those observed in choline-deficient models in mice and humans and suggest that HSD17B13 might be an attractive pharmaceutical target in liver disease. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">In the coming years, hundreds of thousands of small molecules will be characterized using the same strict MS/MS protocols and data curation. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Further, given the ubiquitous coupling of pre-ionization techniques and mass spectrometry instrumentation for untargeted metabolomics, tools for retention time prediction are currently being developed.</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">It is hoped that regardless of its shortcomings or limitations, this document still offers a fresh and enlightening perspective on the utility of metabolomics in physiological research today and the exciting possibilities of metabolomics for physiological research tomorrow. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Obviously it is impossible in a single review article to cover all aspects of metabolomics or even all aspects of metabolomics as they relate to physiology. Several areas that were not covered include the very exciting area of immunometabolism and immunometabolomics (309, 356), the use of metabolomics in understanding nutrition or assessing nutritional intake (122, 412), the utilization of metabolomics in assessing environmental toxic exposures (348, 386, 503), the application of metabolomics to drug metabolism (phase I or phase II) and drug toxicity (i.e., pharmacometabolomics; Refs. 350, 347, 400), and the use of metabolomics in exercise physiology and fitness assessment (253, 263, 269). These are topics that most certainly deserve an entire review or possibly an entire book on their own. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Several areas that were not covered include; immunometabolism and immunometabolomics (309, 356), the use of metabolomics in understanding nutrition or assessing nutritional intake (122, 412), the utilization of metabolomics in assessing environmental toxic exposures (348, 386, 503), the application of metabolomics to drug metabolism (phase I or phase II) and drug toxicity (i.e., pharmacometabolomics; Refs. 350, 347, 400), and the use of metabolomics in exercise physiology and fitness assessment (253, 263, 269). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">The PROMIS method is generic and can be used in any organism and sample type without the need for transgenic lines, as is the case for the tandem affinity approaches (5). In contrast to DARTS (7) and cellular thermal shift assay/thermal proteome profiling (TPP) (35), PROMIS operates in near-cellular metabolite concentrations and does not require small-molecule modifications such as attachment to agarose beads (6). As such, PROMIS is less likely to generate false positives related to a high concentration of either protein or metabolite bait, as well as false negatives related to small-molecule modifications. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">On the down side, PROMIS is in its nature poorly predictive, as co-elution is an indication, and not evidence for interaction. Predictive power is related to the resolution, which depends on the separation range of the column, number of collected fractions, and sensitivity of the proteomic and metabolomic platform. In an experiment like ours, every metabolite is correlated with several hundred proteins, of which merely a handful constitute true binders. As with any other omics study that relies on correlation to define associations, a larger dataset comprising multiple PROMIS experiments covering developmental, environmental, and/or genetic diversity, will improve predictive power. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">In spite of the lack of new AD medicines in recent years, the drug discovery and development process has improved as a result of more precise diagnosis, information on natural history of AD and measurement of clinical progression, better biomarkers, genetic findings, and knowledge of pathophysiology. Such knowledge, combined with a focus on good molecules and efficient development plans will ultimately produce better medicines.</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="data">In this respect, we have developed an original and simple LC-MS method to assay cetuximab in plasma which fulfills the contradictory criteria of sensitivity, simplicity, robustness and low cost for routine TDM. This original method is based on a fast sample preparation workflow coupled with a robust LC-MS/MS detection. The combination of a simple and rapid (i.e., 2 hrs) pellet digestion and a high-pH reverse phase peptides fractionation prior to the low-pH LC separation provided efficient quantification of residual and maximal cetuximab concentrations in all tested samples. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">Although highly sensitive and fully validated, ELISA techniques suffer from a variety of downsides, ranging from time-consuming, multi-steps procedures to possible lack of robustness, cost-effectiveness issues unless large analytical batches are to be performed and possible operator-dependent or laboratory-dependent results if not performed in expert analytical centers. In addition, although commercial kits are now made available, only few clinical pharmacokinetics laboratories in cancer centers or in University-Hospitals have the expertise in properly handling in-house ELISA procedures, which can be a limitation to the widespread use of this technique as part of routine therapeutic drug monitoring at the bedside. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data">Metabolomics is an exciting and evolving research area, with numerous success stories demonstrating that its power extends from biomarker discovery to understanding the mechanisms that underlie phenotypes. This step towards mechanistic understanding has been made possible by advances in analytical technologies and informatics, and the combination of these tools has generated novel insights into chemical physiology. It has also been made possible as metabolomics has become more widely used in combination with orthogonal technologies, such as genomics, proteomics, structural biology and imaging, as well as with various techniques that allow us to modify gene expression, enzymatic activity, cell signalling or whole metabolic pathways, including the contribution of the naturally occurring microbiota. Thus, the future prospects of metabolomics lie not only in the unique information it provides, but in its integration into systems biology. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Thus, further studies assessing the roles of diet and bacteria in cancers are of the utmost importance. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="data">Numerous beneficial characteristics of NMR outweigh its limited resolution and sensitivity.  XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX NMR thus offers unique opportunities to understand systems biology, discover biomarkers and potential therapy targets, and translate laboratory findings to clinical applications. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Outstanding opportunities exist in the application of NMR-based metabolomics to non-health related fields as well. In particular, for any metabolite of moderate size, NMR is the essential technique for structure determination. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">However, because of the increasingly realized complexity of biological mixtures, reliable detection, unknown identification and quantitation (especially of a large pool of metabolites) continue to constitute daunting challenges. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHowever, due to the cost and effort required to acquire a large number of samples, most early validation studies currently rely on relatively moderate sample sizes. As a result of such limitations, potentially confounding factors including diet, age, gender and subtle differences in pathology can strongly affect the performance of the derived biomarkers. Efforts to take these factors into account are still nascent. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">There is also increased interest in developing biological validation (in addition to the analytical and clinical validation) of identified biomarkers, in order to reduce the number of false positive biomarker candidates that arise, and to provide deeper biological insight. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, some parts of metabolism are insufficiently understood or quite complicated, such that it can be challenging to derive specific biological meaning for the promising biomarker candidates. We believe that efforts to translate metabolite biomarker panels for clinical applications and to find biological connection between the disease state and the derived biomarker panel are best pursued in parallel. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, greater insight into metabolic perturbations can lead to novel drug targets, which constitutes another exciting and growing area of opportunities in metabolomics. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With appreciation of the advantages of NMR for metabolomics applications as well as its challenges, there have been multifaceted efforts to boost sensitivity, resolution and the speed of data acquisition, and to improve quantitative accuracy. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Improved methods to combine and compare metabolite data from NMR and MS, for exploiting their combined strengths for unknown metabolite identification and biomarker discovery, are currently being developed, and these efforts will likely deliver important results. NMR-based metabolomics is anticipated to witness further improvements in the number, accuracy and speed of metabolite identification and quantitation, and thus greatly impact the understanding of systems biology with the hope of helping to manage widespread human diseases.</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="data">Messerli et al overcame this problem by initially selecting for mutants with a known phenotype that was predicted to correlate with the metabolic pathway of interest, in their case impaired starch metabolism in Arabidopsis thaliana. Subsequent metabolomics was then used to compare, by principal components analysis, mutants of known starch metabolizing genes with the experimentally derived mutants and subsequently to discriminate between strains with a bona fide deficiency in starch metabolism and those containing mutations in alternative pathways that coincidentally had pleiotropic effects (Though pleiotropic effects are defined as a single gene affecting multiple systems or determining more than one phenotype) on starch metabolism [74]. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">The main disadvantage of this process is the requirement to screen thousands to tens of thousands of genetic mutants in order to achieve full coverage of the test organism’s genome. Typical MS based metabolomic strategies are not suited to high-throughput analysis (typical sample processing time &gt;30 min [72,73]) XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+<td class="data">FUTURE DIRECTION: IMAGING MASS SPECTROMETRY =&gt; An intrinsic disadvantage of in vitro and ex vivo metabolomic experiments is the loss of information regarding the subcellular and cellular localization of the metabolites/pathways under scrutiny. For example, compartmentalized metabolite pools (such as mitochondrial versus cytoplasmic acetyl-CoA) and/or cellular heterogeneity among groups of cells in a tissue cannot be differentiated in a typical metabolomic experiment. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In practical terms, the changes in abundance of putative substrates and products are diminished due to dilution of non-reacting pools of other cellular or tissue compartments. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Imaging mass spectrometry (IMS) is a powerful technique that can complement traditional metabolomic experiments and provide information about spatial distribution, in addition to mass and abundance data (reviewed in [76–78]). IMS techniques allow spatial mapping of metals, lipids, polar metabolites, peptides, drugs and even proteins in fixed samples, without a priori extraction and loss of cellular architecture. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Two types of IMS methods are the most used, matrix-assisted laser desorption ionization (MALDI) imaging and secondary ion mass spectroscopy (SIMS) imaging. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX MALDI imaging currently has a spatial resolution of 5–50 lm, allowing analysis of single cells within tissue samples, for example. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A lateral resolution under 50 nm can be achieved using SIMS, and up to five different ions can be detected simultaneously, making SIMS-based ‘ion microscopy’ a unique technique to follow the fate and organization of metabolic pathways inside and outside cells. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX However, with the available technology, only mono- or diatomic ions can be detected, in contrast to entire molecular ion detection obtained with MALDI imaging. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Direct monitoring of new enzymatic activities with subcellular resolution is a goal that is yet to be achieved, but holds the promise to improve our understanding of cellular physiology and enzyme function at their correct compartment within cells. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FUTURE RESEARCH =&gt; The future of metabolomics as a tool in enzyme functional assessment is inextricably linked to the future of MS as an analytical platform. As the technology improves, its reliability and accuracy as a functional genomics tool will follow suit. Similarly, methodological improvements in how metabolomics experiments are executed are constantly being sought, including increases in the breadth of metabolic diversity detected with a single analytical method [79], increases and automation in sample throughput [80], and increases in analytical sensitivity towards single-cell levels [81]. Enzyme function discovery will also likely benefit from a more holistic systems approach, in which genomics, transcriptomics and proteomics will complement and validate the hypotheses and conclusions regarding protein function derived from metabolomics data sets [67]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+<td class="data"> &#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

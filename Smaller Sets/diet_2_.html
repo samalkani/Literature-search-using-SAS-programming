@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>SAS Output</title>
+<style>
+/*<![CDATA[*/
+.body.c > table, .body.c > pre, .body.c div > table,
+.body.c div > pre, .body.c > table, .body.c > pre,
+.body.j > table, .body.j > pre, .body.j div > table,
+.body.j div > pre, .body.j > table, .body.j > pre,
+.body.c p.note, .body.c p.warning, .body.c p.error, .body.c p.fatal,
+.body.j p.note, .body.j p.warning, .body.j p.error, .body.j p.fatal,
+.body.c > table.layoutcontainer, .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.layoutregion.l table, .layoutregion.l pre, .layoutregion.l p.note,
+.layoutregion.l p.warning, .layoutregion.l p.error, .layoutregion.l p.fatal { margin-left: 0 }
+.layoutregion.c table, .layoutregion.c pre, .layoutregion.c p.note,
+.layoutregion.c p.warning, .layoutregion.c p.error, .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r table, .layoutregion.r pre, .layoutregion.r p.note,
+.layoutregion.r p.warning, .layoutregion.r p.error, .layoutregion.r p.fatal { margin-right: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block }
+html{ font-size: 100% }
+.body { margin: 1em; font-size: 13px; line-height: 1.231 }
+sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px }
+dd { margin: 0 0 0 40px }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+img { border: 0; vertical-align: middle }
+svg:not(:root) { overflow: hidden }
+figure { margin: 0 }
+table { border-collapse: collapse; border-spacing: 0 }
+.layoutcontainer { border-collapse: separate; border-spacing: 0 }
+p { margin-top: 0; text-align: left }
+h1.heading1 { text-align: left }
+h2.heading2 { text-align: left }
+h3.heading3 { text-align: left }
+h4.heading4 { text-align: left }
+h5.heading5 { text-align: left }
+h6.heading6 { text-align: left }
+span { text-align: left }
+table { margin-bottom: 1em }
+td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+td[class$="fixed"], th[class$="fixed"] { white-space: pre }
+section, article { padding-top: 1px; padding-bottom: 8px }
+hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.stacked-value { text-align: left; display: block }
+.stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
+.stacked-cell > div.data { border-width: 0 }
+.systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.systitleandfootercontainer > p { margin: 0 }
+.systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.batch { display: table }
+.toc { display: none }
+.proc_note_group, .proc_title_group { margin-bottom: 1em }
+p.proctitle { margin: 0 }
+p.note, p.warning, p.error, p.fatal { display: table }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner,
+.notecontent, .warncontent, .errorcontent, .fatalcontent { display: table-cell; padding: 0.5em }
+.notebanner, .warnbanner, .errorbanner, .fatalbanner { padding-right: 0 }
+.body > div > ol li { text-align: left }
+.beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.c { text-align: center }
+.r { text-align: right }
+.l { text-align: left }
+.j { text-align: justify }
+.d { text-align: right }
+.b { vertical-align: bottom }
+.m { vertical-align: middle }
+.t { vertical-align: top }
+.accessiblecaption {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.aftercaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.batch > col, .batch > colgroup > col, .batch > colgroup, .batch > tr, .batch > * > tr, .batch > thead, .batch > tbody, .batch > tfoot { border: none; }
+.batch {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.beforecaption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.body {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.bodydate {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.bycontentfolder {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.byline {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.bylinecontainer > col, .bylinecontainer > colgroup > col, .bylinecontainer > colgroup, .bylinecontainer > tr, .bylinecontainer > * > tr, .bylinecontainer > thead, .bylinecontainer > tbody, .bylinecontainer > tfoot { border: none; }
+.bylinecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.caption {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.cell, .container {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.contentfolder, .contentitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.contentproclabel, .contentprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.contents {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.contentsdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.contenttitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.continued {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.data {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.dataemphasis {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataemphasisfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.dataempty {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datafixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.datastrong {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.datastrongfixed {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.date {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.document, .errorbanner, .errorcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.errorcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.extendedpage {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1pt;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.fatalbanner, .fatalcontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.fatalcontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.folderaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.footerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.footerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.footerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.frame {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.graph > col, .graph > colgroup > col, .graph > colgroup, .graph > tr, .graph > * > tr, .graph > thead, .graph > tbody, .graph > tfoot { border: none; }
+.graph {
+    background-color: #ffffff;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.header {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headeremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headeremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.headersandfooters, .headerstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.headerstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.index, .indexaction {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.indexitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.indexprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.indextitle, .linecontent, .list, .list10, .list2, .list3, .list4, .list5, .list6, .list7, .list8, .list9, .listitem, .listitem10, .listitem2, .listitem3, .listitem4, .listitem5, .listitem6, .listitem7, .listitem8, .listitem9, .note, .notebanner, .notecontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.notecontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.output > col, .output > colgroup > col, .output > colgroup, .output > tr, .output > * > tr, .output > thead, .output > tbody, .output > tfoot { border: none; }
+.output {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.pageno {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.pages {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.pagesdate {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.pagesitem {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.pagesproclabel, .pagesprocname {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+}
+.pagestitle, .paragraph {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.parskip {
+    background-color: #ffffff;
+    border-spacing: 0;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.prepage, .proctitle {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.proctitlefixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooter {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooteremphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooteremphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowfooterempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowfooterstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowfooterstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheader {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderemphasis {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderemphasisfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.rowheaderempty {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowheaderstrong {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.rowheaderstrongfixed {
+    background-color: #6495ed;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.systemfooter, .systemfooter10, .systemfooter2, .systemfooter3, .systemfooter4, .systemfooter5, .systemfooter6, .systemfooter7, .systemfooter8, .systemfooter9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.systemtitle, .systemtitle10, .systemtitle2, .systemtitle3, .systemtitle4, .systemtitle5, .systemtitle6, .systemtitle7, .systemtitle8, .systemtitle9 {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+}
+.systitleandfootercontainer > col, .systitleandfootercontainer > colgroup > col, .systitleandfootercontainer > colgroup, .systitleandfootercontainer > tr, .systitleandfootercontainer > * > tr, .systitleandfootercontainer > thead, .systitleandfootercontainer > tbody, .systitleandfootercontainer > tfoot { border: none; }
+.systitleandfootercontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.table > col, .table > colgroup > col, .table > colgroup, .table > tr, .table > * > tr, .table > thead, .table > tbody, .table > tfoot { border: none; }
+.table {
+    background-color: #cccccc;
+    border-style: solid;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.titleandnotecontainer > col, .titleandnotecontainer > colgroup > col, .titleandnotecontainer > colgroup, .titleandnotecontainer > tr, .titleandnotecontainer > * > tr, .titleandnotecontainer > thead, .titleandnotecontainer > tbody, .titleandnotecontainer > tfoot { border: none; }
+.titleandnotecontainer {
+    background-color: #ffffff;
+    border: none;
+    border-spacing: 1px;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.titlesandfooters, .usertext, .warnbanner, .warncontent {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.warncontentfixed {
+    background-color: #ffffff;
+    color: #003399;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="c body">
+<div style="padding-bottom: 8px; padding-top: 1px">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">Diet data set 2</span> </p>
+</div>
+<div style="padding-bottom: 8px; padding-top: 1px">
+<table class="table" style="border-spacing: 1px" aria-label="Data Set REF.DIET_SORTED_2">
+<caption aria-label="Data Set REF.DIET_SORTED_2"></caption>
+<colgroup><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="header" scope="col">Title</th>
+<th class="header" scope="col">Main_Findings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="data">Lysine pathway metabolites and the risk of type 2 diabetes and cardiovascular disease in the PREDIMED study: results from two case-cohort studies</td>
+<td class="data">In the frame of the PREDIMED trial we found that XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) baseline lysine and especially 2-AAA circulating levels were associated with future risk of T2D but not with CVD risk; XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) a baseline diabetic status appeared to modify the association between baseline lysine levels and subsequent CVD risk so that only subjects who were diabetic at baseline exhibited an association between higher lysine levels and increased risk of future CVD; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (3) 1-year changes in lysine, 2-AAA and pipecolic acid were not associated with subsequent CVD or T2D risk; XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (4) the MedDiet did not show any significant effect on 1-year changes neither in 2-AAA nor in lysine; XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (5) the MedDiet supplemented with nuts or with EVOO may be reducing CVD or T2D risk through the regulation of different biological mechanisms than those related to lysine degradation. However, MedDiet may be modifying the risk conferred by high levels of metabolites included in the lysine degradation pathway. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A previous work published by Wang et al. [5], found in two independent cohorts—Framingham Heart Study (FHS)-Offspring Cohort and Malmö Diet and Cancer Study (MDC)-Cardiovascular Cohort-that high 2-AAA predicted the risk of developing T2D in normoglycemic individuals.  XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results confirmed this association among subjects at high cardiovascular risk showing that the higher the baseline levels of 2-AAA, the higher the subsequent T2D risk in this Mediterranean population. This is an important replication and update of the results considering that all PREDIMED participants randomly selected for the T2D case-cohort were at high risk of developing CVD and had baseline glucose levels that can be considered as a proxy of a pre-diabetic status. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our findings suggest that it seems possible to predict the risk of developing diabetes conferred by 2-AAA even at a pre-diabetic stage. We found similar results for the association of lysine with T2D but this association was not as robust as that for 2-AAA. A recent small cross sectional study reported that 2-AAA was also associated with obesity and metabolic syndrome in addition to T2D [3]. Consistent with our results, they also reported that lysine presented similar but weaker associations with these metabolic conditions. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A mechanism potentially explaining these associations may be that 2-AAA is elevated in response to high glucose levels, leading to increased insulin secretion and promoting mechanisms involved in maintaining glucose homeostasis in early stages of insulin resistance [5]. In the case of lysine, it may be elevated at an early stage of this pathophysiological process to provide the 2-AAA substrate for a likely compensatory mechanism [3]. In concordance with these explanations, lysine was also found to be a predictor of insulin resistance and gestational diabetes during pregnancy in a previous study [18]. Moreover, both 2-AAA and pipecolic have been found to be elevated in diabetic corneas suggesting that this pathway may be also related to diabetes induced diseases [6]. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX On the other hand, we observed no association between baseline lysine, 2-AAA or pipecolic acid levels and subsequent incidence of CVD in non-diabetic subjects. However, the association of lysine with CVD was present in subjects with an initial diabetic status. Therefore, it is likely that this association may only be apparent among subjects with pre-existent T2D. In this context, diabetic status may behave as an effect modifier of the association between lysine and CVD. The p value for the interaction test was statistically significant, supporting this interpretation. This finding represents a novelty and deserves future replication in further independent cohorts. It can be speculated that this effect modification by pre-existent diabetes may suggest that lysine can be implicated in the development of complications associated with T2D, because high levels of lysine may represent a biomarker of a poorer control of glycemic levels in T2D. This interpretation should be taken with caution and further confirmation is needed. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In addition to the 2-AAA pathway of lysine degradation, L-homoarginine may be also synthesized from lysine catabolism and, this alternative pathway, involving arginine and nitric oxide synthesis [19, 20], may be related to CVD and T2D, as we have previously reported [21, 22]. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regarding the effect of the dietary intervention, we observed no effect of MedDiet on lysine, 2-AAA or pipecolic acid 1-year changes. Additionally, we did not find any significant multiplicative interaction between the MedDiet intervention and 1 year changes in lysine, 2-AAA or pipecolic acid. However, we found that Med-Diet may be modifying the effects of baseline lysine on CVD risk as we found a significant interaction between lysine and the intervention. In the same direction, results on 2-AAA and pipecolic acid pointed at the same effect of MedDiet + EVOO (non significant interaction). These results may be suggesting that although there is no  direct effect of diet on the levels of the metabolites, it is possible that MedDiet may be modifying the effects of metabolites on CVD or T2D risk by affecting other mechanisms that may involve different metabolic pathways, inflammation or oxidation.   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, our results provide an interesting independent replication of the association of 2-AAA with future risk of T2D, a similar association for lysine and pipecolic acid and a suggestion of a diabetes-dependent association of lysine with subsequent CVD risk. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="data">Serum metabolite profile associated with incident type 2 diabetes in Koreans: findings from the Korean Genome and Epidemiology Study</td>
+<td class="data">In the present study, various biological pathways, including amino acid and choline-containing phospholipid metabolisms, were altered in the incident T2D group of our community-based cohort sample. Recent Korean reports have implicated seven metabolites (hexose, valine, and five PC aas) in obesity and T2D. These metabolites are related to the fat mass and obesity-associated (FTO) genotype (13). XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Altered metabolites associated with genetic loci were also identified in Korean T2D subjects (14). Extending these previous analyses, which investigated only the cross-sectional association between metabolites and T2D, this study sought the metabolic profiles associated with incident T2D over an 8-year follow-up period. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX AMINO ACIDS =&gt; Previous studies have identified the branched-chain amino acids (BCAAs) as among the most consistent and important metabolites in dysregulation of the peripheral glucose metabolism. BCAAs and aromatic amino acids have been implicated in insulin resistance (27), obesity (28), diabetes risk (8, 29, 30) and coronary artery disease (31). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Similarly, increased isoleucine, valine, and tyrosine were predictive markers of future T2D risk in our present study, and were also correlated with metabolic markers of insulin resistance (HOMA-IR, HbA1C, and TG). The association between BCAAs and new-onset T2D might be explained by following mechanisms. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX First, the increased BCAAs may evoke catabolic materials (propionyl CoA and succinyl CoA), leading to accumulation of incompletely beta-oxidized fatty acids and glucose, impaired insulin effect, and (ultimately) disturbance of glucose control (32). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Second, the composition and derangement of the intestinal microbiota might induce diabetes development (33). According to recent research, higher BCAA levels are associated with gastro-intestinal microbiome patterns such as Prevotella copri and Bacteroides vulgatus species (34), suggesting a role for the human microbiome in the association between BCAAs and T2D development. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our results imply that a healthier dietary pattern significantly reduces the likelihood of future T2D development. Thus, whether certain dietary factors interact with the potential BCAA-biosynthetic component of the gut microbiome pattern, thereby affecting BCAA levels, deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, the mammalian target of rapamycin complex 1 (mTORC1) is important for insulin signaling and secretion and the proliferation of pancreatic beta cells. The primary regulator of mTORC1 signaling is leucine (35). Long–term elevation of these BCAAs may contribute to the hyperactivation of mTORC1 and Jun N-terminal kinase signaling, presumably causing impaired insulin signaling, and subsequent early dysfunction and destruction of beta cells (36–38). Despite the accumulating evidence that BCAAs are related to T2D pathogenesis, whether increased BCAA levels are a cause or consequence of T2D has not been elucidated. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Very recently, the causal association between BCAA metabolism and T2D was clarified in a Mendelian randomization study, using genetic proxies as instrumental variables. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Informally, in attempting to estimate the causal effect of some variable X (&quot;covariate&quot; or &quot;explanatory variable&quot;) on another Y (&quot;dependent variable&quot;), an instrument is a third variable Z which affects Y only through its effect on X. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX For example, suppose a researcher wishes to estimate the causal effect of smoking (X) on general health (Y).[5] Correlation between smoking and health does not imply that smoking causes poor health because other variables, such as depression, may affect both health and smoking, or because health may affect smoking. It is not possible to conduct controlled experiments on smoking status in the general population. The researcher may attempt to estimate the causal effect of smoking on health from observational data by using the tax rate for tobacco products (Z) as an instrument for smoking. The tax rate for tobacco products is a reasonable choice for an instrument because the researcher assumes that it can only be correlated with health through its effect on smoking. If the researcher then finds tobacco taxes and state of health to be correlated, this may be viewed as evidence that smoking causes changes in health.) (30). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The authors identified the BCAA-raising polymorphisms by a genome-wide approach, and associated them with elevated T2D risk. This result supports a causal pathway of BCAA metabolism in T2D pathogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the present study, we found that higher levels of alanine and arginine increase the likelihood of incident diabetes. Alanine levels might increase when the metabolism is altered by glutamate turnover (39), when alanine is released from sites other than skeletal muscle, and when alanine production is disturbed by BCAA catabolism, which is associated with increased T2D risk. Arginine plays multiple beneficial roles against metabolic abnormalities, but might also induce oxidative stress (40). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Collectively, we speculate that altered amino acid metabolisms predict the future risk of T2D through mechanisms involving impaired BCAA metabolism, increased oxidative stress, and increased muscle protein degradation, which precedes the development of T2D.  XXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BIOGENIC AMINES =&gt; The biogenic amines spermine and spermidine are involved in several cellular processes, including DNA replication, RNA transcription, and protein biosynthesis (41). They also trigger glucose-stimulated insulin release (41); moreover, spermine is a possible glycation inhibitor (42, 43). Consistent with these studies, we found a negative association between blood spermine levels and new-onset T2D, emphasizing the importance of evaluating various metabolites, such as biogenic amines, in new-onset T2D prediction. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX HEXOSES =&gt; As expected, hexose level was positively associated with new-onset T2D in our present study, even after adjusting for confounding influencers of insulin resistance. Hexose comprises not only glucose, but all six-carbon monosaccharides. Increased hexose level may indicate pancreatic beta-cell dysfunction and insulin resistance. In previous studies, the six-carbon monosaccharide fructose was increased in T2D regardless of glucose level (44), and higher intake of fructose (including sweetened beverages) was associated with insulin resistance and the risk of new-onset T2D (45). Our result was consistent with the earlier results (44, 45), confirming that hexose metabolites are valuable for evaluating associations or predicting new-onset T2D in population-based samples. XXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX GLYCEROPHOSPHOLIPIDS AND SPHINGOMYELIN =&gt; Consistent with earlier studies (6, 7), we found a possible involvement of phospholipid metabolism in incident T2D among our Korean population. Specifically, two LysoPC metabolites (17:0 and 18:2), 8 PC aa metabolites (32:1, 34:1, 36:1, 38:0, 40:1, 40:5, 42:1, and 42:5), 2 PC ae (34:3 and 36:3), SM(OH) 22:2, and SM 16:1 were significant predictors of T2D risk in this prospective study. Phospholipids such as PC and SM are the dominant components of cellular membranes and play an important role in cellular signal transduction (46). They also constitute most of the human lipoproteins (47). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The LysoPC 17:0 and 18:2 were negatively associated with incident T2D in our cohort. LysoPC a 17:0, found exclusively in dairy foods, is particularly effective in reducing T2D risk (48), indicating the beneficial effect of regularly consuming dairy products. LysoPC is a signaling molecule involved in atherogenic and inflammatory processes (49), of which the major function needs to be clearly elucidated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX PC aa is essential for the hepatic release of TG-rich very-low-density lipoprotein (46). On the other hand, PC ae is an antioxidant that inhibits lipoprotein oxidation (50). Previous studies have shown that PC ae levels are reduced in obese or insulin-resistant subjects (50, 51). Furthermore, reduced SM synthesis is associated with increased levels of reactive oxygen species and reduced insulin secretion (52). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The significant contributions of LysoPC, PC, and SM to T2D development in the present study, and the correlations of these metabolites with blood phenotype (observed as expected), support the hypothesis that altered choline-containing phospholipid metabolism potentiates the development of T2D. Several recent studies have also identified the metabolites associated with food intake, and related them to the metabolic diseases at the population level (53–58). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Untargeted metabolomics analysis in the subset of African Americans from the Atherosclerosis Risk in Communities (ARIC) Study cohort identified 48 pairs of significant association between diet and metabolites (53). Specifically, ‘sugar-rich foods and beverages’ were associated with metabolites related to oxidative stress and lipid profiles (53). Another approach to reveal the association between dietary pattern and plasma/urinary metabolites reported that O-acetylcarnitine and phenylacetylglutamine are positively associated with different food groups, red-meat and vegetable intakes, respectively (54). Given that diet can be a primary and secondary (by induction of metabolic responses) source of metabolites (57, 58), we further tested the interrelationships among dietary quality, metabolites, and T2D incidence. In this study, only 22 metabolites were significant predictors of incident T2D. After controlling for covariates, multiple regression analysis revealed that a healthier diet was significantly associated with reduced PC aa 32:1 level and increased the SM(OH) 22:2 level. To test whether each of these two metabolites may act as a mediator in the observed negative association between dietary quality and T2D risk, both dietary score and metabolite were considered in the Cox proportional regression model. The result showed that each metabolite and dietary score remained significant in combination, although the HRs were somewhat attenuated. This indicates that a better diet quality, characterized by well-balanced nutrient intakes reduces the future T2D risk both dependently and independently of intermediate metabolites. Given that food intake and relevant nutrients possibly interact with the environment and the gut microbiome, and that these interactions would be reflected in the blood metabolites, the links among dietary intake, gut microbiota and metabolic biomarkers and their associations with T2D must be further investigated. Indeed, the consumption of PC-containing foods such as meat and eggs reportedly increases the T2D risk (59), possibly through bacterial transformation of PC and consequent production of trimethylamine N-oxide (60, 61). In addition to the complexity and differences of etiology of T2D and environmental factors including diet, ethnic difference also should be considered to interpret metabolic profile in a specific population. Because the response to the specific stimulus (e.g. chemicals, nutrients, etc.) can be distinct depending on gender and ethnic group (62), separate analysis in a certain population is required to apply the identified metabolites for planning the preventive strategy as well as for pharmacological targeting to treat T2D. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In conclusion, our study showed that metabolites relevant to amino acids, biogenic amines, spermine, hexoses, and choline-containing phospholipid metabolism are associated with incident T2D in a prospective community-based cohort study. Through targeted metabolite profiling, we elucidated the underlying biochemical pathway of T2D pathogenesis. However, many of the covered metabolites were choline-containing phospholipids with structural similarities and metabolic inter-relationships, which hindered the comprehensive assessment of the metabolic alterations preceding T2D. Our results confirm that metabolites beyond the conventional T2D risk factors are important for preventing or controlling the development of new-onset T2D. With this knowledge, we can develop strategies for early intervention against average-risk T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="data">A combination of plasma phospholipid fatty acids and its association with incidence of type 2 diabetes: The EPIC-InterAct case-cohort study</td>
+<td class="data">We evaluated fatty acid profiles among adults in 8 European countries and derived a FA-pattern score that represents a combination of both essential and non-essential fatty acids and that is characterised by high relative concentrations of linoleic acid (18:2n-6), stearic acid (18:0), odd-chain SFAs, and VLSFAs (&gt;=20 carbons), and by low relative concentrations of γ-linolenic acid (18:3n-6), monounsaturated fatty acids (MUFAs), and long-chain SFAs (14:0 and 16:0). The unique combination was associated with dietary, metabolic, and genetic factors, and prospectively associated with a lower incidence of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Comparing the top fifth to the bottom fifth of the FA-pattern score, T2D incidence was lower by approximately 60%. This robust association with incident T2D was independent of established risk factors and also any single fatty acids or fatty acid subclasses. These findings support the hypothesis that a combination of multiple fatty acids is an important marker for the development of T2D above and beyond the roles of single types of fatty acids. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The combination of essential and non-essential fatty acids is of strong interest for further clinical or population-based investigations to predict
+T2D risk, identify interventional agents for T2D prevention, and better understand the aetiology of T2D. The combination of fatty acids contributing to the identified FA-pattern score fits with known mechanisms involving the de novo lipogenesis (DNL) pathway. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In DNL, fatty acids including 14:0, 16:0, 16:1n-7, and 18:1n-9 are synthesised endogenously, where stearoyl-CoA desaturase (SCD) converts 16:0 to 16:1n-7 as a rate-limiting step of fatty acid synthesis. The inverse correlation of 18:2n-6 with these fatty acids may reflect its role as a ligand of peroxisome proliferator-activated receptor α (PPARα) [2,5]. PPARα down-regulates SCD and ELOVL (elongation of very-long-chain fatty acid) enzymes, explaining the observed inverse correlation of 18:2n-6 with MUFAs, 16:0, 18:3n-6, and other n-6 PUFAs [2]. An exception of PPARα&apos;s action is activation of ELOVL3, which leads to synthesis of VLSFAs in the adipose tissue [35] and supports the observed associations between 18:2n-6, 18:0, and VLSFAs. While our findings are in line with the benefit of dietary PUFAs (predominantly 18:2n-6), other major PUFAs (e.g., omega-3 PUFA) contributed little to the primary fatty acid combination. This could reflect their diverse roles in eicosanoid pathways and pro- and anti-inflammatory pathways, and their associations with dietary intakes (e.g., fish) independent of DNL-driving dietary factors [5]. These suggested mechanisms are linked to the development of T2D. Activation of PPARα suppresses hepatic DNL and pro-inflammatory pathways that lead to insulin resistance, dyslipidaemia, and fatty liver [2,5,36]. In an experimental setting, for example, PPARα knock-out mice developed fatty liver exhibiting overt hepatic lipogenesis [37]. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Main products of DNL include 16:0 and diacylglycerols that cause a pro-inflammatory response, endoplasmic reticulum stress, and insulin resistance [1,38]. Thus, our analysis yielded a combination of multiple fatty acids that may represent biological pathways related to insulin resistance, inflammatory responses, and T2D risk. This was confirmed with the observed associations of FA-pattern score with metabolic risk factors in an expected direction and the association of FA-pattern score with genetic predisposition to insulin resistance. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Associations of gene variants with fatty acids and with incident T2D cannot be confounded by long-term lifestyle characteristics. Therefore, the specific gene variants, the identified combination of fatty acids, and the risk of T2D are likely to be on the same causal pathway, warranting future research to elucidate how insulin resistance specifically alters fatty acid profiles or vice versa. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Our analysis and prior studies derived a similar combination of fatty acids [12-15], but no previous studies to our knowledge evaluated T2D incidence as an outcome. Past studies used different methods and examined varied numbers of fatty acids (10 to 42) of phospholipids [15], cholesteryl esters [12,15], plasma [13], or adipose tissue [14]. Despite the differences, all of the studies reported a combination of fatty acids partly driven by higher levels of 18:2n6 with lower 16:0, which could reflect activity of DNL [39]. These combinations were found to be associated with lower blood pressure, greater endothelial function, less weight gain over time, or lower risk of metabolic syndrome [12-14]. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In contrast, an association with ischaemic heart disease or stroke was not significant [15]. The inconsistency depending on outcome is predictable as DNL could promote insulin resistance, but suppress atherosclerosis [36]. Statins and other lipid-lowering drugs also alter fatty acid profiles [10] and have divergent effects on heart disease and T2D [40]. Thus, a fatty acid pattern can be a future focus of investigations of cardiometabolic diseases and related interventions. The association of the FA-pattern score with incident T2D was not fully explained by any single fatty acid, but was partly attenuated by adjustment for odd-chain SFAs and VLSFAs. These SFAs are associated with lower risk of cardiometabolic diseases [16,41,42], while their biological roles remains understudied. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX High phospholipid VLSFAs may reflect high activity of PPARα, which leads to VLSFA synthesis and less insulin resistance, apoptotic cell death, and
+pancreatic dysfunction [41,43]. Blood odd-chain SFAs may partly reflect dairy consumption [3,44], gut microbiota [45], or endogenous synthesis through α-oxidation [46], and thus any correlates to those factors could explain our findings. Evidence for these mechanisms and relationships with other fatty acids remains scarce and deserves further investigation. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Dietary correlates with the combination of fatty acids deserve discussion, as they were replicated in EPIC-InterAct and NHANES: alcohol and soft drinks as negative correlates, and coffee, fibre, and PUFAs as positive correlates. The finding for alcohol consumption is likely to reflect its lipogenic effect, a risk factor for liver cirrhosis and T2D [47]. Regarding coffee consumption, polyphenols may deactivate DNL [48] and lower triglyceride levels and T2D risk [49-51]. Increased PUFA intake (predominantly n-6 PUFAs) could increase insulin sensitivity as well as lower DNL [2,5,52]. Our findings for soft drinks and fibre may also reflect their glycaemic and anti-glycaemic effects, respectively, as a high glycaemic effect leads to insulin secretion and DNL [2,53].   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSIONS =&gt; In conclusion, we identified a combination of plasma phospholipid fatty acids characterised by high relative concentrations of 18:2n-6, VLSFAs, and odd-chain SFAs and low relative concentrations of long-chain SFAs and MUFAs, some of which are synthesised endogenously. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX This particular profile was associated with a 3-fold lower relative risk of incident T2D in European populations after adjustment for confounding. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX While both genes and diet were linked to the FA-pattern score, association of the FA-pattern score with T2D was independent of established
+risk factors for T2D and not driven by individual fatty acids. These findings highlight that multiple fatty acids are jointly related to the development of T2D.   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="data">Adiponectin, Insulin Sensitivity, β-Cell Function, and Racial/Ethnic Disparity in Treatment Failure Rates in TODAY</td>
+<td class="data">The present investigation of racial / ethnic contrast in adiponectin, insulin sensitivity, and b-cell function in TODAY at randomization and over time demonstrates that:
+1. NHB had significantly lower total adiponectin, HMWA, and HMWA–to–total adiponectin ratio at baseline compared with the other two groups.
+2. Treatment-associated change in HMWA over time was significantly different among the three racial / ethnic groups, with a lower percentage increase over the first 6 months in NHB.
+3. Early change in HMWA, in the first 6 months of treatment, was a significant independent predictor of progression to glycemic failure.
+4. Baseline HMWA did not predict glycemic failure nor was it different between those who failed versus those who did not fail treatment.
+5. Treatment-associated change in total and HMWA was significantly lower in those who failed treatment versus those who did not fail irrespective of race / ethnicity.                                                                             6. There were no racial /ethnic-related differences in insulin sensitivity and b-cell function at baseline and over time. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The TODAY study of obese youth with type 2 diabetes randomly assigned to metformin alone, metformin plus rosiglitazone, or metformin plus lifestyle showed that glycemic failure rates were higher in NHB (52.8%) versus NHW (36.6%) and H (45.0%), with race / ethnicity alone having a significant effect beyond the treatment effect (1). Similar racial / ethnic disparity, with higher HbA1c in black versus white youth with type 2 diabetes, was reported from a pediatric diabetes clinic (20). XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX To probe the metabolic / hormonal mechanism(s) potentially responsible for the racial / ethnic disparity in therapeutic failure rates in TODAY, we targeted 1) adiponectin because it is known to vary by race / ethnicity (7–9,21) and 2) insulin sensitivity
+and b-cell function because of the well-established racial / ethnic contrast (2–5,22). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Adiponectin has antidiabetic properties (12, 13, 23, 24): it suppresses hepatic glucose output, lowers systemic glucose concentrations (13,25), stimulates skeletal muscle glucose uptake, and promotes b-cell function and survival (13,25). Adiponectin concentrations are low in obesity, and in states of insulin resistance, type 2 diabetes, and cardiovascular disease (26). Adiponectin levels in youth with type 2 diabetes are significantly lower compared with equally obese peers without diabetes and correlate positively with insulin sensitivity and first-phase insulin response and negatively with the proinsulin-to-insulin ratio in youth with and without diabetes (7,27,28). Therefore, adiponectin levels may carry prognostic value for diabetes course beyond the currently recognized set of risk factors. Racial / ethnic differences in adiponectin have been previously described in youth and adults (7–9,29). NHB youth have significantly lower adiponectin concentrations compared with their white peers irrespective of adiposity (7,8,29). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Studies of HMWA reveal similar racial / ethnic contrasts in adults (21). In line with these observations, the current study showed that NHB youth with type 2 diabetes had significantly lower total adiponectin and HMWA concentrations at the time of randomization in TODAY even after adjusting for the higher BMI in NHB. An additional novel finding was that the HMWA–to–total adiponectin ratio was significantly lower in NHB than in the other two groups. Contrary to our postulate, however, baseline adiponectin did not provide any prognostic value with respect to glycemic failure. Baseline adiponectin was neither a predictor of glycemic failure in Cox proportional hazards analysis (Table 2) nor were baseline adiponectin levels different between those who failed versus did not fail (Supplementary Table 3). XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Adiponectin levels in adults increase with treatment of diabetes, and this effect is most pronounced with thiazolidinediones (30–32). With rosiglitazone treatment at 4 or 8 mg/day, adiponectin levels increase by ;50–200% after 3–6 months in adults with type 2 diabetes, with improvements in glycemic control and insulin sensitivity (30–32). XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX With respect to metformin treatment in adults with type 2 diabetes, most studies (33,34)-but not all (35,36)-show no change in adiponectin levels. In the Diabetes Prevention Program (DPP), however, metformin intervention in impaired glucose tolerant adults was associated with a significant increase in adiponectin from baseline to year 1 (24). Results on the effect of metformin treatment on adiponectin concentrations in youth are contradictory. Some studies show no change in obese insulin resistant normoglycemic adolescents (37,38), whereas others demonstrate increases after 3 months of metformin at 850 mg twice daily in youth with impaired glucose tolerance (39). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Trials combining metformin with lifestyle intervention in obese children with normal glucose tolerance showed an increase in adiponectin levels after 3 (40) and 6 months (41,42). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Studies in youth with type 2 diabetes examining change in adiponectin associated with metformin or thiazolidinedione are lacking. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In the present investigation, total adiponectin and HMWA increased during the first 6 months in the three racial / ethnic groups (Fig. 1D). However, those in the metformin plus rosiglitazone group had significantly larger increases over time compared with those in the metformin alone and metformin plus lifestyle groups (Supplementary Fig. 2 and Supplementary Table 2). This is in agreement with observations in adult type 2 diabetes showing consistent increases in adiponectin with rosiglitazone or thiazolidinedione treatment (30–32), which is not necessarily the case with metformin (33,34). XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX An important observation that emerged from this investigation is that treatment associated changes in HMWA were proportional to the effectiveness of treatment in preventing glycemic failure (hazard ratio 0.55 in the total cohort, 0.52 in NHB, 0.58 in H, and 0.63 in NHW) (Table 2, model 5). In proportional hazards modeling, changes in total adiponectin and HMWA remained significant determinants of progression to glycemic failure even after adjusting for baseline HbA1c and oDI, important determinants of glycemic failure (16). Moreover,  treatment associated change in total adiponectin and HMWA was significantly lower in those who failed treatment versus those who did not (Fig. 3). XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Lastly, our finding that the metformin plus rosiglitazone group had larger increases in HMWA over time compared with those in the metformin alone and the metformin plus lifestyle groups lends further support for the TODAY main outcome, which showed that the combination of metformin plus rosiglitazone was superior to metformin in sustaining durable glycemic control, with glycemic failure rates of 38.6% compared with 51.7% for metformin and 46.6% for metformin plus lifestyle (1). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Collectively, these novel observations underscore the utility of adiponectin in youth type 2 diabetes as a biomarker of treatment response predictive of glycemic efficacy consistent with adult data (6). This combined with the discovery that the increase in HMWA was significantly lower in NHB than in H and NHW (Fig. 1D) provides a possible explanation for the higher therapeutic failure rates in NHB than in the other two racial / ethnic groups. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The question remains though whether the lower increase in HMWA in NHB is a biological/genetic phenomenon or consequent to inadequate treatment adherence. However, adherence to the medication regimen, defined by pill count, did not differ by race / ethnicity in TODAY (1) nor did the current results differ when the analyses were performed with or without adjustment for medication adherence. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is no current literature addressing whether adiponectin response to pharmacotherapy of youth type 2 diabetes differs by race / ethnicity. With respect to the postulated racial / ethnic-related contrast in the pathophysiological components of type 2 diabetes as a potential explanation for the racial / ethnic disparity in therapeutic failure rates, surrogate estimates did not differ by race / ethnicity at baseline or over time (Table 1 and Fig. 1). This divergent observation from the existing literature (4) may stem from the use of surrogate estimates that are not as sensitive as the gold standard of the clamp method. In addition, before enrollment in TODAY, patients were treated with a variety of modalities, insulin, and / or other medications, which may have modified insulin sensitivity and secretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX CONCLUSION =&gt; In summary, these observations support the validity and the value of HMWA as a biomarker predictive of glycemic response to treatment in youth with type 2 diabetes. The significantly lower increase in HMWA in the first 6 months in NHB may explain the higher therapeutic failure rates in NHB compared with the other two racial / ethnic groups. Therapeutic modalities that more effectively increase adiponectin levels may yet prove beneficial in NHB as well as all youth with type 2 diabetes.</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="data">Worldwide Exposures to Cardiovascular Risk Factors and Associated Health Effects: Current Knowledge and Data Gaps</td>
+<td class="data">Following the expansion of, and advances in, epidemiological research on the behavioral, dietary, environmental, and physiological causes of CVDs, the number of CVD risk factors in global (comparative risk assessment) CRA analyses has increased substantially, from a handful in 1990 to tens in recent analyses. The CRA analyses have attributed hundreds of thousands or millions of CVD deaths to the aforementioned risk factors. These numbers have in turn helped draw attention to important global or regional public health issues. The above-mentioned limitations and gaps in data on risk factor exposure and effect sizes should not overshadow the tremendous advances in understanding the causes of CVDs, and in measuring their levels in worldwide populations, because the first cohort studies were done over 6 decades ago. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Rather, they should motivate future efforts in collecting new data and reanalyzing existing data that can improve our knowledge of the worldwide CVD effects of risk factors, as outlined in Table 2. Even with these uncertainties, a number of policies and interventions identified in Table 2, if successfully implemented, are likely to reduce the worldwide burden of CVDs through primordial prevention at the population level. (176) Together with equitable access to high-quality health care for CVD prevention and treatment, these actions can help replicate the successes of high-income countries in reducing CVD events and deaths, and to reduce global inequalities in CVD burden. (3–5, 160, 176) XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Finally, we note that CVDs and most of their risk factors are strongly inversely associated with individual and community socioeconomic status, as summarized in previous reviews. (19, 160) The higher CVD incidence and mortality in the poor is, at least in part, mediated by less favorable risk factor levels and more limited and lower quality health care for prevention and treatment, (18, 160, 161) although independent pathways may also exist. Therefore all CVD prevention policies, and scientific analyses that inform them, should take into account their impacts on CVDs on the poor and on inequalities. (160)XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="data">Dietary and Policy Priorities for Cardiovascular Disease, Diabetes, and Obesity: A Comprehensive Review</td>
+<td class="data">THE WAY FORWARD =&gt; The global challenges of diet-related obesity, diabetes, and CVD present enormous health and economic burdens (404) and emphasize the imperative of prioritizing nutrition in clinical care, advocacy, research, and policy. Scientific advances provide a wealth of new evidence on the key dietary priorities for cardiometabolic health. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These include food-based priorities for more fruits, non-starchy vegetables, nuts, legumes, fish, vegetable oils, yogurt, and whole grains; and fewer red meats, processed (sodium-preserved) meats, and foods higher in refined carbohydrates and salt (Figure 3). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Red meats should be minimized to prevent diabetes; butter used occasionally but not emphasized; and other foods (e.g., unprocessed poultry, eggs) consumed in moderation according to personal preference. Coffee and tea can be enjoyed, with possible (but not yet confirmed) benefits; and alcohol, if consumed, should be moderate (up to 1 drink/day for women and 2 drinks/day for men). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Harmful additives, in particular sodium, trans fat, and added sugar, will generally be lower in such diets and must be further minimized through strong policy actions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX There is growing evidence and consensus for such food-based dietary patterns as the best means to reduce CVD, obesity and weight gain, and diabetes, (21) replacing outdated emphases on total fat, other isolated nutrients, or calorie counting. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="data">Nutrition Transition and the Global Diabetes Epidemic</td>
+<td class="data">This paper highlights the major shifts in dietary, PA, and body composition patterns that are directly linked with increased risk of diabetes. We have shown that many of the underlying economic, technological, and demographic changes are accelerating. Further, agricultural systems are changing globally, directed by food companies, the retail food sector, food service companies, and agribusinesses rather than by governments. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX These factors point to continued increases in all of the key risk indicators for diabetes across LMICs. We will not examine in depth the ways LMICs are responding, however, there is evidence that some countries in Asia and Latin America have begun to use large-scale regulatory, tax, and other national mechanisms to address some of the forces affecting local diets. Papers from the 2013 Bellagio Obesity Conference, “Program and Policy Options for Preventing Obesity in Low, Middle, and Transitional Income Countries,” provide recent overviews of previous efforts in LMICs (all papers have open access, see Obesity Reviews supplement, http://bellagioobesity2013.org/). Since this meeting a number of countries, particularly Mexico and several South American countries, have seen major developments. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Over the past six years, as a response to obesity and diabetes health problems, the Mexican government has embarked on several initiatives aimed at arresting the increases in obesity and subsequently reducing the burden of disease and disability.[51] In 2012 Mexico’s national nutrition survey (Ensanut 2012) showed that earlier efforts were insufficient to reduce the prevalence of obesity and that obesity continued to rise in most age groups.[51] This set the stage for the government to initiate new regulations, such as taxes on foods and beverages. A specific excise tax of approximately 10 percent on SSBs and an ad valorem sales tax of 8 percent on nonessential foods (many might think of these as “junk foods”) were initiated on January 1, 2014. Results of the impact of this tax for the first quarter of 2014 have not been published yet but do show positive food-purchasing changes (personal communication, B Popkin). Additional controls on marketing unhealthy products to children began in the summer of 2014. South American countries considering SSB taxes include Colombia, Peru, Ecuador, and Chile. Also Peru, Ecuador, and Chile either have already or will soon institute front-of-the package profiling that will signify products with high levels of added sugar, sodium, or saturated fat.[52] XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Other countries have instituted programs related to schools.[53] The most exemplary is Brazil, which introduced a requirement [54, 55] that schools must purchase 30 percent of the food they offer from local, small family farms and cooperatives. Also 70 percent of the food must be a basic (not processed) food. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 7. CONCLUSIONS =&gt;  In summary, this paper has shown the increasing prevalence of overweight and obesity across LMICs and the related potential for significant increases in cardiometabolic problems, especially diabetes. This relates not only to increases in BMI and WC but also to reduced PA, increased sedentary time, and dietary changes. Global diets show large shifts toward processed foods high in refined carbohydrates and added sugars and away from legumes, coarse grains, and other vegetables.  XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="data">The diabetes-cancer link</td>
+<td class="data"> &#160;</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="data">Ethnicity and type 2 diabetes: focus on Asian Indians</td>
+<td class="data">5. PREVENTION OF DIABETES IN ASIAN INDIANS: TARGETING INSULIN RESISTANCE =&gt; 5.1 DIET AND EXERCISE =&gt; Reduction in dietary fats and caloric intake will promote weight control and reduce insulin resistance. Dietary composition may independently affect insulin resistance. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Regular exercise increases the number of capillaries surrounding muscle fibers and also increases the skeletal muscle fiber composition that favors insulin-mediated glucose disposal (Utriainen et al., 1996). Bouts of exercise stimulate translocation of GLUT-4 to the plasma membrane and increase glucose transport in skeletal muscle (Thorell et al., 1999). The signal that mediate exercise-induced GLUT-4 recruitment differs from those that mediate insulin-induced recruitment, in that insulin receptor expression and PI-3-kinase activity is not required for the exercise effect (Lund, Holman, Schmitz, &amp; Pedersen, 1995; Wojtaszewski et al., 1999). Instead, activation of the 5-AMP-activated kinase may have a role (Hayashi, Hirshman, Kurth, Winder, &amp; Goodyear, 1998). Exercise-induced production of NO and subsequent production of cyclic GMP may be involved in the regulation of glucose transport in muscle, independent of the effects of NO on vasodilatation (Young, Radda, &amp; Leighton, 1997). X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Bradykinin may also play a role in exercise-induced glucose transport, since it is released from muscle during exercise and, in cells expressing bradykinin receptors, it stimulates GLUT-4 translocation (Kishi et al., 1998). Muscle has high levels of bradykinin receptors, and as with the glucose uptake stimulated by exercise, bradykinin-stimulated glucose uptake is not blocked by inhibitors of PI-3 kinase (Kishi et al., 1998). XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The beneficial effect of exercise on insulin activity has recently been confirmed in the IRAS (Mayer-Davis et al., 1998). There is some evidence that implementation of dietary modification and regular exercise is feasible and is an effective modality for prevention of diabetes. In a Swedish non-randomized study (Eriksson &amp; Lindgarde, 1991), a 6-year intervention with diet and exercise advice resulted in 50% reduction in the incidence of diabetes in middle-aged men who volunteered to participate in the intervention group compared to those who were not willing to participate and thus served as controls. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Pan et al. (1997) reported on the marked decline in cumulative incidence of diabetes among subjects with IGT in the City of DaQing in China after 6 years of intervention with either a diet, exercise, or combined diet and exercise program. The incidence of diabetes was 67.7% in the control group compared with 43.8% in the diet group, 41.1% in the exercise group, and 46% in the diet plus exercise group. Interestingly, the intervention was equally successful in normal weight and obese people. The incidence of new diabetes was exceptionally high in this study where randomization was made by the clinic and not by the individual. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX The Finnish Diabetes Prevention Study included lifestyle modifications to prevent diabetes in middle-aged IGT subjects and showed feasibility of lifestyle intervention in motivated individuals (Uusitupa et al., 2000). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX A similar study is being conducted in US by the NIH. The results of these studies will provide evidence for effectiveness of diet and exercise to prevent or delay the onset of diabetes in high-risk individuals. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 5.1.1 BIGUANIDES =&gt; Although the liver is the primary site of action of the biguanide drugs such as metformin, in vivo studies indicate that metformin also increases glucose uptake into peripheral tissues (Inzucchi et al., 1998). Metformin improves glycemic control in monotherapy and in combination with other hypoglycemic agents. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Metformin may also delay or prevent the onset of diabetes in high-risk individuals. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX THIAZOLIDINEDIONES (TZDs) =&gt; TZDs increase the disposal of glucose in peripheral tissues in animals and humans with insulin resistance, including subjects with type 2 diabetes (Inzucchi et al., 1998). How these agents increase insulin-mediated glucose
+uptake is unclear. They appear to act as a ligand for a nuclear receptor, the peroxisomal proliferator-activated receptor-g (PPAR-g), augmenting the insulin action by enhancing insulin signaling at a post-receptor step (Lehmann et al., 1995). The effects of these agents in skeletal muscle may be direct or indirect. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Treatment of insulin-resistant rodents with TZDs restores the expression and translocation of GLUT-4 in adipocytes (Hofmann, Lorenz &amp; Colca, 1991). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX TZDs also overcome the TNF-a-induced inhibition of insulin-stimulated glucose transport in adipocytes (Szalkowski, White-Carrington, Berger, &amp; Zhang, 1995). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX In insulin-resistant rats given high-fat diets and insulin-deficient rats with streptozocin-induced diabetes, TZD treatment increases insulin-stimulated glucose uptake in muscles (Hofmann et al., 1991). TZDs do not increase the expression of GLUT-4 in rodent muscle or human muscle cells, although they do induce expression of GLUT-1 (Ciaraldi &amp; Henry, 1997). Furthermore, TZDs do not restore defective insulin-stimulated GLUT-4 translocation in muscle in insulin-resistant Zucker rats (Hirshman, Fagnant, Horton, King, &amp; Horton, 1995).</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

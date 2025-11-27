@@ -1,0 +1,1498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>SAS Output</title>
+<style type="text/css">
+<!--
+.accessiblecaption
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.aftercaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.batch
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7px;
+}
+.beforecaption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.body
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodydate
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  width: 100%;
+}
+.bycontentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.byline
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.bylinecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.caption
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.cell
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.container
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.contentfolder
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contentprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.contents
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.contentsdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.contenttitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.continued
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  width: 100%;
+}
+.data
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasis
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataemphasisfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataempty
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datafixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datastrong
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.datastrongfixed
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.date
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.document
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.extendedpage
+{
+  background-color: #FFFFFF;
+  border: 1pt solid #000000;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+.fatalbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.folderaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.frame
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.graph
+{
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.header
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headeremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headeremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headerempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.headersandfooters
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.index
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexaction
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.indextitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.linecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.listitem9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.note
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notebanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.output
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.pageno
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+.pages
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.pagesdate
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.pagesitem
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.pagesproclabel
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagesprocname
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+}
+.pagestitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.paragraph
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.parskip
+{
+  background-color: #FFFFFF;
+  border-spacing: 0px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.prepage
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.proctitlefixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooter
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooteremphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooteremphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooterempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowfooterstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheader
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderemphasis
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderemphasisfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderempty
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowheaderstrong
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderstrongfixed
+{
+  background-color: #6495ED;
+  color: #FFFFFF;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemfooter
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemfooter9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.systemtitle
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle10
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle2
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle3
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle4
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle5
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle6
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle7
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle8
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle9
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: normal;
+  font-weight: bold;
+}
+.systitleandfootercontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.table
+{
+  background-color: #CCCCCC;
+  border: 1px solid #000000;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+  border: 0;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+  border: 0;
+}
+.titleandnotecontainer
+{
+  background-color: #FFFFFF;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.titlesandfooters
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.usertext
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warnbanner
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontent
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontentfixed
+{
+  background-color: #FFFFFF;
+  color: #003399;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Stress data set 2</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table class="table" cellspacing="1" cellpadding="7" rules="none" frame="box" summary="Procedure Print: Data Set REF2.STRESS_SORTED_2">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">sub_ref_no</th>
+<th class="l header" scope="col">Title</th>
+<th class="l header" scope="col">Research_Gaps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="r data">1</td>
+<td class="l data">A metabolomics-based molecular pathway analysis of how the sodium-glucose co-transporter-2 inhibitor dapagliflozin may slow kidney function decline in patients with diabetes</td>
+<td class="l data">(A) Treatment with dapagliflozin in fasting situation =&gt; increases AA&#39;s and decreases lipid species. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Bioinformatic procedures =&gt; metabolic pathways =&gt; protective of renal function for SGLT2i dapagliflozin. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx (C) Overlap in gene expression between (1) Metabolites targeted by dapagliflozin. (2) Intra-renal transcripts assoc. DKD =&gt; upregulation of pathway of BCAA corresponding BCAA&#39;s not changed. (3) Urea + urea cycle metabolites increased. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Increased levels of short chain acyl-carnitines reduced levels of myristoylcarnitine (long chain acyl-carnitines). XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) FAO incomplete surplus acyl-groups exported from mitochondria as acylcarnitines. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Reduced levels of acylcarnitines =&gt; larger degree of complete FAO. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Long chain acylcarnitines =&gt; fasting =&gt; increased short chain acylcarnitines. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) 3-Hydroxy FA reduces by dapagliflozin + high levels 3-OH FA&#39;s =&gt; markers of FAO disorders. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Improved FAO + increased fasting response, surplus 2- and 4-chain carbons. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Obese non-diabetic mice + canagliflozin =&gt; activation of catabolic pathways =&gt; FAO + mTOR inhibition + activation of AMPK. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Dapagliflozin =&gt; increased TCA cycle activity =&gt; increased expression of several TCA enzymes =&gt; eGFR =&gt; +ve effect on renal mitochondrial function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) DKD =&gt; increased levels of metabolites + intermediates of TCA cycle + endoplasmic reticulum stress. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Cause of reduced TCA-cycle intermediates not clear explained by; (1) Improved mitochondrial efficacy. (2) Larger degree of complete FAO + increased gluconeogenesis (liver + kidney) =&gt; to compensate for urinary glucose loss. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Kynurenine redn =&gt; increased activity =&gt; picolinic acid increased + NAD+ further support improved mitochondrial function after dapagliflozin treatment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Long term protective effects of SGLT2i&#39;s on kidney =&gt; amelioration of mitochondrial function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) SGLT2i =&gt; improves endothelial function + prevents accelerated renal function decline mechn =&gt; increased glycaemic control, metabolic control, osmotic duiresis + natriuresis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (Q) Dapagliflozin targeted pathways assoc. with DKD, molecular processes related to (1) energy metabolism (2) mitochondrial function (3) endothelial function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Dapagliflozin slows progression of DKD. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Future research =&gt; refer to point (p). XXXXXXXXXXXXXXXXXXXXXXXXXXXX     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) The exact mechanism of how SGLT2 inhibition improves endothelial function is not fully understood but may involve improved glycaemic and metabolic control, osmotic diuresis, and changes in sodium homeostasis as a result of increased natriuresis.</td>
+</tr>
+<tr>
+<td class="r data">2</td>
+<td class="l data">Metabolomics for Investigating Physiological and Pathophysiological Processes</td>
+<td class="l data">(A) Small molecules are essential to life. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) They are the molecular bricks + mortar for cells. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Provide chemical fuel for cellular processes, fences to maintain cellular integrity, the buffers to help cells tolerate environmental stressors + messengers for many important cellular signalling events. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Metabolomics =&gt; explore the known functions of small molecule metabolites =&gt; greater detail + precision than ever before. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Increasingly broad coverage available (upto 1000 identified compounds in biofluids) the greater sensitivity (&lt;1ul of material), the much improved analytical software + trends to more accurate quantification =&gt; allowing certain novel metabolomic experiments not previously performed. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Technology developments =&gt; identification of completely new or previously unknown functions for existing metabolites. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) This review =&gt; recent developments in metabolomics =&gt; esp. understanding of the pathophysiology + biochemistry of a number of important diseases. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Some metabolites =&gt; esp. present in high levels =&gt; function as slow-acting poisons (i.e.metabotoxins). XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Symptoms or central characteristics of each disease =&gt; accounted for by the targeted action of these compound on =&gt; specific genes, proteins, cells, tissues or organs. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) The alternative view of looking at chronic disease from a metabolic perspective =&gt; new way of detecting, treating + preventing these conditions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Small molecule perspective + borrowing concepts from toxicology practices =&gt; metabolomics =&gt; identification of many new metabotoxins =&gt; cause conditions previously ascribed to defective genes or misfolded proteins. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Review =&gt; highlighted role of &quot;bad&quot; + &quot;good&quot; metabolites play in health + normal physiology. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Many roles =&gt; small molecules have roles as hormones or signallig molecules. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Highlighted =&gt; mechns =&gt; metabolites =&gt; protect + heal tissues in the intestine + how specific metabolites facilitate gut-brain communication or how selected compounds activate or train the immune system. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Metabolites are absolutely essential as signalling molecules. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Roles in organ, tissue or cellular signalling =&gt; far more important than roles of small molecules as molecular fuels or molecular bricks + mortar. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Exisiting biases =&gt; many public databases (only depict =&gt; catabolic or anabolic pathways) =&gt; leads to underinterpretation of results + ignore the possibility =&gt; metabolomic data =&gt; provide valuable insights =&gt; previously unknown signalling processes. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Most public pathway databases =&gt; ignore the polygenomic nature of most vertebrate genomes (consists =&gt; host genome + large complex microbial genome) + polygenomic, multi-organ nature of many important pathways (e.g. polyphenol metabolism, drug metabolism or bile acid metabolism) =&gt; underappreciated role that microbial metabolism, organ metabolic specialization + microbial metabolite signalling =&gt; play in vertebrate physiology.  XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Several areas that were not covered include; immunometabolism and immunometabolomics (309, 356), the use of metabolomics in understanding nutrition or assessing nutritional intake (122, 412), the utilization of metabolomics in assessing environmental toxic exposures (348, 386, 503), the application of metabolomics to drug metabolism (phase I or phase II) and drug toxicity (i.e., pharmacometabolomics; Refs. 350, 347, 400), and the use of metabolomics in exercise physiology and fitness assessment (253, 263, 269). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">3</td>
+<td class="l data">Serum metabolic signatures of coronary and carotid atherosclerosis and subsequent cardiovascular disease</td>
+<td class="l data">(A) 7000 participants + 3 prospective popn-based cohorts =&gt; present metabolic signature of atherosclerosis offering  insights =&gt; sytemic disturbances underlying atherosclerosis. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Atherosclerosis =&gt; associated with disturbances of interconnected pathways related =&gt; lipid, FA + CHO metabolism BCAA + AAA metabolism, TCA + urea cycle + muscle metabolism =&gt; largely consistent pattern between coronary + carotid atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Metabolites above associated with =&gt; incident CVD events =&gt; highlighting the importance of these pathways =&gt; progression to clinical CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Majority of these associations =&gt; attenuated substantially after adjustment for  conventional CVD risk factors =&gt; suggesting =&gt; metabolites lie on pathways closely associated with CVD risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Beyond KEGG pathways =&gt; replicated metabolites highlight oxidative stress + inflammatory pathways. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) 5-oxoproline + glutamate =&gt; inversely associated CAC (chronic aortic calcification) + IMT (inter-medial thickness) =&gt; involved =&gt; synthesis + degradation glutathione. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Glutathione deficiency =&gt; oxidative stress =&gt; key role in pathogenesis of atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) N-acetylneuraminic acid =&gt; +vely associated with CAC + IMT =&gt; major form of salic acid in mammals =&gt; biomarker sustained inflammatory response =&gt; subsequent effects =&gt; atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Glycoprotein acetyls have previously shown =&gt; associations with risk of MI + stroke =&gt; consistent with CAC + IMT. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Lactate =&gt; +vely associated with IMT formed from pyruvate under insufficient O2 supply (hypoxia) =&gt; indicator of inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Local hypoxia =&gt; occurs in highly active inflammed tissues =&gt; demands of increased cellularity exceed O2 supply =&gt; feature of atherosclerotic plaque. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Hypoxia =&gt; stimulate proatherosclerotic processes =&gt; including =&gt; deficinet lipid efflux, inflammation, interference with macrophage polarization + glucose metabolism. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) 4 metabolites =&gt; sugar + CHO metabolism =&gt; (D-glucose, 1,5-anhydrosorbitol, D-mannose + myo-inositol) =&gt; directly associated =&gt; CAC +/- IMT post adjustment for CVD risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) 1,5-anhydrosorbitol =&gt; marker of glycaemic control =&gt; previously associated with CVD + kidney disease + close association =&gt; atherosclerotic disease, diabetes + IR. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Mannose =&gt; repeatedly associated =&gt; prediabetes, incident T2D + all cause mortality =&gt; in this study =&gt; highlight associated =&gt; atherosclerosis + incident CVD =&gt; independent of glucose. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Mannose =&gt; stronger correlations =&gt; lipids + N-acetylglycoproteins vs glucose. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Mannose =&gt; central role in glycation processes of lipoproteins =&gt; may initiate development of atherogenesis. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) N-glycans =&gt; upregulated in proinflammatory settings =&gt; found on cell surface =&gt; early stages of atherosclerotic plaque development. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Data =&gt; mannose could also affect CVD risk =&gt; through non-glucose dependent pathways. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Energy metabolism, TCA cycle + glycolysis =&gt; central pathways associated with atherosclerosis. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Alanine =&gt; synthesized directly from pyruvate, a product of glycolysis =&gt; supply cells with energy through TCA cycle =&gt; aerobic conditions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Increase glucose utilization =&gt; in high risk atherosclerotic plaques. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Citrate =&gt; intermediate + key energy metabolite in the TCA cycle =&gt; previously associated with CV mortality. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Reduced O2 levels in the presence of atherosclerosis =&gt; affect TCA cycle which is O2 dependent. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Creatine, an amino acid derivative =&gt; reflects changes of energy metabolism in the muscles =&gt; transported through the circulation =&gt; taken up by tissues with high energy demands =&gt; with creatinine as the degradation product. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Creatinine levels =&gt; inversely associated with fat intake in animal studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Lipoprotein profiles analyses =&gt; confirmed association of these lipids with subclinical atherosclerosis, MI + stroke. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Further show =&gt; consistent picture between coronary + carotid atherosclerosis + CV events. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Association of TG&#39;s + atherosclerotic disease + future events was +ve even within HDL particles =&gt; supports previous observations. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Conversely not all HDL cholesterol was inversely associated with atherosclerosis highlighting the fact that causal association of HDL with lower CVD risk may be limited to certain particles (i.e. NOT the ones containing TG&#39;s). XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) In contrast =&gt; LDL + VLDL =&gt; consistently +vely associated =&gt; higher CAC + IMT + higher risk of CVD events + small trend =&gt; strong associations with decreasing density of lipoproteins. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Molecular interaction gene network map =&gt; interconnections between inflammatory, insulin + lipid pathways =&gt; metabolite markers of atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Fibronectin 1 (FN1) =&gt; involved in cell adhesion + migration processes, including wound healing, blood coagulation + host defence; genetic polymorphisms within this gene =&gt; associated with =&gt; adverse lipid levels + CHD. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) CCAAT / enhancer-binding protein beta =&gt; master regulator of immunity + inflammation =&gt; other immunity related genes =&gt; (e.g. P13K complex) + pathways related to betaine-homocysteine metabolism (BHMT), glycolysis (pyruvate kinase) + angiogenesis (ANGPT4). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Summary =&gt; strong associations between serum metabolites =&gt; observed on 1H NMR spectroscopy + subclinical atherosclerosis =&gt; largely consistent between to vascular beds (coronary + carotid arteries). XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) Metabolic + gene networks =&gt; highly interconnected system  level metabolic disturbances =&gt; atherosclerosis =&gt; overlaps with the known CV risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) Genetic approaches as well as mechanistic studies are now needed to further validate our results and to follow-up the possible entry points for investigation of novel targets or preventive strategies for atherosclerotic disease. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">4</td>
+<td class="l data">Assessing the causal association of glycine with risk of cardio-metabolic diseases</td>
+<td class="l data">(A) 22 Genetic loci identified for glycine. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Two novel loci (PSPH + PHGDH) are located in genes encoding enzymes catalysing the de novo biosynthesis of serine, there is a metabolic link with glycine + serine. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (C) Two rare variants (in FGG and near KIF5B) proves rare genetic variants play a role in amino acid levels XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Low levels of glycine are genetically associated with higher risk of CHD =&gt; protective role of glycine against CHD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Effect suze differs depending on genetic score. The effect of glycine on CHD increasing with degree of specificity of genetic score to glycine =&gt; genetic associations driven by glycine. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (F) Glycine protective effect similar in men + women, sex specific association of CPS1 with CHD causal role of glycine in women only. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) After accounting for sex-specific effect sizes on glycine, genetic association of glycine + CHD based of based on CPS1 only =&gt; similar in magnitude in both sexes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   (H) Inverse genetic association of glycine with BP =&gt; partly explains =&gt; genetic glycine-CHD association. High BP =&gt; major risk factor for CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (I) Glycine supplementation in rodents =&gt; lowers BP + small intervention in humans. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (J) Mechanism =&gt; glycine =&gt; lowers BP =&gt; glycine-gated chloride channels on endothelial cells =&gt; membrane  hyperpolarisation =&gt; nitric oxide (NO) prodn =&gt; vasodilatation. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   (K) Cannot conclude genetic effect of glycine on CHD risk =&gt; entirely mediated through BP =&gt; limited power of MR analyses. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Absence of association between glycine + stroke, high BP is a major risk factor for stroke =&gt; there may be other physiological pathways which glycine may regulate CVD risk. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   (M) No evidence =&gt; glycine is associated with lipid metabolism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (n) Not investigated =&gt; glycine may protect against oxidative stress =&gt; substrate of glutathione biosynthesis =&gt; major antioxidant in human cells. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Observational studies =&gt; high glycine levels =&gt; lower risk of T2D =&gt; genetic evidence weaker. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) MR analyses, based on larger but less specific genetic scores =&gt; no causal effect of glycine on risk of T2D. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Variant of genes related to glycine catabolism =&gt; drive association of 5 + 2 SNP scores to lower T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (R) Glycine not causal for T2D risk, BUT low glycine levels =&gt; changes in catalytic efficiency of glycine cleavage system =&gt; may cause higher T2D risk. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Coding mutations in genes of glycine cleavage system =&gt; causes of hyperglycaemia, life-threatening in born error of metabolism =&gt; higher risk of neural tube defects. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) The enzyme complex NOT previously linked with cardiometabolic diseases. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Alternative interpretation =&gt; overall glycine levels causally associated with T2D risk =&gt; masked by pleiotropic effects of CPS1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) CPS1 =&gt; 10-fold stronger effect on glycine than most other glycine-associated variants. The genetic scores which included CPS1 most represented CPS1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) CPS1 - effect across the metabolome not restricted to glycine pathway + associated with other traits, some include glycine may protect against T2D others increase risk of T2D. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (X) Null association genetic scores including CPS1 =&gt; glycine independent pathways =&gt; mask true genetic assocation of glycine with T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Results did not replicate recent study on protective effect of glycine on T2D =&gt; MR analyses using 5 loci for glycine. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Significant inverse genetic association glycine + T2D risk =&gt; largely driven by CPS1 =&gt; glycine raising allele =&gt; lower T2D risk (previous study). Our study didn&#39;t replicate this result. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (A1) Strong genetic evidence =&gt; low glycine levels consequence of IR =&gt; inverse association of glycine level with T2D partly driven by IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (B1) Rodent experiments =&gt; IR =&gt; increases oxidative stress =&gt; increase glutathione synthesis =&gt; glycine depletion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Another mechanism =&gt; IR =&gt; glycine depletion =&gt; increase demand for glycine to safely excrete fatty-acyl-CoA esters =&gt; accumulate because of suppression of lipolysis =&gt; increased circulation FFA in insulin resistant state. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) FFA =&gt; increased B oxidn intermediates fatty-acyl-CoA esters =&gt; transconjugation + glycine =&gt; safely excreted fatty-acyl-glycine. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Glycine supplementation =&gt; reduced cardiometabolic disease. Effect size of glycine of CHD dependent on the specificity of genetic score =&gt; benefit may be considerable. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (F1) Safety =&gt; glycine + serine =&gt; promote oncogenesis =&gt; fuels one-carbon + folate metabolism, (folic acid supplementation + cancer incidence). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Serine + glycine depletion =&gt; increase treatment response + survival =&gt; murine models of colorectal cancer + lymphoma. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Our study =&gt; genetic analyses =&gt; no evidence that glycine levels risk of breast, ovarian and prostate cancer. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Low glycine  =&gt; increases CHD risk, confirmed by genetic scores for glycine =&gt; causal relationship. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) IR =&gt; reduced glycine levels =&gt; drive association of increased glycine levels =&gt; decreased T2D, evidence of causal relationship between glycine + T2D weak. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">5</td>
+<td class="l data">Serum metabolite profile associated with incident type 2 diabetes in Koreans: findings from the Korean Genome and Epidemiology Study</td>
+<td class="l data">(A) Amino acid + choline-containing phospholipid metabolisms altered in T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Seven metabolites =&gt; hexose, valine + 5AA&#39;s in obesity + T2D =&gt; related to fat mass + obesity-associated (FTO) genotype. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Altered metabolites =&gt; genetic loci =&gt; Korean T2D subjects =&gt; incident T2D over 8 year FU. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) GLYCEROPHOSPHOLIPIDS + SPHINGOMYELIN =&gt; phospholipid metabolism =&gt; incident T2D, specificity LysoPC (17:0 +18:2), 8PC aa metabolites, 2PC ae, DM(OH) 22:2 + SM 16:1 =&gt; significant predictors of T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Phospholipids PC + SM =&gt; dominant components of cellular membranes =&gt; signal transduction + constitute most lipoproteins. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) LysoPC 17:0 + 18:2 =&gt; -vely assoc. incident T2D LysoPC exclusively found in dairy foods =&gt; effective redn T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) LysoPC =&gt; signalling molecule =&gt; atherogenic + inflammatory processes =&gt; mechn unknown. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) PC aa essential for the hepatic release of TG-rich VLDL. PC ae =&gt; antioxidant that inhibits lipoprotein oxidn. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Previous studies =&gt; PC ae levels redn in obese or IR subjects. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Reduced SM synthesis =&gt; increased levels of ROS (reactive oxygen species) + reduced insulin secretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) LysoPC, PC + SM to T2D development =&gt; correlations with blood phenotype =&gt; altered choline-containing phospholipid metabolism =&gt; increased development of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) ARIC study =&gt; 48 pairs sig. assoc. diet + metabolites esp. sugar rich foods + beverages assoc. metabolites related to oxidative stress + lipid profiles.  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Dietary pattern + plasma urinary metabolites =&gt; O-acetylcarnitine + phenylacetylglutamine =&gt; +vely associated with different food groups =&gt; red meat + vegetable intakes respectively. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Tested relationships =&gt; dietary quality + metabolites + T2D incidence =&gt; 22 metaboliotes =&gt; sig. predictors =&gt; incident T2D after controlling for covariates. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Healthy diet =&gt; redn PC aa 32:1 level + increase SM(OH) XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) These metabolites were tested for negative assoc. dietary quality + T2D =&gt; each metabolite + dietary score =&gt; significant =&gt; combn BUT HR&#39;s attenuated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Better diet quality =&gt; redn future T2D risk, both dependently + independently of intermediate metabolites. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Food intake + relevant nutrients =&gt; interact with gut microbiome =&gt; reflected in blood metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Links between dietary intake, gut microbiota + metabolic markers + assoc. T2D =&gt; FURTHER INVESTIGATED. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Consumption of PC containing foods =&gt; meat / eggs =&gt; increased T2D risk =&gt; bacterial transformation of PC =&gt; trimethylamine oxide (TMAO). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Ethnic differences important! =&gt; specific popns response to specific stimulus =&gt; chemicals + nutrients =&gt; dependent of gender + ethnicity =&gt; important for preventive strategy + p&#39;cological treatment of T2D. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) AA&#39;s, biogenic amines, spermine, hexoses + choline-containing phospholipid metabolism =&gt; incident T2D. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Targeted metabolmic profiling =&gt; biochemical pathway of T2D pathogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Covered metabolites =&gt; choline-containing phospholipids + structural similariites + metabolic interrelationships =&gt; hindered comprehensive assessment of metabolic alterations =&gt; T2D. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Discovered metabolites =&gt; role to play in preventing controlling development of new onset T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1)LysoPC is a signaling molecule involved in atherogenic and inflammatory processes (49), of which the major function needs to be clearly elucidated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Given that food intake and relevant nutrients possibly interact with the environment and the gut microbiome, and that these interactions would be reflected in the blood metabolites, the links among dietary intake, gut microbiota and metabolic biomarkers and their associations with T2D must be further investigated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Because the response to the specific stimulus (e.g. chemicals, nutrients, etc.) can be distinct depending on gender and ethnic group (62), separate analysis in a certain population is required to apply the identified metabolites for planning the preventive strategy as well as for pharmacological targeting to treat T2D.</td>
+</tr>
+<tr>
+<td class="r data">6</td>
+<td class="l data">Identification of Neuroendocrine Stress Response-Related Circulating MicroRNAs as Biomarkers for Type 2 Diabetes Mellitus and Insulin Resistance</td>
+<td class="l data">(A) Study identified =&gt; association =&gt; plasma expression of neuroendocrine stress response-related miRNA&#39;s + T2D + IR =&gt; occupational cohort. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Differential miRNA expression profile + bioinformatic analysis =&gt; six stress-related miRNA&#39;s =&gt; (let-7b, let-7, miR-142, miR-144, miR-155 + miR-29a) associated with T2D =&gt; selected for qRT-PCR validation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Average expression levels =&gt; let-7b, miR-142, miR-144 + miR-290 =&gt; significantly different between T2D vs healthy controls. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Increased expression of let-7b, miR-144 + miR-29a + decreased expression of miR-142 =&gt; significant-independent predictors of T2D, IFG, even IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) ROC analysis =&gt; 3-miRNA panel =&gt; let-7b, miR-142 + miR-144 =&gt; high accuracy =&gt; diagnosing T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) miRNA =&gt; important signatures or therapeutic targets =&gt; T2D =&gt; in circulation + specific tissues. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) miR-184 =&gt; highly regulated miRNA =&gt; impacting growth + function of the B-cell. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) By targets Argonaute2, miR-184 plays an adaptive role of the miRNA pathway based on metabolic state. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) The Argonaute protein family, first discovered for its evolutionarily conserved stem cell function, plays a central role in RNA silencing processes as essential components of the RNA-induced silencing complex (RISC). RISC is responsible for the gene silencing phenomenon known as RNA interference (RNAi). Argonaute proteins bind different classes of small non-coding RNAs, including microRNAs (miRNAs), small interfering RNAs (siRNAs) and Piwi-interacting RNAs (piRNAs). XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Stress-induced overexpression of miR-708 suppressed B-cell proliferation + induced B-cell apoptosis =&gt; novel mechn of glucose regulation of B-cell function + growth. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Comparing to tissue biomarkers =&gt; circulating miRNA&#39;s =&gt; preferred =&gt; easier sampling + testing. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Circulating miR-192 + miR-193b =&gt; found significantly increased  =&gt; prediabetic state. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (M) Other miRNA&#39;s =&gt; biomarkers =&gt; diabetic complications =&gt; e.g. plasma miR-152 + diabetic nephropathy + miR-93 + diabetic retinopathy. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Circulating miRNA&#39;s =&gt; help predict the development + progression of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Increasing evidence =&gt; psychosocial factors facilitate the development + progression of central obesity + T2D =&gt; possibly as the results of increased IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Copenhagen Psychosocial Questionnaire =&gt; assess job-related psychosocial stress. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) After adjustment for influence of cortisol, HOMA-IR =&gt; significantly associated =&gt; scales of &quot;demands at work&quot; + &quot;insecurity at work&quot;. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Psychosocial factors interact with biological mechns =&gt; several levels =&gt; neuroendocrine, metabolic + molecular responses. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Stress hormones influence glucose metabolism =&gt; stimulation gluconeogenesis + impairing glucose uptake in peripheral tissues like fat + muscle. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Activation of stress hormones secretion =&gt; mediated by neuronal signals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Repeated stress =&gt; activates hypothalamic paraventricular nucleus to synthesize (corticotrophin release hormone) CRH =&gt; major regulator of stress responses. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Anterior pituitary =&gt; responds to CRH =&gt; produces adrenocorticotropic hormone (ACTH) =&gt; released into circulation =&gt; promotes synthesis + release =&gt; glucocorticoids (cortisol in humans) =&gt; adrenals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) HPA (hypothalamic-pituitary-adrenal) axis =&gt; controlling cortisol secretion + SNS (sympathetic nervous system) =&gt; originate from hypothalamus =&gt; interlinked + hyperactivity in one of them can activate the other. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Our study =&gt; plasma levels of (epinephrine) E, (norepinephrine) NE, cortisol + CRH =&gt; significantly higher in T2D vs control (P&lt;0.05). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Results =&gt; evidence association between chronic stress + T2D =&gt; occupational popn study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Elevated activites =&gt; HPA axis + SNS =&gt; triggered by psychosocial factors + reported in individuals with metabolic syndrome. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Increased plasma IL-6 levels in T2D + correlation of IL-6 with cortisol =&gt; evidence of the pathway between chronic stress + T2D =&gt; since various psychological stressors alone can induce proinflammatory. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Cellular responsiveness =&gt; stress hormone =&gt; dependent on the amount of corresponding receptor protein. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Significant upregulated expression of let-7b + miR-144 in T2D =&gt; our study =&gt; downregulated expression of their target gene =&gt; ADBR2 / ADBR3 (B-adrenoreceptors) + NR3C1 (GR) respectively. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Protein expression of ADRB3 was regulated by direct binding of let-7b at 3&#39;-UTR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Let-7b =&gt; -vely correlated with ADRB3 protein level =&gt; decreased expression in perivascular adipose tissue of hypertensive mice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Cortisol treatment =&gt; decreased NR3C1 mRNA levels + increased miR-144 in T2D patients in hippocampus + sperm of mice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Evidence of NR3C1 as target of miR-144 =&gt; obtained from next generation sequencing (miRTarBase). XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Positive correlation between let-7b + E/NE, miR-144 + cortisol =&gt; redn stress hormone receptor expression =&gt; reflects -ve feedback mechns =&gt; controlling the magnitude of responses to stress. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Previous popn based study =&gt; chronic stress increase plasma cortisol =&gt; decreased mRNA expression of GRa + increased of GRB / GRa mRNA ratio in lymphocyte. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) miR-142 =&gt; mediated expression of CRH =&gt; lower levels =&gt; T2D or IFG vs controls. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) miR-142 =&gt; participants in the inflammatory response =&gt; regulating the prodn of IL-6. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L1) Plasma CRH + IL-6 =&gt; -vely associated with miR-142 expression in total subjects =&gt; explained by the inhibitory effect of miRNA on target genes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M1) Microarray analysis =&gt; downregulation miR-142 in the peripheral blood of mice =&gt; associated pronounced enhanced oxidative stress. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N1) miR-29a =&gt; reported to be involved inthe glucocorticoids signalling pathway + chronic academic stress =&gt; excessive glucocorticoids reduce =&gt; expression of miR-29a. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O1) Association may partially be explained by receptor gene NR3C1 + CRHR1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P1) miR-29a expression =&gt; significantly associated with T2D + HOMA-IR =&gt; relatively weak correlations exist only between miR-29a + cortisol (r=0.183) in the total subjects. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q1) It is possible =&gt; miR-29a =&gt; regulates glucose metabolism throu</td>
+</tr>
+<tr>
+<td class="r data">7</td>
+<td class="l data">Ethnic differences in infectious burden and the association with metabolic risk factors for cardiovascular disease: a cross-sectional analysis</td>
+<td class="l data">(A) SUMMARY OF KEY FINDINGS =&gt; higher (infectious burden) IB =&gt; 18 - 70 yrs old participants =&gt; Turkish + Moroccan origin vs Dutch origin. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Increased IB =&gt; significantly associated with higher odds of diabetes BUT association =&gt; not clear for elevated cholesterol + hypertension. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) IB attenuated the ethnic disparities in diabetes. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) KEY FINDINGS =&gt; Turkish + Morrocans had a higher IB vs Dutch. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Previous reports consistent with part (d) =&gt; signalling a higher prevalence of individual infections in these groups vs Dutch. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Findings in agreement with ethnic differences in IB =&gt; reported in two studies =&gt; US. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Both studies =&gt; IB popns originating from low income countries living in the Netherlands =&gt; e.g. Surinamese, Antilleans + Egyptians =&gt; higher IB also expected in these 3 groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Findings =&gt; ethnic minorities have a higher IB vs Dutch popn =&gt; likely to be related to country of origin =&gt; combined with early life exposure before migration, or exposure during travel to their region of origin post migration. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Turkey + Morocco =&gt; countries =&gt; increased background prevalence of, e.g. HAV + HBV vs Netherlands + reported to have lesser hygienic circumstances. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Differences in IB =&gt; partly explained =&gt; increased susceptibility =&gt; lower socioeconomic position of ethnic minority groups OR differences in proportion vaccinated for HBV. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Poor circumstances =&gt; subject popns =&gt; social stress =&gt; down regulate immunity =&gt; increased susceptibility to infections. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Transmission dynamics may also be important. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Historically high rates of infection among ethnic minorities =&gt; partly remain =&gt; because minority popns live + work together, even as their socioeconomic positions change. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Consistently +ve association of IB with diabetes + non-sig. association with elevated cholesterol + hypertension =&gt; in our popn =&gt; support possible association between IB + metabolic risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Previous studies =&gt; inconsistent =&gt; several studies reported  =&gt; +ve association with diabetes + clinical markers,  elevation cholesterol + hypertension =&gt; other studies =&gt; no association of IB with these factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Differences between other studies + ours =&gt; several reasons. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Difference =&gt; may reflect differences in popns studied. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Previous studies =&gt; did not include ethnic minority groups OR did not adjust for ethnic differences in the analysis DESPITE known ethnic differences in infections + metabolic risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Other explanations =&gt; lack of consistent IB definition. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Our study =&gt; included data of HAV, HBV, HCV =&gt; others studies failed to include this data. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Inconsistency across studies =&gt; lack of insight into exact mechns of risk + need for further work to determine which infections or combns of infections =&gt; associate most strongly with metabolic risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Consistent =&gt; lack of ethnic specific data on association of IB + metabolic risk =&gt; lack of data on possible contribution of IB to ethnic disparities in diabetes elevated cholesterol + hypertension. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Our findings =&gt; IB may contribute to differences in diabetes between ethnic groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) If confirmed in larger studies + multiethnic popns =&gt; implication =&gt; reducing the burden of infections =&gt; timely initiation of treatment =&gt; directed at diminishing + reversing its effects =&gt; contributes to reducing disparities between ethnic groups. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Mechns =&gt; IB works =&gt; (e.g. epigenetics or inflammatory processes) =&gt; should be studied + specific patterns of infections, currency + chronicity of infections + association of these =&gt; incidence of metabolic factors. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Our study limitations =&gt; power of study + availability of specific data, obstructed exploration of such specific patterns. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Conclusion =&gt; Turkish + Moroccan adults in Amsterdam =&gt; higher IB vs Dutch adults + higher IB =&gt; associated with differences in metabolic risk factors =&gt; in particular diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Cross-sectional nature of the study =&gt; cannot draw conclusions about time sequences of cause + effect. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Nevertheless, the findings ask for further research into the nature of association of IB with metabolic risk factors in a longitudinal setting, including investigations of dose-response relationships and an investigation of possible underlying mechanisms leading to the incidence of metabolic risk factors for CVD. If the association and time-sequence are confirmed, a reduction in IB or treatment directed at effects of IB may possibly be investigated as a target for reducing ethnic disparities in metabolic risk factors.</td>
+</tr>
+<tr>
+<td class="r data">8</td>
+<td class="l data">A combination of plasma phospholipid fatty acids and its association with incidence of type 2 diabetes: The EPIC-InterAct case-cohort study</td>
+<td class="l data">(A) FA profiles =&gt; adults =&gt; 8 European countries and derived + derived FA-pattern score =&gt; combn of essential + non-essential FA&#39;s =&gt; high relative concns of linoleic acid (18:2n-6), stearic acid (18:0), odd-chain SFA&#39;s + VLSFA (&gt;= 20 carbons) + low relative concns of Y-linolenic acid (18:3n-6), monosaturated FA&#39;s (MUFA&#39;s) + long-chain SFAs (14:0 + 16:0). XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Unique combn =&gt; associated with dietary, metabolic + genetic factors =&gt; prospective assoc. =&gt; reduced incidence of T2D. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Hypothesis =&gt; combn of multiple FA&#39;s =&gt; important marker of development of T2D above + beyond single types of FA&#39;s. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Combn of essential + non-essential FA&#39;s =&gt; strong interest =&gt; clinical + popn-based investigations =&gt; predict T2D risk, identify interventional agents for T2D prevention + better understand the aetiology of T2D. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Combn of FA&#39;s =&gt; identified FA-pattern score =&gt; fits with known mechns =&gt; de novo lipogenesis (DNL) pathway. XXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) In DNL =&gt; FA&#39;s =&gt; 14:0, 16:0, 16:1n-7 + 18:1n-9 =&gt; synthesised endogenuously =&gt; stearoyl-CoA desaturase (SCD) converts 16:0 to 16:1n-7 =&gt; rate-limiting step of FA synthesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Inverse correlation 18:2n-6 with these FA&#39;s =&gt; role as a ligand of peroxisome proliferator-activated receptor a (PPARa), PPARa =&gt; downregulates SCD + ELOVL (elongation of very long chain FA) enzyme =&gt; explaining =&gt; observed inverse correlation 18:2n-6 with MUFA&#39;s 16:0 18:3n-6 + other n-6PUFA&#39;s. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Exception of PPARa&#39;s action =&gt; activation of ELOVL3 =&gt; synthesis of VLSFA&#39;s =&gt; adipose tissue + supports the observed acc. 18:2n-6, 18:0 + VLSFA&#39;s. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Findings =&gt; in line as benefit of dietary PUFA&#39;s (18:2n-6) + major PUFAs (e.g. omega-3 PUFA) =&gt; contributed little to primary FA combn. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Eicosanoid pathways =&gt; pro- + anti-inflammatory pathways, assoc. with dietary intakes (e.g. fish) independent of DNL-driving dietary factors. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) These suggested mechns =&gt; development of T2D. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Activation of PPARa suppresses hepatic DNL + pro-inflammatory pathways =&gt; IR, dyslipidaemia + fatty liver. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Experimental settings =&gt;  PPARa knock-out mice =&gt; fatty liver =&gt; overt hepatic lipogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Main products =&gt; DNL include 16:0 + DAG&#39;s =&gt; pro-inflammatory response, endoplasmic reticulum stress + IR. Combn of multiple FA&#39;s =&gt; represent biological pathways =&gt; IR, inflammatory responses + T2D risk =&gt; confirmed observed assoc. of FA-pattern score with metabolic risk factors =&gt; expected direction =&gt; association of FA-pattern score with genetic predisposition to IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Associations of gene variants + FA&#39;s + incident T2D =&gt; not confounded by long-term lifestyle characteristics. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Specific gene variants =&gt; identified combn of FA&#39;s + risk of T2D =&gt; same causal pathway =&gt; future research =&gt; elucidate how IR =&gt; alters FA profiles or vice-versa. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Our study =&gt; only study yet to evaluate T2D as an outcome for a combn of FA&#39;s, previous studies used different methods + different no of FA&#39;s =&gt; phospholipids, cholesterol esters, plasma or adipose tissue. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Combn of FA&#39;s =&gt; partly driven by higher levels 18:2n6 with lower 16:0 =&gt; reflect activity of DNL =&gt; combns =&gt; assoc. redn BP, increase endothelial function, less weight gain over time, redn risk of metabolic syndrome. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) No assoc. of IHD or stroke =&gt; not significant. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Inconsistency depending on outcome =&gt; predictable =&gt; DNL =&gt; promote IR BUT suppress atherosclerosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Statins + other lipid lowering drugs alter FA profiles + have divergent effects on heart disease + T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) FA pattern =&gt; future focus =&gt; investigations of cardiometabolic diseases + related intervention. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Assoc. of FA-pattern score + incident T2D not fully explained by any single FA. BUT partly attenuated by adjustment for odd-chain SFA + VLSFA&#39;s =&gt; these SFA&#39;s associated with lower risk of cardiometabolic diseases =&gt; remains understudied. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) High phospholipid VLSFA&#39;s =&gt; reflect high activity of PPARa =&gt; VLSFA synthesis + less IR, apoptotic cell death + pancreatic dysfunction. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Blood odd-chain SFA&#39;s =&gt; partly reflect =&gt; diary consumption, gut microbiota or endogenous synthesis through a-oxidn =&gt; correlates to those factors =&gt; explain our findings. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Evidence =&gt; mechns + relationships with other FA&#39;s remains scarce + deserves further investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Dietary correlates =&gt; combns of FA&#39;s =&gt; discussion  =&gt; replicated in EPIC-InterAct + NHANES: EtOH + soft drinks =&gt; -ve correlates + coffee, fibre + PUFAs =&gt; +ve correlate. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) EtOH =&gt; lipogenic effect =&gt; risk factor for liver cirrhosis + T2D. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Coffee consumption =&gt; polyphenols =&gt; deactivate DNL + lower TG levels + T2D risk. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Increase PUFA intake (predominantly n-6-PUFAs) =&gt; increased insulin sensitivity + redn DNL. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Soft drinks + fibre =&gt; reflect glycaemic + anti-glycaemic effects respectively. High glycaemic effect leads to insulin secretion + DNL. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Identified =&gt; combn of plasma phospholipid FA&#39;s =&gt; high relative concns =&gt; 18:2n-6, VLSFA&#39;s + odd chain SFA&#39;s + low relative concns long-chain SFA&#39;s + MUFA&#39;s (some synthesised endogenously). XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Above profile =&gt; assoc. 3-fold lower relative risk of incident T2D in European popns after adjustment for confounding. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Genes + diet =&gt; linked to FA pattern score + assoc. of FA-pattern score + T2D =&gt; independent of est. risk factors for T2D =&gt; not driven by individual FA&#39;s. Findings highlight =&gt; multiple FA&#39;s jointly related to =&gt; T2D.</td>
+</tr>
+<tr>
+<td class="r data">9</td>
+<td class="l data">Obesity and inflammation: the linking mechanism and the complications</td>
+<td class="l data">(A) Sustained inflammation is considered a strong risk factor =&gt; developing many diseases =&gt; CVD&#39;s, metabolic syndrome, diabetes + cancer. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Obesity =&gt; predisposes to a pro-inflammatory state =&gt; via increased inflammatory mediators =&gt; IL-6 and TNF-a + redn levels of adiponectin (which has anti-inflammatory function). XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) TNF-a =&gt; overexpressed in overweight state + IL-6 =&gt; linked more to the obese state =&gt; influences =&gt; liver to synthesize + secrete CRP =&gt; feature of systemic inflammation. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Inflammatory state =&gt; reduced levels of adiponectin, =&gt; important implications on =&gt;  insulin sensitivity, reducing metabolic abnormalities + adjusting energy expediture. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Inflammatory state =&gt; vascular + endothelial dysfunction =&gt; characterized by decreased nitric oxide (NO) + elevated reactive oxygen species (ROS) =&gt; oxidative stress. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Both oxidative stress + inflammatory states =&gt; atherosclerosis, hypertension, alteration of metabolic markers =&gt; major adverse cardiovascular events. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">10</td>
+<td class="l data">Early metabolic markers identify potential targets for the prevention of type 2 diabetes</td>
+<td class="l data">(A) Comprehensive metabolomics profiling =&gt; novel multivariate panel of metabolic markers =&gt; glucose, mannose, a-HB, a-tocopherol, [Hyp3]-BK, X-12063 + X-13435 =&gt; concns in fasting samples =&gt; predicted future progression to T2D =&gt; in otherwise healthy, normoglycaemic popn =&gt; years before the onset of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Metabolic markers significantly improved the prediction of progression towards T2D =&gt; shows added value =&gt; screening metabolites + clinical risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Statistical association testing + machine learning-based predictive modelling  =&gt; metabolic changes that preceded T2D. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Metabolite features =&gt; identified through both above approaches =&gt; well supported =&gt; T2D literature. We systematically assessed =&gt; predictive performance =&gt; biomarker panel =&gt; T2D risk prediction. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) STATISTICAL ASSOCIATIONS =&gt; Histidine, glutamine + (E,E)-isomer of bilirubin =&gt; -vely associated with T2D risk independent of clinical risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Histidine-mediated suppression of hepatic glucose prodn =&gt; previously suggested =&gt; potential target =&gt; treatment of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Glutamate + trehalose =&gt; +vely associated =&gt; T2D risk independent of clinical risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Double-blind placebo-controlled trial =&gt; T2D =&gt; glutamine supplementation =&gt; positive results. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Bilirubin =&gt; previously reported =&gt; -vely correlated =&gt; progression to diabetic nephropathy =&gt; T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (J) Glutamate + trehalose =&gt; +vely associated =&gt; T2D risk independent of clinical risk factors. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Plasma glutamate levels =&gt; elevated in several diseases =&gt; characterised by chronic oxidative stress + inflammation. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Chronically high extracellular glutamate levels =&gt; directly or indirectly contribute =&gt; progressive loss of B-cells =&gt; T1D + T2D. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Trehalose =&gt; widely regarded as a safe food ingredient =&gt; for individuals with diabetes, BUT trehalose =&gt; associated with increased T2D risk in this study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Similar results =&gt; previously reported =&gt; African-American popn. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) PREDICTIVE MODELLING =&gt; Machine learning model =&gt; based on entire metabolome =&gt; accurately predicted the future incidience of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) A more interpretable model =&gt; feature selection =&gt; identified the most predictive metabolic markers. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Combining clinical variable + selected markers =&gt; significantly improved =&gt; predictive performance vs reference model with clinical variables alone =&gt; model had highest predictive performance. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) After excluding glucose =&gt; combined predictive model outperformed the clinical reference model that contained glucose =&gt; proving predictive performance of marker panel not solely due to glucose. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Excluding glucose + mannose from marker panel =&gt; reasonable combined predictive model (AUC = 0.75) =&gt; outperformed the reference model (p = 0.04) =&gt; further supporting  =&gt; novel markers. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Biomarkers identified through feature selection =&gt; 3 showed -ve associations + 4 showed +ve associations =&gt; T2D risk. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) -vely associated markers =&gt; [Hyp3]-BK, a-tocopherol + X-13435 =&gt; 1st metabolomic study =&gt; value of these markers =&gt; predicting T2D risk. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) +vely associated markers =&gt; glucose, mannose, a-HB + X-12063. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Mechns =&gt; mannose is associated with increased risk of T2D independently of glucose =&gt; previously suggested. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Identifying unknown markers =&gt; X-13435 + X-12063 =&gt; may reveal novel pathways =&gt; progression of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) BK =&gt; peptide =&gt; vasodilation =&gt; BP lowering + protection from CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) [Hyp3]-BK =&gt; BK analogue  =&gt; third amino acid =&gt; proline =&gt; hydroxylated. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) [Hyp3]-BK =&gt; -vely associated =&gt; T2D risk independent of CVD risk (p = 2.2 x 10 -6). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) BK =&gt; elevated in progressors =&gt; showing an opposite trend =&gt; additionally tested  =&gt; association of total amount of BK + [Hyp3]-BK with progression. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Total BK level =&gt; -vely associated =&gt; progression to T2D (p = 0.0004). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Diabetes =&gt; decreases the activity of the Kallikrein-Kinin system =&gt; reducing synthesis of plasma prekallikrein + BK =&gt; endothelial dysfunction. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Current study =&gt; reduced levels of total BK =&gt; far before onset of T2D =&gt; potential role =&gt; Kallikrein-kinin system of oxidative stress + DNA damage =&gt; associated with reduced BK =&gt; progression to T2D. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Physical exercise =&gt; improves glucose uptake =&gt; skeletal muscle =&gt; improved insulin sensitivity =&gt; partially mediated by increased BK concn =&gt; suggests =&gt; mechn =&gt; physical exercise =&gt; contribute to predn of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) [Hyp3]-BK =&gt; associated with T2D risk independently of physical activity, antihypertensive medn + CVD. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1)  A-TOCOPHEROL =&gt; Redn in a-tocopherol =&gt; most biologically active form of vitamin E =&gt; humans =&gt; seen in progressors =&gt; selected in biomarker panel. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Observational studies =&gt; protective effect =&gt; Vitamin E supplementation of glycaemic control in T2D =&gt; RCT&#39;s =&gt; not confirmed effect. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) THE UNKNOWNS (X-13435 AND X-12063) =&gt; X-12063 =&gt; strong association with progression towards T2D + delected for biomarker panel. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) X-12063 =&gt; identity unknown =&gt; metabolite previously noted =&gt; significantly associated with IR + glucose intolerance. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L1) X-13435 =&gt; not identified in earlier metabolomics studies =&gt; no univariate statistical association BUT predicted T2D risk jointly with other biomarkers. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M1) All metabolic markers =&gt; associated with progression to T2D independently of fasting glucose. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N1) Except for X-13435, all associated with progression T2D independently of CVD, physical activity + use of hypertension medn. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O1) Mannose =&gt; highly correlated with fasting glucose, [Hyp3]-BK + X-12063 =&gt; statistical significant =&gt; low correlations. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">11</td>
+<td class="l data">Improvement of myocardial infarction risk prediction via inflammation-associated metabolite biomarkers</td>
+<td class="l data">(A) Targeted metabolomics =&gt; arginine, LPC 17:0 + LPC 18:2 =&gt; metabolite biomarkers =&gt; incident MI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Addition of arginine, LPC 17:0 + LPC 18:2 to FRS (Framington risk score) increase predictive value in fasting cohorts. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Metabolite biomarkers independent of conventional risk factors for MI, strongly attenuated by hsCRP-MI assoc. =&gt; potential systemic inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) LYSOPHOSPHATIDYLCHOLINES =&gt; LPCs assoc. lipid metabolism, inflammation + MI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Higher serum LPC 17:0 + LPC 18:2 concn lower risk MI, LPC&#39;s -ve assoc. combined CVD outcome (MI, ischaemic stroke + sudden cardiac death) XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) LPC&#39;s =&gt; inflammatory processes =&gt; variety of mechns (1) increased expression of NOS3 =&gt; NO synthesis. (2) Drive prodn antioxidant enzymes e.g. SOD3 =&gt; reduces superoxide anion concns. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Lower LPC concns =&gt; increased oxidative stress =&gt; promote inflammation (confirmed with hsCRP). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) LPC =&gt; reduces synthesis of prostoglandin I2 =&gt; improved vasodilation =&gt; lower LPC&#39;s concns =&gt; endothelial dysfunction =&gt; increased risk for MI. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) HIGH SENSITIVITY C REACTIVE PROTEIN =&gt; hsCRP =&gt; inflammatory marker =&gt; 3 metabolite biomarker explained 10% hs-CRP concns + redn hsCRP-MI assoc coefficient 34 - 74% =&gt; no longer significant. Inflammation =&gt; represents the pathway =&gt; novel biomarkers assoc. MI. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) CONCLUSIONS =&gt;  3 metabolites, id&#39;ed assoc. =&gt; incident MI =&gt; improved MI prediction when added to FRS. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Three metabolites assoc. hs CRP + attenuated the hsCRP-MI assoc. while being independent of other traditional CVD risk factors =&gt; potential link to systemic inflammation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) We suggest that future studies of MI and metabolic profiles collect detailed dietary information and use fasting samples. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Although we provide substantial evidence for improved baseline discrimination for future incident MI for our novel biomarkers, future studies are needed to formulate and validate an incident MI risk scoring function based on these metabolite biomarkers.</td>
+</tr>
+<tr>
+<td class="r data">12</td>
+<td class="l data">Effect of Insulin Resistance on Monounsaturated Fatty Acid Levels: A Multi-cohort Non-targeted Metabolomics and Mendelian Randomization Study</td>
+<td class="l data">(A) Bile acid, glycerophospholipid + caffeine metabolism assoc. with IR + FA biosynthesis =&gt; related to impaired insulin secretion. XXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Discovered + replicated causal effects of IR on reduced mono-unsaturated FA, FA&#39;s (palmitoleic) POA + (Oleic acid) OA + suggestive evidence =&gt; higher levels of AAA =&gt; tyrosine. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Sensitivity analysis =&gt; no pleiotropic of the genetic instruments. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Causal effects =&gt; largely unaffected =&gt; exclusion of prevalent diabetes cases. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) All IR-increasing conditions =&gt; associated with downregulation of SCD-1 (rate-limiting enzyme MUFA biosynthesis) =&gt; redn in prodn of endogenous OA + POA. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Palmitic + Stearic acid (SFAs) =&gt; SCD-1 introduces double bonds =&gt; POA (16:1n-7) + OA (18:1n-9) respectively =&gt; major precursors of cholesteryl esters (CE&#39;s) + triglycerides (TG&#39;s) =&gt; packaged =&gt; very low density lipoprotein (VLDL) particles =&gt; secreted by the liver. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Reduced SCD-1 activity =&gt; adverse vascular outcomes : inhibition of SCD-1 in hyperlipidaemic mice =&gt; increased aortic atherosclerosis despite protective effects on obesity + IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Reduced SCD-1 activity =&gt; enrichment of SFA in VLDL + LDL =&gt; atherogenesis =&gt; macrophage-induced vascular inflammation. XXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Competing effects on vascular + metabolic health. IR =&gt; reduced SCD-1 activity =&gt; counteracts the metabolic consequences of IR by improving insulin signalling BUT concomittently =&gt; increased risk of CVD =&gt; increased SFA =&gt; proinflammatory changes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) IR +vely associated with OA + POA, in contrast -ve genetic associations in MR studies. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Molecular mechns =&gt; reduced tyrosine catabolism =&gt; IR-induced oxidative stress =&gt; increased methionine, cysteine + glutathione (anti-oxidant) =&gt; tyrosine hydroxylase inhibition. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Molecular mechns =&gt; inactivation of tyrosine aminotransferase. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Causal effect of IR on circ OA + POA + tyrosine levels =&gt; new insights into metabolic signature of IR + impaired insulin secretion. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Potential implications =&gt; presumed IR-induced inhibition of MUFA biosynthesis =&gt; health outcomes =&gt; form part of explanation for elevated CVD risk in IR =&gt; independent of T2D development. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (O) Future studies =&gt; hypothesized but untested relationship with cardiovascular disease requires further investigation. The effect of IR =&gt; elevated tyrosine =&gt; non-significant tendency in all cohorts =&gt; reached nominal significance after =&gt; combn of estimates in meta-analysis =&gt; Future studies =&gt; considerable risk of result being false +ve due to multiple testing =&gt; further investigation in larger MR studies (not been reported before). Associations between worse IR / T2D risk + circulating tyrosine levels =&gt; established in observational + longitudinal studies (42, 43) XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Speculation =&gt; the identified association between tyrosine + increased T2D risk =&gt; due to concomitant IR =&gt; observed trends need to be confirmed through larger samples. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Relative circulating levels =&gt; POA + OA =&gt; unlikely to reflect endogenous biosynthesis. Further experimental investigation =&gt; exact contributions of SCD-1, exogenous source, catabolism + excretion.</td>
+</tr>
+<tr>
+<td class="r data">13</td>
+<td class="l data">Identification of serum metabolites associated with risk of type 2 diabetes using a targeted metabolomic approach</td>
+<td class="l data">(A) Targeted metabolomic approach at population level, =&gt;  increased concentrations of hexose; phenylalanine; and diacyl-phosphatidyl-cholines =&gt; C32:1, C36:1, C38:3, + C40:5 and reduced concentrations of glycine; sphingomyelin C16:1; acyl-alkylphosphatidylcholines C34:3, C40:6, C42:5, C44:4, and C44:5; + lysophosphatidylcholine C18:2 =&gt; independently predictive of T2D in EPIC-Potsdam. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (B) Results =&gt; agree with data =&gt; cross-sectional studies =&gt; T2D patients =&gt; increased concentrations =&gt; sugar metabolites, acylcarnitines + BCAA + reduced concns of glycine. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (C) Another study replicated BCAA&#39;s + AAA&#39;s =&gt; predicted T2D =&gt; prospective Framingham Offspring cohort + Malmo Diet + Cancer study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (D) Higher concns =&gt; phenylalanine, isoleucine, tyrosine + valine =&gt; increased risk T2D + glycine reduced risk T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (E) Our Study =&gt; BCAA&#39;s + AAA&#39;s =&gt; linked to each other =&gt; only phenylalanine independently associated with T2D risk after adjusting for other metabolites. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (F) BCAA&#39;s =&gt; substrates =&gt; glucose-alanine cycle in skeletal muscle. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (G) Alanine =&gt; alanine aminotransferase =&gt; pyruvate =&gt; hepatic gluconeogenesis =&gt; glucose. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X (H) Conversely =&gt; glycine =&gt; gluconeogenic AA&#39;s =&gt; reduced glycine levels =&gt; reflect increased gluconeogenesis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Glycine depletion =&gt; glutathione consumption driven by oxidative stress or by abundance of incompletely oxidized fuels =&gt; excreted as urinary acylglycine conjugates. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (J) Increased BCAA&#39;s in subjects with IR =&gt; reduced activities of BCAA catabolic enzymes =&gt; liver + adipose. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) AA&#39;s may directly cause muscular IR by disrupting insulin signalling. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) IR conditions =&gt; body aims to compensate for reduced glucose uptake in peripheral tissues =&gt; increasing pancreatic insulin secretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) At a stage of overt IR =&gt; this system is exhausted =&gt; caused by B cell dysfunction =&gt; insulin secretion decreases. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Phenylalanine =&gt; +vely correlated  =&gt; insulin secretion + may be involved in pathways to compensate for early stages of IR through stimulation of insulin secretion. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X (O) CONCLUSIONS =&gt; Identified metabolites part of different pathways involved in early genesis of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (P) Novel candidates  =&gt; useful in clinical practice =&gt; identify high-risk individuals earlier =&gt; delay / prevent disease onset. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Serum metabolites =&gt; predicted risk of T2D =&gt; similar manner to combn of risk factors =&gt; measurement =&gt;useful approach to predict T2D risk for individuals in the future. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X (R) Prospective investigation =&gt; metabolomic data of independent study popns =&gt; identified =&gt; sugar metabolites, AA&#39;s + choline-containing-phospholipids =&gt; independently associated  =&gt; risk of T2D. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) The metabolites could also serve as markers for specific metabolic pathways that are deranged and, thereby, allow the implementation of individualized preventive and therapeutic strategies. However, future investigations are warranted to calculate in detail the individual risks and to better understand the metabolic effects of these biomarkers and their biological mechanisms. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Beyond the classic pathways, these candidates point toward a novel role of phospholipid and lipoprotein metabolism in T2D pathophysiology. Future studies should further elucidate the biological mechanisms. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">14</td>
+<td class="l data">Iron overload and diabetes risk: a shift from glucose to Fatty Acid oxidation and increased hepatic glucose production in a mouse model of hereditary hemochromatosis</td>
+<td class="l data">(A) Increased tissue iron levels =&gt; associated with diabetes =&gt; human heretitory haemochromatosis (HH) + dietary iron overload. XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) At least partially the result of decreased insulin secretion, tissue iron overload =&gt; significant changes in glucose metabolism in skeletal muscle. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) The effect on iron is to increase glucose uptake =&gt; a change that would be predicted to be protective of diabetes. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) To better understand the changes in overall fuel economy caused by iron =&gt; diabetes =&gt; investigated =&gt; muscle + hepatic =&gt; CHO + FA metabolism =&gt; mouse model =&gt; targeted deletion of the gene most commonly mutated in human HH, Hfe. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Shown =&gt; Hfe -/- mice =&gt; shift in fuel preference from glucose =&gt; FA oxidn =&gt; in muscle. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Decrease glucose oxidn in muscle =&gt; associated with =&gt; increased pyruvate / lactate recycling to liver =&gt; demonstrated by previous metabolic flux studies + increased hepatic glucose output (Cori cycling). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) These combined effects =&gt; increased prevalence of diabetes in individuals with HH. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Our results =&gt; consistent with the close coupling of metabolism =&gt; iron availability =&gt; demonstrated in lower eukaryotes. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Decreased glucose oxidn in skeletal muscle =&gt; partly due to decreased PDH activity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Mechn =&gt; likely =&gt; observed increase in PdK4 mRNA, PDK4 activity =&gt; regulated at the transcription level. XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Candidate mediator for regulation of PdK4 =&gt; may be increased AMPK activity =&gt; previously reported =&gt; Hfe -/- mouse muscle. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Other factors contributing to decreased glucose oxidn =&gt; modest degree of mitochondrial dysfunction + increased FA oxidn. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Mitochondrial dysfunction in Hfe -/- muscle =&gt; relatively minor contributors =&gt; given the increased capacity for FA oxidn apparent in mice on high-fat diets. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Mechn =&gt; increased FA oxidn =&gt; increased AMPK activation + decreased ACC activity. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Increase Cptb expression =&gt; may play a role + changes in malonyl-CoA (not assessed). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Related to current findings =&gt; mice overexpressing erythropoietin in muscle =&gt; exhibit a similar phenotype to iron-overloaded mice =&gt; increased FA oxidn, decreased glucose oxidn + protection from diet-induced obesity (iron levels not measured in this model). XXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Iron sufficiency =&gt; facilitate unimpaired erthropoiesis =&gt; advantageous for iron-sufficient mouse to shift to the more energy-efficient BUT oxygen-inefficient fuel source of FA&#39;s to make use of that capacity for oxygen transport. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Under opposite condition of hypoxia =&gt; FA oxidn decrease, enzymes for fat metabolism downregulate + glucose oxidn increases. X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) The adaptive relationship between iron + fuel choice, Hfe -/- mice =&gt; consume more oxygen + produce more heat when fat is available in the diet. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Decreased ability =&gt; transfer between utilization of CHO + lipid fuel sources =&gt; metabolic inflexibility =&gt; characteristic =&gt; metabolic syndrome + T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Data, most consistent =&gt; increased hepatic glucose prodn =&gt; increased recycling of lactate + pyruvate (previously documented by isotopmer analysis of the fate of 1, 2 [13C] glucose. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Increase in hepatic glucose prodn =&gt; mainly substrate driven =&gt; levels of mRNA for gluconeogenic enzymes =&gt; not increased + glucose prodn =&gt; exogenous pyruvate =&gt; not enhanced. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) Data =&gt; do not support changes in insulin signalling as the underlying cause of the phenotype. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) CONCLUSIONS =&gt; Diabetes risk engendered by iron operates not only through toxic effects on B cells mediated by increased oxidative stress + mitochondrial dysfunction. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Liver of Hfe -/- mice exhibits increased glucose output with patterns of hepatic gene regulation + metabolite levels suggesting that gluconeogenesis in largely substrate-driven + results from altered fuel choice in muscle. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Findings =&gt; help elucidate the association between iron + diabetes =&gt; not only in haemochromatosis BUT not-haemochromatotic individuals with metabolic syndrome or T2D associated with dietary iron excess. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Chronically increased fat oxidation, especially in the setting of decreased mitochondrial function, might also contribute to the accumulation of lipid products that have been implicated in the pathogenesis of diabetes (41). Whether these pathways contribute to increased diabetes risk in human hemochromatosis, however, is unknown. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) We previously demonstrated no change in basal or insulin-stimulated (in vivo) pAkt in skeletal muscle (18), and herein we shown that the increased hepatic glucose production occurs in the face of paradoxically increased insulin signaling in liver (Fig. 5D and E). Why insulin signaling is upregulated is not known. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Levels of the insulin-sensitizing adipokine have been shown to be elevated in Hfe-/- mice (18), but other unknown factors may also contribute, including compensation for decreased insulin levels (17) or decreased inflammatory signaling in macrophages based on their lower iron content (42). Why this increased insulin signaling does not translate to decreased levels of gluconeogenic enzymes is unclear and is under investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">15</td>
+<td class="l data">alpha-hydroxybutyrate is an early biomarker of insulin resistance and glucose intolerance in a nondiabetic population</td>
+<td class="l data">(A) Non-targeted biochemical screening approach =&gt; non-diabetic subjects =&gt; wide spectrum of insulin sensitivity =&gt; a-hydroxybutyrate (a-HB) =&gt; biomarker =&gt; segregating =&gt; clamp-derived IR with NGT. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) a-HB segregated with dysglycaemia (IFG + IGT) independently of + in addition to IR. Associations =&gt; independent of sex, age + BMI. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) a-HB =&gt; diagnostic tool =&gt; identify IR and / or IGT earlier vs currently used clincial tests. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) a-HB =&gt; organic acid derived from a-ketobutyrate (a-KB). a-KB produced by amino acid catabolism (threonine + methionine) + glutathione anabolism (cysteine formation pathway) + metabolized =&gt; propionyl-Co-A + carbon dioxide. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) a-HB =&gt; by product =&gt; during the during the formation of a a-KB via a reaction catalyzed by lactate dehydrogenase (LDH) or a-hydroxybutyrate dehydrogenase (a-HBDH) =&gt; isoform present in the heart. XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Accumulation of a-HB is postulated to occur in vivo when either: XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) Formation of a-HB exceeds the rate of its catabolism which leads to substrate accumulation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) Product inhibition of the dehydrogenase that catalyzes the conversion of a-KB to propionyl-CoA. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Methionine =&gt; (S-adenosylmethionine) SAM =&gt; methyltransferase =&gt; S-adenosylhomocysteine =&gt; homocysteine =&gt; cystathionine =&gt; homoserine =&gt; a-ketobutyrate =&gt; propionylCoA. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Threonine =&gt; a-ketobutyrate =&gt; propionylCoA. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) a-KB is also produced cystathionine to cysteine under conditions of increased oxidative stress =&gt; higher flux of cysteine into prodn of glutathione =&gt; primary anti-oxidant in cells =&gt; shift in homocysteine prodn from transmethylation of methionine =&gt; transsulfuration of homocysteine =&gt; cystathionine. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) a-HB =&gt; assoc excess glutathione demand + disrupted mitochondrial energy metabolism =&gt; derives from hepatic glutathione stress =&gt; supporting increased a-HB assoc. increased oxidative stress in IR state. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) a-HB =&gt; increased by 2 mechns: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (1) Increase of hepatic glutathione stress =&gt; increased demand for glutathione prodn. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (2) Elevation NADH/NAD+ ratio =&gt; increased lipid oxidn. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) 1st mechn =&gt; increased a-HB formation by supplying more a-KB from increased cysteine anabolism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Cystathionine &lt;=&gt; increased cysteine =&gt; increased Glutamate =&gt; GSH (Glutathione). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Consistent with this interpretation =&gt; statistically significant increased both a-KB + cysteine with increased IR =&gt; similar trend with a-HB. XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) 2nd mechn =&gt; increased lipid oxidn =&gt; metabolic feature of IR =&gt; indexed =&gt; insulin-inhibited FFA concn. +ve assoc. =&gt; steady state FFA + plasma a-HB concns + increased NADH/NAD+ ratio favours =&gt; redn of a-KB to a-HB. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Changes in other important IR-associated metabolites =&gt; metabolic pathways =&gt; formation of a-HB + a-KB =&gt; e.g. redn glycine levels + serine upstream of a-KB formn =&gt; consistent increase gluconeogenesis =&gt; observed in IR db- / db- mice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Redox imbalance =&gt; may contribute increased a-HB in context of IR =&gt; consistent =&gt; branched-chain (BC) alpha-keto acids eg. 3-methyl-2-oxobutyrate increase in IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Increases BC-a-keto acid =&gt; due to effect of redox imbalance =&gt; directionality of the dehydrogenases =&gt; reduce / oxidize these keto acids. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) a-HB =&gt; increase in T2D subjects + animal models of T2D + severe lactic acidosis + ketoacidosis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Normal subjects / T2D  patients =&gt; restoration of the NADH /NAD+ redox balance by glutathione infusion therapy =&gt; increased insulin sensitivity + B-cell function. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Recent study =&gt; metabolic signature =&gt; accumulation of BCAA&#39;s, the glutamine / glutamate couple, several acylcarnitines + same AAA&#39;s (phenylalanine + tyrosine) =&gt; related to IR (HOMA index) =&gt; marking the metabolic consequences of excessive fat + protein intake with impairment of insulin signalling + mitochondrial overload. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Non-targeted metabolomics approach =&gt; present study =&gt; lipid molecules, BCAA&#39;s + acylcarnitines =&gt; top 30 metabolite that RF analysis associated with M-value. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Current data =&gt; narrow down the complex interactions of AA + lipid metabolism =&gt; highlight importance of a single marker, a-HB =&gt; reflects oxidative burden in context of IR. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Unmet need =&gt; practical clinical test =&gt; accurately measures IR =&gt; a-HB =&gt; significant biomarker =&gt; separating IR + IS subjects =&gt; using fasting plasma sample =&gt; development of diagnostic test. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) a-HB + biochemical + clinical parameters =&gt; useful =&gt; clinical indicator of subclinical abnormalities of glucose metabolism. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">16</td>
+<td class="l data">miR-375 maintains normal pancreatic alpha- and beta-cell mass</td>
+<td class="l data">(A) Our results =&gt; essential role for miR-375 =&gt; establishment of normal pancreatic endocrine cell mass in the postnatal period + glucose homeostasis. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Primary consequence =&gt; loss of miR-375 =&gt; chronic hyperglycaemia =&gt; caused by pancreatic B-cell defect glucagon release from isolated islets =&gt; elevated fasted + fed plasma glucagon levels + increase in downstream effects of glucagon =&gt; e.g. expression of genes regulating gluconeogenesis + hepatic glucose prodn. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) 375 KO mice in the fed state =&gt; exhibit plasma glucagon levels are comparable to fasted levels in wild type mice further emphasizing the chronic glucagon stimulus in these animals. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Hyper-glucagonaemia in 375 KO mice vs control littermates =&gt; likely due to increase in a-cell numbers + defect in glucose sensing =&gt; exocytosis measurement in isolated a-cells in response to direct depolarization =&gt; similar in wild-type + mutant mice. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) The hyperglycaemic phenotype of 375 KO animals =&gt; unlikely due to the moderate (25%) decrease in B-cell mass =&gt; the redn =&gt; insufficient to cause insulin deficiency + diabetes + amounts of insulin secretion by isolated pancreatic islet from mutant + wild type mice in response to various concns of glucose were similar. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Insulin levels in the fasted state + during a glucose challenge in 375 KO + wild type littermates =&gt; similar, despite a reduced B-cell number in 375 KO mice =&gt; suggesting =&gt; insulin secretion per B cell mass + increased secretion balance each other in mutant mice. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Mechns =&gt; loss of miR-375 function =&gt; redn B-cell mass =&gt; most likely mediated by cluster of negative growth regulators =&gt; directly regulated by miR-375 and are markedly up-regulated in 375 KO animals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) The phenotype is more profound in mice with metabolic stress =&gt; indicates that miR-375 targets play a crucial role in B-cell compensation when metabolic demand is increased. XXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Mechn =&gt; a-cell number in 375 KO pancreata is increased =&gt; currently unknown. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Two models can be proposed: miR-375 regulates =&gt; specific target genes in a-cells =&gt; responsible for increased a-cell mass. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Alternatively =&gt; increase in a-cell number  =&gt; compensatory response to altered B-cell mass + function or to the chronic hyperglucagonaemia =&gt; some models is associated with a-cell hyperplasia. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Mice =&gt; conditional deletion of dicer, an enzyme req&#39;d for miRNA processing, during pancreas development =&gt; exhibit defects in all pancreatic cell lineages, abnormal islet architecture + profound redn in pancreatic B-cells. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Mutant 375 KO mice =&gt; only partially mimic this phenotype =&gt; suggesting =&gt; miR-375 alone =&gt; not  responsible =&gt; marked developmental defect in B-cell growth + differentiation. Other miRNA&#39;s =&gt; expressed in endocrine pancreatic precursor cells =&gt; must be responsible =&gt; observed phenotype of the Pdx-Cre / dicer mice. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) mi-375 =&gt; significant role =&gt; hypertrophic growth response of pancreatic islets to metabolic stress. XXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Expression levels of miR-375 =&gt; aberrant in obese mice =&gt; contribute to increased B-cell mass in IR. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Ablation of miR-375 expression in obese mice =&gt; profound loss of B-cells, metabolic decompensation + premature death. XXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Under these conditions =&gt; a-cell mass is not affected =&gt; suggesting miR-375 =&gt; less prominant role in a-cells =&gt; which are not under particular metabolic or cellular stress =&gt; hyperglycaemic / IR conditions. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Increased evidence implicates miRNA&#39;s =&gt; essential component mediating responses to cellular stress. XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Tissue-enriched miRNA&#39;s =&gt; heart =&gt; miR-1, miR-208 + miR-133 =&gt; regulate the hypertrophic proliferative activity =&gt; in response to a variety of stresses + miR-126 affects survival after induction of myocardial infarction. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) The mechanism by which the a-cell number in 375 KO pancreata is increased is currently unknown. XXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) These observations from miRNA-knockout mice highlight the importance of small RNAs in cellular development, maintenance, and survival and reveal potential therapeutic targets for the treatment of disease.</td>
+</tr>
+<tr>
+<td class="r data">17</td>
+<td class="l data">Elevated serum ferritin levels predict new-onset type 2 diabetes: results from the EPIC-Norfolk prospective study</td>
+<td class="l data">(A) This prospective study =&gt; strong association =&gt; clinical raised ferritin (below the range indicative of clinical haemochromatosis) + development of incident diabetes. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) The risk =&gt; elevated 7-fold =&gt; clinically raised ferritin group vs lowest ferritin category. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) Association =&gt; potential importance =&gt; understanding the aetiology  of T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) Our study =&gt; new information =&gt; association of serum ferritin + incident T2D. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Unlike previous studies =&gt; study the assocation =&gt; men + women in the same prospective study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) Strong assocations of clinically raised ferritin with diabetes vs whole group of those with normal ferritin + also vs those in the low quartile of ferritin distribution. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Our sensitivity analysis =&gt; this was regardless of the cut-point of the upper limit of ferritin in women =&gt; debate whether the threshold should be 150, 200 or the same as men at 300 ng/ml. XXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Elevated ferritin =&gt; predictive of diabetes independently of a comprehensive range of risk factors + confounders =&gt; previous studies =&gt; only limited no risk factors accounted for. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I) Elevated ferritin =&gt; associated with diabetes independently of known risk factors for diabetes =&gt; (age, BMI, sex, family history, physical inactivity + smoking) + dietary factors + EtOH intake =&gt; measured by food diary. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Accounting for potential confounding effect of 3 markers of inflammation (IL-6 + fibrinogen + CRP (measure is previous studies)). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Accounted for potential confounding effect of hepatic enzymes + adiponectin =&gt; both associated with incident diabetes BUT association with ferritin is unclear. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (l) Data on fasting glucose =&gt; not available in EPIC-Norfolk study, BUT suggest non-diabetic hyperglycaemia =&gt; likely to be on the causal pathway, it is not likely to be a confounder of the ferritin-diabetes association. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) Mechn of the association =&gt; ferritin + T2D =&gt; not established BUT iron deposition in the liver =&gt; may cause IR =&gt; interfering with the ability of insulin to suppress hepatic glucose prodn. XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Iron =&gt; auto-oxidised =&gt; highly reactive, lipid-soluble iron-oxygen complexes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) These free radicals are powerful pro-oxidants =&gt; change membrane properties + result in tissue damage. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Oxidative stress =&gt; hyperglycaemia =&gt; disturbed glucose metabolism. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) In addition iron accumulation in hepatocytes =&gt; interfere with the insulin extracting capacity of the liver =&gt; affect insulin synthesis + secretion in the pancreas. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R) Iron excess =&gt; contributes initially to IR + subsequently to decreased insulin secretion. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Independent asssociation of hepatic enzymes + incident diabetes =&gt; well described. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Strong +ve correlation =&gt; ferritin + hepatic enzymes =&gt; ALT + GGT (r = 0.29 + r = 0.37, p &lt;0.0001, respectively). XXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Consistent =&gt; recent reports =&gt; correlation of 0.37 (p &lt; 0.001) between ALT + serum ferritin =&gt; 959 women =&gt; cross-sectional Korean study. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) It is plausable =&gt; iron overload in the liver damages hepatocytes =&gt; elevated transaminases + GGT. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) No access to liver ultrasound or biospy in our study =&gt; correlation between ferritin level + NAFLD or NASH =&gt; associated with elevated ALT =&gt; in obese + mainly non-obese individuals. XXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Association =&gt; raised hepatic iron concn + severity of fibrosis in NASH =&gt; also reported. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Recent study =&gt; association between hepatic fat content =&gt; measured by computed tomography + ferritin concn =&gt; diabetic individuals. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) Hypo-adiponectinaemia =&gt; predictive of future diabetes =&gt; no previous reports =&gt; association between serum ferritin + adiponectin levels. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) CONCLUSIONS =&gt; shown prospectively =&gt; modestly elevated ferritin, below levels diagnostic of haemochromatosis or other iron-storage disorders =&gt; predicts incident diabetes independently of known risk factors + confounders. XXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) We report a strong negative correlation between adiponectin and ferritin (r −0.21 to −0.28, p&lt;0.0001). Although the mechanism underlying this association is not clear, it is plausible that it works through the recently described association of ferritin with abdominal fat [31]. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) These findings have implications for increasing our understanding of the aetiology of type 2 diabetes and merit further study in future studies that help to clarify causality and advance this area of research. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+<tr>
+<td class="r data">18</td>
+<td class="l data">Nutrient control of glucose homeostasis through a complex of PGC-1a and SIRT1</td>
+<td class="l data">(A) SIR2 =&gt; controls lifespan in S. cerevisiae + C. elegans in repsonse to caloric restriction. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B) Investigate SIRT1 =&gt; regulated by nutritional status in mice. XXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C) SIRT1 expression in liver =&gt; NOT regulated at mRNA level in fasted mice. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D) SIRT1 protein levels =&gt; induced after fasting + returned to nearly control levels upon refeeding. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E) Expression of PGC-1a =&gt; upregulated at the level of mRNA + protein =&gt; by fasting. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F) PGC-1a + SIRT1 =&gt; increased in correlation with induction of the gluconeogenic gene PEPCK (phosphoenolpyruvate kinase). XXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G) Lactate + pyruvate can change ratio of NAD+/NADPH + regulate SIRT1 activity =&gt; BUT were found to be fluctuating in the liver. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H) Pyruvate levels =&gt; increased 1.7-fold in the liver of fasted mice conversely =&gt; lactate levels decreased 2-fold. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) Measured NAD+ =&gt; a potent activator + substrate of SIRT1. Liver NAD+ levels increased 33% by fasting =&gt; returned to control levels after re-feeeding. Not detectable changes in NADH levels. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J) Data suggests =&gt; increase of SIRT1 protein levels + NAD+ concn =&gt; contributes =&gt; SIRT1 deacetylase activity in the fasted state. XXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K) Further investigation =&gt; regulation of SIRT1 =&gt; effect of AMP or insulin =&gt; key signals of fasted response in mammals. XXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L) These two pathways do not affect SIRT1 protein levels in cultured hepatocytes. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M) By contrast =&gt; glucose + pyruvate =&gt; fluctuate in fasting =&gt; regulated SIRT1 protein levels. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N) Increasing concns of glucose =&gt; redn SIRT1 BUT increased concns of pyruvate =&gt; markedly increased SIRT1. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O) Changes in SIRT1 protein levels =&gt; regulated =&gt; post-transcriptional level as SIRT1 mRNA =&gt; remained constant. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P) Pulse-chase experiment (examines cellular process over time =&gt; exposing cells =&gt; labelling compound (pulse) =&gt; + same compound in unlabelled form (chase) =&gt; analyse =&gt; whether changes =&gt; at the level of protein synthesis or degradation). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q) Pulsed radiolabelled SIRT1 protein levels =&gt; did not change after chase for 6 + 12h =&gt; pyruvate treatment BUT increased SIRT1 protein in liver of fasted mice =&gt; mediated by changes in glucose +/- pyruvate. XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S) Induction pattern of SIRT1 protein =&gt; correlated with expression of PGC-1a in fasting =&gt; suggesting =&gt; SIRT1 + PGC-1a interact. XXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T) Immunoprecipitation of endogenous SIRT1 protein from liver extracts + precipitated PGC-1a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (U) Interaction =&gt; endogenous +/- overexpressed proteins =&gt; observed =&gt; cultured hepatocytes (293 cells). XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (V) Confirm direct physical interaction =&gt; in vitro interaction assay + recombinant glutathione S-transferase (GST) PGC-1a. XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (W) PGC-1a + SIRT1 =&gt; directly interacted =&gt; suggests =&gt; PGC-1a =&gt; substrate for SIRT1 deacetylation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (X) Nicotinamide (SIRT1 inhibitor) treatment =&gt; strongly induced PGC-1a lysine acetylation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Y) Importantly =&gt; expression of SIRT1 =&gt; overcome nicotinamide-induced PGC-1a acetylation BUT SIRT1 mutant (SIRT1H355A) =&gt; lacks enzymatic activity =&gt; no effect. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Z) PGC-1a acetylation =&gt; redn fasted liver =&gt; suggesting SIRT1 activity increased in this situation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (A1) Demonstrate =&gt; SIRT1 =&gt; deacetylated PGC-1a directly =&gt; in vitro deacetylase assay =&gt; PGC-1a acetylation redn 60% =&gt; + of SIRT1 + NAD+. XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (B1) Map PGC-1a lysine-acetylation sites induced by nicotinamide =&gt; tandem mass spectrometry analysis =&gt; PGC-1a =&gt; acetylated at 13 lysine sites. XXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (C1) Mutation of these 13 lysine to arginine =&gt; abolished acetylation of PGC-1a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (D1) Test the effect of PGC-1a acetylation =&gt; transcription activity =&gt; luciferase reporter assays =&gt; using transcriptor factor HNFa (TF =&gt; contains DNA binding domain DBD =&gt; attaches to DNA =&gt; promoting (activator) or blocking (repressor) =&gt; recruitment of RNA polymerase =&gt; performs transcription). XXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (E1) Nicotinamide treatment =&gt; redn transcriptional activity of wild-type PGC-1a / HNF4a by 24-fold. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (F1) Tested several combns of PGC-1a mutants =&gt; mutant PGC-1a(R5) =&gt; 5 lysines substituted to arginine =&gt; decreased fold repression by nicotinamide to 10-fold. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (G1) Two different mutants R10 + R13 =&gt; containing the R5 mutations =&gt; decreased this repression =&gt; almost control levels. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (H1) Results =&gt; acetylation of PGC-1a =&gt; decreases it&#39;s ability to efficiency co-activate HNF4a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (I1) Molecular Mechns =&gt; transcriptional repression by acetylation =&gt; under investigation. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (J1) Previous studies =&gt; hormone regulation =&gt; PGC-1a expression. XXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (K1) Gluconeogenic function of PGC-1a =&gt; may be controlled through a nutrient-sensing pathway =&gt; pyruvate + SIRT1 XXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (L1) Gluconeogenic genes PEPCK + G6Pase (glucose-6-phosphatase) =&gt; induced by pyruvate treatment. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (M1) Effect of pyruvate =&gt; induction of G6Pase + PEPCK =&gt; reduced by specific short interfering RNA (siRNA) for PGC-1a (G6Pase redn 30% + PEPCK redn 70%) BUT not in scrambed siRNA (control) =&gt; pyruvate regulation of these genes req&#39;d PGC-1a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (N1) Use of siRNA =&gt; effect of pyruvate on PGC-1a was dependent on SIRT1. XX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (O1) Knockdown of SIRT1 protein =&gt; largely blocked the pyruvate-induced PGC-1a increase =&gt; PEPCK + G6Pase. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (P1) Pyruvate + SIRT1 effects =&gt; specific to gluconeogenic genes because PGC-1a =&gt; targeted mitochondrial genes (cytochrome-c + b-ATP synthase) NOT significantly changed. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (Q1) Requirement of SIRT1 =&gt; regulation of gluconeogenic gene expression by PGC-1a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (R1) Endogenous SIRT1 + PGC-1a =&gt; recruited to chromatin promoter fragments of the PGC-1a targets PEPCK + G6Pase. XXXXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (S1) Recruitment of both proteins =&gt; increased by pyruvate treatment. XXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (T</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>
