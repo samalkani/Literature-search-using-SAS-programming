@@ -1,0 +1,2 @@
+# Literature-search-using-SAS-programming
+Using SAS programming to organize and categorize a list of research topics from excel spreadsheet composed of 130 scientific research papers on the broad area of  type 2 diabetes and cardiometabolic disease so that research 'gaps' can be identified for future research in the form of a PhD proposal
